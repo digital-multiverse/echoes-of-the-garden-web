@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 digital-multiverse
+Copyright (c) 2026 Echoes of the Garden
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+IMPORTANT NOTE ON CREATIVE ASSETS
+
+The MIT license above applies exclusively to the website source code
+(HTML, CSS, JavaScript, and serverless functions).
+
+The following are NOT covered by this license and remain the exclusive
+property of Echoes of the Garden:
+
+- Game name, title, and branding ("Echoes of the Garden")
+- All lore, worldbuilding, narrative, and story content
+- Game design documents, mechanics descriptions, and systems design
+- Creature names, ecosystem names, and item names
+- All artwork, illustrations, pixel art, and visual assets
+- All audio assets
+- The Codex and all in-game text
+
+Unauthorized reproduction, distribution or commercial use of the above
+is strictly prohibited without explicit written permission.
