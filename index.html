@@ -1071,4 +1071,35 @@ async function handleSubscribe(e) {
   const isLocalPreview = ['localhost','127.0.0.1',''].includes(location.hostname) || location.protocol === 'file:';
 
   if (isLocalPreview) {
-    success.textContent = '✦ Preview mode 
+    success.textContent = '✦ Preview mode — subscription would be saved to Resend here.';
+    success.style.display = 'block';
+    document.getElementById('nl-email').value = '';
+    btn.textContent = '✓ Done';
+    return;
+  }
+
+  try {
+    const res = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    if (res.ok) {
+      success.textContent = '✦ You\'re in. We\'ll let you know when the garden opens.';
+      success.style.display = 'block';
+      document.getElementById('nl-email').value = '';
+      btn.textContent = '✓ Subscribed';
+    } else {
+      throw new Error('Server error ' + res.status);
+    }
+  } catch (err) {
+    error.textContent = 'Something went wrong. Please try again or contact us directly.';
+    error.style.display = 'block';
+    btn.disabled    = false;
+    btn.textContent = 'Try again';
+  }
+}
+</script>
+
+</body>
+</html>
