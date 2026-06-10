@@ -4,11 +4,40 @@
 // Required environment variables (set in Netlify dashboard):
 //   RESEND_API_KEY      — from resend.com dashboard
 //   RESEND_AUDIENCE_ID  — audience ID from resend.com
+//
+// Abuse protections:
+//   1. Honeypot — the form includes a hidden "website" field. Humans never
+//      fill it; bots auto-fill every input. Non-empty → silently accept
+//      (return ok) without doing anything, so the bot learns nothing.
+//   2. Rate limiting — max SUBSCRIBES_PER_WINDOW requests per IP per window.
+//      In-memory, so it only persists while the Lambda container is warm.
+//      Good enough to stop naive loops; not a substitute for double opt-in.
+//   3. No duplicate welcome emails — if Resend reports the contact already
+//      exists (409), we skip the welcome send.
 
 const https = require('https');
 
+// ── Rate limiting (per warm container) ─────────────────────────────────
+const RATE_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const SUBSCRIBES_PER_WINDOW = 3;
+const ipHits = new Map(); // ip -> array of timestamps
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const hits = (ipHits.get(ip) || []).filter(t => now - t < RATE_WINDOW_MS);
+  hits.push(now);
+  ipHits.set(ip, hits);
+  // Opportunistic cleanup so the map doesn't grow unbounded
+  if (ipHits.size > 500) {
+    for (const [key, stamps] of ipHits) {
+      if (stamps.every(t => now - t >= RATE_WINDOW_MS)) ipHits.delete(key);
+    }
+  }
+  return hits.length > SUBSCRIBES_PER_WINDOW;
+}
+
+// ── Resend API wrapper — no SDK dependency needed ──────────────────────
 /**
- * Minimal Resend API wrapper — no SDK dependency needed.
  * @param {string} path
  * @param {string} method
  * @param {object} body
@@ -43,8 +72,12 @@ function resendRequest(path, method, body, apiKey) {
 
 /** Basic email format validation */
 function isValidEmail(email) {
-  return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  return typeof email === 'string'
+    && email.length <= 254
+    && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+
+const JSON_HEADERS = { 'Content-Type': 'application/json' };
 
 exports.handler = async (event) => {
   // Only accept POST
@@ -53,16 +86,30 @@ exports.handler = async (event) => {
   }
 
   // Parse body
-  let email;
+  let email, website;
   try {
-    ({ email } = JSON.parse(event.body || '{}'));
+    ({ email, website } = JSON.parse(event.body || '{}'));
   } catch {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request body' }) };
+    return { statusCode: 400, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Invalid request body' }) };
   }
 
-  // Validate email
+  // Honeypot tripped — pretend everything went fine and do nothing.
+  if (typeof website === 'string' && website.trim() !== '') {
+    return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify({ ok: true }) };
+  }
+
+  // Rate limit by client IP (Netlify provides the real client IP here)
+  const ip = event.headers['x-nf-client-connection-ip']
+    || (event.headers['x-forwarded-for'] || '').split(',')[0].trim()
+    || 'unknown';
+  if (isRateLimited(ip)) {
+    return { statusCode: 429, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Too many requests. Please try again later.' }) };
+  }
+
+  // Normalize + validate email
+  email = typeof email === 'string' ? email.trim().toLowerCase() : '';
   if (!isValidEmail(email)) {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid email address' }) };
+    return { statusCode: 400, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Invalid email address' }) };
   }
 
   const apiKey     = process.env.RESEND_API_KEY;
@@ -70,7 +117,7 @@ exports.handler = async (event) => {
 
   if (!apiKey || !audienceId) {
     console.error('Missing RESEND_API_KEY or RESEND_AUDIENCE_ID');
-    return { statusCode: 500, body: JSON.stringify({ error: 'Server configuration error' }) };
+    return { statusCode: 500, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Server configuration error' }) };
   }
 
   try {
@@ -78,25 +125,28 @@ exports.handler = async (event) => {
     const contactRes = await resendRequest(
       `/audiences/${audienceId}/contacts`,
       'POST',
-      { email: email.trim(), unsubscribed: false },
+      { email, unsubscribed: false },
       apiKey
     );
 
-    // 200 = created, 409 = already exists (treat as success)
-    if (contactRes.status !== 200 && contactRes.status !== 201 && contactRes.status !== 409) {
+    const alreadySubscribed = contactRes.status === 409;
+    const created = contactRes.status === 200 || contactRes.status === 201;
+
+    if (!created && !alreadySubscribed) {
       console.error('Resend contacts error:', contactRes);
       throw new Error(`Resend API error: ${contactRes.status}`);
     }
 
-    // Send welcome email
-    await resendRequest(
-      '/emails',
-      'POST',
-      {
-        from: 'Echoes of the Garden <hello@echoesofthegarden.com>',
-        to:   email.trim(),
-        subject: '🌱 Welcome to Echoes of the Garden',
-        html: `
+    // Send welcome email — only on first subscription, never on re-submits
+    if (created) {
+      await resendRequest(
+        '/emails',
+        'POST',
+        {
+          from: 'Echoes of the Garden <hello@echoesofthegarden.com>',
+          to:   email,
+          subject: '🌱 Welcome to Echoes of the Garden',
+          html: `
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -127,13 +177,14 @@ exports.handler = async (event) => {
   </div>
 </body>
 </html>`,
-      },
-      apiKey
-    );
+        },
+        apiKey
+      );
+    }
 
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: JSON_HEADERS,
       body: JSON.stringify({ ok: true }),
     };
 
@@ -141,7 +192,7 @@ exports.handler = async (event) => {
     console.error('Subscribe function error:', err);
     return {
       statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: JSON_HEADERS,
       body: JSON.stringify({ error: 'Internal server error' }),
     };
   }
