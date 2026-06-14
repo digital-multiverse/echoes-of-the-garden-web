@@ -32,6 +32,7 @@ const LAUNCH_IDS = [
 ];
 
 const ECO_LABEL = { roots: "Roots of the World", ash: "Tide of Ash" };
+const ECO_ORDER = { roots: 0, ash: 1 };
 
 const field = (src, name) => {
   const m = src.match(new RegExp(`^${name} = "([\\s\\S]*?)"$`, "m"));
@@ -85,32 +86,52 @@ async function buildRecords() {
     });
     await fetchSprite(id);
   }
+  // Group: roots first, ash second; alphabetical within biome.
+  records.sort((a, b) =>
+    (ECO_ORDER[a.ecosystem] ?? 9) - (ECO_ORDER[b.ecosystem] ?? 9) ||
+    a.name.localeCompare(b.name));
   return records;
 }
+
+const slug = (name) => name.toLowerCase().replace(/ /g, "-").replace(/'/g, "");
 
 const esc = (s) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-/** Static HTML for the card grid — real markup, fully indexable. */
-function renderCards(records) {
-  const cards = records.map((r, i) => {
-    const delay = i % 3 ? ` reveal-d${i % 3}` : "";
-    return `        <article class="beast-card beast-${r.ecosystem} reveal${delay}">
+/** A single creature card (static, indexable markup). */
+function card(r, i) {
+  const delay = i % 3 ? ` reveal-d${i % 3}` : "";
+  return `        <a class="beast-card beast-${r.ecosystem} reveal${delay}" href="/bestiary/${slug(r.name)}/">
           <img class="beast-sprite" src="${r.sprite}" alt="${esc(r.name)} — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">${esc(r.name)}</h3>
           <div class="beast-eco">${ECO_LABEL[r.ecosystem] ?? r.ecosystem}</div>
           <div class="beast-traits">${r.lifespan} life · ${r.yield} yield</div>
           <p class="beast-flavor">${esc(r.flavor)}</p>
-        </article>`;
-  });
-  cards.push(`        <article class="beast-card beast-secret reveal">
+        </a>`;
+}
+
+const TEASER = `        <article class="beast-card beast-secret reveal">
           <div class="beast-sprite beast-unknown" aria-hidden="true">?</div>
           <h3 class="beast-name">???</h3>
           <div class="beast-eco">Synthesis</div>
           <div class="beast-traits">The garden teaches; it does not instruct.</div>
           <p class="beast-flavor">Two more forms exist. No seed sells them. They are learned.</p>
-        </article>`);
-  return cards.join("\n");
+        </article>`;
+
+/** Grouped-by-biome grid with subheadings — the teaser closes the Ash group. */
+function renderGrid(records) {
+  const sections = [];
+  for (const [eco, title, cls] of [["roots", "Roots of the World", "roots"],
+                                    ["ash", "Tide of Ash", "ash"]]) {
+    const group = records.filter((r) => r.ecosystem === eco);
+    const cards = group.map((r, i) => card(r, i)).join("\n");
+    const tail = eco === "ash" ? "\n" + TEASER : "";
+    sections.push(`      <h3 class="beast-biome-title beast-biome-${cls}">${title}</h3>
+      <div class="beast-grid">
+${cards}${tail}
+      </div>`);
+  }
+  return "\n" + sections.join("\n") + "\n      ";
 }
 
 async function main() {
@@ -136,10 +157,9 @@ async function main() {
     console.error(`ERROR: markers ${START} / ${END} not found in index.html`);
     process.exit(1);
   }
-  const grid = `\n${renderCards(records)}\n      `;
   html = html.replace(
     new RegExp(`${START}[\\s\\S]*?${END}`),
-    `${START}${grid}${END}`,
+    `${START}${renderGrid(records)}${END}`,
   );
   await writeFile("index.html", html);
   console.log("index.html bestiary grid baked (static, SEO-friendly)");

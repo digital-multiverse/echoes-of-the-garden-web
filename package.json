@@ -1,0 +1,10 @@
+{
+  "name": "echoes-of-the-garden-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Marketing site for Echoes of the Garden",
+  "type": "module",
+  "scripts": {
+    "bestiary": "node scripts/build-bestiary.mjs"
+  }
+}
