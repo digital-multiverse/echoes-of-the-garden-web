@@ -1,0 +1,131 @@
+{
+  "count": 14,
+  "creatures": [
+    {
+      "id": "avispa_llama",
+      "name": "Flame Wasp",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Individually, inconsequential.",
+      "sprite": "assets/creatures/avispa_llama.png"
+    },
+    {
+      "id": "babosa_turba",
+      "name": "Peat Slug",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Modest",
+      "flavor": "Slower than the moss it lives on.",
+      "sprite": "assets/creatures/babosa_turba.png"
+    },
+    {
+      "id": "ciempies_anciano",
+      "name": "Elder Centipede",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Generous",
+      "flavor": "It navigates by sensing the decay of other creatures.",
+      "sprite": "assets/creatures/ciempies_anciano.png"
+    },
+    {
+      "id": "dragon_ceniza",
+      "name": "Ash Drake",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Old for this biome — unheard of, really.",
+      "sprite": "assets/creatures/dragon_ceniza.png"
+    },
+    {
+      "id": "escarabajo_raiz",
+      "name": "Root Beetle",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Generous",
+      "flavor": "It spends most of its life underground, following root paths that have existed longer than the biome.",
+      "sprite": "assets/creatures/escarabajo_raiz.png"
+    },
+    {
+      "id": "escorpion_ceniza",
+      "name": "Ash Scorpion",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Generous",
+      "flavor": "Most ash creatures race through their lifecycle.",
+      "sprite": "assets/creatures/escorpion_ceniza.png"
+    },
+    {
+      "id": "halcon_brasa",
+      "name": "Ember Falcon",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "It never lands.",
+      "sprite": "assets/creatures/halcon_brasa.png"
+    },
+    {
+      "id": "lagarto_musgo",
+      "name": "Moss Lizard",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Modest",
+      "flavor": "The first to arrive.",
+      "sprite": "assets/creatures/lagarto_musgo.png"
+    },
+    {
+      "id": "micelio_raiz",
+      "name": "Root Mycelium",
+      "ecosystem": "roots",
+      "lifespan": "Steady",
+      "yield": "Modest",
+      "flavor": "It doesn't move.",
+      "sprite": "assets/creatures/micelio_raiz.png"
+    },
+    {
+      "id": "oruga_tierra",
+      "name": "Earth Caterpillar",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Generous",
+      "flavor": "Slow until it isn't.",
+      "sprite": "assets/creatures/oruga_tierra.png"
+    },
+    {
+      "id": "salamandra_ceniza",
+      "name": "Ash Salamander",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Born from ember, it rarely lasts a season.",
+      "sprite": "assets/creatures/salamandra_ceniza.png"
+    },
+    {
+      "id": "serpiente_humo",
+      "name": "Smoke Serpent",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Hard to see against the ashen ground.",
+      "sprite": "assets/creatures/serpiente_humo.png"
+    },
+    {
+      "id": "topo_carbon",
+      "name": "Char Mole",
+      "ecosystem": "ash",
+      "lifespan": "Fleeting",
+      "yield": "Generous",
+      "flavor": "The only ash creature that goes deeper instead of faster.",
+      "sprite": "assets/creatures/topo_carbon.png"
+    },
+    {
+      "id": "tortuga_roca",
+      "name": "Stone Tortoise",
+      "ecosystem": "roots",
+      "lifespan": "Enduring",
+      "yield": "Modest",
+      "flavor": "No one has ever seen it move at speed.",
+      "sprite": "assets/creatures/tortuga_roca.png"
+    }
+  ]
+}

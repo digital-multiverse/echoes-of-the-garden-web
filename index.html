@@ -1941,7 +1941,7 @@
         gap: 12px;
       }
     }
-  
+
     /* ── Bestiary ─────────────────────────────────────────── */
     .beast-grid {
       display: grid;
@@ -1995,9 +1995,17 @@
       margin-bottom: 8px;
     }
 
-    .beast-roots .beast-eco { color: var(--green-hi); }
-    .beast-ash .beast-eco { color: var(--amber); }
-    .beast-secret { border-style: dashed; }
+    .beast-roots .beast-eco {
+      color: var(--green-hi);
+    }
+
+    .beast-ash .beast-eco {
+      color: var(--amber);
+    }
+
+    .beast-secret {
+      border-style: dashed;
+    }
 
     .beast-traits {
       font-size: 12px;
@@ -2012,7 +2020,6 @@
       font-style: italic;
       margin: 0;
     }
-
   </style>
 </head>
 
@@ -2234,117 +2241,119 @@
       <div class="section-header reveal">
         <span class="section-eyebrow">The Inhabitants</span>
         <h2 id="bestiary-title" class="section-title">Bestiary</h2>
-        <p class="section-lead">Fourteen creatures at Early Access launch, each with its own pace of living and
-          dying. Numbers stay hidden — the garden rewards the kind of player who watches, compares, and theorizes.</p>
+        <p class="section-lead">Fourteen creatures at Early Access launch, each with its own pace of living and dying.
+          Numbers stay hidden — the garden rewards the kind of player who watches, compares, and theorizes.</p>
       </div>
       <div class="beast-grid">
+        <!-- BESTIARY:START -->
         <article class="beast-card beast-ash reveal">
-          <img class="beast-sprite" src="assets/creatures/avispa_llama.png" alt="Flame Wasp pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/avispa_llama.png" alt="Flame Wasp — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Flame Wasp</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Bountiful yield</div>
           <p class="beast-flavor">Individually, inconsequential.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d1">
-          <img class="beast-sprite" src="assets/creatures/babosa_turba.png" alt="Peat Slug pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/babosa_turba.png" alt="Peat Slug — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Peat Slug</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Modest yield</div>
           <p class="beast-flavor">Slower than the moss it lives on.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d2">
-          <img class="beast-sprite" src="assets/creatures/ciempies_anciano.png" alt="Elder Centipede pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/ciempies_anciano.png"
+            alt="Elder Centipede — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Elder Centipede</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Generous yield</div>
           <p class="beast-flavor">It navigates by sensing the decay of other creatures.</p>
         </article>
         <article class="beast-card beast-ash reveal">
-          <img class="beast-sprite" src="assets/creatures/dragon_ceniza.png" alt="Ash Drake pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/dragon_ceniza.png" alt="Ash Drake — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Drake</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Bountiful yield</div>
           <p class="beast-flavor">Old for this biome — unheard of, really.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d1">
-          <img class="beast-sprite" src="assets/creatures/escarabajo_raiz.png" alt="Root Beetle pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/escarabajo_raiz.png" alt="Root Beetle — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Root Beetle</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Generous yield</div>
-          <p class="beast-flavor">It spends most of its life underground, following root paths that have existed longer than the biome.</p>
+          <p class="beast-flavor">It spends most of its life underground, following root paths that have existed longer
+            than the biome.</p>
         </article>
         <article class="beast-card beast-ash reveal reveal-d2">
-          <img class="beast-sprite" src="assets/creatures/escorpion_ceniza.png" alt="Ash Scorpion pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/escorpion_ceniza.png"
+            alt="Ash Scorpion — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Scorpion</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Generous yield</div>
           <p class="beast-flavor">Most ash creatures race through their lifecycle.</p>
         </article>
         <article class="beast-card beast-ash reveal">
-          <img class="beast-sprite" src="assets/creatures/halcon_brasa.png" alt="Ember Falcon pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/halcon_brasa.png" alt="Ember Falcon — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ember Falcon</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Bountiful yield</div>
           <p class="beast-flavor">It never lands.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d1">
-          <img class="beast-sprite" src="assets/creatures/lagarto_musgo.png" alt="Moss Lizard pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/lagarto_musgo.png" alt="Moss Lizard — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Moss Lizard</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Modest yield</div>
           <p class="beast-flavor">The first to arrive.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d2">
-          <img class="beast-sprite" src="assets/creatures/micelio_raiz.png" alt="Root Mycelium pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/micelio_raiz.png" alt="Root Mycelium — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Root Mycelium</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Steady life · Modest yield</div>
           <p class="beast-flavor">It doesn't move.</p>
         </article>
         <article class="beast-card beast-roots reveal">
-          <img class="beast-sprite" src="assets/creatures/oruga_tierra.png" alt="Earth Caterpillar pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/oruga_tierra.png"
+            alt="Earth Caterpillar — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Earth Caterpillar</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Generous yield</div>
           <p class="beast-flavor">Slow until it isn't.</p>
         </article>
         <article class="beast-card beast-ash reveal reveal-d1">
-          <img class="beast-sprite" src="assets/creatures/salamandra_ceniza.png" alt="Ash Salamander pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/salamandra_ceniza.png"
+            alt="Ash Salamander — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Salamander</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Bountiful yield</div>
           <p class="beast-flavor">Born from ember, it rarely lasts a season.</p>
         </article>
         <article class="beast-card beast-ash reveal reveal-d2">
-          <img class="beast-sprite" src="assets/creatures/serpiente_humo.png" alt="Smoke Serpent pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/serpiente_humo.png"
+            alt="Smoke Serpent — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Smoke Serpent</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Bountiful yield</div>
           <p class="beast-flavor">Hard to see against the ashen ground.</p>
         </article>
         <article class="beast-card beast-ash reveal">
-          <img class="beast-sprite" src="assets/creatures/topo_carbon.png" alt="Char Mole pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/topo_carbon.png" alt="Char Mole — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Char Mole</h3>
           <div class="beast-eco">Tide of Ash</div>
           <div class="beast-traits">Fleeting life · Generous yield</div>
           <p class="beast-flavor">The only ash creature that goes deeper instead of faster.</p>
         </article>
         <article class="beast-card beast-roots reveal reveal-d1">
-          <img class="beast-sprite" src="assets/creatures/tortuga_roca.png" alt="Stone Tortoise pixel sprite" width="72" height="72"
-            loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/tortuga_roca.png" alt="Stone Tortoise — pixel creature sprite"
+            width="72" height="72" loading="lazy">
           <h3 class="beast-name">Stone Tortoise</h3>
           <div class="beast-eco">Roots of the World</div>
           <div class="beast-traits">Enduring life · Modest yield</div>
@@ -2357,6 +2366,7 @@
           <div class="beast-traits">The garden teaches; it does not instruct.</div>
           <p class="beast-flavor">Two more forms exist. No seed sells them. They are learned.</p>
         </article>
+        <!-- BESTIARY:END -->
       </div>
     </div>
   </section>
