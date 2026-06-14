@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://echoes-of-the-garden.netlify.app//sitemap.xml

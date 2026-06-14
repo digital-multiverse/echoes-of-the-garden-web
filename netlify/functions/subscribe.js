@@ -166,7 +166,7 @@ exports.handler = async (event) => {
       an exclusive item only available to newsletter subscribers.
     </p>
     <div style="border-top:1px solid #222820;padding-top:24px;text-align:center">
-      <a href="https://echoesofthegarden.com" style="color:#5a9e6a;font-size:14px;text-decoration:none">
+      <a href="https://echoes-of-the-garden.netlify.app/" style="color:#5a9e6a;font-size:14px;text-decoration:none">
         echoesofthegarden.com
       </a>
     </div>

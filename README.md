@@ -4,7 +4,7 @@ Official presentation website for **Echoes of the Garden**, an idle creature col
 
 > *A garden outside of time. Creatures born, grown, aged and permanently gone — leaving unique items that can never be replicated.*
 
-**Live site:** [echoesofthegarden.com](https://echoesofthegarden.com)
+**Live site:** [echoesofthegarden.com](https://echoes-of-the-garden.netlify.app/)
 
 ---
 

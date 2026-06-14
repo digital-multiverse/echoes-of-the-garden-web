@@ -29,6 +29,6 @@
 
 [[redirects]]
   from   = "https://www.echoesofthegarden.com/*"
-  to     = "https://echoesofthegarden.com/:splat"
+  to     = "https://echoes-of-the-garden.netlify.app//:splat"
   status = 301
   force  = true
