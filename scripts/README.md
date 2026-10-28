@@ -4,17 +4,18 @@
 Regenerates the Bestiary from the game repo's `.tres` files (single source
 of truth = the game). Run after any game lore/creature change:
 
-    npm run bestiary        (or: node scripts/build-bestiary.mjs)
+    npm run bestiary                        # game checkout at ../echoes-of-the-garden
+    GAME_DIR=/path/to/game npm run bestiary # elsewhere
 
-Outputs (all committed):
-- `bestiary.json` — editable data snapshot, grouped roots→ash
-- `index.html` — static bestiary grid baked between `<!-- BESTIARY:START/END -->`,
-  grouped by biome with subheadings (SEO: real indexable HTML) + enriched
-  VideoGame JSON-LD character list
+The game repo is private, so the script reads a **local checkout** (the
+`main` branch, ideally) — there is no HTTP fetch. Outputs (all committed):
+- `bestiary.json` — data snapshot, grouped roots→ash, incl. `affinity` and
+  `band_affinities` (ADR-008/009 resonance wheel)
+- `index.html` — static bestiary grid baked between `<!-- BESTIARY:START/END -->`
+  (SEO: real indexable HTML)
 - `bestiary/{slug}/index.html` — one indexable lore page per creature
-- `sitemap.xml` — homepage + all creature pages
+  (full lore, death epitaph, resonance + birth-band table)
+- `assets/creatures/{id}.png` — sprites copied from the game
 
-Fetches data + sprites via raw.githubusercontent (main branch). REQUIRES the
-game's branch merged to `main` (the .tres live there). The version in this
-bundle was baked from a local workspace for verification; once main has the
-.tres, `npm run bestiary` reproduces it from the canonical source.
+Not touched by the script: `sitemap.xml` and the homepage JSON-LD character
+list — update by hand if a creature is added or renamed.

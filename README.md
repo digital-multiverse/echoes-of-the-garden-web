@@ -2,7 +2,7 @@
 
 Official presentation website for **Echoes of the Garden**, an idle creature collector coming to Steam.
 
-> *A garden outside of time. Creatures born, grown, aged and permanently gone — leaving unique items that can never be replicated.*
+> *A garden outside of time. Creatures born, grown, aged and permanently gone. Every relic carries the name you gave it and the life it lived. No two share a story.*
 
 **Live site:** [echoesofthegarden.com](https://echoes-of-the-garden.netlify.app/)
 
@@ -10,7 +10,7 @@ Official presentation website for **Echoes of the Garden**, an idle creature col
 
 ## About the Game
 
-Echoes of the Garden is a free-to-play idle creature collector where every creature has a real life cycle — born, grown, aged, and permanently dead. What they leave behind is unique and unrepeatable, tradeable on the Steam Community Market.
+Echoes of the Garden is a free-to-play idle creature collector where every creature has a real life cycle — born, grown, aged, and permanently dead. Every relic carries the name you gave it and the life it lived — typed items (species × rarity) tradeable on the Steam Community Market, whose story travels with them.
 
 - 4 ecosystems, 28 creatures at launch
 - Permanent death with inheritance system
@@ -106,7 +106,8 @@ In Netlify: **Domain settings → Add custom domain** → follow the DNS instruc
 | Newsletter welcome email | `netlify/functions/subscribe.js` |
 | OG image / social preview | `public/og-image.jpg` (1200×630px) |
 | Dev log entries | Add entries before `.devlog-empty` div in `index.html` |
-| Roadmap changes | Update `.rm-item` blocks in `index.html` |
+| Roadmap changes | Update `.rm-item` blocks in `index.html` — source of truth is the game repo's `ROADMAP.md` |
+| Bestiary / creature pages | `npm run bestiary` (reads the sibling game checkout, see `scripts/README.md`) |
 
 ---
 

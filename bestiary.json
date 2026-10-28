@@ -1,130 +1,271 @@
 {
+  "source": "../echoes-of-the-garden/data/creatures",
   "count": 14,
   "creatures": [
     {
       "id": "oruga_tierra",
       "name": "Earth Caterpillar",
+      "slug": "earth-caterpillar",
       "ecosystem": "roots",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Arraigo",
+        "Umbra",
+        "Escarcha",
+        "Brisa"
+      ],
       "lifespan": "Enduring",
       "yield": "Generous",
       "flavor": "Slow until it isn't.",
+      "lore": "Slow until it isn't. In its final stage it accelerates without warning, drawing on something stored since it hatched. What it becomes afterward depends entirely on what it consumed.",
+      "death_flavor": "The cocoon it never built still hangs, unfinished, in the bark.",
       "sprite": "assets/creatures/oruga_tierra.png"
     },
     {
       "id": "ciempies_anciano",
       "name": "Elder Centipede",
+      "slug": "elder-centipede",
       "ecosystem": "roots",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Umbra",
+        "Escarcha",
+        "Brisa",
+        "Fulgor"
+      ],
       "lifespan": "Enduring",
       "yield": "Generous",
       "flavor": "It navigates by sensing the decay of other creatures.",
+      "lore": "It navigates by sensing the decay of other creatures. Where something has died, it arrives — not to consume, but to remain. Over time, the places it has visited all look the same: older, darker, more alive.",
+      "death_flavor": "The soil where it rested will be richer for years.",
       "sprite": "assets/creatures/ciempies_anciano.png"
     },
     {
       "id": "lagarto_musgo",
       "name": "Moss Lizard",
+      "slug": "moss-lizard",
       "ecosystem": "roots",
+      "affinity": "Arraigo",
+      "band_affinities": [
+        "Ascua",
+        "Arraigo",
+        "Umbra",
+        "Escarcha"
+      ],
       "lifespan": "Enduring",
       "yield": "Modest",
       "flavor": "The first to arrive.",
+      "lore": "The first to arrive. The last to leave. It has spent decades on the same log and the log has already grown around it.",
+      "death_flavor": "Even now, the bark it rested on feels warm.",
       "sprite": "assets/creatures/lagarto_musgo.png"
     },
     {
       "id": "babosa_turba",
       "name": "Peat Slug",
+      "slug": "peat-slug",
       "ecosystem": "roots",
+      "affinity": "Arraigo",
+      "band_affinities": [
+        "Umbra",
+        "Arraigo",
+        "Ascua",
+        "Fulgor"
+      ],
       "lifespan": "Enduring",
       "yield": "Modest",
       "flavor": "Slower than the moss it lives on.",
+      "lore": "Slower than the moss it lives on. It crosses the same stretch of root over several days, leaving a trail that other small things seem to follow. No one has studied where the trail goes.",
+      "death_flavor": "The trail it left is still moist. Something is already using it.",
       "sprite": "assets/creatures/babosa_turba.png"
     },
     {
       "id": "escarabajo_raiz",
       "name": "Root Beetle",
+      "slug": "root-beetle",
       "ecosystem": "roots",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Brisa",
+        "Escarcha",
+        "Umbra",
+        "Arraigo"
+      ],
       "lifespan": "Enduring",
       "yield": "Generous",
       "flavor": "It spends most of its life underground, following root paths that have existed longer than the biome.",
+      "lore": "It spends most of its life underground, following root paths that have existed longer than the biome. When it surfaces, it carries fragments of whatever it passed through.",
+      "death_flavor": "The tunnel it dug still channels water three layers down.",
       "sprite": "assets/creatures/escarabajo_raiz.png"
     },
     {
       "id": "micelio_raiz",
       "name": "Root Mycelium",
+      "slug": "root-mycelium",
       "ecosystem": "roots",
+      "affinity": "Fulgor",
+      "band_affinities": [
+        "Ascua",
+        "Fulgor",
+        "Brisa",
+        "Escarcha"
+      ],
       "lifespan": "Steady",
       "yield": "Modest",
       "flavor": "It doesn't move.",
+      "lore": "It doesn't move. It spreads. Given enough time, a single mycelium can thread its way through an entire section of root system without ever appearing above ground.",
+      "death_flavor": "The network it built continues without it. Something else is already using the paths.",
       "sprite": "assets/creatures/micelio_raiz.png"
     },
     {
       "id": "tortuga_roca",
       "name": "Stone Tortoise",
+      "slug": "stone-tortoise",
       "ecosystem": "roots",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Fulgor",
+        "Brisa",
+        "Escarcha",
+        "Umbra"
+      ],
       "lifespan": "Enduring",
       "yield": "Modest",
       "flavor": "No one has ever seen it move at speed.",
+      "lore": "No one has ever seen it move at speed. It chooses its spot once, and that is enough. The moss on its shell is older than most of the trees nearby.",
+      "death_flavor": "The hollow it left in the soil has already begun to fill with something green.",
       "sprite": "assets/creatures/tortuga_roca.png"
     },
     {
       "id": "dragon_ceniza",
       "name": "Ash Drake",
+      "slug": "ash-drake",
       "ecosystem": "ash",
+      "affinity": "Ascua",
+      "band_affinities": [
+        "Fulgor",
+        "Ascua",
+        "Arraigo",
+        "Umbra"
+      ],
       "lifespan": "Fleeting",
       "yield": "Bountiful",
       "flavor": "Old for this biome — unheard of, really.",
+      "lore": "Old for this biome — unheard of, really. It has outlasted every creature it shared the ash beds with. By the time it reaches its final stage, the rest of the ecosystem has cycled through several generations around it.",
+      "death_flavor": "The heat it generated is already becoming something new.",
       "sprite": "assets/creatures/dragon_ceniza.png"
     },
     {
       "id": "salamandra_ceniza",
       "name": "Ash Salamander",
+      "slug": "ash-salamander",
       "ecosystem": "ash",
+      "affinity": "Ascua",
+      "band_affinities": [
+        "Arraigo",
+        "Ascua",
+        "Fulgor",
+        "Brisa"
+      ],
       "lifespan": "Fleeting",
       "yield": "Bountiful",
       "flavor": "Born from ember, it rarely lasts a season.",
+      "lore": "Born from ember, it rarely lasts a season. But its children remember every mistake — and make new ones.",
+      "death_flavor": "It burned bright. The ash it leaves still glows.",
       "sprite": "assets/creatures/salamandra_ceniza.png"
     },
     {
       "id": "escorpion_ceniza",
       "name": "Ash Scorpion",
+      "slug": "ash-scorpion",
       "ecosystem": "ash",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Fulgor",
+        "Brisa",
+        "Escarcha",
+        "Umbra"
+      ],
       "lifespan": "Fleeting",
       "yield": "Generous",
       "flavor": "Most ash creatures race through their lifecycle.",
+      "lore": "Most ash creatures race through their lifecycle. The scorpion does not. It carries its venom carefully, as if saving it for something — though whatever that something is, it never arrives.",
+      "death_flavor": "The mark its tail left in the ash will last until the next wind.",
       "sprite": "assets/creatures/escorpion_ceniza.png"
     },
     {
       "id": "topo_carbon",
       "name": "Char Mole",
+      "slug": "char-mole",
       "ecosystem": "ash",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Brisa",
+        "Escarcha",
+        "Umbra",
+        "Arraigo"
+      ],
       "lifespan": "Fleeting",
       "yield": "Generous",
       "flavor": "The only ash creature that goes deeper instead of faster.",
+      "lore": "The only ash creature that goes deeper instead of faster. It digs into the carbon layers below the burn, into heat that hasn't changed in decades. Nobody knows what it is looking for down there.",
+      "death_flavor": "The tunnel it dug collapsed slowly behind it.",
       "sprite": "assets/creatures/topo_carbon.png"
     },
     {
       "id": "halcon_brasa",
       "name": "Ember Falcon",
+      "slug": "ember-falcon",
       "ecosystem": "ash",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Arraigo",
+        "Umbra",
+        "Escarcha",
+        "Brisa"
+      ],
       "lifespan": "Fleeting",
       "yield": "Bountiful",
       "flavor": "It never lands.",
+      "lore": "It never lands. From the moment it hatches it stays airborne, circling the thermals above the ash beds. When it finally comes down, that is the end.",
+      "death_flavor": "The thermal it rode has already pulled something else upward.",
       "sprite": "assets/creatures/halcon_brasa.png"
     },
     {
       "id": "avispa_llama",
       "name": "Flame Wasp",
+      "slug": "flame-wasp",
       "ecosystem": "ash",
+      "affinity": "Ascua",
+      "band_affinities": [
+        "Arraigo",
+        "Ascua",
+        "Fulgor",
+        "Brisa"
+      ],
       "lifespan": "Fleeting",
       "yield": "Bountiful",
       "flavor": "Individually, inconsequential.",
+      "lore": "Individually, inconsequential. In numbers, something that burns. It seems to know when it has company — the colony feeds and dies faster than any single creature would on its own.",
+      "death_flavor": "Its stinger is still hot.",
       "sprite": "assets/creatures/avispa_llama.png"
     },
     {
       "id": "serpiente_humo",
       "name": "Smoke Serpent",
+      "slug": "smoke-serpent",
       "ecosystem": "ash",
+      "affinity": "Fulgor",
+      "band_affinities": [
+        "Brisa",
+        "Fulgor",
+        "Ascua",
+        "Arraigo"
+      ],
       "lifespan": "Fleeting",
       "yield": "Bountiful",
       "flavor": "Hard to see against the ashen ground.",
+      "lore": "Hard to see against the ashen ground. It doesn't hunt so much as drift — arriving wherever warmth remains after a fire has passed. By the time the smoke clears, it is already gone.",
+      "death_flavor": "The warmth where it coiled has already dissipated.",
       "sprite": "assets/creatures/serpiente_humo.png"
     }
   ]

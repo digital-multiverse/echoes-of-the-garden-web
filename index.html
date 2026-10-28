@@ -8,7 +8,7 @@
   <!-- ═══ PRIMARY SEO ═══════════════════════════════════════════════════════ -->
   <title>Echoes of the Garden — Idle Creature Collector · Coming to Steam</title>
   <meta name="description"
-    content="A garden outside of time. Collect creatures that are born, grow, age and permanently die — leaving unique, unrepeatable items tradeable on Steam Community Market. Free to play.">
+    content="A garden outside of time. Collect creatures that are born, grow, age and permanently die. Every relic carries the name you gave it and the life it lived — tradeable on Steam Community Market. Free to play.">
   <meta name="keywords"
     content="idle game, creature collector, steam, pixel art, steam market, trading, indie game, free to play, idle collector">
   <meta name="author" content="Echoes of the Garden">
@@ -20,7 +20,7 @@
   <meta property="og:url" content="https://echoes-of-the-garden.netlify.app/">
   <meta property="og:title" content="Echoes of the Garden — Idle Creature Collector">
   <meta property="og:description"
-    content="A garden outside of time. Creatures born, grown and permanently dead. Each loss leaves a unique item tradeable on Steam. Free to play.">
+    content="A garden outside of time. Creatures born, grown and permanently dead. Every relic carries the name you gave it and the life it lived. Free to play on Steam.">
   <meta property="og:image" content="https://echoes-of-the-garden.netlify.app/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Echoes of the Garden — Idle Creature Collector">
   <meta name="twitter:description"
-    content="Creatures that are born, grow, and permanently die. Every loss is unrepeatable. Coming to Steam.">
+    content="Creatures that are born, grow, and permanently die. No two relics share a story. Coming to Steam.">
   <meta name="twitter:image" content="https://echoes-of-the-garden.netlify.app/og-image.jpg">
 
   <!-- ═══ SCHEMA.ORG — VideoGame structured data ══════════════════════════ -->
@@ -41,7 +41,7 @@
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Echoes of the Garden",
-  "description": "An idle creature collector where creatures are born, grow, age and permanently die, leaving unique unrepeatable items tradeable on Steam Community Market.",
+  "description": "An idle creature collector where creatures are born, grow, age and permanently die, leaving relics that carry the name you gave them and the life they lived — tradeable on Steam Community Market.",
   "genre": ["Idle Game", "Creature Collector", "Simulation"],
   "gamePlatform": "PC",
   "operatingSystem": "Windows, macOS, Linux",
@@ -671,6 +671,11 @@
       background: var(--bg2);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
+    }
+
+    #systems {
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
     }
 
     .lifecycle-flow {
@@ -1616,7 +1621,8 @@
       }
 
       /* Lifecycle */
-      #lifecycle {
+      #lifecycle,
+      #systems {
         padding: 72px 0;
       }
 
@@ -2117,8 +2123,8 @@
       <h1 class="hero-title">Echoes of the<br>Garden</h1>
       <p class="hero-subtitle">Free to Play · Steam Community Market</p>
       <p class="hero-tagline">
-        A garden outside of time. Creatures born, grown, aged and permanently gone —
-        leaving unique items that can never be replicated. Nothing lasts. Everything matters.
+        A garden outside of time. Creatures born, grown, aged and permanently gone.
+        Every relic carries the name you gave it and the life it lived. No two share a story.
       </p>
       <div class="hero-actions">
         <a href="#newsletter" class="btn-primary">🌱 Get notified on launch</a>
@@ -2134,8 +2140,8 @@
           <div class="hero-stat-label">Creatures</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">∞</div>
-          <div class="hero-stat-label">Unique items</div>
+          <div class="hero-stat-num">10</div>
+          <div class="hero-stat-label">Echo Arc tiers</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">F2P</div>
@@ -2157,8 +2163,8 @@
           <p>In Echoes of the Garden you are <strong>the Gardener</strong> — a timeless entity who cultivates
             creature-seeds: beings that are part plant, part animal, part memory.</p>
           <p>Each creature has a <strong>real life cycle</strong>. They are born, grow, reach their peak, and age. When
-            they die, the loss is <em>permanent and irreversible</em>. What they leave behind can never be replicated
-            exactly.</p>
+            they die, the loss is <em>permanent and irreversible</em>. What they leave behind carries the name you gave
+            it and the life it lived.</p>
           <p>While you're away, <strong>the garden keeps living</strong>. When you return, you find a world that changed
             without you. An idle that never truly stops.</p>
         </div>
@@ -2174,7 +2180,7 @@
             <span class="pillar-icon" aria-hidden="true">💀</span>
             <div>
               <div class="pillar-name">Permanent Death</div>
-              <div class="pillar-desc">When a creature dies, it's gone. What it leaves is unique across the entire game.
+              <div class="pillar-desc">When a creature dies, it's gone. What it leaves carries its name and the life it lived.
               </div>
             </div>
           </div>
@@ -2187,10 +2193,11 @@
             </div>
           </div>
           <div class="pillar" role="listitem">
-            <span class="pillar-icon" aria-hidden="true">📖</span>
+            <span class="pillar-icon" aria-hidden="true">🧭</span>
             <div>
-              <div class="pillar-name">Collectable Lore</div>
-              <div class="pillar-desc">Memory Fragments reveal the story of a world that existed before yours.</div>
+              <div class="pillar-name">Curation, Not Hoarding</div>
+              <div class="pillar-desc">Twelve slots, six resonances. Neighbours harmonise or clash — where you plant
+                matters as much as what.</div>
             </div>
           </div>
         </div>
@@ -2218,11 +2225,11 @@
         </div>
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌸</span>
           <div class="lc-name">Adult</div>
-          <div class="lc-desc">Peak performance. Unique visual mutations visible. Highest market value.</div>
+          <div class="lc-desc">Peak performance. Mutations show on the sprite. Highest market value.</div>
         </div>
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🍂</span>
           <div class="lc-name">Elder</div>
-          <div class="lc-desc">Output declines. Generates rare Memory Fragments and unique crafting materials.</div>
+          <div class="lc-desc">Output declines. The last stretch before the choice that decides what it leaves behind.</div>
         </div>
         <div class="lc-stage death" role="listitem"><span class="lc-emoji" aria-hidden="true">✦</span>
           <div class="lc-name">Death</div>
@@ -2232,7 +2239,46 @@
       <div class="lifecycle-note reveal" role="note">
         <strong>The key decision:</strong> when your creature dies, choose between <em>Rebirth</em> — an Inherited Seed
         carrying its lineage and a new mutation — or <em>Preservation</em> — a static Relic with permanent garden
-        bonuses. You can only pick one. This choice has real weight.
+        bonuses. You can only pick one. This choice has real weight. Whichever you choose, every death also leaves a
+        <em>Vestigio</em> — the first tier of the Echo Arc.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SYSTEMS ═══════════════════════════════════════════════════════════ -->
+  <section id="systems" aria-labelledby="systems-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">How the Garden Grows</span>
+        <h2 id="systems-title" class="section-title">Three Systems, No Numbers</h2>
+        <p class="section-lead">The garden shows you things before it explains them. Everything below is qualitative in
+          play — the kind of player who watches, compares and theorises gets further than the one who optimises.</p>
+      </div>
+      <div class="trading-grid">
+        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">👁</span>
+          <div class="t-name">Encounters &amp; the Seed Altar</div>
+          <div class="t-rarity r-common">Acquisition</div>
+          <div class="t-desc">New species are not listed for sale. As a biome earns, something stirs — a quiet toast, a
+            dossier, a creature you have now <em>seen</em>. Only then will the Seed Altar trade for it. No timers, no
+            dice: the garden shows a creature before it will sell it.</div><span class="t-badge">Revealed, then
+            bought</span>
+        </article>
+        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🧭</span>
+          <div class="t-name">The Resonance Wheel</div>
+          <div class="t-rarity r-rare">Curation</div>
+          <div class="t-desc">Six resonances on a wheel — Arraigo, Ascua, Fulgor, Brisa, Escarcha, Umbra. Each creature
+            carries one, set by the hour it was born. Neighbours one step apart harmonise; opposites clash. Twelve
+            slots per biome, so placement is the puzzle, not the grind.</div><span class="t-badge">Gold border:
+            harmony · red: clash</span>
+        </article>
+        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🪶</span>
+          <div class="t-name">The Echo Arc</div>
+          <div class="t-rarity r-ancient">Crafting</div>
+          <div class="t-desc">Every death leaves a <em>Vestigio</em>. Combine them and climb: Rastro, Impronta, Murmullo,
+            Eco — ten tiers in all, ending in Origen. From tier four onward the forge can destroy the output instead of
+            producing it. Each ecosystem's materials are its own.</div><span class="t-badge">Tiers 1–5 now · 6–10 with
+            Steam</span>
+        </article>
       </div>
     </div>
   </section>
@@ -2276,7 +2322,7 @@
             <h3 class="eco-name">Suspended Garden</h3>
             <p class="eco-tagline">"Between dream and air." Ethereal creatures that exist halfway in another plane.</p>
             <div class="eco-tags"><span class="eco-tag">Exploration</span><span class="eco-tag">Rarity</span></div>
-            <div class="eco-meta eco-soon">7 creatures · coming in Early Access</div>
+            <div class="eco-meta eco-soon">7 creatures · first Early Access update</div>
           </div>
         </article>
         <article class="eco-card eco-cave reveal reveal-d3">
@@ -2287,7 +2333,7 @@
             <p class="eco-tagline">"The darkness that illuminates." Creatures that carry their own light and reveal
               what's hidden.</p>
             <div class="eco-tags"><span class="eco-tag">Exploration</span><span class="eco-tag">Survival</span></div>
-            <div class="eco-meta eco-soon">7 creatures · coming in Early Access</div>
+            <div class="eco-meta eco-soon">7 creatures · second Early Access update</div>
           </div>
         </article>
       </div>
@@ -2306,119 +2352,104 @@
       <h3 class="beast-biome-title beast-biome-roots">Roots of the World</h3>
       <div class="beast-grid">
         <a class="beast-card beast-roots reveal" href="/bestiary/earth-caterpillar/">
-          <img class="beast-sprite" src="assets/creatures/oruga_tierra.png"
-            alt="Earth Caterpillar — pixel creature sprite" width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/oruga_tierra.png" alt="Earth Caterpillar — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Earth Caterpillar</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Generous yield</div>
-          <p class="beast-flavor">Slow until it isn&#x27;t.</p>
+          <div class="beast-traits">Enduring life · Generous yield · Umbra resonance</div>
+          <p class="beast-flavor">Slow until it isn't.</p>
         </a>
         <a class="beast-card beast-roots reveal reveal-d1" href="/bestiary/elder-centipede/">
-          <img class="beast-sprite" src="assets/creatures/ciempies_anciano.png"
-            alt="Elder Centipede — pixel creature sprite" width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/ciempies_anciano.png" alt="Elder Centipede — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Elder Centipede</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Generous yield</div>
+          <div class="beast-traits">Enduring life · Generous yield · Escarcha resonance</div>
           <p class="beast-flavor">It navigates by sensing the decay of other creatures.</p>
         </a>
         <a class="beast-card beast-roots reveal reveal-d2" href="/bestiary/moss-lizard/">
-          <img class="beast-sprite" src="assets/creatures/lagarto_musgo.png" alt="Moss Lizard — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/lagarto_musgo.png" alt="Moss Lizard — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Moss Lizard</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Modest yield</div>
+          <div class="beast-traits">Enduring life · Modest yield · Arraigo resonance</div>
           <p class="beast-flavor">The first to arrive.</p>
         </a>
         <a class="beast-card beast-roots reveal" href="/bestiary/peat-slug/">
-          <img class="beast-sprite" src="assets/creatures/babosa_turba.png" alt="Peat Slug — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/babosa_turba.png" alt="Peat Slug — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Peat Slug</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Modest yield</div>
+          <div class="beast-traits">Enduring life · Modest yield · Arraigo resonance</div>
           <p class="beast-flavor">Slower than the moss it lives on.</p>
         </a>
         <a class="beast-card beast-roots reveal reveal-d1" href="/bestiary/root-beetle/">
-          <img class="beast-sprite" src="assets/creatures/escarabajo_raiz.png" alt="Root Beetle — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/escarabajo_raiz.png" alt="Root Beetle — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Root Beetle</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Generous yield</div>
-          <p class="beast-flavor">It spends most of its life underground, following root paths that have existed longer
-            than the biome.</p>
+          <div class="beast-traits">Enduring life · Generous yield · Escarcha resonance</div>
+          <p class="beast-flavor">It spends most of its life underground, following root paths that have existed longer than the biome.</p>
         </a>
         <a class="beast-card beast-roots reveal reveal-d2" href="/bestiary/root-mycelium/">
-          <img class="beast-sprite" src="assets/creatures/micelio_raiz.png" alt="Root Mycelium — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/micelio_raiz.png" alt="Root Mycelium — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Root Mycelium</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Steady life · Modest yield</div>
-          <p class="beast-flavor">It doesn&#x27;t move.</p>
+          <div class="beast-traits">Steady life · Modest yield · Fulgor resonance</div>
+          <p class="beast-flavor">It doesn't move.</p>
         </a>
         <a class="beast-card beast-roots reveal" href="/bestiary/stone-tortoise/">
-          <img class="beast-sprite" src="assets/creatures/tortuga_roca.png" alt="Stone Tortoise — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/tortuga_roca.png" alt="Stone Tortoise — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Stone Tortoise</h3>
           <div class="beast-eco">Roots of the World</div>
-          <div class="beast-traits">Enduring life · Modest yield</div>
+          <div class="beast-traits">Enduring life · Modest yield · Brisa resonance</div>
           <p class="beast-flavor">No one has ever seen it move at speed.</p>
         </a>
       </div>
       <h3 class="beast-biome-title beast-biome-ash">Tide of Ash</h3>
       <div class="beast-grid">
         <a class="beast-card beast-ash reveal" href="/bestiary/ash-drake/">
-          <img class="beast-sprite" src="assets/creatures/dragon_ceniza.png" alt="Ash Drake — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/dragon_ceniza.png" alt="Ash Drake — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Drake</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Bountiful yield</div>
+          <div class="beast-traits">Fleeting life · Bountiful yield · Ascua resonance</div>
           <p class="beast-flavor">Old for this biome — unheard of, really.</p>
         </a>
         <a class="beast-card beast-ash reveal reveal-d1" href="/bestiary/ash-salamander/">
-          <img class="beast-sprite" src="assets/creatures/salamandra_ceniza.png"
-            alt="Ash Salamander — pixel creature sprite" width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/salamandra_ceniza.png" alt="Ash Salamander — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Salamander</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Bountiful yield</div>
+          <div class="beast-traits">Fleeting life · Bountiful yield · Ascua resonance</div>
           <p class="beast-flavor">Born from ember, it rarely lasts a season.</p>
         </a>
         <a class="beast-card beast-ash reveal reveal-d2" href="/bestiary/ash-scorpion/">
-          <img class="beast-sprite" src="assets/creatures/escorpion_ceniza.png"
-            alt="Ash Scorpion — pixel creature sprite" width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/escorpion_ceniza.png" alt="Ash Scorpion — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ash Scorpion</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Generous yield</div>
+          <div class="beast-traits">Fleeting life · Generous yield · Brisa resonance</div>
           <p class="beast-flavor">Most ash creatures race through their lifecycle.</p>
         </a>
         <a class="beast-card beast-ash reveal" href="/bestiary/char-mole/">
-          <img class="beast-sprite" src="assets/creatures/topo_carbon.png" alt="Char Mole — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/topo_carbon.png" alt="Char Mole — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Char Mole</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Generous yield</div>
+          <div class="beast-traits">Fleeting life · Generous yield · Escarcha resonance</div>
           <p class="beast-flavor">The only ash creature that goes deeper instead of faster.</p>
         </a>
         <a class="beast-card beast-ash reveal reveal-d1" href="/bestiary/ember-falcon/">
-          <img class="beast-sprite" src="assets/creatures/halcon_brasa.png" alt="Ember Falcon — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/halcon_brasa.png" alt="Ember Falcon — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Ember Falcon</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Bountiful yield</div>
+          <div class="beast-traits">Fleeting life · Bountiful yield · Umbra resonance</div>
           <p class="beast-flavor">It never lands.</p>
         </a>
         <a class="beast-card beast-ash reveal reveal-d2" href="/bestiary/flame-wasp/">
-          <img class="beast-sprite" src="assets/creatures/avispa_llama.png" alt="Flame Wasp — pixel creature sprite"
-            width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/avispa_llama.png" alt="Flame Wasp — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Flame Wasp</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Bountiful yield</div>
+          <div class="beast-traits">Fleeting life · Bountiful yield · Ascua resonance</div>
           <p class="beast-flavor">Individually, inconsequential.</p>
         </a>
         <a class="beast-card beast-ash reveal" href="/bestiary/smoke-serpent/">
-          <img class="beast-sprite" src="assets/creatures/serpiente_humo.png"
-            alt="Smoke Serpent — pixel creature sprite" width="72" height="72" loading="lazy">
+          <img class="beast-sprite" src="assets/creatures/serpiente_humo.png" alt="Smoke Serpent — pixel creature sprite" width="72" height="72" loading="lazy">
           <h3 class="beast-name">Smoke Serpent</h3>
           <div class="beast-eco">Tide of Ash</div>
-          <div class="beast-traits">Fleeting life · Bountiful yield</div>
+          <div class="beast-traits">Fleeting life · Bountiful yield · Fulgor resonance</div>
           <p class="beast-flavor">Hard to see against the ashen ground.</p>
         </a>
         <article class="beast-card beast-secret reveal">
@@ -2438,46 +2469,31 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-eyebrow">Steam Community Market</span>
-        <h2 id="trading-title" class="section-title">Every Item is Unique</h2>
-        <p class="section-lead">Items are generated by gameplay, not purchased. What exists in Echoes can only exist
-          once. The market is driven entirely by players.</p>
+        <h2 id="trading-title" class="section-title">Every Relic Has a Story</h2>
+        <p class="section-lead">Items are generated by gameplay, not purchased. Every relic carries the name you gave it
+          and the life it lived. The market is driven entirely by players.</p>
       </div>
       <div class="trading-grid">
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">🌰</span>
-          <div class="t-name">Base Seeds</div>
-          <div class="t-rarity r-common">Common · Rare</div>
-          <div class="t-desc">Generated by farming and events. Entry point for new players. Always in demand.</div><span
-            class="t-badge">Steady market</span>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🧬</span>
+        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">🧬</span>
           <div class="t-name">Inherited Seeds</div>
-          <div class="t-rarity r-epic">Epic · Ancient</div>
-          <div class="t-desc">Born when a creature chooses Rebirth at death. Contains the lineage and mutations of its
-            progenitor. Value grows with each generation.</div><span class="t-badge">Unique per lineage</span>
+          <div class="t-rarity r-epic">Rare · Mythic</div>
+          <div class="t-desc">Born when a creature chooses Rebirth at death. Carries the lineage and mutations of its
+            progenitor; each generation rolls a little higher. Rare and above can be traded.</div><span
+            class="t-badge">Lineage travels</span>
         </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">💎</span>
+        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">💎</span>
           <div class="t-name">Relics</div>
-          <div class="t-rarity r-ancient">Ancient · Mythic</div>
-          <div class="t-desc">Only obtainable when a creature chooses Preservation. Each one has a unique permanent
-            effect on your garden.</div><span class="t-badge">High rarity</span>
+          <div class="t-rarity r-ancient">Rare · Mythic</div>
+          <div class="t-desc">Only obtainable when a creature chooses Preservation. Species and rarity set its effect — a
+            passive bonus to its home ecosystem that survives any trade. Its name, generation and epitaph travel with
+            it as its story.</div><span class="t-badge">The story goes with it</span>
         </article>
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">📜</span>
-          <div class="t-name">Memory Fragments</div>
-          <div class="t-rarity r-rare">Rare</div>
-          <div class="t-desc">Collectable lore pieces generated by Elder-phase creatures. Each fragment reveals part of
-            the world's story.</div><span class="t-badge">Lore collectors</span>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🎪</span>
-          <div class="t-name">Event Items</div>
-          <div class="t-rarity r-event">Limited · Never return</div>
-          <div class="t-desc">3 events per year. Items that will never be obtainable again. Value appreciates over time.
-          </div><span class="t-badge">Price appreciates</span>
-        </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🌀</span>
-          <div class="t-name">Era Relics</div>
-          <div class="t-rarity r-mythic">Mythic · One per game</div>
-          <div class="t-desc">The rarest item in the game. One per era, per player. Created from the most precious
-            materials across all 4 ecosystems.</div><span class="t-badge">Maximum value</span>
+        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🪶</span>
+          <div class="t-name">Echo Arc Materials</div>
+          <div class="t-rarity r-rare">Vestigio → Origen</div>
+          <div class="t-desc">Forged from what the dead leave behind, stacked by tier and ecosystem. Specialising in one
+            biome means wanting what another biome's gardeners have.</div><span class="t-badge">Traded by
+            tier</span>
         </article>
       </div>
       <div class="trading-disclaimer reveal" role="note">
@@ -2494,7 +2510,7 @@
         <span class="section-eyebrow">Development Plan</span>
         <h2 id="roadmap-title" class="section-title">The Road Ahead</h2>
         <p class="section-lead">Honest and public. Echoes is built by a single developer. Here's exactly where we are
-          and where we're going.</p>
+          and where we're going. Quarters are targets, not deadlines.</p>
       </div>
       <div class="roadmap-timeline" role="list" aria-label="Development roadmap">
 
@@ -2502,10 +2518,9 @@
           <div class="rm-content reveal">
             <div class="rm-phase">Phase 0</div>
             <div class="rm-title">Foundations</div>
-            <div class="rm-date">Months 1–2</div>
-            <div class="rm-desc">Technical prototype: one creature that is born, grows and dies. Core lifecycle system
-              built and tested.</div>
-            <span class="rm-tag">Playable prototype</span>
+            <div class="rm-date">Q2 2026 · done</div>
+            <div class="rm-desc">One creature born, grown and dead — and the save survives a restart. Lifecycle, offline progress, the death choice, inherited seeds.</div>
+            <span class="rm-tag">✅ Closed</span>
           </div>
           <div class="rm-dot-col">
             <div class="rm-dot"></div>
@@ -2520,22 +2535,20 @@
           </div>
           <div class="rm-content reveal">
             <div class="rm-phase">Phase 1</div>
-            <div class="rm-title">MVP Core</div>
-            <div class="rm-date">Months 3–7</div>
-            <div class="rm-desc">Full lifecycle, resources, crafting, permanent death, Steam Market integrated. First
-              creatures with final pixel art.</div>
-            <span class="rm-tag">Closed alpha</span>
+            <div class="rm-title">Garden Loop</div>
+            <div class="rm-date">Q3 2026 · closed July 2026</div>
+            <div class="rm-desc">Four navigable biomes, all 28 species defined, the Seed Altar and the full idle loop. Roots and Ash playable; Garden and Cave content moves to the Early Access updates.</div>
+            <span class="rm-tag">✅ Closed · v0.3.0</span>
           </div>
         </div>
 
         <div class="rm-item" data-p="2" role="listitem">
           <div class="rm-content reveal">
             <div class="rm-phase">Phase 2</div>
-            <div class="rm-title">Polish & Onboarding</div>
-            <div class="rm-date">Months 8–12</div>
-            <div class="rm-desc">Tutorial-free onboarding, sound design, visual feedback, real player playtesting. The
-              game feels right.</div>
-            <span class="rm-tag">Closed beta</span>
+            <div class="rm-title">Economy</div>
+            <div class="rm-date">Q4 2026 · closed October 2026</div>
+            <div class="rm-desc">Resources L2, Echo Arc tiers 1–5, the drop factory, the resonance wheel, encounters — and a simulated 30-day player that had to pass every gate before any of it shipped.</div>
+            <span class="rm-tag">✅ Closed · v0.6.0</span>
           </div>
           <div class="rm-dot-col">
             <div class="rm-dot"></div>
@@ -2550,22 +2563,20 @@
           </div>
           <div class="rm-content reveal">
             <div class="rm-phase">Phase 3</div>
-            <div class="rm-title">Early Access</div>
-            <div class="rm-date">Months 13–18</div>
-            <div class="rm-desc">EA launch with Roots of the World. Steam Market live. Community feedback actively
-              shapes the game.</div>
-            <span class="rm-tag">🚀 Early Access Steam</span>
+            <div class="rm-title">Steam Integration</div>
+            <div class="rm-date">Q2 – Q3 2027</div>
+            <div class="rm-desc">Relics and Echo Arc materials on the Community Market, granted server-side. Echo Arc tiers 6–10. Gated on Valve's review of the free-to-play economy.</div>
+            <span class="rm-tag">⏳ Next</span>
           </div>
         </div>
 
         <div class="rm-item" data-p="4" role="listitem">
           <div class="rm-content reveal">
             <div class="rm-phase">Phase 4</div>
-            <div class="rm-title">Full Launch v1.0</div>
-            <div class="rm-date">Months 19–26</div>
-            <div class="rm-desc">All 4 ecosystems. Full Prestige system. First seasonal event. Battle Pass. Exit Early
-              Access.</div>
-            <span class="rm-tag">🌿 v1.0 Full Release</span>
+            <div class="rm-title">Polish &amp; Early Access</div>
+            <div class="rm-date">Q4 2027 – Q1 2028</div>
+            <div class="rm-desc">Onboarding, settings, the Book of Echoes and the written lore. Early Access launches when a fresh player can get through unguided.</div>
+            <span class="rm-tag">🚀 Early Access Steam</span>
           </div>
           <div class="rm-dot-col">
             <div class="rm-dot"></div>

@@ -18,19 +18,20 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Homepage VideoGame JSON-LD enriched with character list
 - ✅ Card alignment fix (equal-height flex, footer-anchored badges)
 - ✅ build-bestiary.mjs generator + package.json (`npm run bestiary`)
+- ✅ `npm run bestiary` reads the local game checkout (private repo), emits
+  affinity / band_affinities + creature pages with lore and epitaph (2026-10-28)
+- ✅ Landing matches the game (2026-10-28): roadmap from game `ROADMAP.md`,
+  uniqueness promise per ADR-007, systems section (encounters, Seed Altar,
+  resonance wheel, Echo Arc), fabricated items/features removed
 
 ## Pending — your manual actions ⚠️
-- ⚠️ **[GAME REPO — hand to Claude Code]** The game's "Report a Bug" POSTs to
-  `echoesofthegarden.com/.netlify/functions/report` — a domain that isn't
-  bought, so the host doesn't resolve and every report from itch playtesters
-  fails (falls back to Save Backup; the report is lost). Re-point the game to
-  `echoes-of-the-garden.netlify.app/.netlify/functions/report` until EA.
-  (Flagged from session-12 notes; couldn't read live `hud.gd` — repo is
-  private. Confirm against the actual source.)
+- ✅ Game's "Report a Bug" re-pointed to
+  `echoes-of-the-garden.netlify.app/.netlify/functions/report` (game block
+  A.1, 2026-10-28)
 - ⚠️ Netlify: set REPORT_EMAIL env var — the second half of the same fix: even
   with the URL corrected, `report.js` delivers nothing until this is set
-- ⚠️ Run `npm run bestiary` once the game's branch is merged to `main` (the
-  bundled HTML was baked from a local workspace for now)
+- ⚠️ `npm run bestiary` needs the game checkout at `../echoes-of-the-garden`
+  on `main` (or `GAME_DIR=`); the raw-GitHub fetch never worked (private repo)
 
 ## Deferred to Early Access 🗓 (do NOT start in dev)
 - 🗓 Buy `echoesofthegarden.com` (Namecheap) — planned EA-time purchase, not a
@@ -43,7 +44,8 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   resolves
 
 ## Phase W2 — remaining ⏳
-- ⏳ Lore-forward section on the landing page (epitaph / death prose)
+- ⏳ Lore-forward section on the landing page (epitaph / death prose) —
+  creature pages already show the epitaph; the homepage doesn't yet
 - ⏳ Steam page link (CTA + JSON-LD sameAs) — blocked on Steam page existing
 - ⏳ Per-section OG images (bestiary share ≠ homepage share)
 

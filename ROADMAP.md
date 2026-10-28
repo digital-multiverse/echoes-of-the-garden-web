@@ -36,8 +36,15 @@
   truth), baked as static indexable HTML, grouped by biome, cards link out.
 - ✅ Per-creature lore pages (`/bestiary/{slug}/`), indexable, OG + JSON-LD.
 - ✅ sitemap.xml + robots.txt; VideoGame JSON-LD enriched with character list.
-- ⏳ Lore-forward landing content: surface a real epitaph / death prose
-  (the feeling, not just the feature list). Pull from death_flavor.
+- ✅ Creature pages carry the full lore + death epitaph (`death_flavor`) and
+  the resonance / birth-band table (2026-10-28).
+- ✅ Landing content matches the game (2026-10-28, game-side block A.4):
+  roadmap mirrors the game's `ROADMAP.md`; uniqueness promise per ADR-007
+  addendum; systems section (encounters + Seed Altar, resonance wheel, Echo
+  Arc); invented items (Memory Fragments, Event Items, Era Relics, Battle
+  Pass, Prestige) removed.
+- ⏳ Lore-forward landing content: a real epitaph on the homepage itself
+  (the feeling, not just the feature list).
 - ⏳ Link the Steam page (sameAs in JSON-LD + visible CTA) once it exists.
 - ⏳ Per-section OG images for deep-link social shares.
 
@@ -75,8 +82,10 @@ hand-translating content that will change.*
   `echoesofthegarden.com` before it's bought and live — that would point
   canonical/OG/JSON-LD at a domain that doesn't resolve and break the live
   site's SEO. The migration is a single tracked task (W2 ⏳ above).
-- **Content drift**: the bestiary auto-syncs via `npm run bestiary`, but only
-  after the game's branch is on `main`. Re-run after game lore changes.
+- **Content drift**: the bestiary auto-syncs via `npm run bestiary` from the
+  sibling game checkout (private repo → no HTTP). Re-run with the game on
+  `main` after lore/creature changes. The roadmap section is hand-mirrored
+  from the game's `ROADMAP.md` — re-check at every phase close.
 - **i18n maintenance cost**: only worth it automated (W4) — manual trilingual
   upkeep would not be sustainable solo.
 - **The web is secondary to Steam for traffic** — prioritize the wishlist CTA
