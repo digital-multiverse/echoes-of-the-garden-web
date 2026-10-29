@@ -1,6 +1,6 @@
 {
   "source": "../echoes-of-the-garden/data/creatures",
-  "count": 14,
+  "count": 28,
   "creatures": [
     {
       "id": "oruga_tierra",
@@ -267,6 +267,272 @@
       "lore": "Hard to see against the ashen ground. It doesn't hunt so much as drift — arriving wherever warmth remains after a fire has passed. By the time the smoke clears, it is already gone.",
       "death_flavor": "The warmth where it coiled has already dissipated.",
       "sprite": "assets/creatures/serpiente_humo.png"
+    },
+    {
+      "id": "libelula_cristal",
+      "name": "Crystal Dragonfly",
+      "slug": "crystal-dragonfly",
+      "ecosystem": "garden",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Escarcha",
+        "Brisa",
+        "Fulgor",
+        "Ascua"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "Transparent from certain angles.",
+      "lore": "Transparent from certain angles. From others, it refracts light into patterns on the ground below it. It isn't performing anything — that's simply what it is.",
+      "death_flavor": "The refraction it left in the air persists for a moment, then finds its way to the ground.",
+      "sprite": "assets/creatures/libelula_cristal.png"
+    },
+    {
+      "id": "mariposa_eterea",
+      "name": "Ethereal Butterfly",
+      "slug": "ethereal-butterfly",
+      "ecosystem": "garden",
+      "affinity": "Arraigo",
+      "band_affinities": [
+        "Ascua",
+        "Arraigo",
+        "Umbra",
+        "Escarcha"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "Its wings shouldn't keep it aloft.",
+      "lore": "Its wings shouldn't keep it aloft. It loses altitude so slowly it barely registers — falling at all times, just sideways. It doesn't seem concerned about this.",
+      "death_flavor": "The pollen it carried is already settling somewhere it will matter.",
+      "sprite": "assets/creatures/mariposa_eterea.png"
+    },
+    {
+      "id": "serpiente_niebla",
+      "name": "Mist Serpent",
+      "slug": "mist-serpent",
+      "ecosystem": "garden",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Arraigo",
+        "Umbra",
+        "Escarcha",
+        "Brisa"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It prefers the space between stages — the moment after one thing ends and before the next begins.",
+      "lore": "It prefers the space between stages — the moment after one thing ends and before the next begins. It has learned to extend those moments. Whether it does this consciously is unclear.",
+      "death_flavor": "The mist it moved through briefly holds the shape of something passing.",
+      "sprite": "assets/creatures/serpiente_niebla.png"
+    },
+    {
+      "id": "polilla_luna",
+      "name": "Moon Moth",
+      "slug": "moon-moth",
+      "ecosystem": "garden",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Umbra",
+        "Escarcha",
+        "Brisa",
+        "Fulgor"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It only fully feeds at the slowest part of the night.",
+      "lore": "It only fully feeds at the slowest part of the night. Patient in a way that feels less like waiting and more like knowing — as if it already knows the light will return and sees no reason to hurry toward it.",
+      "death_flavor": "The scales it shed are still catching light that no longer exists.",
+      "sprite": "assets/creatures/polilla_luna.png"
+    },
+    {
+      "id": "arana_seda",
+      "name": "Silk Spider",
+      "slug": "silk-spider",
+      "ecosystem": "garden",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Fulgor",
+        "Brisa",
+        "Escarcha",
+        "Umbra"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It builds continuously, even when there is nowhere left to build.",
+      "lore": "It builds continuously, even when there is nowhere left to build. The web grows around itself, each generation adding another layer to something that was already complete.",
+      "death_flavor": "The web it left will hold weight long after anyone remembers it built it.",
+      "sprite": "assets/creatures/arana_seda.png"
+    },
+    {
+      "id": "colibri_suspension",
+      "name": "Suspended Hummingbird",
+      "slug": "suspended-hummingbird",
+      "ecosystem": "garden",
+      "affinity": "Arraigo",
+      "band_affinities": [
+        "Ascua",
+        "Arraigo",
+        "Umbra",
+        "Escarcha"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It moves constantly, but at high enough frequency that the effect is stillness.",
+      "lore": "It moves constantly, but at high enough frequency that the effect is stillness. It has found a way to be in one place by never stopping moving. This seems exhausting. It does not appear exhausted.",
+      "death_flavor": "The air where it hovered is still vibrating.",
+      "sprite": "assets/creatures/colibri_suspension.png"
+    },
+    {
+      "id": "medusa_velo",
+      "name": "Veil Jellyfish",
+      "slug": "veil-jellyfish",
+      "ecosystem": "garden",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Escarcha",
+        "Umbra",
+        "Arraigo",
+        "Ascua"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It drifts rather than swims.",
+      "lore": "It drifts rather than swims. Where other creatures navigate, it simply adjusts — a slight tilt, a slow rotation — and ends up wherever the air currents decide.",
+      "death_flavor": "The veil it trailed has already dispersed into something the rest of the garden can breathe.",
+      "sprite": "assets/creatures/medusa_velo.png"
+    },
+    {
+      "id": "polipo_abismo",
+      "name": "Abyss Polyp",
+      "slug": "abyss-polyp",
+      "ecosystem": "cave",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Umbra",
+        "Escarcha",
+        "Brisa",
+        "Fulgor"
+      ],
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Anchored to the deepest point of the cave floor.",
+      "lore": "Anchored to the deepest point of the cave floor. Where other fixed creatures simply endure, this one feeds — slowly, persistently, on whatever the dark brings past it.",
+      "death_flavor": "The anchor point it held is already being colonised by something smaller.",
+      "sprite": "assets/creatures/polipo_abismo.png"
+    },
+    {
+      "id": "serpiente_abismo",
+      "name": "Abyss Serpent",
+      "slug": "abyss-serpent",
+      "ecosystem": "cave",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Brisa",
+        "Escarcha",
+        "Umbra",
+        "Arraigo"
+      ],
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "It comes from somewhere below the known cave.",
+      "lore": "It comes from somewhere below the known cave. Its resource yield doesn't match its lifecycle length by any formula that works for other creatures. Something else is contributing.",
+      "death_flavor": "For a moment after it dies, every other creature in the garden generates one final tick. Then the cave is quiet again.",
+      "sprite": "assets/creatures/serpiente_abismo.png"
+    },
+    {
+      "id": "escorpion_caverna",
+      "name": "Cave Scorpion",
+      "slug": "cave-scorpion",
+      "ecosystem": "cave",
+      "affinity": "Escarcha",
+      "band_affinities": [
+        "Brisa",
+        "Escarcha",
+        "Umbra",
+        "Arraigo"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It doesn't move unless it has to.",
+      "lore": "It doesn't move unless it has to. In the deep cave, not moving is a strategy — everything that found it first assumed it was stone. By the time they learned otherwise, it had already been there for years.",
+      "death_flavor": "The depression it carved in the rock will outlast everything else in this record.",
+      "sprite": "assets/creatures/escorpion_caverna.png"
+    },
+    {
+      "id": "cangrejo_cristal",
+      "name": "Crystal Crab",
+      "slug": "crystal-crab",
+      "ecosystem": "cave",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Fulgor",
+        "Brisa",
+        "Escarcha",
+        "Umbra"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "Its shell has grown around the quartz deposits it rests against.",
+      "lore": "Its shell has grown around the quartz deposits it rests against. Removing it from its spot is theoretically possible. It would not be the same creature afterward.",
+      "death_flavor": "The quartz where it rested is fractionally brighter than the surrounding rock.",
+      "sprite": "assets/creatures/cangrejo_cristal.png"
+    },
+    {
+      "id": "pez_luz",
+      "name": "Light Fish",
+      "slug": "light-fish",
+      "ecosystem": "cave",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Arraigo",
+        "Umbra",
+        "Escarcha",
+        "Brisa"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "It generates its own light, which it uses to navigate tunnels that have no other source.",
+      "lore": "It generates its own light, which it uses to navigate tunnels that have no other source. Whether it needs the light to see or whether it simply prefers to illuminate what it passes through is not clear.",
+      "death_flavor": "The tunnel it was in is darker than before it arrived.",
+      "sprite": "assets/creatures/pez_luz.png"
+    },
+    {
+      "id": "anguila_fosforo",
+      "name": "Phosphor Eel",
+      "slug": "phosphor-eel",
+      "ecosystem": "cave",
+      "affinity": "Umbra",
+      "band_affinities": [
+        "Escarcha",
+        "Umbra",
+        "Arraigo",
+        "Ascua"
+      ],
+      "lifespan": "Fleeting",
+      "yield": "Bountiful",
+      "flavor": "Leaves a trail of light as it moves.",
+      "lore": "Leaves a trail of light as it moves. The trail fades in minutes, but while it lasts, other creatures seem to follow it — whether because of the light or in spite of it isn't certain.",
+      "death_flavor": "The trail it left takes a little longer to fade than usual.",
+      "sprite": "assets/creatures/anguila_fosforo.png"
+    },
+    {
+      "id": "caracol_cuarzo",
+      "name": "Quartz Snail",
+      "slug": "quartz-snail",
+      "ecosystem": "cave",
+      "affinity": "Brisa",
+      "band_affinities": [
+        "Escarcha",
+        "Brisa",
+        "Fulgor",
+        "Ascua"
+      ],
+      "lifespan": "Steady",
+      "yield": "Generous",
+      "flavor": "Each generation is slightly larger than the last.",
+      "lore": "Each generation is slightly larger than the last. The shell it leaves becomes the base for the next. At this rate, in enough generations, the shell would be the largest thing in the cave. This is presumably fine.",
+      "death_flavor": "The shell it left is already being filled with sediment from above.",
+      "sprite": "assets/creatures/caracol_cuarzo.png"
     }
   ]
 }
