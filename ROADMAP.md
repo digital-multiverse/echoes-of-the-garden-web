@@ -43,6 +43,9 @@
   addendum; systems section (encounters + Seed Altar, resonance wheel, Echo
   Arc); invented items (Memory Fragments, Event Items, Era Relics, Battle
   Pass, Prestige) removed.
+- ✅ Post-ADR-012 pass (2026-10-29): roadmap order Phase 4 → 3, Market as the
+  first major update after EA; all 28 species in the bestiary; in-engine
+  screenshots + GIF; Early Access scope section; itch CTA.
 - ⏳ Lore-forward landing content: a real epitaph on the homepage itself
   (the feeling, not just the feature list).
 - ⏳ Link the Steam page (sameAs in JSON-LD + visible CTA) once it exists.

@@ -17,5 +17,5 @@ The game repo is private, so the script reads a **local checkout** (the
   (full lore, death epitaph, resonance + birth-band table)
 - `assets/creatures/{id}.png` — sprites copied from the game
 
-Not touched by the script: `sitemap.xml` and the homepage JSON-LD character
-list — update by hand if a creature is added or renamed.
+Also regenerated from the same records: `sitemap.xml` and the homepage JSON-LD
+`character` list (all 28 species; `data/creatures/variants/` stays secret).

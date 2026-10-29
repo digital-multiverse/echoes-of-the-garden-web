@@ -23,6 +23,12 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Landing matches the game (2026-10-28): roadmap from game `ROADMAP.md`,
   uniqueness promise per ADR-007, systems section (encounters, Seed Altar,
   resonance wheel, Echo Arc), fabricated items/features removed
+- ✅ Post-ADR-012 pass (2026-10-29, game s74): roadmap Phase 4 before Phase 3,
+  Market = first major update after EA; bestiary = all 28 species (Garden/Cave
+  sprites); in-engine screenshots + GIF section; "What the Garden Holds Now"
+  (Book of Echoes, ceremony, fragments, stats, en/es/it); itch "Play in
+  browser" CTA; generator now also writes sitemap.xml + JSON-LD characters;
+  the Gardener no longer named on the site (ADR-013)
 
 ## Pending — your manual actions ⚠️
 - ✅ Game's "Report a Bug" re-pointed to
@@ -44,6 +50,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   resolves
 
 ## Phase W2 — remaining ⏳
+- ⏳ Devlog: first entry (the section still shows the empty state)
 - ⏳ Lore-forward section on the landing page (epitaph / death prose) —
   creature pages already show the epitaph; the homepage doesn't yet
 - ⏳ Steam page link (CTA + JSON-LD sameAs) — blocked on Steam page existing
