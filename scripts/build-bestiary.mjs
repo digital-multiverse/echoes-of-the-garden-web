@@ -12,7 +12,7 @@
  *
  * Usage:  npm run bestiary          (GAME_DIR=/path/to/game npm run bestiary)
  */
-import { writeFile, mkdir, readFile, copyFile } from "node:fs/promises";
+import { writeFile, mkdir, readFile, copyFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const GAME = process.env.GAME_DIR ?? "../echoes-of-the-garden";
@@ -20,16 +20,13 @@ const CREATURE_DIR = join(GAME, "data/creatures");
 const SPRITE_DIR = join(GAME, "assets/sprites/creatures");
 const SITE = "https://echoes-of-the-garden.netlify.app";
 
-// Launch creatures = Roots + Ash. Cave/garden .tres are sprite-less stubs.
-const LAUNCH_IDS = [
-  "lagarto_musgo", "tortuga_roca", "escarabajo_raiz", "babosa_turba",
-  "oruga_tierra", "ciempies_anciano", "micelio_raiz",
-  "salamandra_ceniza", "halcon_brasa", "escorpion_ceniza", "serpiente_humo",
-  "avispa_llama", "topo_carbon", "dragon_ceniza",
-];
+// All 28 species: every top-level .tres (data/creatures/variants = synthesis forms, kept secret).
+const LAUNCH_IDS = (await readdir(CREATURE_DIR)).filter((f) => f.endsWith(".tres")).map((f) => f.slice(0, -5)).sort();
 
-const ECO_LABEL = { roots: "Roots of the World", ash: "Tide of Ash" };
-const ECO_ORDER = { roots: 0, ash: 1 };
+const ECO_LABEL = { roots: "Roots of the World", ash: "Tide of Ash", garden: "Suspended Garden", cave: "Luminous Cave" };
+const ECO_ORDER = { roots: 0, ash: 1, garden: 2, cave: 3 };
+// ADR-011: garden/cave ship with the first two Early Access content updates.
+const ECO_NOTE = { garden: " — first Early Access update", cave: " — second Early Access update" };
 // ADR-009: band_affinities index = birth band (UTC 6h bands).
 const BANDS = ["night", "morning", "midday", "evening"];
 
@@ -116,15 +113,16 @@ const TEASER = `        <article class="beast-card beast-secret reveal">
           <p class="beast-flavor">Two more forms exist. No seed sells them. They are learned.</p>
         </article>`;
 
-/** Grouped-by-biome grid with subheadings — the teaser closes the Ash group. */
+/** Grouped-by-biome grid with subheadings — the teaser closes the last group. */
 function renderGrid(records) {
   const sections = [];
-  for (const [eco, title, cls] of [["roots", "Roots of the World", "roots"],
-                                    ["ash", "Tide of Ash", "ash"]]) {
+  const ecos = Object.keys(ECO_ORDER);
+  for (const eco of ecos) {
     const group = records.filter((r) => r.ecosystem === eco);
     const cards = group.map((r, i) => card(r, i)).join("\n");
-    const tail = eco === "ash" ? "\n" + TEASER : "";
-    sections.push(`      <h3 class="beast-biome-title beast-biome-${cls}">${title}</h3>
+    const tail = eco === ecos.at(-1) ? "\n" + TEASER : "";
+    const title = ECO_LABEL[eco] + (ECO_NOTE[eco] ?? "");
+    sections.push(`      <h3 class="beast-biome-title beast-biome-${eco}">${title}</h3>
       <div class="beast-grid">
 ${cards}${tail}
       </div>`);
@@ -171,6 +169,8 @@ ${ld}
     .eco { text-transform: uppercase; letter-spacing: .1em; font-size: 13px; margin-bottom: 4px }
     .eco.roots { color: var(--green) }
     .eco.ash { color: var(--amber) }
+    .eco.garden { color: #b8aee0 }
+    .eco.cave { color: #e8c870 }
     .traits { color: var(--dim); font-size: 14px; margin-bottom: 6px }
     .bands { color: var(--dim); font-size: 13px; margin-bottom: 24px }
     .lore { max-width: 540px; font-size: 18px; font-style: italic; margin-bottom: 16px }
@@ -231,6 +231,20 @@ async function main() {
     await writeFile(`bestiary/${r.slug}/index.html`, page(r));
   }
   console.log(`${records.length} creature pages written under bestiary/`);
+
+  // Homepage JSON-LD character list + sitemap.xml follow the same records.
+  const chars = records.map((r) => ({ "@type": "Thing", name: r.name, url: `${SITE}/bestiary/${r.slug}/` }));
+  html = html.replace(/"character": \[[\s\S]*?\]\n/, () => `"character": ${JSON.stringify(chars)}\n`);
+  await writeFile("index.html", html);
+  const urls = records.map((r) =>
+    `  <url><loc>${SITE}/bestiary/${r.slug}/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
+  await writeFile("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${SITE}/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+${urls.join("\n")}
+</urlset>
+`);
+  console.log("JSON-LD character list + sitemap.xml updated");
   console.log("Done. Review the diff, then commit.");
 }
 

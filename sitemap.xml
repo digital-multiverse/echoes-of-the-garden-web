@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://echoes-of-the-garden.netlify.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/flame-wasp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/peat-slug/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/elder-centipede/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-drake/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/root-beetle/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ember-falcon/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/moss-lizard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/root-mycelium/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/earth-caterpillar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-salamander/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/smoke-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/char-mole/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/elder-centipede/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/moss-lizard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/peat-slug/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/root-beetle/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/root-mycelium/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/stone-tortoise/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-drake/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-salamander/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ash-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/char-mole/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ember-falcon/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/flame-wasp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/smoke-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/crystal-dragonfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/ethereal-butterfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/mist-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/moon-moth/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/silk-spider/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/suspended-hummingbird/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/veil-jellyfish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/abyss-polyp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/abyss-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/cave-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/crystal-crab/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoes-of-the-garden.netlify.app/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
