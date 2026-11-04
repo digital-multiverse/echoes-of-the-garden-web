@@ -71,13 +71,14 @@ const WELCOME_HTML = `
       an exclusive item only available to newsletter subscribers.
     </p>
     <div style="border-top:1px solid #222820;padding-top:24px;text-align:center">
-      <a href="https://echoes-of-the-garden.netlify.app/" style="color:#5a9e6a;font-size:14px;text-decoration:none">
+      <a href="https://echoesofthegarden.com/" style="color:#5a9e6a;font-size:14px;text-decoration:none">
         echoesofthegarden.com
       </a>
     </div>
     <p style="color:#3a5040;font-size:12px;text-align:center;margin-top:16px;line-height:1.5">
       You received this because you subscribed at echoesofthegarden.com.<br>
-      No spam, ever. Unsubscribe at any time.
+      No spam, ever. <a href="mailto:hello@echoesofthegarden.com?subject=unsubscribe" style="color:#5a9e6a">Unsubscribe</a> at any time ·
+      <a href="https://echoesofthegarden.com/privacy/" style="color:#5a9e6a">Privacy</a>
     </p>
   </div>
 </body>
@@ -120,6 +121,8 @@ async function subscribe(request, env) {
         from: 'Echoes of the Garden <hello@echoesofthegarden.com>',
         to: email,
         subject: '🌱 Welcome to Echoes of the Garden',
+        // ponytail: unsubscribing is a manual mail to hello@; a signed one-click link if the list grows.
+        headers: { 'List-Unsubscribe': '<mailto:hello@echoesofthegarden.com?subject=unsubscribe>' },
         html: WELCOME_HTML,
       }, env.RESEND_API_KEY);
       // The contact is saved, so the visitor is subscribed either way. Keep the failure visible in the logs.

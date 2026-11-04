@@ -43,10 +43,10 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
   `.assetsignore`, tests with `node --test src/`
 - ✅ Deployed to workers.dev in the Info account, secrets set, Resend domain verified, real subscribe and report delivered (2026-11-04). A max-size save used 10 ms of CPU
-- ⏳ Rewrite the absolute URLs, then add the custom domains to `wrangler.jsonc`
-- ⏳ Newsletter: unsubscribe link in the welcome email and a privacy notice
-- ⏳ Netlify: set `RESEND_API_KEY` and `REPORT_EMAIL` if v0.12.0 goes out before the cut-over, or its bug reports are lost
-- ⏳ infra connects `echoesofthegarden.com` + `www`; `workers_dev` to false; www redirect at the edge
+- ✅ Absolute URLs rewritten, root custom domain in `wrangler.jsonc`, Netlify redirects to the domain
+- ✅ Newsletter: unsubscribe mail link, `List-Unsubscribe` header and `/privacy/`
+- ⏳ Privacy page: add the owner's legal name (José to decide)
+- ⏳ Deploy the root domain (tell infra right before); infra checks it; José adds `www` and its 301
 - ⏳ Game: `REPORT_URL` to `https://echoesofthegarden.com/api/report` in the next build
 - ⏳ Delete `netlify.toml` and `netlify/functions/` only when no published build posts to netlify.app. Do NOT
   add `"type": "module"` to `package.json` before that: it breaks those CommonJS functions

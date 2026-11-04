@@ -18,7 +18,7 @@ import { join } from "node:path";
 const GAME = process.env.GAME_DIR ?? "../echoes-of-the-garden";
 const CREATURE_DIR = join(GAME, "data/creatures");
 const SPRITE_DIR = join(GAME, "assets/sprites/creatures");
-const SITE = "https://echoes-of-the-garden.netlify.app";
+const SITE = "https://echoesofthegarden.com";
 
 // All 28 species: every top-level .tres (data/creatures/variants = synthesis forms, kept secret).
 const LAUNCH_IDS = (await readdir(CREATURE_DIR)).filter((f) => f.endsWith(".tres")).map((f) => f.slice(0, -5)).sort();
