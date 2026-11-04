@@ -28,7 +28,7 @@ Echoes of the Garden is a free-to-play idle creature collector where every creat
 | Site | Static HTML/CSS/JS — no framework |
 | Hosting | [Netlify](https://netlify.com) (free tier) |
 | Newsletter | [Resend](https://resend.com) via Netlify Functions |
-| Domain | echoesofthegarden.com (Namecheap) |
+| Domain | echoesofthegarden.com + .es (dondominio), not connected until EA |
 
 ---
 
@@ -97,7 +97,7 @@ RESEND_AUDIENCE_ID   = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ### Custom domain
 
-In Netlify: **Domain settings → Add custom domain** → follow the DNS instructions for Namecheap.
+In Netlify: **Domain settings → Add custom domain** → follow the DNS instructions for dondominio.
 
 ---
 

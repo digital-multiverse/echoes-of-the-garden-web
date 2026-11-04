@@ -40,11 +40,14 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   on `main` (or `GAME_DIR=`); the raw-GitHub fetch never worked (private repo)
 
 ## Deferred to Early Access 🗓 (do NOT start in dev)
-- 🗓 Buy `echoesofthegarden.com` (Namecheap) — planned EA-time purchase, not a
-  dev expense; netlify.app is the home until then
+- ✅ `echoesofthegarden.com` + `echoesofthegarden.es` bought (2026-11-04, DNS at
+  dondominio); netlify.app stays the home until the migration below
 - 🗓 Add the domain to Netlify as custom + set PRIMARY (301 netlify.app → .com)
+- 🗓 Point `.es` at the `.com` (301)
+- 🗓 Fix the `www` rule in `netlify.toml`: it sends www.echoesofthegarden.com to
+  netlify.app (with a double slash), the opposite of the migration
 - 🗓 Rewrite all absolute URLs to the new origin: `index.html` (7),
-  `sitemap.xml` (15), `robots.txt` Sitemap line. Until bought, netlify.app is
+  `sitemap.xml` (15), `robots.txt` Sitemap line. Until connected, netlify.app is
   correct — leave it
 - 🗓 Re-point the game's report endpoint from netlify.app to `.com` once it
   resolves

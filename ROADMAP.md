@@ -9,9 +9,10 @@
 
 ## Phase W1 — Foundation ✅ (done)
 - Static site live on Netlify at `echoes-of-the-garden.netlify.app`, brand
-  design system (Crimson Pro / Cinzel, forest-dark palette). Custom domain
-  `echoesofthegarden.com` is NOT bought yet — deliberately deferred to EA
-  (see W3 + Top risks). The netlify.app subdomain is the current home.
+  design system (Crimson Pro / Cinzel, forest-dark palette). Custom domains
+  `echoesofthegarden.com` and `.es` were bought on 2026-11-04 but are not
+  connected: going live stays deferred to EA (see W3 + Top risks). The
+  netlify.app subdomain is the current home.
 - Newsletter capture via Resend (`subscribe.js`), hardened (honeypot, rate
   limit, normalization).
 - Bug-report endpoint (`report.js`) — the one cross-repo contract with the
@@ -24,9 +25,9 @@
   twitter:image, JSON-LD (`url`/`image`/14 `character` URLs), sitemap.xml and
   the robots Sitemap directive all agree. No split, no duplicate-content risk
   while on a single domain. (Earlier docs claimed this was "unified to
-  echoesofthegarden.com" — false: that domain isn't bought. Corrected.)
+  echoesofthegarden.com" — false: that domain wasn't bought then. Corrected.)
 - ⏳ **Migrate to `echoesofthegarden.com` at EA** — NOT before; the domain is
-  unbought by design (dev runs free on netlify.app). When bought: add it as a
+  bought (2026-11-04) but stays unconnected until then. At EA: add it as a
   Netlify custom domain + set PRIMARY (301 the netlify.app host), then rewrite
   every absolute URL to the new origin — `index.html` (7: canonical, og:url,
   og:image, twitter:image, JSON-LD url/image/character), `sitemap.xml` (15),
@@ -80,9 +81,9 @@ hand-translating content that will change.*
 ---
 
 ## Top risks / notes
-- **Domain is netlify.app until EA**: the custom domain is a deliberate
-  EA-time purchase, not a dev expense. Do NOT rewrite the netlify.app URLs to
-  `echoesofthegarden.com` before it's bought and live — that would point
+- **Domain is netlify.app until EA**: `echoesofthegarden.com` is bought
+  (2026-11-04) but connecting it is a deliberate EA-time step. Do NOT rewrite
+  the netlify.app URLs to `echoesofthegarden.com` before it's connected and live — that would point
   canonical/OG/JSON-LD at a domain that doesn't resolve and break the live
   site's SEO. The migration is a single tracked task (W2 ⏳ above).
 - **Content drift**: the bestiary auto-syncs via `npm run bestiary` from the
