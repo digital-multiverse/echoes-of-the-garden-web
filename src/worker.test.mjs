@@ -32,6 +32,8 @@ test('a new subscriber gets a contact and a welcome email', async () => {
   assert.match(calls[0].url, /audiences\/a\/contacts$/);
   assert.equal(calls[0].body.email, 'ana@example.com');
   assert.match(calls[1].body.html, /Founder's Seed/);
+  assert.match(calls[1].body.html, /mailto:hello@echoesofthegarden\.com\?subject=unsubscribe/);
+  assert.match(calls[1].body.headers['List-Unsubscribe'], /^<mailto:/);
 });
 
 test('an existing subscriber gets no second welcome', async () => {

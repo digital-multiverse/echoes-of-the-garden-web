@@ -11,8 +11,8 @@
     "directory": ".",
     "run_worker_first": ["/api/*"]
   },
-  // Test phase: workers.dev only. At the cut-over add the custom domains and set workers_dev to false,
-  // so search engines get no second copy of the site.
-  "workers_dev": true,
+  // Only the root domain: www is a 301 at the edge, not on the Worker. No workers.dev copy for search engines.
+  "routes": [{ "pattern": "echoesofthegarden.com", "custom_domain": true }],
+  "workers_dev": false,
   "preview_urls": false
 }

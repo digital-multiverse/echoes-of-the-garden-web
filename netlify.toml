@@ -1,3 +1,4 @@
+# The site lives on Cloudflare Workers (wrangler.jsonc). Netlify only sends old links to the real domain.
 [build]
   functions = "netlify/functions"
   publish   = "."
@@ -5,15 +6,8 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Headers live in _headers, shared with Cloudflare Workers until the cut-over.
-
-# The page posts to /api/*: the same index.html works on Netlify and on the Worker.
 [[redirects]]
-  from   = "/api/*"
-  to     = "/.netlify/functions/:splat"
-  status = 200
-
-[[redirects]]
-  from   = "/bestiary/*"
-  to     = "/bestiary/:splat/index.html"
-  status = 200
+  from   = "/*"
+  to     = "https://echoesofthegarden.com/:splat"
+  status = 301
+  force  = true
