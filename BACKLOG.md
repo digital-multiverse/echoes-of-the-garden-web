@@ -42,7 +42,10 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 ## Move to Cloudflare Workers 🔄 (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
   `.assetsignore`, tests with `node --test src/`
-- ⏳ First deploy to workers.dev, secrets (`RESEND_API_KEY`, `RESEND_AUDIENCE_ID`, `REPORT_EMAIL`), real test
+- ✅ Deployed to workers.dev in the Info account, secrets set, Resend domain verified, real subscribe and report delivered (2026-11-04). A max-size save used 10 ms of CPU
+- ⏳ Rewrite the absolute URLs, then add the custom domains to `wrangler.jsonc`
+- ⏳ Newsletter: unsubscribe link in the welcome email and a privacy notice
+- ⏳ Netlify: set `RESEND_API_KEY` and `REPORT_EMAIL` if v0.12.0 goes out before the cut-over, or its bug reports are lost
 - ⏳ infra connects `echoesofthegarden.com` + `www`; `workers_dev` to false; www redirect at the edge
 - ⏳ Game: `REPORT_URL` to `https://echoesofthegarden.com/api/report` in the next build
 - ⏳ Delete `netlify.toml` and `netlify/functions/` only when no published build posts to netlify.app. Do NOT
