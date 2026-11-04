@@ -1,2 +1,0 @@
-# Netlify: serve clean bestiary URLs and enforce trailing slash
-/bestiary/*  /bestiary/:splat/index.html  200

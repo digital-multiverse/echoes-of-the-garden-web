@@ -1,0 +1,10 @@
+# Allowlist: only what the site serves is published.
+*
+!index.html
+!og-image.jpg
+!robots.txt
+!sitemap.xml
+!assets/
+!assets/**
+!bestiary/
+!bestiary/**
