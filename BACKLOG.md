@@ -45,7 +45,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Deployed to workers.dev in the Info account, secrets set, Resend domain verified, real subscribe and report delivered (2026-11-04). A max-size save used 10 ms of CPU
 - ✅ Absolute URLs rewritten, root custom domain in `wrangler.jsonc`, Netlify redirects to the domain
 - ✅ Newsletter: unsubscribe mail link, `List-Unsubscribe` header and `/privacy/`
-- ⏳ Privacy page: add the owner's legal name (José to decide)
+- ✅ Privacy page: owner data, same as digital-multiverse.com
 - ⏳ Deploy the root domain (tell infra right before); infra checks it; José adds `www` and its 301
 - ⏳ Game: `REPORT_URL` to `https://echoesofthegarden.com/api/report` in the next build
 - ⏳ Delete `netlify.toml` and `netlify/functions/` only when no published build posts to netlify.app. Do NOT
