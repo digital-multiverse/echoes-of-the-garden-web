@@ -2,6 +2,8 @@
 // served straight from the assets, with .assetsignore keeping the repo's own files out of the site.
 {
   "name": "echoes-of-the-garden",
+  // Info@josejpg.com account, with comparavoto. Fixed here because wrangler deploys wherever it is logged in.
+  "account_id": "91fe7d6faa0d5d83b5731ce1cbf03151",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/worker.js",
