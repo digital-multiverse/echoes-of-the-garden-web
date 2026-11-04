@@ -5,30 +5,15 @@
 [build.environment]
   NODE_VERSION = "20"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options         = "DENY"
-    X-Content-Type-Options  = "nosniff"
-    Referrer-Policy         = "strict-origin-when-cross-origin"
-    Permissions-Policy      = "camera=(), microphone=(), geolocation=()"
-    # CSP: self + Google Fonts only. Inline script/style required by the
-    # single-file architecture (all CSS/JS lives in index.html).
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+# Headers live in _headers, shared with Cloudflare Workers until the cut-over.
 
-[[headers]]
-  for = "/index.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-# Social preview image — long cache, bump filename if it ever changes
-[[headers]]
-  for = "/og-image.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
+# The page posts to /api/*: the same index.html works on Netlify and on the Worker.
+[[redirects]]
+  from   = "/api/*"
+  to     = "/.netlify/functions/:splat"
+  status = 200
 
 [[redirects]]
-  from   = "https://www.echoesofthegarden.com/*"
-  to     = "https://echoes-of-the-garden.netlify.app//:splat"
-  status = 301
-  force  = true
+  from   = "/bestiary/*"
+  to     = "/bestiary/:splat/index.html"
+  status = 200

@@ -26,6 +26,7 @@
   the robots Sitemap directive all agree. No split, no duplicate-content risk
   while on a single domain. (Earlier docs claimed this was "unified to
   echoesofthegarden.com" — false: that domain wasn't bought then. Corrected.)
+- 🔄 **Hosting moves to Cloudflare Workers** (2026-11-04): see BACKLOG. The Netlify steps below no longer apply.
 - ⏳ **Migrate to `echoesofthegarden.com` at EA** — NOT before; the domain is
   bought (2026-11-04) but stays unconnected until then. At EA: add it as a
   Netlify custom domain + set PRIMARY (301 the netlify.app host), then rewrite

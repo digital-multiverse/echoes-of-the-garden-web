@@ -26,7 +26,7 @@ Echoes of the Garden is a free-to-play idle creature collector where every creat
 | Layer | Tool |
 |---|---|
 | Site | Static HTML/CSS/JS — no framework |
-| Hosting | [Netlify](https://netlify.com) (free tier) |
+| Hosting | Netlify today, moving to Cloudflare Workers static assets (see BACKLOG) |
 | Newsletter | [Resend](https://resend.com) via Netlify Functions |
 | Domain | echoesofthegarden.com + .es (dondominio), not connected until EA |
 
