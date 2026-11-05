@@ -238,12 +238,9 @@ async function main() {
   await writeFile("index.html", html);
   const urls = records.map((r) =>
     `  <url><loc>${SITE}/bestiary/${r.slug}/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
-  await writeFile("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>${SITE}/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-${urls.join("\n")}
-</urlset>
-`);
+  // Only the bestiary's own lines change: the sitemap also lists /privacy/ and the dev log.
+  const sitemap = (await readFile("sitemap.xml", "utf8")).split("\n").filter((l) => !l.includes("/bestiary/")).join("\n");
+  await writeFile("sitemap.xml", sitemap.replace("</urlset>", `${urls.join("\n")}\n</urlset>`));
   console.log("JSON-LD character list + sitemap.xml updated");
   console.log("Done. Review the diff, then commit.");
 }

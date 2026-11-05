@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The bug that paid 60 times too much | Echoes of the Garden Dev Log</title>
+  <meta name="description" content="A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.">
+  <link rel="canonical" href="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The bug that paid 60 times too much | Echoes of the Garden Dev Log">
+  <meta property="og:description" content="A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/05_echo_arc.png">
+  <meta property="og:url" content="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The bug that paid 60 times too much",
+  "description": "A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.",
+  "datePublished": "2026-10-28",
+  "image": "https://echoesofthegarden.com/assets/screenshots/05_echo_arc.png",
+  "url": "https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/"
+  }
+}
+</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+    :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
+    main { max-width: 680px; margin: 0 auto; padding: 48px 16px 72px }
+    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; line-height: 1.3; margin: 24px 0 8px }
+    h2 { color: var(--gold); font-size: 23px; font-weight: 600; margin: 36px 0 10px }
+    p, ul, figure { margin-bottom: 18px }
+    ul { padding-left: 22px }
+    li { margin-bottom: 8px }
+    strong { color: #e4e8dc; font-weight: 600 }
+    a { color: var(--green) }
+    img { display: block; width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated }
+    figcaption { color: var(--dim); font-size: 15px; margin-top: 6px }
+    .meta { color: var(--dim); font-size: 15px; margin-bottom: 28px }
+    .entry { padding: 22px 0; border-top: 1px solid var(--border) }
+    .entry h2 { margin: 4px 0 6px }
+    .entry h2 a { color: var(--gold); text-decoration: none }
+    .entry h2 a:hover { text-decoration: underline }
+    .entry p { margin: 0 }
+    .foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border) }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a href="/devlog/">← Dev Log</a>
+    <h1>The bug that paid 60 times too much</h1>
+    <p class="meta"><time datetime="2026-10-28">28 October 2026</time> · Build v0.6.0</p>
+    <figure>
+      <img src="/assets/screenshots/05_echo_arc.png" alt="The Echo Arc crafting panel" loading="lazy">
+      <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
+    </figure>
+<p>Before building any crafting screen I wrote a headless simulator that plays the economy for weeks of game time. It found a critical bug: production rates were designed per minute and the code paid them per second. Everything earned 60 times too much, and every resource sat at its cap.</p>
+<p>With that fixed, a simulated player checking in twice a day owns every Roots and Ash species around day 4.4, and reaches the fifth crafting tier in Tide of Ash around day 24.</p>
+<h2>What this phase added</h2>
+<ul>
+  <li><strong>Encounters and the Seed Altar.</strong> New species reveal themselves as you play, and you buy their seeds at the Altar.</li>
+  <li><strong>The Echo Arc.</strong> Five crafting tiers, from Vestigio to Eco, each with a risk of destroying what you put in.</li>
+  <li><strong>Mutations.</strong> They now change how fast a creature produces and how long it lives, and they tint its sprite.</li>
+  <li><strong>Offline progress.</strong> A creature that lived and died while you were away used to come back with nothing to its name. Its output now counts.</li>
+</ul>
+<h2>A change of plan</h2>
+<p>Early Access will launch without the real Steam Market, which becomes the first major update after launch. Until then, selling a relic pays out inside the game. The Suspended Garden and the Luminous Cave arrive as the first two Early Access content updates.</p>
+    <p class="foot"><a href="/#newsletter">Get the next entry by email</a> · <a href="/">Echoes of the Garden</a></p>
+  </main>
+</body>
+
+</html>

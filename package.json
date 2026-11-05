@@ -4,6 +4,7 @@
   "private": true,
   "description": "Marketing site for Echoes of the Garden",
   "scripts": {
-    "bestiary": "node scripts/build-bestiary.mjs"
+    "bestiary": "node scripts/build-bestiary.mjs",
+    "devlog": "node scripts/build-devlog.mjs"
   }
 }

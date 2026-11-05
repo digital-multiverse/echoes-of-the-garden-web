@@ -63,7 +63,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   resolves
 
 ## Phase W2 — remaining ⏳
-- ⏳ Devlog: first entry (the section still shows the empty state)
+- ✅ Devlog: 5 milestone entries, `npm run devlog` (scripts/devlog-entries.mjs), full page per entry
 - ⏳ Lore-forward section on the landing page (epitaph / death prose) —
   creature pages already show the epitaph; the homepage doesn't yet
 - ⏳ Steam page link (CTA + JSON-LD sameAs) — blocked on Steam page existing
