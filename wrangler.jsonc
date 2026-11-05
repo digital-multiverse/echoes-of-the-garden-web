@@ -9,6 +9,7 @@
   "main": "src/worker.js",
   "assets": {
     "directory": ".",
+    "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
   // Only the root domain: www is a 301 at the edge, not on the Worker. No workers.dev copy for search engines.

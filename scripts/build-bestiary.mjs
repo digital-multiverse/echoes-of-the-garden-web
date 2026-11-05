@@ -131,7 +131,7 @@ ${cards}${tail}
 }
 
 /** One indexable lore page per creature. */
-function page(r) {
+function page(r, records) {
   const url = `${SITE}/bestiary/${r.slug}/`;
   const img = `${SITE}/${r.sprite}`;
   const bands = r.band_affinities.map((a, i) => `${BANDS[i]} → ${a}`).join(" · ");
@@ -156,6 +156,7 @@ function page(r) {
   <meta property="og:description" content="${esc(r.flavor)}">
   <meta property="og:image" content="${img}">
   <meta property="og:url" content="${url}">
+  <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
 ${ld}
 </script>
@@ -177,6 +178,7 @@ ${ld}
     .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
     a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
     a:hover { border-color: var(--gold) }
+    .intro, .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
     .back { font-size: 14px; letter-spacing: .05em }
   </style>
 </head>
@@ -189,6 +191,8 @@ ${ld}
   <div class="bands">Born by ${bands}</div>
   <p class="lore">${esc(r.lore)}</p>
   <p class="epitaph">On its death: “${esc(r.death_flavor)}”</p>
+  <p class="intro">Echoes of the Garden is a free-to-play idle game about creatures that die for good.</p>
+  <p class="related"><span>More from ${ECO_LABEL[r.ecosystem]}</span>${records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug).slice(0, 3).map((o) => ` · <a href="/bestiary/${o.slug}/">${esc(o.name)}</a>`).join("")}</p>
   <a class="back" href="/#bestiary">← The Bestiary of Echoes of the Garden</a>
 </body>
 
@@ -228,7 +232,7 @@ async function main() {
 
   for (const r of records) {
     await mkdir(`bestiary/${r.slug}`, { recursive: true });
-    await writeFile(`bestiary/${r.slug}/index.html`, page(r));
+    await writeFile(`bestiary/${r.slug}/index.html`, page(r, records));
   }
   console.log(`${records.length} creature pages written under bestiary/`);
 

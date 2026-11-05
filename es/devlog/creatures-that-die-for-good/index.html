@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criaturas que mueren para siempre | Dev log de Echoes of the Garden</title>
+  <meta name="description" content="El primer bucle jugable: una criatura nace, envejece y muere, y tú eliges qué queda de ella.">
+  <link rel="canonical" href="https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Criaturas que mueren para siempre | Dev log de Echoes of the Garden">
+  <meta property="og:description" content="El primer bucle jugable: una criatura nace, envejece y muere, y tú eliges qué queda de ella.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Criaturas que mueren para siempre",
+  "description": "El primer bucle jugable: una criatura nace, envejece y muere, y tú eliges qué queda de ella.",
+  "datePublished": "2026-07-05",
+  "image": "https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp",
+  "url": "https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/es/"
+  }
+}
+</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+    :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
+    main { max-width: 680px; margin: 0 auto; padding: 48px 16px 72px }
+    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; line-height: 1.3; margin: 24px 0 8px }
+    h2 { color: var(--gold); font-size: 23px; font-weight: 600; margin: 36px 0 10px }
+    p, ul, figure { margin-bottom: 18px }
+    ul { padding-left: 22px }
+    li { margin-bottom: 8px }
+    strong { color: #e4e8dc; font-weight: 600 }
+    a { color: var(--green) }
+    img { display: block; width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated }
+    figcaption { color: var(--dim); font-size: 15px; margin-top: 6px }
+    .meta { color: var(--dim); font-size: 15px; margin-bottom: 28px }
+    .entry { padding: 22px 0; border-top: 1px solid var(--border) }
+    .entry h2 { margin: 4px 0 6px }
+    .entry h2 a { color: var(--gold); text-decoration: none }
+    .entry h2 a:hover { text-decoration: underline }
+    .entry p { margin: 0 }
+    .foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border) }
+  </style>
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/creatures-that-die-for-good/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/creatures-that-die-for-good/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/creatures-that-die-for-good/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <main>
+    <a href="/es/devlog/">← Dev log</a>
+    <h1>Criaturas que mueren para siempre</h1>
+    <p class="meta"><time datetime="2026-07-05">5 de julio de 2026</time> · Build v0.3.0</p>
+    <figure>
+      <img src="/assets/screenshots/01_roots_garden.webp" alt="Un jardín del bioma Raíces del Mundo con criaturas en una cuadrícula" loading="lazy">
+      <figcaption>Capturado en la build v0.9.0. Arte provisional.</figcaption>
+    </figure>
+<p>Empecé Echoes of the Garden el 4 de junio de 2026 con una regla: las criaturas mueren para siempre. Un mes después, esa regla ya se puede jugar.</p>
+<p>Cada criatura pasa por semilla, cría, adulto y anciano. Después muere y tú eliges. Renacimiento deja una Semilla heredada que continúa su línea. Preservación la conserva como Reliquia. Es una cosa o la otra.</p>
+<h2>Qué hace la v0.3.0</h2>
+<ul>
+  <li>Hay dos biomas jugables: Raíces del Mundo y Marea de Ceniza.</li>
+  <li>Cada bioma tiene 12 huecos en una cuadrícula de 4 por 3, y mueves las criaturas arrastrándolas.</li>
+  <li>Las vecinas importan. Una rueda de afinidades decide qué criaturas funcionan bien juntas.</li>
+  <li>La hora del día en que nace una criatura fija su afinidad.</li>
+</ul>
+<p>Las 28 especies existen como datos, aunque de momento solo están en el juego los dos primeros biomas. Los sprites son pixel art provisional.</p>
+<p><a href="/es/#bestiary">Conoce las 28 especies en el bestiario.</a></p>
+<p>Lo siguiente es la economía: qué producen las criaturas, qué se compra con eso y cuánto debería llevar una colección.</p>
+    <p class="foot"><a href="/es/#newsletter">Recibe la próxima entrada por correo</a> · <a href="/es/">Echoes of the Garden</a></p>
+  </main>
+  <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/creatures-that-die-for-good/" hreflang="en" lang="en" style="color:#8fba7a">English</a> · <a href="/es/devlog/creatures-that-die-for-good/" hreflang="es" lang="es" aria-current="true" style="color:#8fba7a">Español</a> · <a href="/it/devlog/creatures-that-die-for-good/" hreflang="it" lang="it" style="color:#8fba7a">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>

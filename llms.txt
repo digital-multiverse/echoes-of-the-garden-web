@@ -1,0 +1,14 @@
+# Echoes of the Garden
+
+> A free-to-play idle game and creature collector with permadeath, in development for PC. Creatures are born, grow old and die for good, and each death leaves a choice: an Inherited Seed or a Relic. By Digital Multiverse, a solo developer.
+
+- Status: in development, playable on itch.io, coming to Steam Early Access
+- Languages: English, Spanish, Italian
+
+## Pages
+
+- [Home](https://echoesofthegarden.com/): the game, its systems and the roadmap
+- [Dev log](https://echoesofthegarden.com/devlog/): one entry per milestone
+- [Play on itch.io](https://echoes-of-the-garden.itch.io/play)
+- [Español](https://echoesofthegarden.com/es/)
+- [Italiano](https://echoesofthegarden.com/it/)

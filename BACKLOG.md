@@ -64,6 +64,9 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 
 ## Phase W2 — remaining ⏳
 - ✅ Devlog: 5 milestone entries, `npm run devlog` (scripts/devlog-entries.mjs), full page per entry
+- ✅ Spanish and Italian: `/es/` and `/it/` baked by `npm run i18n` from `i18n/{es,it}.json` and the game's `content.csv`; hreflang on every page. Translations are drafts pending a native review
+- ✅ SEO pass: title and meta, keywords, real favicon files, 404 pages, WebP media, `llms.txt`, internal links
+- ⏳ Welcome email is English only, whatever the page language
 - ⏳ Lore-forward section on the landing page (epitaph / death prose) —
   creature pages already show the epitaph; the homepage doesn't yet
 - ⏳ Steam page link (CTA + JSON-LD sameAs) — blocked on Steam page existing

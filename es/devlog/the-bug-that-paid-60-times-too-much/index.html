@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El fallo que pagaba 60 veces de más | Dev log de Echoes of the Garden</title>
+  <meta name="description" content="Un simulador de balance detectó un fallo de producción de 60 veces. La fase de economía queda cerrada y el Mercado de Steam pasa a después del acceso anticipado.">
+  <link rel="canonical" href="https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="El fallo que pagaba 60 veces de más | Dev log de Echoes of the Garden">
+  <meta property="og:description" content="Un simulador de balance detectó un fallo de producción de 60 veces. La fase de economía queda cerrada y el Mercado de Steam pasa a después del acceso anticipado.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "El fallo que pagaba 60 veces de más",
+  "description": "Un simulador de balance detectó un fallo de producción de 60 veces. La fase de economía queda cerrada y el Mercado de Steam pasa a después del acceso anticipado.",
+  "datePublished": "2026-10-28",
+  "image": "https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp",
+  "url": "https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/es/"
+  }
+}
+</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+    :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
+    main { max-width: 680px; margin: 0 auto; padding: 48px 16px 72px }
+    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; line-height: 1.3; margin: 24px 0 8px }
+    h2 { color: var(--gold); font-size: 23px; font-weight: 600; margin: 36px 0 10px }
+    p, ul, figure { margin-bottom: 18px }
+    ul { padding-left: 22px }
+    li { margin-bottom: 8px }
+    strong { color: #e4e8dc; font-weight: 600 }
+    a { color: var(--green) }
+    img { display: block; width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated }
+    figcaption { color: var(--dim); font-size: 15px; margin-top: 6px }
+    .meta { color: var(--dim); font-size: 15px; margin-bottom: 28px }
+    .entry { padding: 22px 0; border-top: 1px solid var(--border) }
+    .entry h2 { margin: 4px 0 6px }
+    .entry h2 a { color: var(--gold); text-decoration: none }
+    .entry h2 a:hover { text-decoration: underline }
+    .entry p { margin: 0 }
+    .foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border) }
+  </style>
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <main>
+    <a href="/es/devlog/">← Dev log</a>
+    <h1>El fallo que pagaba 60 veces de más</h1>
+    <p class="meta"><time datetime="2026-10-28">28 de octubre de 2026</time> · Build v0.6.0</p>
+    <figure>
+      <img src="/assets/screenshots/05_echo_arc.webp" alt="El panel de creación del Arco de Ecos" loading="lazy">
+      <figcaption>Capturado en la build v0.9.0. Arte provisional.</figcaption>
+    </figure>
+<p>Antes de hacer ninguna pantalla de creación escribí un simulador sin interfaz que juega la economía durante semanas de tiempo de juego. Encontró un fallo crítico: la producción estaba diseñada por minuto y el código la pagaba por segundo. Todo ganaba 60 veces de más y cada recurso se quedaba en su tope.</p>
+<p>Con eso arreglado, un jugador simulado que entra dos veces al día tiene todas las especies de Raíces y Ceniza hacia el día 4,4, y llega al quinto nivel de creación en Marea de Ceniza hacia el día 24.</p>
+<h2>Qué añadió esta fase</h2>
+<ul>
+  <li><strong>Encuentros y el Altar de Semillas.</strong> Las especies nuevas se revelan al jugar, y sus semillas se compran en el Altar.</li>
+  <li><strong>El Arco de Ecos.</strong> Cinco niveles de creación, de Vestigio a Eco, cada uno con riesgo de destruir lo que metes.</li>
+  <li><strong>Mutaciones.</strong> Ahora cambian lo rápido que produce una criatura y cuánto vive, y tiñen su sprite.</li>
+  <li><strong>Progreso sin conexión.</strong> Una criatura que vivía y moría mientras no estabas volvía sin nada a su nombre. Ahora su producción cuenta.</li>
+</ul>
+<h2>Un cambio de plan</h2>
+<p>El acceso anticipado saldrá sin el Mercado de Steam real, que pasa a ser la primera gran actualización tras el lanzamiento. Hasta entonces, vender una reliquia paga dentro del juego. El Jardín Suspendido y la Cueva Luminosa llegan como las dos primeras actualizaciones de contenido del acceso anticipado.</p>
+    <p class="foot"><a href="/es/#newsletter">Recibe la próxima entrada por correo</a> · <a href="/es/">Echoes of the Garden</a></p>
+  </main>
+  <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/the-bug-that-paid-60-times-too-much/" hreflang="en" lang="en" style="color:#8fba7a">English</a> · <a href="/es/devlog/the-bug-that-paid-60-times-too-much/" hreflang="es" lang="es" aria-current="true" style="color:#8fba7a">Español</a> · <a href="/it/devlog/the-bug-that-paid-60-times-too-much/" hreflang="it" lang="it" style="color:#8fba7a">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>

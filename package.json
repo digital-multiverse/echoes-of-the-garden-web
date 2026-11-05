@@ -5,6 +5,9 @@
   "description": "Marketing site for Echoes of the Garden",
   "scripts": {
     "bestiary": "node scripts/build-bestiary.mjs",
-    "devlog": "node scripts/build-devlog.mjs"
+    "devlog": "node scripts/build-devlog.mjs",
+    "i18n": "node scripts/build-i18n.mjs",
+    "build": "node scripts/build-devlog.mjs && node scripts/build-i18n.mjs",
+    "test": "node --test src/"
   }
 }
