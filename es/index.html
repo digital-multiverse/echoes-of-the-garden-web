@@ -214,11 +214,8 @@
 
   <!-- ═══ FONTS ═════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
 
   <style>
     /* ─── TOKENS ─────────────────────────────────────────────────────────── */
@@ -240,7 +237,7 @@
       --purple: #9a7fd4;
       --text: #c8dcc8;
       --text-dim: #6a9070;
-      --text-muted: #3a5040;
+      --text-muted: #8a9a8a;
       --white: #edf0e6;
       --nav-h: 58px;
       --max-w: 1080px;
@@ -611,8 +608,7 @@
       align-items: center;
       justify-content: center;
       gap: 14px;
-      opacity: 0;
-      animation: heroFadeUp 0.8s ease 0.2s forwards;
+      animation: heroFadeUp 0.8s ease both;
     }
 
     .hero-eyebrow::before,
@@ -633,8 +629,7 @@
       margin-bottom: 12px;
       color: var(--white);
       text-shadow: 0 0 80px rgba(143, 186, 122, 0.18), 0 0 160px rgba(143, 186, 122, 0.08);
-      opacity: 0;
-      animation: heroFadeUp 0.9s ease 0.35s forwards;
+      animation: heroFadeUp 0.9s ease both;
     }
 
     .hero-subtitle {
@@ -644,8 +639,7 @@
       letter-spacing: 5px;
       font-weight: 400;
       margin-bottom: 28px;
-      opacity: 0;
-      animation: heroFadeUp 0.8s ease 0.5s forwards;
+      animation: heroFadeUp 0.8s ease both;
     }
 
     .hero-tagline {
@@ -657,8 +651,7 @@
       max-width: 540px;
       margin-left: auto;
       margin-right: auto;
-      opacity: 0;
-      animation: heroFadeUp 0.8s ease 0.65s forwards;
+      animation: heroFadeUp 0.8s ease both;
     }
 
     .hero-actions {
@@ -668,8 +661,7 @@
       gap: 14px;
       flex-wrap: wrap;
       margin-bottom: 60px;
-      opacity: 0;
-      animation: heroFadeUp 0.8s ease 0.8s forwards;
+      animation: heroFadeUp 0.8s ease both;
     }
 
     .hero-stats {
@@ -678,8 +670,7 @@
       gap: 48px;
       border-top: 1px solid var(--border);
       padding-top: 32px;
-      opacity: 0;
-      animation: heroFadeUp 0.8s ease 0.95s forwards;
+      animation: heroFadeUp 0.8s ease both;
     }
 
     .hero-stat-num {
@@ -700,13 +691,11 @@
 
     @keyframes heroFadeUp {
       from {
-        opacity: 0;
-        transform: translateY(16px)
+        transform: translateY(14px);
       }
 
       to {
-        opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
       }
     }
 
@@ -2434,31 +2423,31 @@
       </div>
       <div class="shots-grid">
         <figure class="shot shot-wide reveal">
-          <img src="/assets/screenshots/garden_loop.webp" alt="Jardín de Raíces del Mundo en movimiento: raíces que se mecen, motas a la deriva y un recurso que aparece" width="1280" height="720" loading="lazy">
+          <img src="/assets/screenshots/garden_loop.webp" srcset="/assets/screenshots/garden_loop-640.webp 640w, /assets/screenshots/garden_loop.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" alt="Jardín de Raíces del Mundo en movimiento: raíces que se mecen, motas a la deriva y un recurso que aparece" width="1280" height="720" loading="lazy">
           <figcaption>Raíces del Mundo, a solas durante ocho segundos.</figcaption>
         </figure>
         <figure class="shot reveal">
-          <img src="/assets/screenshots/03_death_ceremony.webp" alt="La Ceremonia de la muerte: el nombre de una criatura, su epitafio y los dos destinos, Renacimiento o Preservación" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/03_death_ceremony.webp" srcset="/assets/screenshots/03_death_ceremony-960.webp 960w, /assets/screenshots/03_death_ceremony.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="La Ceremonia de la muerte: el nombre de una criatura, su epitafio y los dos destinos, Renacimiento o Preservación" width="1920" height="1080" loading="lazy">
           <figcaption>Toda criatura muere. Tú decides en qué se convierte.</figcaption>
         </figure>
         <figure class="shot reveal reveal-d1">
-          <img src="/assets/screenshots/01_roots_garden.webp" alt="Raíces del Mundo con doce criaturas en tres etapas" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/01_roots_garden.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Raíces del Mundo con doce criaturas en tres etapas" width="1920" height="1080" loading="lazy">
           <figcaption>Cuida un jardín vivo, incluso cuando no estás.</figcaption>
         </figure>
         <figure class="shot reveal reveal-d2">
-          <img src="/assets/screenshots/02_tide_of_ash.webp" alt="Marea de Ceniza con brasas, capas de humo y brillos de sinergia entre vecinas" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/02_tide_of_ash.webp" srcset="/assets/screenshots/02_tide_of_ash-960.webp 960w, /assets/screenshots/02_tide_of_ash.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Marea de Ceniza con brasas, capas de humo y brillos de sinergia entre vecinas" width="1920" height="1080" loading="lazy">
           <figcaption>Cada bioma pide un tipo distinto de paciencia.</figcaption>
         </figure>
         <figure class="shot reveal">
-          <img src="/assets/screenshots/05_echo_arc.webp" alt="Panel de creación del Arco de Ecos, de Vestigio a Eco, con el riesgo de destrucción de cada nivel" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Panel de creación del Arco de Ecos, de Vestigio a Eco, con el riesgo de destrucción de cada nivel" width="1920" height="1080" loading="lazy">
           <figcaption>Convierte la pérdida en el Arco de Ecos, de Vestigio a Origen.</figcaption>
         </figure>
         <figure class="shot reveal reveal-d1">
-          <img src="/assets/screenshots/04_codex_fragments.webp" alt="El Códice, pestaña Fragmentos: cuatro fragmentos de historia desbloqueados" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/04_codex_fragments.webp" srcset="/assets/screenshots/04_codex_fragments-960.webp 960w, /assets/screenshots/04_codex_fragments.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="El Códice, pestaña Fragmentos: cuatro fragmentos de historia desbloqueados" width="1920" height="1080" loading="lazy">
           <figcaption>El jardín guarda sus ecos. Lee lo que recuerda.</figcaption>
         </figure>
         <figure class="shot reveal reveal-d2">
-          <img src="/assets/screenshots/06_book_of_echoes.webp" alt="El Libro de Ecos: filas de memoria con nombre, especie, bioma, destino y tiempo vivido" width="1920" height="1080" loading="lazy">
+          <img src="/assets/screenshots/06_book_of_echoes.webp" srcset="/assets/screenshots/06_book_of_echoes-960.webp 960w, /assets/screenshots/06_book_of_echoes.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="El Libro de Ecos: filas de memoria con nombre, especie, bioma, destino y tiempo vivido" width="1920" height="1080" loading="lazy">
           <figcaption>Cada vida queda escrita. Ninguna vuelve igual.</figcaption>
         </figure>
       </div>
@@ -3093,18 +3082,27 @@
       }
     }
 
-    function drawGarden() {
+    function paintGarden(step) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       plants.forEach(p => {
-        p.sway += p.speed;
+        p.sway += p.speed * step;
         ctx.fillStyle = p.color;
         ctx.fillRect(p.x + Math.sin(p.sway) * p.PX * 0.6, canvas.height - p.h, p.PX, p.h);
       });
+    }
+
+    // 15 fps is enough for a slow sway and keeps the main thread free for the first paint.
+    let lastPaint = 0;
+    function drawGarden(now) {
       requestAnimationFrame(drawGarden);
+      if (now - lastPaint < 66) return;
+      lastPaint = now;
+      paintGarden(4);
     }
 
     initGarden();
-    drawGarden();
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) paintGarden(0);
+    else addEventListener('load', () => requestAnimationFrame(drawGarden));
     window.addEventListener('resize', initGarden);
 
     /* ── SCROLL REVEAL ─────────────────────────────────────────────── */

@@ -39,8 +39,10 @@
   }
 }
 </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" media="print" onload="this.media='all'">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
@@ -79,7 +81,7 @@
     <h1>The bug that paid 60 times too much</h1>
     <p class="meta"><time datetime="2026-10-28">28 October 2026</time> · Build v0.6.0</p>
     <figure>
-      <img src="/assets/screenshots/05_echo_arc.webp" alt="The Echo Arc crafting panel" loading="lazy">
+      <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 712px) 100vw, 680px" width="1280" height="720" alt="The Echo Arc crafting panel">
       <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
     </figure>
 <p>Before building any crafting screen I wrote a headless simulator that plays the economy for weeks of game time. It found a critical bug: production rates were designed per minute and the code paid them per second. Everything earned 60 times too much, and every resource sat at its cap.</p>

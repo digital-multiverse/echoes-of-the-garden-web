@@ -91,8 +91,8 @@ export const ENTRIES = [
     date: "2026-11-05",
     build: "v0.12.1",
     summary: "A design review found eleven quiet minutes in the first session. What changed before the first external playtest.",
-    image: "garden_loop.webp",
-    alt: "Creatures moving in the garden",
+    image: "02_tide_of_ash.webp",
+    alt: "Tide of Ash with ember motes, smoke layers and synergy glows between neighbours",
     body: `
 <p>Before anyone new plays the game, I reviewed v0.10.0 on a fresh save in real time. The first creature, which lives fast on purpose, reached adulthood at 3:03, became an elder at 14:15 and died at 19:51. Between minutes 3 and 14 the player had nothing to do except watch, and nothing said the garden keeps living while the game is closed. That promise is the whole contract of an idle game.</p>
 <h2>What changed in v0.11 and v0.12</h2>

@@ -39,8 +39,10 @@
   }
 }
 </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" media="print" onload="this.media='all'">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
@@ -79,7 +81,7 @@
     <h1>Creatures that die for good</h1>
     <p class="meta"><time datetime="2026-07-05">5 July 2026</time> · Build v0.3.0</p>
     <figure>
-      <img src="/assets/screenshots/01_roots_garden.webp" alt="A garden in the Roots of the World biome with creatures on a grid" loading="lazy">
+      <img src="/assets/screenshots/01_roots_garden.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 712px) 100vw, 680px" width="1280" height="720" alt="A garden in the Roots of the World biome with creatures on a grid">
       <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
     </figure>
 <p>I started Echoes of the Garden on 4 June 2026 with one rule: creatures die for good. A month later, that rule is playable.</p>

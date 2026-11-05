@@ -39,8 +39,10 @@
   }
 }
 </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" media="print" onload="this.media='all'">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
@@ -79,7 +81,7 @@
     <h1>Il bug che pagava 60 volte troppo</h1>
     <p class="meta"><time datetime="2026-10-28">28 ottobre 2026</time> · Build v0.6.0</p>
     <figure>
-      <img src="/assets/screenshots/05_echo_arc.webp" alt="Il pannello di creazione dell'Arco degli Echi" loading="lazy">
+      <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 712px) 100vw, 680px" width="1280" height="720" alt="Il pannello di creazione dell'Arco degli Echi">
       <figcaption>Catturato dalla build v0.9.0. Grafica provvisoria.</figcaption>
     </figure>
 <p>Prima di creare qualsiasi schermata di creazione ho scritto un simulatore senza interfaccia che gioca l'economia per settimane di tempo di gioco. Ha trovato un bug critico: la produzione era pensata al minuto e il codice la pagava al secondo. Tutto guadagnava 60 volte troppo e ogni risorsa restava al limite.</p>

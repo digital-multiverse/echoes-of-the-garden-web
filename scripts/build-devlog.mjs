@@ -20,7 +20,6 @@ const longDate = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-GB", {
 const jsonLd = (o) => JSON.stringify(o, null, 2).replace(/</g, "\\u003c");
 
 const STYLE = `
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
@@ -60,10 +59,20 @@ const head = ({ title, description, url, image, type, ld }) => `<!DOCTYPE html>
   <script type="application/ld+json">
 ${jsonLd(ld)}
 </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" media="print" onload="this.media='all'">
   <style>${STYLE}
   </style>
 </head>
 `;
+
+const srcset = (file) => {
+  const base = file.replace(".webp", "");
+  return base === "garden_loop"
+    ? "/assets/screenshots/garden_loop-640.webp 640w, /assets/screenshots/garden_loop.webp 1280w"
+    : `/assets/screenshots/${base}-960.webp 960w, /assets/screenshots/${file} 1920w`;
+};
 
 const publisher = { "@type": "Organization", name: "Digital Multiverse", url: "https://digital-multiverse.com" };
 
@@ -84,7 +93,7 @@ function entryPage(e) {
     <h1>${esc(e.title)}</h1>
     <p class="meta"><time datetime="${e.date}">${longDate(e.date)}</time> · Build ${e.build}</p>
     <figure>
-      <img src="/assets/screenshots/${e.image}" alt="${esc(e.alt)}" loading="lazy">
+      <img src="/assets/screenshots/${e.image}" srcset="${srcset(e.image)}" sizes="(max-width: 712px) 100vw, 680px" width="1280" height="720" alt="${esc(e.alt)}">
       <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
     </figure>
 ${e.body.trim()}
