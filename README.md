@@ -101,6 +101,13 @@ In Netlify: **Domain settings → Add custom domain** → follow the DNS instruc
 
 ---
 
+## Languages
+
+`/es/` and `/it/` are generated from the English pages. After any text change run `npm run build` (dev log, then
+languages). The build fails and names the text if a translation is missing: add it to `i18n/es.json` and
+`i18n/it.json` (key = the English text). `node scripts/build-i18n.mjs --missing` writes the list to `i18n/missing.txt`.
+Creature lore comes from the game's `i18n/content.csv`, so the game checkout must sit next to this repo.
+
 ## Content Updates
 
 | What to update | Where |

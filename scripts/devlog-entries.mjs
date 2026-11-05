@@ -7,7 +7,7 @@ export const ENTRIES = [
     date: "2026-07-05",
     build: "v0.3.0",
     summary: "The first playable loop: a creature is born, grows old and dies, and you choose what stays of it.",
-    image: "01_roots_garden.png",
+    image: "01_roots_garden.webp",
     alt: "A garden in the Roots of the World biome with creatures on a grid",
     body: `
 <p>I started Echoes of the Garden on 4 June 2026 with one rule: creatures die for good. A month later, that rule is playable.</p>
@@ -20,6 +20,7 @@ export const ENTRIES = [
   <li>The time of day a creature is born sets its affinity.</li>
 </ul>
 <p>All 28 species exist as data, though only the first two biomes are in the game for now. The sprites are placeholder pixel art.</p>
+<p><a href="/#bestiary">Meet the 28 species in the bestiary.</a></p>
 <p>The next job is the economy: what creatures produce, what it buys, and how long a collection should take.</p>`,
   },
   {
@@ -28,7 +29,7 @@ export const ENTRIES = [
     date: "2026-10-28",
     build: "v0.6.0",
     summary: "A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.",
-    image: "05_echo_arc.png",
+    image: "05_echo_arc.webp",
     alt: "The Echo Arc crafting panel",
     body: `
 <p>Before building any crafting screen I wrote a headless simulator that plays the economy for weeks of game time. It found a critical bug: production rates were designed per minute and the code paid them per second. Everything earned 60 times too much, and every resource sat at its cap.</p>
@@ -49,7 +50,7 @@ export const ENTRIES = [
     date: "2026-10-29",
     build: "v0.9.0",
     summary: "The Book of Echoes records every creature that lived, the lore arrives, and the game speaks Spanish and Italian.",
-    image: "06_book_of_echoes.png",
+    image: "06_book_of_echoes.webp",
     alt: "The Book of Echoes listing creatures that have lived",
     body: `
 <p>If death is the point of the game, the dead should stay on the record. Three builds went into that idea.</p>
@@ -68,11 +69,12 @@ export const ENTRIES = [
     date: "2026-10-30",
     build: "v0.10.0",
     summary: "Achievements, words at each death, all the lore in three languages, and a bug that made creatures younger than they were.",
-    image: "03_death_ceremony.png",
+    image: "03_death_ceremony.webp",
     alt: "The death ceremony with the choice between Rebirth and Preservation",
     body: `
 <p>This build gives the moment of death more weight.</p>
 <p>The Death Ceremony now shows each species' own death text. Four rare lines can also appear there, each one at most once per save. I won't list them.</p>
+<p><a href="/bestiary/ash-drake/">Read what the Ash Drake leaves behind.</a></p>
 <h2>Also in v0.10.0</h2>
 <ul>
   <li><strong>27 achievements</strong>, kept in the game for now and ready for Steam. Three of them count time spent with the garden in focus.</li>
@@ -89,7 +91,7 @@ export const ENTRIES = [
     date: "2026-11-05",
     build: "v0.12.1",
     summary: "A design review found eleven quiet minutes in the first session. What changed before the first external playtest.",
-    image: "garden_loop.gif",
+    image: "garden_loop.webp",
     alt: "Creatures moving in the garden",
     body: `
 <p>Before anyone new plays the game, I reviewed v0.10.0 on a fresh save in real time. The first creature, which lives fast on purpose, reached adulthood at 3:03, became an elder at 14:15 and died at 19:51. Between minutes 3 and 14 the player had nothing to do except watch, and nothing said the garden keeps living while the game is closed. That promise is the whole contract of an idle game.</p>

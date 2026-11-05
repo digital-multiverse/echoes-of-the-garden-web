@@ -11,7 +11,7 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="The bug that paid 60 times too much | Echoes of the Garden Dev Log">
   <meta property="og:description" content="A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.">
-  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/05_echo_arc.png">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp">
   <meta property="og:url" content="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
   <script type="application/ld+json">
 {
@@ -20,7 +20,7 @@
   "headline": "The bug that paid 60 times too much",
   "description": "A balance simulator caught a 60x production bug. The economy phase is closed, and the Steam Market moves after Early Access.",
   "datePublished": "2026-10-28",
-  "image": "https://echoesofthegarden.com/assets/screenshots/05_echo_arc.png",
+  "image": "https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp",
   "url": "https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/",
   "author": {
     "@type": "Organization",
@@ -62,6 +62,15 @@
     .entry p { margin: 0 }
     .foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border) }
   </style>
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/the-bug-that-paid-60-times-too-much/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/">
+  <!-- SEO:END -->
 </head>
 
 <body>
@@ -70,7 +79,7 @@
     <h1>The bug that paid 60 times too much</h1>
     <p class="meta"><time datetime="2026-10-28">28 October 2026</time> · Build v0.6.0</p>
     <figure>
-      <img src="/assets/screenshots/05_echo_arc.png" alt="The Echo Arc crafting panel" loading="lazy">
+      <img src="/assets/screenshots/05_echo_arc.webp" alt="The Echo Arc crafting panel" loading="lazy">
       <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
     </figure>
 <p>Before building any crafting screen I wrote a headless simulator that plays the economy for weeks of game time. It found a critical bug: production rates were designed per minute and the code paid them per second. Everything earned 60 times too much, and every resource sat at its cap.</p>
@@ -86,6 +95,7 @@
 <p>Early Access will launch without the real Steam Market, which becomes the first major update after launch. Until then, selling a relic pays out inside the game. The Suspended Garden and the Luminous Cave arrive as the first two Early Access content updates.</p>
     <p class="foot"><a href="/#newsletter">Get the next entry by email</a> · <a href="/">Echoes of the Garden</a></p>
   </main>
+  <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/the-bug-that-paid-60-times-too-much/" hreflang="en" lang="en" aria-current="true" style="color:#8fba7a">English</a> · <a href="/es/devlog/the-bug-that-paid-60-times-too-much/" hreflang="es" lang="es" style="color:#8fba7a">Español</a> · <a href="/it/devlog/the-bug-that-paid-60-times-too-much/" hreflang="it" lang="it" style="color:#8fba7a">Italiano</a></nav><!-- LANG:END -->
 </body>
 
 </html>

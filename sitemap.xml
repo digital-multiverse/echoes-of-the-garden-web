@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://echoesofthegarden.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://echoesofthegarden.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/earth-caterpillar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/elder-centipede/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/moss-lizard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -29,11 +30,82 @@
   <url><loc>https://echoesofthegarden.com/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/earth-caterpillar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/elder-centipede/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/moss-lizard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/peat-slug/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/root-beetle/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/root-mycelium/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/stone-tortoise/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/ash-drake/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/ash-salamander/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/ash-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/char-mole/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/ember-falcon/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/flame-wasp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/smoke-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/crystal-dragonfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/ethereal-butterfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/mist-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/moon-moth/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/silk-spider/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/suspended-hummingbird/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/veil-jellyfish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/abyss-polyp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/abyss-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/cave-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/crystal-crab/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/earth-caterpillar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/elder-centipede/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/moss-lizard/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/peat-slug/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/root-beetle/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/root-mycelium/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/stone-tortoise/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/ash-drake/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/ash-salamander/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/ash-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/char-mole/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/ember-falcon/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/flame-wasp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/smoke-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/crystal-dragonfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/ethereal-butterfly/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/mist-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/moon-moth/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/silk-spider/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/suspended-hummingbird/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/veil-jellyfish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/abyss-polyp/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/abyss-serpent/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/cave-scorpion/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/crystal-crab/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
 </urlset>
