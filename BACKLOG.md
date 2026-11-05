@@ -46,7 +46,8 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Absolute URLs rewritten, root custom domain in `wrangler.jsonc`, Netlify redirects to the domain
 - ✅ Newsletter: unsubscribe mail link, `List-Unsubscribe` header and `/privacy/`
 - ✅ Privacy page: owner data, same as digital-multiverse.com
-- ⏳ Deploy the root domain (tell infra right before); infra checks it; José adds `www` and its 301
+- ✅ Root domain deployed; `www` and `.es` redirect to it
+- ✅ Workers Builds connected: a push to `main` deploys. Run `npm run build` before pushing text changes
 - ⏳ Game: `REPORT_URL` to `https://echoesofthegarden.com/api/report` in the next build
 - ⏳ Delete `netlify.toml` and `netlify/functions/` only when no published build posts to netlify.app. Do NOT
   add `"type": "module"` to `package.json` before that: it breaks those CommonJS functions
