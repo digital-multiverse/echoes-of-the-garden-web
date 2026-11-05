@@ -8,5 +8,7 @@
 !assets/**
 !bestiary/
 !bestiary/**
+!devlog/
+!devlog/**
 !privacy/
 !privacy/**

@@ -1271,33 +1271,56 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .devlog-empty {
-      max-width: 480px;
-      margin: 44px auto 0;
-      text-align: center;
-      padding: 56px 32px;
-      border: 1px dashed var(--border);
+    .devlog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 20px;
+      margin-top: 44px;
+    }
+
+    .devlog-card {
+      padding: 26px 24px;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
+      background: var(--bg);
     }
 
-    .devlog-empty-icon {
-      font-size: 44px;
+    .devlog-date {
       display: block;
-      margin-bottom: 18px;
-      opacity: 0.35;
+      font-size: 13px;
+      color: #8a9a8a;
+      margin-bottom: 10px;
     }
 
-    .devlog-empty-title {
+    .devlog-title {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 17px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.35;
+      margin-bottom: 10px;
     }
 
-    .devlog-empty-desc {
-      font-size: 14px;
-      color: var(--text-muted);
-      font-style: italic;
+    .devlog-title a {
+      color: var(--gold-hi);
+      text-decoration: none;
+    }
+
+    .devlog-title a:hover {
+      text-decoration: underline;
+    }
+
+    .devlog-summary {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .devlog-all {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .devlog-all a {
+      color: var(--green-hi);
     }
 
     /* ═══════════════════════════════════════════════════════════════════════
@@ -2167,7 +2190,7 @@
     <div class="hero-content">
       <div class="badge" aria-label="Development status">
         <span class="badge-dot"></span>
-        In development · v0.9.0 playable on itch.io · Coming to Steam
+        In development · Playable on itch.io · Coming to Steam
       </div>
       <div class="hero-eyebrow" aria-hidden="true">An Idle Creature Collector</div>
       <h1 class="hero-title">Echoes of the<br>Garden</h1>
@@ -2838,11 +2861,26 @@
         <p class="section-lead">Progress updates, design decisions and behind-the-scenes looks at how the garden grows.
         </p>
       </div>
-      <div class="devlog-empty reveal" aria-live="polite">
-        <span class="devlog-empty-icon" aria-hidden="true">🌱</span>
-        <div class="devlog-empty-title">First entry coming soon</div>
-        <div class="devlog-empty-desc">Subscribe below to be notified when the first dev log drops.</div>
+      <!-- DEVLOG:START -->
+      <div class="devlog-grid">
+        <article class="devlog-card reveal">
+          <time class="devlog-date" datetime="2026-11-05">5 November 2026 · Build v0.12.1</time>
+          <h3 class="devlog-title"><a href="/devlog/ready-for-strangers/">Ready for strangers</a></h3>
+          <p class="devlog-summary">A design review found eleven quiet minutes in the first session. What changed before the first external playtest.</p>
+        </article>
+        <article class="devlog-card reveal">
+          <time class="devlog-date" datetime="2026-10-30">30 October 2026 · Build v0.10.0</time>
+          <h3 class="devlog-title"><a href="/devlog/27-achievements-and-four-rare-lines/">27 achievements and four rare lines</a></h3>
+          <p class="devlog-summary">Achievements, words at each death, all the lore in three languages, and a bug that made creatures younger than they were.</p>
+        </article>
+        <article class="devlog-card reveal">
+          <time class="devlog-date" datetime="2026-10-29">29 October 2026 · Build v0.9.0</time>
+          <h3 class="devlog-title"><a href="/devlog/a-garden-that-remembers/">A garden that remembers</a></h3>
+          <p class="devlog-summary">The Book of Echoes records every creature that lived, the lore arrives, and the game speaks Spanish and Italian.</p>
+        </article>
       </div>
+      <p class="devlog-all"><a href="/devlog/">All dev log entries</a></p>
+      <!-- DEVLOG:END -->
     </div>
   </section>
 
