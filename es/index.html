@@ -213,6 +213,7 @@
   <meta name="theme-color" content="#0d100c">
 
   <!-- ═══ FONTS ═════════════════════════════════════════════════════════════ -->
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
@@ -359,7 +360,7 @@
       display: block;
       padding: 6px 13px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -376,7 +377,7 @@
 
     .nav-cta {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       padding: 8px 18px;
@@ -401,8 +402,29 @@
       border: none;
       cursor: pointer;
       color: var(--text-dim);
-      font-size: 18px;
-      padding: 4px;
+      font-size: 20px;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    .nav-lang {
+      display: flex;
+      gap: 2px;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid var(--border);
+    }
+
+    .nav.nav-open .nav-lang {
+      margin: 8px 0 0;
+      padding: 8px 0 0;
+      border-left: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .beast-all {
+      text-align: center;
+      margin-top: 36px;
     }
 
     /* Mobile nav open state — toggled via JS */
@@ -442,7 +464,7 @@
 
     .section-eyebrow {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--green);
@@ -478,7 +500,7 @@
       border: 1px solid var(--green);
       color: var(--green-hi);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       text-decoration: none;
@@ -501,7 +523,7 @@
       border: 1px solid var(--border-hi);
       color: var(--text-dim);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       text-decoration: none;
@@ -516,13 +538,22 @@
     }
 
     /* ─── REVEAL ANIMATIONS ──────────────────────────────────────────────── */
-    .reveal {
+    /* Hidden only when the inline script in <head> has run, so a JS failure never blanks the page. */
+    @media (prefers-reduced-motion: reduce) {
+      html.js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    .js .reveal {
       opacity: 0;
       transform: translateY(22px);
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
 
-    .reveal.visible {
+    .js .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -549,10 +580,10 @@
     #hero {
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       text-align: center;
-      padding-top: var(--nav-h);
+      padding-top: calc(var(--nav-h) + 40px);
       overflow: hidden;
     }
 
@@ -597,29 +628,6 @@
       padding: 0 20px;
     }
 
-    .hero-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      animation: heroFadeUp 0.8s ease both;
-    }
-
-    .hero-eyebrow::before,
-    .hero-eyebrow::after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 36px;
-      background: var(--green-dim);
-    }
-
     .hero-title {
       font-family: 'Cinzel Decorative', serif;
       font-size: clamp(36px, 7.5vw, 76px);
@@ -632,26 +640,36 @@
       animation: heroFadeUp 0.9s ease both;
     }
 
-    .hero-subtitle {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(12px, 2vw, 16px);
-      color: var(--green);
-      letter-spacing: 5px;
-      font-weight: 400;
-      margin-bottom: 28px;
+    .hero-pitch {
+      font-size: clamp(18px, 2.4vw, 22px);
+      color: var(--text);
+      line-height: 1.5;
+      max-width: 560px;
+      margin: 8px auto 36px;
       animation: heroFadeUp 0.8s ease both;
     }
 
-    .hero-tagline {
-      font-size: clamp(16px, 2.2vw, 19px);
+    .hero-media {
+      max-width: 640px;
+      margin: 0 auto 48px;
+      animation: heroFadeUp 0.8s ease both;
+    }
+
+    .hero-media video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border-hi);
+      border-radius: var(--radius);
+      image-rendering: pixelated;
+      cursor: pointer;
+    }
+
+    .hero-media figcaption {
       font-style: italic;
       color: var(--text-dim);
-      line-height: 1.65;
-      margin-bottom: 44px;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: heroFadeUp 0.8s ease both;
+      font-size: 16px;
+      margin-top: 12px;
     }
 
     .hero-actions {
@@ -683,7 +701,7 @@
 
     .hero-stat-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -705,14 +723,13 @@
       align-items: center;
       gap: 8px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
       padding: 6px 14px;
       border-radius: 20px;
       border: 1px solid var(--border);
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 20px;
     }
 
     .badge-dot {
@@ -867,7 +884,7 @@
 
     .lc-name {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold);
@@ -1075,7 +1092,7 @@
 
     .eco-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       padding: 4px 10px;
@@ -1084,7 +1101,7 @@
 
     .eco-meta {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 1px;
       color: var(--text-muted);
     }
@@ -1139,7 +1156,7 @@
 
     .t-rarity {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -1178,7 +1195,7 @@
 
     .t-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 1px;
       padding: 5px 10px;
       border-radius: 2px;
@@ -1314,7 +1331,7 @@
 
     .rm-phase {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 3px;
@@ -1349,7 +1366,7 @@
 
     .rm-date {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 8px;
     }
@@ -1364,7 +1381,7 @@
     .rm-tag {
       display: inline-block;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 1px;
       padding: 3px 9px;
       border-radius: 2px;
@@ -1521,7 +1538,7 @@
 
     .nl-perk {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -1572,7 +1589,7 @@
       background: var(--green-dim);
       color: var(--green-hi);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       white-space: nowrap;
@@ -1591,7 +1608,7 @@
 
     .nl-privacy {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 1px;
       color: var(--text-muted);
     }
@@ -1664,7 +1681,7 @@
 
     .dev-link {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -1673,6 +1690,11 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .dev-soon {
+      opacity: 0.55;
+      pointer-events: none;
     }
 
     .dev-link:hover {
@@ -1696,14 +1718,14 @@
 
     .footer-logo {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-muted);
       letter-spacing: 2px;
     }
 
     .footer-copy {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 1px;
       color: var(--text-muted);
     }
@@ -1715,7 +1737,7 @@
 
     .footer-links a {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -1735,6 +1757,19 @@
      480px — mobile
 ═══════════════════════════════════════════════════════════════════════ */
 
+    /* ── 1200px: the nav no longer fits on one line (Spanish labels are the longest) ── */
+    @media (max-width: 1200px) {
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-mobile-btn {
+        display: block;
+      }
+    }
+
     /* ── 820px: tablet ─────────────────────────────────────────────────── */
     @media (max-width: 820px) {
 
@@ -1748,18 +1783,9 @@
         padding: 0 20px;
       }
 
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-mobile-btn {
-        display: block;
-      }
-
       /* Hero */
       #hero {
-        padding-top: calc(var(--nav-h) + 12px);
+        padding-top: calc(var(--nav-h) + 24px);
         padding-bottom: 40px;
       }
 
@@ -1974,7 +2000,7 @@
       }
 
       .nav-logo {
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 1px;
       }
 
@@ -2003,7 +2029,7 @@
 
       /* Section headers */
       .section-eyebrow {
-        font-size: 8px;
+        font-size: 12px;
       }
 
       .section-lead {
@@ -2152,7 +2178,7 @@
     }
 
     .beast-eco {
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -2313,12 +2339,10 @@
     <ul class="nav-links" role="list">
       <li><a href="#about">Sobre el juego</a></li>
       <li><a href="#screenshots">Capturas</a></li>
-      <li><a href="#lifecycle">Ciclo de vida</a></li>
-      <li><a href="#ecosystems">Ecosistemas</a></li>
       <li><a href="#bestiary">Bestiario</a></li>
-      <li><a href="#trading">Intercambio</a></li>
       <li><a href="#roadmap">Hoja de ruta</a></li>
       <li><a href="#devlog">Dev Log</a></li>
+      <li class="nav-lang"><!-- NAVLANG:START --><a href="/" hreflang="en" lang="en" title="English">EN</a><a href="/es/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a><a href="/it/" hreflang="it" lang="it" title="Italiano">IT</a><!-- NAVLANG:END --></li>
     </ul>
     <a href="#newsletter" class="nav-cta">Avísame</a>
     <button class="nav-mobile-btn" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -2331,36 +2355,38 @@
     <div class="pixel-garden" aria-hidden="true"><canvas id="garden-canvas"></canvas></div>
 
     <div class="hero-content">
-      <div class="badge" aria-label="Estado del desarrollo">
-        <span class="badge-dot"></span>
-        En desarrollo · Jugable en itch.io · Próximamente en Steam
+      <div class="badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Gratis · Ya se juega en el navegador · Próximamente en acceso anticipado en Steam
       </div>
-      <div class="hero-eyebrow" aria-hidden="true">Un coleccionista de criaturas idle</div>
       <h1 class="hero-title">Echoes of the<br>Garden</h1>
-      <p class="hero-subtitle">Gratis · Próximamente en acceso anticipado en Steam</p>
-      <p class="hero-tagline">
-        Un jardín fuera del tiempo. Criaturas que nacen, crecen, envejecen y se van para siempre. Cada reliquia lleva el nombre que le diste y la vida que vivió. Dos nunca comparten historia.
-      </p>
+      <p class="hero-pitch">Un juego idle donde cada criatura vive, envejece y muere para siempre, y tú eliges lo que deja.</p>
       <div class="hero-actions">
-        <a href="https://echoes-of-the-garden.itch.io/play" class="btn-primary" target="_blank" rel="noopener">🌱 Juega en el navegador</a>
+        <a href="https://echoes-of-the-garden.itch.io/play" class="btn-primary" target="_blank" rel="noopener">🌱 Juega gratis en el navegador</a>
         <a href="#newsletter" class="btn-ghost">Avísame del lanzamiento →</a>
       </div>
+      <figure class="hero-media">
+        <video id="hero-video" src="/assets/screenshots/garden_loop.mp4" poster="/assets/screenshots/garden_loop-poster.webp"
+          width="1280" height="720" autoplay muted loop playsinline
+          aria-label="El jardín de Raíces del Mundo en marcha: raíces que se mecen, motas que flotan y un recurso que aparece"></video>
+        <figcaption>Un jardín fuera del tiempo. Cada reliquia lleva el nombre que le diste y la vida que vivió.</figcaption>
+      </figure>
       <div class="hero-stats" aria-label="Datos del juego">
-        <div class="hero-stat">
-          <div class="hero-stat-num">4</div>
-          <div class="hero-stat-label">Ecosistemas</div>
-        </div>
         <div class="hero-stat">
           <div class="hero-stat-num">28</div>
           <div class="hero-stat-label">Criaturas</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">10</div>
-          <div class="hero-stat-label">Niveles del Arco de Ecos</div>
+          <div class="hero-stat-num">1</div>
+          <div class="hero-stat-label">Vida cada una</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">3</div>
-          <div class="hero-stat-label">Idiomas</div>
+          <div class="hero-stat-num">24/7</div>
+          <div class="hero-stat-label">Crece aunque no estés</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">Gratis</div>
+          <div class="hero-stat-label">Sin pagar para ganar</div>
         </div>
       </div>
     </div>
@@ -2422,10 +2448,6 @@
         <p class="section-lead">Capturado en la build v0.9.0. Pixel art provisional, juego real: nada de esto es una maqueta.</p>
       </div>
       <div class="shots-grid">
-        <figure class="shot shot-wide reveal">
-          <img src="/assets/screenshots/garden_loop.webp" srcset="/assets/screenshots/garden_loop-640.webp 640w, /assets/screenshots/garden_loop.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" alt="Jardín de Raíces del Mundo en movimiento: raíces que se mecen, motas a la deriva y un recurso que aparece" width="1280" height="720" loading="lazy">
-          <figcaption>Raíces del Mundo, a solas durante ocho segundos.</figcaption>
-        </figure>
         <figure class="shot reveal">
           <img src="/assets/screenshots/03_death_ceremony.webp" srcset="/assets/screenshots/03_death_ceremony-960.webp 960w, /assets/screenshots/03_death_ceremony.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="La Ceremonia de la muerte: el nombre de una criatura, su epitafio y los dos destinos, Renacimiento o Preservación" width="1920" height="1080" loading="lazy">
           <figcaption>Toda criatura muere. Tú decides en qué se convierte.</figcaption>
@@ -2465,7 +2487,7 @@
       <div class="lifecycle-flow reveal" role="list" aria-label="Etapas de la vida de una criatura">
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌰</span>
           <div class="lc-name">Semilla</div>
-          <div class="lc-desc">Objeto intercambiable. Inactiva hasta plantarla. El comienzo de toda historia.</div>
+          <div class="lc-desc">Se compra en el Altar de Semillas o se hereda. Inactiva hasta plantarla. El comienzo de toda historia.</div>
         </div>
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌿</span>
           <div class="lc-name">Cría</div>
@@ -2473,7 +2495,7 @@
         </div>
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌸</span>
           <div class="lc-name">Adulto</div>
-          <div class="lc-desc">Máximo rendimiento. Las mutaciones se ven en el sprite. Mayor valor de mercado.</div>
+          <div class="lc-desc">Máximo rendimiento. Las mutaciones se ven en el sprite. Lo mejor de su vida.</div>
         </div>
         <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🍂</span>
           <div class="lc-name">Anciano</div>
@@ -2597,41 +2619,6 @@
           <div class="beast-traits">Vida duradera · Producción generosa · Resonancia Escarcha</div>
           <p class="beast-flavor">Se orienta percibiendo la descomposición de otras criaturas.</p>
         </a>
-        <a class="beast-card beast-roots reveal reveal-d2" href="/es/bestiary/moss-lizard/">
-          <img class="beast-sprite" src="/assets/creatures/lagarto_musgo.png" alt="Moss Lizard — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Moss Lizard</h3>
-          <div class="beast-eco">Raíces del Mundo</div>
-          <div class="beast-traits">Vida duradera · Producción modesta · Resonancia Arraigo</div>
-          <p class="beast-flavor">El primero en llegar.</p>
-        </a>
-        <a class="beast-card beast-roots reveal" href="/es/bestiary/peat-slug/">
-          <img class="beast-sprite" src="/assets/creatures/babosa_turba.png" alt="Peat Slug — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Peat Slug</h3>
-          <div class="beast-eco">Raíces del Mundo</div>
-          <div class="beast-traits">Vida duradera · Producción modesta · Resonancia Arraigo</div>
-          <p class="beast-flavor">Más lenta que el musgo sobre el que vive.</p>
-        </a>
-        <a class="beast-card beast-roots reveal reveal-d1" href="/es/bestiary/root-beetle/">
-          <img class="beast-sprite" src="/assets/creatures/escarabajo_raiz.png" alt="Root Beetle — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Root Beetle</h3>
-          <div class="beast-eco">Raíces del Mundo</div>
-          <div class="beast-traits">Vida duradera · Producción generosa · Resonancia Escarcha</div>
-          <p class="beast-flavor">Pasa casi toda su vida bajo tierra, siguiendo caminos de raíz que existen desde antes que el bioma.</p>
-        </a>
-        <a class="beast-card beast-roots reveal reveal-d2" href="/es/bestiary/root-mycelium/">
-          <img class="beast-sprite" src="/assets/creatures/micelio_raiz.png" alt="Root Mycelium — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Root Mycelium</h3>
-          <div class="beast-eco">Raíces del Mundo</div>
-          <div class="beast-traits">Vida constante · Producción modesta · Resonancia Fulgor</div>
-          <p class="beast-flavor">No se mueve.</p>
-        </a>
-        <a class="beast-card beast-roots reveal" href="/es/bestiary/stone-tortoise/">
-          <img class="beast-sprite" src="/assets/creatures/tortuga_roca.png" alt="Stone Tortoise — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Stone Tortoise</h3>
-          <div class="beast-eco">Raíces del Mundo</div>
-          <div class="beast-traits">Vida duradera · Producción modesta · Resonancia Brisa</div>
-          <p class="beast-flavor">Nadie la ha visto nunca moverse deprisa.</p>
-        </a>
       </div>
       <h3 class="beast-biome-title beast-biome-ash">Marea de Ceniza</h3>
       <div class="beast-grid">
@@ -2648,41 +2635,6 @@
           <div class="beast-eco">Marea de Ceniza</div>
           <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Ascua</div>
           <p class="beast-flavor">Nacida de la brasa, rara vez dura una estación.</p>
-        </a>
-        <a class="beast-card beast-ash reveal reveal-d2" href="/es/bestiary/ash-scorpion/">
-          <img class="beast-sprite" src="/assets/creatures/escorpion_ceniza.png" alt="Ash Scorpion — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Ash Scorpion</h3>
-          <div class="beast-eco">Marea de Ceniza</div>
-          <div class="beast-traits">Vida fugaz · Producción generosa · Resonancia Brisa</div>
-          <p class="beast-flavor">Casi todas las criaturas de la ceniza atraviesan su vida a toda prisa.</p>
-        </a>
-        <a class="beast-card beast-ash reveal" href="/es/bestiary/char-mole/">
-          <img class="beast-sprite" src="/assets/creatures/topo_carbon.png" alt="Char Mole — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Char Mole</h3>
-          <div class="beast-eco">Marea de Ceniza</div>
-          <div class="beast-traits">Vida fugaz · Producción generosa · Resonancia Escarcha</div>
-          <p class="beast-flavor">La única criatura de la ceniza que va más hondo en vez de más rápido.</p>
-        </a>
-        <a class="beast-card beast-ash reveal reveal-d1" href="/es/bestiary/ember-falcon/">
-          <img class="beast-sprite" src="/assets/creatures/halcon_brasa.png" alt="Ember Falcon — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Ember Falcon</h3>
-          <div class="beast-eco">Marea de Ceniza</div>
-          <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Umbra</div>
-          <p class="beast-flavor">Nunca se posa.</p>
-        </a>
-        <a class="beast-card beast-ash reveal reveal-d2" href="/es/bestiary/flame-wasp/">
-          <img class="beast-sprite" src="/assets/creatures/avispa_llama.png" alt="Flame Wasp — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Flame Wasp</h3>
-          <div class="beast-eco">Marea de Ceniza</div>
-          <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Ascua</div>
-          <p class="beast-flavor">Sola, insignificante.</p>
-        </a>
-        <a class="beast-card beast-ash reveal" href="/es/bestiary/smoke-serpent/">
-          <img class="beast-sprite" src="/assets/creatures/serpiente_humo.png" alt="Smoke Serpent — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Smoke Serpent</h3>
-          <div class="beast-eco">Marea de Ceniza</div>
-          <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Fulgor</div>
-          <p class="beast-flavor">Difícil de ver contra el suelo ceniciento.</p>
         </a>
       </div>
       <h3 class="beast-biome-title beast-biome-garden">Jardín Suspendido: primera actualización del acceso anticipado</h3>
@@ -2701,41 +2653,6 @@
           <div class="beast-traits">Vida constante · Producción generosa · Resonancia Arraigo</div>
           <p class="beast-flavor">Sus alas no deberían sostenerla.</p>
         </a>
-        <a class="beast-card beast-garden reveal reveal-d2" href="/es/bestiary/mist-serpent/">
-          <img class="beast-sprite" src="/assets/creatures/serpiente_niebla.png" alt="Mist Serpent — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Mist Serpent</h3>
-          <div class="beast-eco">Jardín Suspendido</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Umbra</div>
-          <p class="beast-flavor">Prefiere el espacio entre etapas: el momento después de que algo termina y antes de que empiece lo siguiente.</p>
-        </a>
-        <a class="beast-card beast-garden reveal" href="/es/bestiary/moon-moth/">
-          <img class="beast-sprite" src="/assets/creatures/polilla_luna.png" alt="Moon Moth — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Moon Moth</h3>
-          <div class="beast-eco">Jardín Suspendido</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Escarcha</div>
-          <p class="beast-flavor">Solo se alimenta del todo en la parte más lenta de la noche.</p>
-        </a>
-        <a class="beast-card beast-garden reveal reveal-d1" href="/es/bestiary/silk-spider/">
-          <img class="beast-sprite" src="/assets/creatures/arana_seda.png" alt="Silk Spider — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Silk Spider</h3>
-          <div class="beast-eco">Jardín Suspendido</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Brisa</div>
-          <p class="beast-flavor">Construye sin parar, incluso cuando ya no queda dónde construir.</p>
-        </a>
-        <a class="beast-card beast-garden reveal reveal-d2" href="/es/bestiary/suspended-hummingbird/">
-          <img class="beast-sprite" src="/assets/creatures/colibri_suspension.png" alt="Suspended Hummingbird — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Suspended Hummingbird</h3>
-          <div class="beast-eco">Jardín Suspendido</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Arraigo</div>
-          <p class="beast-flavor">Se mueve sin cesar, pero a una frecuencia tan alta que el efecto es quietud.</p>
-        </a>
-        <a class="beast-card beast-garden reveal" href="/es/bestiary/veil-jellyfish/">
-          <img class="beast-sprite" src="/assets/creatures/medusa_velo.png" alt="Veil Jellyfish — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Veil Jellyfish</h3>
-          <div class="beast-eco">Jardín Suspendido</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Umbra</div>
-          <p class="beast-flavor">Más que nadar, deriva.</p>
-        </a>
       </div>
       <h3 class="beast-biome-title beast-biome-cave">Cueva Luminosa: segunda actualización del acceso anticipado</h3>
       <div class="beast-grid">
@@ -2753,41 +2670,6 @@
           <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Escarcha</div>
           <p class="beast-flavor">Viene de algún lugar por debajo de la cueva conocida.</p>
         </a>
-        <a class="beast-card beast-cave reveal reveal-d2" href="/es/bestiary/cave-scorpion/">
-          <img class="beast-sprite" src="/assets/creatures/escorpion_caverna.png" alt="Cave Scorpion — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Cave Scorpion</h3>
-          <div class="beast-eco">Cueva Luminosa</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Escarcha</div>
-          <p class="beast-flavor">No se mueve si no tiene que hacerlo.</p>
-        </a>
-        <a class="beast-card beast-cave reveal" href="/es/bestiary/crystal-crab/">
-          <img class="beast-sprite" src="/assets/creatures/cangrejo_cristal.png" alt="Crystal Crab — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Crystal Crab</h3>
-          <div class="beast-eco">Cueva Luminosa</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Brisa</div>
-          <p class="beast-flavor">Su caparazón ha crecido alrededor de los depósitos de cuarzo en los que se apoya.</p>
-        </a>
-        <a class="beast-card beast-cave reveal reveal-d1" href="/es/bestiary/light-fish/">
-          <img class="beast-sprite" src="/assets/creatures/pez_luz.png" alt="Light Fish — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Light Fish</h3>
-          <div class="beast-eco">Cueva Luminosa</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Umbra</div>
-          <p class="beast-flavor">Genera su propia luz y la usa para recorrer túneles que no tienen otra.</p>
-        </a>
-        <a class="beast-card beast-cave reveal reveal-d2" href="/es/bestiary/phosphor-eel/">
-          <img class="beast-sprite" src="/assets/creatures/anguila_fosforo.png" alt="Phosphor Eel — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Phosphor Eel</h3>
-          <div class="beast-eco">Cueva Luminosa</div>
-          <div class="beast-traits">Vida fugaz · Producción abundante · Resonancia Umbra</div>
-          <p class="beast-flavor">Deja un rastro de luz al moverse.</p>
-        </a>
-        <a class="beast-card beast-cave reveal" href="/es/bestiary/quartz-snail/">
-          <img class="beast-sprite" src="/assets/creatures/caracol_cuarzo.png" alt="Quartz Snail — sprite pixel art de la criatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Quartz Snail</h3>
-          <div class="beast-eco">Cueva Luminosa</div>
-          <div class="beast-traits">Vida constante · Producción generosa · Resonancia Brisa</div>
-          <p class="beast-flavor">Cada generación es un poco más grande que la anterior.</p>
-        </a>
         <article class="beast-card beast-secret reveal">
           <div class="beast-sprite beast-unknown" aria-hidden="true">?</div>
           <h3 class="beast-name">???</h3>
@@ -2796,6 +2678,7 @@
           <p class="beast-flavor">Existen dos formas más. Ninguna semilla las vende. Se aprenden.</p>
         </article>
       </div>
+      <p class="beast-all"><a class="btn-ghost" href="/es/bestiary/">Ver las 28 criaturas →</a></p>
       <!-- BESTIARY:END -->
     </div>
   </section>
@@ -2827,7 +2710,7 @@
         </article>
       </div>
       <div class="trading-disclaimer reveal" role="note">
-        <p>Todos los objetos nacen de jugar: <strong>nada se vende por dinero real</strong>. El acceso anticipado sale sin el Mercado; cuando abra, la economía dependerá solo de los jugadores a través del Mercado de la Comunidad de Steam.</p>
+        <p>Todos los objetos nacen de jugar: <strong>no hay tienda con dinero real</strong>. El acceso anticipado sale sin el Mercado; cuando abra, los precios los pondrán los jugadores en el Mercado de la Comunidad de Steam.</p>
       </div>
     </div>
   </section>
@@ -2966,7 +2849,7 @@
       <div class="devlog-grid">
         <article class="devlog-card reveal">
           <time class="devlog-date" datetime="2026-11-05">5 de noviembre de 2026 · Build v0.12.1</time>
-          <h3 class="devlog-title"><a href="/es/devlog/ready-for-strangers/">Listo para desconocidos</a></h3>
+          <h3 class="devlog-title"><a href="/es/devlog/ready-for-strangers/">Listo para jugadores nuevos</a></h3>
           <p class="devlog-summary">Una revisión de diseño encontró once minutos muertos en la primera sesión. Qué cambió antes del primer playtest externo.</p>
         </article>
         <article class="devlog-card reveal">
@@ -3016,7 +2899,7 @@
   </section>
 
   <!-- ══ ABOUT DEV ═════════════════════════════════════════════════════════════ -->
-  <section id="about-dev" aria-labelledby="dev-title">
+  <section id="about-dev" aria-label="Sobre el desarrollador">
     <div class="container">
       <div class="about-dev-inner reveal">
         <span class="section-eyebrow">Sobre el desarrollador</span>
@@ -3024,8 +2907,7 @@
         <p>El desarrollo es transparente y público porque la comunidad merece saber en qué se mete.</p>
         <nav class="dev-links" aria-label="Enlaces externos">
           <a href="https://echoes-of-the-garden.itch.io/play" class="dev-link" target="_blank" rel="noopener">Juega en itch.io</a>
-          <a href="#" class="dev-link" aria-label="Lista de deseos en Steam (próximamente)">Steam (próximamente)</a>
-          <a href="#" class="dev-link" aria-label="Únete a Discord (próximamente)">Discord (próximamente)</a>
+          <span class="dev-link dev-soon">Steam (próximamente)</span>
           <a href="#newsletter" class="dev-link">Newsletter</a>
         </nav>
       </div>
@@ -3042,6 +2924,7 @@
       <a href="#roadmap">Hoja de ruta</a>
       <a href="#newsletter">Newsletter</a>
       <a href="/es/privacy/">Privacidad</a>
+      <a href="/es/privacy/#who-we-are">Aviso legal</a>
     </nav>
   </footer>
 
@@ -3105,40 +2988,29 @@
     else addEventListener('load', () => requestAnimationFrame(drawGarden));
     window.addEventListener('resize', initGarden);
 
-    /* ── SCROLL REVEAL ─────────────────────────────────────────────── */
-    const revealEls = document.querySelectorAll('.reveal');
-    new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }).observe
-      || revealEls.forEach(el => el.classList.add('visible')); // fallback
+    /* ── HERO VIDEO ────────────────────────────────────────────────── */
+    // Muted loop: paused for reduced motion, and a click pauses or resumes it (WCAG 2.2.2).
+    const heroVideo = document.getElementById('hero-video');
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); }
+    heroVideo.addEventListener('click', () => (heroVideo.paused ? heroVideo.play() : heroVideo.pause()));
 
+    /* ── SCROLL REVEAL ─────────────────────────────────────────────── */
     const ro = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-    revealEls.forEach(el => ro.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
     /* ── NAV ACTIVE LINK ───────────────────────────────────────────── */
+    // A line across the middle of the screen: works for sections taller than the viewport,
+    // which a visibility threshold never reaches (the bestiary used to leave "Trading" lit).
     const navLinks = document.querySelectorAll('.nav-links a');
-    new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active'));
-          const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-          if (a) a.classList.add('active');
-        }
-      });
-    }, { threshold: 0.35 }).observe
-      || null;
-
     const sio = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active'));
-          const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-          if (a) a.classList.add('active');
-        }
+        if (!e.isIntersecting) return;
+        navLinks.forEach(a => a.classList.remove('active'));
+        document.querySelector(`.nav-links a[href="#${e.target.id}"]`)?.classList.add('active');
       });
-    }, { threshold: 0.35 });
+    }, { rootMargin: '-50% 0px -50% 0px' });
     document.querySelectorAll('section[id]').forEach(s => sio.observe(s));
 
     /* ── MOBILE MENU ────────────────────────────────────────────────── */
