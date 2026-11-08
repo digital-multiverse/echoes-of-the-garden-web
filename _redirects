@@ -1,7 +1,0 @@
-# Cloudflare Workers static assets. The bestiary has no page of its own: it is a section of the home.
-/bestiary  /#bestiary  302
-/bestiary/  /#bestiary  302
-/es/bestiary  /es/#bestiary  302
-/es/bestiary/  /es/#bestiary  302
-/it/bestiary  /it/#bestiary  302
-/it/bestiary/  /it/#bestiary  302
