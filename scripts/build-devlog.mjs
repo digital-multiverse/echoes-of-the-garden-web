@@ -10,6 +10,7 @@
  */
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { ENTRIES } from "./devlog-entries.mjs";
+import { CHROME_CSS, HEADER, CTA } from "./site-chrome.mjs";
 
 const SITE = "https://echoesofthegarden.com";
 const HOME_ENTRIES = 3;
@@ -23,7 +24,7 @@ const STYLE = `
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
-    main { max-width: 680px; margin: 0 auto; padding: 48px 16px 72px }
+    main { max-width: 680px; margin: 0 auto; padding: 24px 16px 0 }
     h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; line-height: 1.3; margin: 24px 0 8px }
     h2 { color: var(--gold); font-size: 23px; font-weight: 600; margin: 36px 0 10px }
     p, ul, figure { margin-bottom: 18px }
@@ -38,8 +39,7 @@ const STYLE = `
     .entry h2 { margin: 4px 0 6px }
     .entry h2 a { color: var(--gold); text-decoration: none }
     .entry h2 a:hover { text-decoration: underline }
-    .entry p { margin: 0 }
-    .foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border) }`;
+    .entry p { margin: 0 }${CHROME_CSS}`;
 
 const head = ({ title, description, url, image, type, ld }) => `<!DOCTYPE html>
 <html lang="en">
@@ -67,12 +67,7 @@ ${jsonLd(ld)}
 </head>
 `;
 
-const srcset = (file) => {
-  const base = file.replace(".webp", "");
-  return base === "garden_loop"
-    ? "/assets/screenshots/garden_loop-640.webp 640w, /assets/screenshots/garden_loop.webp 1280w"
-    : `/assets/screenshots/${base}-960.webp 960w, /assets/screenshots/${file} 1920w`;
-};
+const srcset = (file) => `/assets/screenshots/${file.replace(".webp", "")}-960.webp 960w, /assets/screenshots/${file} 1920w`;
 
 const publisher = { "@type": "Organization", name: "Digital Multiverse", url: "https://digital-multiverse.com" };
 
@@ -88,6 +83,7 @@ function entryPage(e) {
     },
   })}
 <body>
+${HEADER}
   <main>
     <a href="/devlog/">← Dev Log</a>
     <h1>${esc(e.title)}</h1>
@@ -97,8 +93,8 @@ function entryPage(e) {
       <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
     </figure>
 ${e.body.trim()}
-    <p class="foot"><a href="/#newsletter">Get the next entry by email</a> · <a href="/">Echoes of the Garden</a></p>
   </main>
+${CTA}
 </body>
 
 </html>
@@ -121,13 +117,13 @@ function indexPage() {
     },
   })}
 <body>
+${HEADER}
   <main>
-    <a href="/">← Echoes of the Garden</a>
     <h1>Dev Log</h1>
     <p class="meta">One entry per milestone.</p>
 ${rows}
-    <p class="foot"><a href="/#newsletter">Get the next entry by email</a></p>
   </main>
+${CTA}
 </body>
 
 </html>

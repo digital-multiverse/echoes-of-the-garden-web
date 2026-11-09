@@ -1,5 +1,6 @@
 // Cloudflare Worker: only /api/* reaches this script (see run_worker_first in wrangler.jsonc).
-// Every other request is a static asset. Secrets: RESEND_API_KEY, RESEND_AUDIENCE_ID, REPORT_EMAIL.
+// Every other request is a static asset. Secrets: RESEND_API_KEY, RESEND_AUDIENCE_ID, REPORT_EMAIL,
+// UNSUBSCRIBE_SECRET (signs the one-click unsubscribe links; without it the mails fall back to mailto).
 //
 // Rate limits live in memory, so they are per isolate: enough to stop naive loops, not a real quota.
 // ponytail: per-isolate limits; move to the Workers rate limiting binding if abuse appears.
@@ -42,16 +43,32 @@ const json = (status, body, headers = {}) =>
 
 const clientIp = (request) => request.headers.get('cf-connecting-ip') || 'unknown';
 
-const resend = (path, body, apiKey) =>
+const resend = (path, body, apiKey, method = 'POST') =>
   fetch(`https://api.resend.com${path}`, {
-    method: 'POST',
+    method,
     headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
 
 const isValidEmail = (email) => email.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-const WELCOME_HTML = `
+const SITE = 'https://echoesofthegarden.com';
+const MAILTO_UNSUBSCRIBE = 'mailto:hello@echoesofthegarden.com?subject=unsubscribe';
+
+/** HMAC-SHA256 of the email, base64url: the link proves we sent it, so nobody can unsubscribe someone else. */
+async function unsubscribeToken(email, secret) {
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(email));
+  return Buffer.from(mac).toString('base64url');
+}
+
+async function unsubscribeUrl(email, env) {
+  if (!env.UNSUBSCRIBE_SECRET) return MAILTO_UNSUBSCRIBE;
+  const t = await unsubscribeToken(email, env.UNSUBSCRIBE_SECRET);
+  return `${SITE}/api/unsubscribe?e=${encodeURIComponent(email)}&t=${t}`;
+}
+
+const welcomeHtml = (unsubscribe) => `
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -77,7 +94,7 @@ const WELCOME_HTML = `
     </div>
     <p style="color:#3a5040;font-size:12px;text-align:center;margin-top:16px;line-height:1.5">
       You received this because you subscribed at echoesofthegarden.com.<br>
-      No spam, ever. <a href="mailto:hello@echoesofthegarden.com?subject=unsubscribe" style="color:#5a9e6a">Unsubscribe</a> at any time ·
+      No spam, ever. <a href="${unsubscribe}" style="color:#5a9e6a">Unsubscribe</a> at any time ·
       <a href="https://echoesofthegarden.com/privacy/" style="color:#5a9e6a">Privacy</a>
     </p>
   </div>
@@ -117,13 +134,16 @@ async function subscribe(request, env) {
     }
     // Welcome only on the first subscription: 409 means the contact already exists.
     if (contact.ok) {
+      const unsubscribe = await unsubscribeUrl(email, env);
+      const listUnsubscribe = unsubscribe === MAILTO_UNSUBSCRIBE
+        ? { 'List-Unsubscribe': `<${MAILTO_UNSUBSCRIBE}>` }
+        : { 'List-Unsubscribe': `<${unsubscribe}>, <${MAILTO_UNSUBSCRIBE}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' };
       const welcome = await resend('/emails', {
         from: 'Echoes of the Garden <hello@echoesofthegarden.com>',
         to: email,
         subject: '🌱 Welcome to Echoes of the Garden',
-        // ponytail: unsubscribing is a manual mail to hello@; a signed one-click link if the list grows.
-        headers: { 'List-Unsubscribe': '<mailto:hello@echoesofthegarden.com?subject=unsubscribe>' },
-        html: WELCOME_HTML,
+        headers: listUnsubscribe,
+        html: welcomeHtml(unsubscribe),
       }, env.RESEND_API_KEY);
       // The contact is saved, so the visitor is subscribed either way. Keep the failure visible in the logs.
       if (!welcome.ok) console.error('Resend welcome error', welcome.status, await welcome.text());
@@ -133,6 +153,44 @@ async function subscribe(request, env) {
     console.error('Subscribe error', err);
     return json(500, { error: 'Internal server error' });
   }
+}
+
+const page = (title, body) => new Response(`<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>${title} — Echoes of the Garden</title></head>
+<body style="margin:0;background:#090b08;color:#c8dcc8;font-family:Georgia,serif;font-size:18px;line-height:1.7">
+<main style="max-width:520px;margin:0 auto;padding:64px 16px;text-align:center">
+<h1 style="color:#e8cb7a;font-weight:normal;font-size:26px">${title}</h1>${body}
+<p><a href="${SITE}/" style="color:#8fba7a">echoesofthegarden.com</a></p></main></body></html>`,
+{ headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
+
+// GET only shows a button: mail scanners open links, and they must not unsubscribe anyone.
+// POST does it, from that button or from the mail client's one-click (RFC 8058).
+async function unsubscribe(request, env) {
+  const url = new URL(request.url);
+  const email = (url.searchParams.get('e') || '').trim().toLowerCase();
+  const token = url.searchParams.get('t') || '';
+  if (!env.UNSUBSCRIBE_SECRET || !env.RESEND_API_KEY || !env.RESEND_AUDIENCE_ID) {
+    console.error('Missing UNSUBSCRIBE_SECRET, RESEND_API_KEY or RESEND_AUDIENCE_ID');
+    return page('Something went wrong', '<p>Write to <a href="' + MAILTO_UNSUBSCRIBE + '" style="color:#8fba7a">hello@echoesofthegarden.com</a> and we will remove you.</p>');
+  }
+  const valid = isValidEmail(email) && token === (await unsubscribeToken(email, env.UNSUBSCRIBE_SECRET));
+  if (!valid) return new Response(null, { status: 400 });
+
+  if (request.method === 'GET') {
+    const action = `/api/unsubscribe?e=${encodeURIComponent(email)}&amp;t=${token}`;
+    return page('Leave the newsletter?', `<p>No more mail about Echoes of the Garden will reach this address.</p>
+<form method="post" action="${action}"><button style="font:inherit;padding:10px 24px;background:#1e3324;color:#c8e8c0;border:1px solid #5a9e6a;border-radius:4px;cursor:pointer">Unsubscribe</button></form>`);
+  }
+  if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
+
+  const res = await resend(`/audiences/${env.RESEND_AUDIENCE_ID}/contacts/${encodeURIComponent(email)}`, { unsubscribed: true }, env.RESEND_API_KEY, 'PATCH');
+  // 404: already gone from the list, which is what the visitor wants.
+  if (!res.ok && res.status !== 404) {
+    console.error('Resend unsubscribe error', res.status, await res.text());
+    return page('Something went wrong', '<p>Please try again, or write to <a href="' + MAILTO_UNSUBSCRIBE + '" style="color:#8fba7a">hello@echoesofthegarden.com</a>.</p>');
+  }
+  return page('You are unsubscribed', '<p>The garden will not write to you again. You can subscribe again from the site at any time.</p>');
 }
 
 async function report(request, env) {
@@ -194,6 +252,7 @@ export default {
     const { pathname } = new URL(request.url);
     if (pathname === '/api/subscribe') return subscribe(request, env);
     if (pathname === '/api/report') return report(request, env);
+    if (pathname === '/api/unsubscribe') return unsubscribe(request, env);
     return json(404, { error: 'Not found' });
   },
 };
