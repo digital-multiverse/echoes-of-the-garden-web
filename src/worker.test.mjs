@@ -18,7 +18,7 @@ function post(path, body, { ip = `10.0.0.${++ipCount}`, method = 'POST' } = {}) 
 function stubResend(status = 200) {
   const calls = [];
   globalThis.fetch = async (url, init) => {
-    calls.push({ url, body: JSON.parse(init.body) });
+    calls.push({ url, method: init.method, body: JSON.parse(init.body) });
     return new Response('{}', { status: typeof status === 'function' ? status(url) : status });
   };
   return calls;
@@ -93,6 +93,44 @@ test('report handles preflight, bad input, size, delivery failure and the limit'
   const send = () => worker.fetch(post('/api/report', { message: 'x' }, { ip: 'rep-limit' }), env);
   for (let i = 0; i < 5; i++) assert.equal((await send()).status, 200);
   assert.equal((await send()).status, 429);
+});
+
+const signed = { ...env, UNSUBSCRIBE_SECRET: 's3cret' };
+
+async function welcomeLink() {
+  const calls = stubResend();
+  await worker.fetch(post('/api/subscribe', { email: 'ana@example.com' }), signed);
+  return calls[1];
+}
+
+test('with a secret, the welcome carries a signed one-click unsubscribe link', async () => {
+  const mail = await welcomeLink();
+  assert.match(mail.body.html, /https:\/\/echoesofthegarden\.com\/api\/unsubscribe\?e=ana%40example\.com&t=[\w-]+/);
+  assert.match(mail.body.headers['List-Unsubscribe'], /^<https:.*>, <mailto:/);
+  assert.equal(mail.body.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+});
+
+test('opening the link asks first, and only POST unsubscribes', async () => {
+  const link = (await welcomeLink()).body.html.match(/https:\/\/echoesofthegarden\.com(\/api\/unsubscribe\?[^"]+)/)[1];
+  let calls = stubResend();
+  const get = await worker.fetch(new Request(`https://x.test${link}`), signed);
+  assert.equal(get.status, 200);
+  assert.match(await get.text(), /<form method="post"/);
+  assert.equal(calls.length, 0);
+
+  calls = stubResend();
+  const res = await worker.fetch(new Request(`https://x.test${link}`, { method: 'POST', body: 'List-Unsubscribe=One-Click' }), signed);
+  assert.equal(res.status, 200);
+  assert.match(calls[0].url, /audiences\/a\/contacts\/ana%40example\.com$/);
+  assert.equal(calls[0].method, 'PATCH');
+  assert.deepEqual(calls[0].body, { unsubscribed: true });
+});
+
+test('a forged or edited unsubscribe link does nothing', async () => {
+  const calls = stubResend();
+  const forged = new Request('https://x.test/api/unsubscribe?e=ana%40example.com&t=nope', { method: 'POST' });
+  assert.equal((await worker.fetch(forged, signed)).status, 400);
+  assert.equal(calls.length, 0);
 });
 
 test('unknown api paths are a 404', async () => {

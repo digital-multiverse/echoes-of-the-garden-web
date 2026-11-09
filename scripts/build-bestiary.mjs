@@ -8,12 +8,14 @@
  *   2. index.html bestiary grid   — STATIC HTML baked between markers (SEO:
  *                                   search engines index real HTML, not JS)
  *   3. bestiary/{slug}/index.html — one indexable lore page per creature
- *   4. assets/creatures/{id}.png  — sprites copied so the site is self-contained
+ *   4. bestiary/index.html        — every species; the homepage shows a few per biome
+ *   5. assets/creatures/{id}.png  — sprites copied so the site is self-contained
  *
  * Usage:  npm run bestiary          (GAME_DIR=/path/to/game npm run bestiary)
  */
 import { writeFile, mkdir, readFile, copyFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
+import { CHROME_CSS, HEADER, CTA } from "./site-chrome.mjs";
 
 const GAME = process.env.GAME_DIR ?? "../echoes-of-the-garden";
 const CREATURE_DIR = join(GAME, "data/creatures");
@@ -29,6 +31,8 @@ const ECO_ORDER = { roots: 0, ash: 1, garden: 2, cave: 3 };
 const ECO_NOTE = { garden: " — first Early Access update", cave: " — second Early Access update" };
 // ADR-009: band_affinities index = birth band (UTC 6h bands).
 const BANDS = ["night", "morning", "midday", "evening"];
+// The homepage shows this many per biome and links to /bestiary/ for the rest: 28 cards made it 4 800 px tall on a phone.
+const HOME_PER_BIOME = 2;
 
 const field = (src, name) => {
   const m = src.match(new RegExp(`^${name} = "([\\s\\S]*?)"$`, "m"));
@@ -113,12 +117,12 @@ const TEASER = `        <article class="beast-card beast-secret reveal">
           <p class="beast-flavor">Two more forms exist. No seed sells them. They are learned.</p>
         </article>`;
 
-/** Grouped-by-biome grid with subheadings — the teaser closes the last group. */
+/** Homepage grid: a few per biome with subheadings, the teaser, then the link to every species. */
 function renderGrid(records) {
   const sections = [];
   const ecos = Object.keys(ECO_ORDER);
   for (const eco of ecos) {
-    const group = records.filter((r) => r.ecosystem === eco);
+    const group = records.filter((r) => r.ecosystem === eco).slice(0, HOME_PER_BIOME);
     const cards = group.map((r, i) => card(r, i)).join("\n");
     const tail = eco === ecos.at(-1) ? "\n" + TEASER : "";
     const title = ECO_LABEL[eco] + (ECO_NOTE[eco] ?? "");
@@ -127,7 +131,78 @@ function renderGrid(records) {
 ${cards}${tail}
       </div>`);
   }
+  sections.push(`      <p class="beast-all"><a class="btn-ghost" href="/bestiary/">See all ${records.length} creatures →</a></p>`);
   return "\n" + sections.join("\n") + "\n      ";
+}
+
+const PAGE_FONTS = `  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital@0;1&display=swap" media="print" onload="this.media='all'">`;
+
+/** /bestiary/: every species, grouped by biome. */
+function indexPage(records) {
+  const url = `${SITE}/bestiary/`;
+  const description = `All ${records.length} creatures of Echoes of the Garden, an idle creature collector where life and death are permanent.`;
+  const groups = Object.keys(ECO_ORDER).map((eco) => {
+    const items = records.filter((r) => r.ecosystem === eco).map((r) => `      <li><a href="/bestiary/${r.slug}/">
+        <img src="/${r.sprite}" alt="" width="72" height="72" loading="lazy">
+        <strong>${esc(r.name)}</strong>
+        <span>${esc(r.flavor)}</span>
+      </a></li>`).join("\n");
+    return `    <h2 class="eco ${eco}">${ECO_LABEL[eco]}${ECO_NOTE[eco] ?? ""}</h2>
+    <ul class="grid">
+${items}
+    </ul>`;
+  }).join("\n");
+  return `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bestiary | Echoes of the Garden</title>
+  <meta name="description" content="${esc(description)}">
+  <link rel="canonical" href="${url}">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Bestiary | Echoes of the Garden">
+  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:image" content="${SITE}/og-image.jpg">
+  <meta property="og:url" content="${url}">
+${PAGE_FONTS}
+  <style>
+    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; --border: #222820 }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.6 }
+    main { max-width: 900px; margin: 0 auto; padding: 24px 16px 0 }
+    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin: 16px 0 8px; text-align: center }
+    .lead { color: var(--dim); text-align: center; margin-bottom: 24px }
+    h2.eco { text-transform: uppercase; letter-spacing: .1em; font-size: 15px; margin: 36px 0 14px; color: var(--green) }
+    h2.ash { color: var(--amber) }
+    h2.garden { color: #b8aee0 }
+    h2.cave { color: #e8c870 }
+    .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px }
+    .grid a { display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; padding: 16px 12px; border: 1px solid var(--border); border-radius: 6px; text-align: center; text-decoration: none; color: var(--text) }
+    .grid a:hover { border-color: var(--gold) }
+    .grid img { image-rendering: pixelated }
+    .grid strong { color: var(--gold); font-size: 18px }
+    .grid span { color: var(--dim); font-size: 15px; font-style: italic }
+    a { color: var(--gold) }${CHROME_CSS}
+  </style>
+</head>
+
+<body>
+${HEADER}
+  <main>
+    <h1>The Bestiary</h1>
+    <p class="lead">${records.length} species across four ecosystems. Each one lives once.</p>
+${groups}
+  </main>
+${CTA}
+</body>
+
+</html>
+`;
 }
 
 /** One indexable lore page per creature. */
@@ -160,13 +235,12 @@ function page(r, records) {
   <script type="application/ld+json">
 ${ld}
 </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital@0;1&display=swap" media="print" onload="this.media='all'">
+${PAGE_FONTS}
   <style>
     :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; }
     * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.65; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; text-align: center }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.65 }
+    main { display: flex; flex-direction: column; align-items: center; padding: 24px 20px 0; text-align: center }
     .sprite { width: 144px; height: 144px; image-rendering: pixelated; margin-bottom: 20px }
     h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin-bottom: 6px }
     .eco { text-transform: uppercase; letter-spacing: .1em; font-size: 13px; margin-bottom: 4px }
@@ -180,12 +254,14 @@ ${ld}
     .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
     a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
     a:hover { border-color: var(--gold) }
-    .intro, .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
-    .back { font-size: 14px; letter-spacing: .05em }
+    .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
+    .back { font-size: 15px; letter-spacing: .05em }${CHROME_CSS}
   </style>
 </head>
 
 <body>
+${HEADER}
+  <main>
   <img class="sprite" src="../../${r.sprite}" alt="${esc(r.name)} pixel creature sprite" width="144" height="144">
   <h1>${esc(r.name)}</h1>
   <div class="eco ${r.ecosystem}">${ECO_LABEL[r.ecosystem]}</div>
@@ -193,9 +269,10 @@ ${ld}
   <div class="bands">Born by ${bands}</div>
   <p class="lore">${esc(r.lore)}</p>
   <p class="epitaph">On its death: “${esc(r.death_flavor)}”</p>
-  <p class="intro">Echoes of the Garden is a free-to-play idle game about creatures that die for good.</p>
   <p class="related"><span>More from ${ECO_LABEL[r.ecosystem]}</span>${records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug).slice(0, 3).map((o) => ` · <a href="/bestiary/${o.slug}/">${esc(o.name)}</a>`).join("")}</p>
-  <a class="back" href="/#bestiary">← The Bestiary of Echoes of the Garden</a>
+  <a class="back" href="/bestiary/">← The Bestiary of Echoes of the Garden</a>
+  </main>
+${CTA}
 </body>
 
 </html>
@@ -236,14 +313,15 @@ async function main() {
     await mkdir(`bestiary/${r.slug}`, { recursive: true });
     await writeFile(`bestiary/${r.slug}/index.html`, page(r, records));
   }
-  console.log(`${records.length} creature pages written under bestiary/`);
+  await writeFile("bestiary/index.html", indexPage(records));
+  console.log(`${records.length} creature pages and bestiary/index.html written`);
 
   // Homepage JSON-LD character list + sitemap.xml follow the same records.
   const chars = records.map((r) => ({ "@type": "Thing", name: r.name, url: `${SITE}/bestiary/${r.slug}/` }));
   html = html.replace(/"character": \[[\s\S]*?\]\n/, () => `"character": ${JSON.stringify(chars)}\n`);
   await writeFile("index.html", html);
-  const urls = records.map((r) =>
-    `  <url><loc>${SITE}/bestiary/${r.slug}/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
+  const urls = [`  <url><loc>${SITE}/bestiary/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`, ...records.map((r) =>
+    `  <url><loc>${SITE}/bestiary/${r.slug}/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`)];
   // Only the bestiary's own lines change: the sitemap also lists /privacy/ and the dev log.
   const sitemap = (await readFile("sitemap.xml", "utf8")).split("\n").filter((l) => !l.includes("/bestiary/")).join("\n");
   await writeFile("sitemap.xml", sitemap.replace("</urlset>", `${urls.join("\n")}\n</urlset>`));

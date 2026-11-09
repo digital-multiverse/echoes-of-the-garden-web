@@ -21,7 +21,7 @@ const NAMES = new Set(bestiary.map((c) => c.name));
 const RESONANCES = new Set(bestiary.map((c) => c.affinity));
 const KEEP = new Set(["Echoes of the Garden", "Echo Arc", "Dev Log", "Vestigio", "Rastro", "Impronta", "Murmullo", "Eco", "Origen", "Vestigio → Origen",
   "English", "Español", "Italiano", "English · Español · Italiano", "itch.io", "Steam", "Newsletter", "your@email.com",
-  "Cloudflare", "Resend", "Google Fonts", "AEPD", "Digital Multiverse", "info@digital-multiverse.com", "hello@echoesofthegarden.com", "Founder's Seed", ...NAMES, ...RESONANCES]);
+  "Cloudflare", "Resend", "Google Fonts", "AEPD", "Digital Multiverse", "info@digital-multiverse.com", "hello@echoesofthegarden.com", "Founder's Seed", "cf_clearance", ...NAMES, ...RESONANCES]);
 
 /** Minimal CSV reader: quoted fields may hold commas, line breaks and doubled quotes. */
 function parseCsv(text) {
@@ -56,7 +56,7 @@ function creatureDict(column) {
 }
 
 async function pages() {
-  const list = ["index.html", "404.html", "privacy/index.html", "devlog/index.html"];
+  const list = ["index.html", "404.html", "privacy/index.html", "devlog/index.html", "bestiary/index.html"];
   for (const dir of ["devlog", "bestiary"]) {
     for (const e of await readdir(dir, { withFileTypes: true })) if (e.isDirectory()) list.push(`${dir}/${e.name}/index.html`);
   }
@@ -84,9 +84,21 @@ function langNav(file, lang) {
   return `<!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px">${links}</nav><!-- LANG:END -->`;
 }
 
-const withBlocks = (html, file, lang) => html
-  .replace(/\s*<!-- SEO:START -->[\s\S]*?<!-- SEO:END -->/, "")
+/** Short EN · ES · IT links for the homepage nav (inside the mobile menu too). */
+function navLang(file, lang) {
+  const p = urlPath(file);
+  const link = (l, href, label) => `<a href="${href}" hreflang="${l}" lang="${l}" title="${label}"${l === lang ? ' aria-current="true"' : ""}>${l.toUpperCase()}</a>`;
+  return [link("en", p, "English"), ...Object.entries(LOCALES).map(([l, v]) => link(l, `/${l}${p}`, v.label))].join("");
+}
+
+// Generated blocks are emptied before translating, so their text never reaches the dictionary.
+const stripBlocks = (html) => html
   .replace(/\s*<!-- LANG:START -->[\s\S]*?<!-- LANG:END -->/, "")
+  .replace(/<!-- NAVLANG:START -->[\s\S]*?<!-- NAVLANG:END -->/, "<!-- NAVLANG:START --><!-- NAVLANG:END -->");
+
+const withBlocks = (html, file, lang) => stripBlocks(html)
+  .replace(/\s*<!-- SEO:START -->[\s\S]*?<!-- SEO:END -->/, "")
+  .replace("<!-- NAVLANG:START --><!-- NAVLANG:END -->", () => `<!-- NAVLANG:START -->${navLang(file, lang)}<!-- NAVLANG:END -->`)
   .replace("</head>", `  ${seoBlock(file, lang)}\n</head>`)
   .replace("</body>", `  ${langNav(file, lang)}\n</body>`);
 
@@ -168,7 +180,7 @@ for (const lang of Object.keys(LOCALES)) {
   const dict = new Map([...creatureDict(lang), ...Object.entries(JSON.parse(await readFile(`i18n/${lang}.json`, "utf8")))]);
   for (const file of all) {
     const html = await readFile(file, "utf8");
-    const out = withBlocks(translate(html.replace(/\s*<!-- LANG:START -->[\s\S]*?<!-- LANG:END -->/, ""), file, lang, dict, missing), file, lang);
+    const out = withBlocks(translate(stripBlocks(html), file, lang, dict, missing), file, lang);
     await mkdir(dirname(`${lang}/${file}`), { recursive: true });
     await writeFile(`${lang}/${file}`, out);
   }
