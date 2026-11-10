@@ -1,4 +1,4 @@
-# Read by Cloudflare Workers static assets and by Netlify. It does not apply to /api/* Worker responses.
+# Read by Cloudflare Workers static assets. It does not apply to /api/* Worker responses.
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff

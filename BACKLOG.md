@@ -51,7 +51,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   footer; privacy and 404 use the site fonts
 - ✅ Accessibility: no text under 12 px, 44 px menu button, content visible without JS, reduced motion respected
 
-## Move to Cloudflare Workers 🔄 (decided 2026-11-04, like comparavoto)
+## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
   `.assetsignore`, tests with `node --test src/`
 - ✅ Deployed to workers.dev in the Info account, secrets set, Resend domain verified, real subscribe and report delivered (2026-11-04). A max-size save used 10 ms of CPU
@@ -60,9 +60,9 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Privacy page: owner data, same as digital-multiverse.com
 - ✅ Root domain deployed; `www` and `.es` redirect to it
 - ✅ Workers Builds connected: a push to `main` deploys. Run `npm run build` before pushing text changes
-- ⏳ Game: `REPORT_URL` to `https://echoesofthegarden.com/api/report` in the next build
-- ⏳ Delete `netlify.toml` and `netlify/functions/` only when no published build posts to netlify.app. Do NOT
-  add `"type": "module"` to `package.json` before that: it breaks those CommonJS functions
+- ✅ Game: `REPORT_URL` is `https://echoesofthegarden.com/api/report` since build v0.12.1 (v0.13.0 too)
+- ✅ `netlify.toml` and `netlify/functions/` deleted (2026-11-10): no published build posts to netlify.app,
+  and the Netlify site is switched off (old netlify.app links now return 404)
 
 ## Phase W2 — remaining ⏳
 - ✅ Devlog: 5 milestone entries, `npm run devlog` (scripts/devlog-entries.mjs), full page per entry
