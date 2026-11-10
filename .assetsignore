@@ -21,3 +21,5 @@
 !favicon.ico
 !apple-touch-icon.png
 !llms.txt
+!.well-known/
+!.well-known/security.txt
