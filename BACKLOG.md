@@ -51,6 +51,16 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   footer; privacy and 404 use the site fonts
 - ✅ Accessibility: no text under 12 px, 44 px menu button, content visible without JS, reduced motion respected
 
+## Review 2026-11-09 ✅ (`docs/REVIEW-WEB-2026-11-09.md`, accessibility pass in `docs/REVIEW-WEB-2026-11-08.md`)
+- ✅ Mobile menu works by keyboard (focus, inert background, Escape); visible focus on every page; skip link and `<main>`
+- ✅ Contrast fixes (newsletter privacy link, "Steam (soon)", roadmap phase); reduced motion stops every animation
+- ✅ Newsletter form: error tied to the field; footer and language links ~44 px tall
+- ✅ Mobile: trading section hidden, shorter badge, "Juega gratis", shared header logo on one line
+- ✅ Creature pages link "How resonances work" → `/#systems`
+- ⏳ Home TBT 300–990 ms (lab, idle host): 1.4 s of Style & Layout on mobile. Profile it (backdrop-filter, reveal transitions)
+- ⏳ Newsletter still at ~15,900 px on mobile: trim the roadmap to current + next phase
+- ⚠️ Manual: subscribe a real address and use the unsubscribe link once
+
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
   `.assetsignore`, tests with `node --test src/`
