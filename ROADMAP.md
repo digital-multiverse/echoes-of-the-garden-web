@@ -1,7 +1,7 @@
 # Web Roadmap — echoesofthegarden.com
 
 > Separate from the game roadmap. This repo (`echoes-of-the-garden-web`) is
-> the marketing/lore face of the game: Netlify static site + Functions, owned
+> the marketing/lore face of the game: static site + API Worker on Cloudflare Workers, owned
 > by the chat assistant. The game is an upstream data source (read via raw),
 > never a dependency the other way. Quarters are loose targets, not deadlines.
 
@@ -16,7 +16,8 @@
 - Newsletter capture via Resend (`subscribe.js`), hardened (honeypot, rate
   limit, normalization).
 - Bug-report endpoint (`report.js`) — the one cross-repo contract with the
-  game (needs REPORT_EMAIL env var set in Netlify).
+  game. Both endpoints now live in `src/worker.js` (`/api/subscribe`, `/api/report`);
+  the Netlify Functions were deleted on 2026-11-10.
 - Security headers / CSP, www redirect, og-image.
 
 ## Phase W2 — Content & SEO 🔄 (current)
@@ -26,8 +27,10 @@
   the robots Sitemap directive all agree. No split, no duplicate-content risk
   while on a single domain. (Earlier docs claimed this was "unified to
   echoesofthegarden.com" — false: that domain wasn't bought then. Corrected.)
-- 🔄 **Hosting moves to Cloudflare Workers** (2026-11-04): see BACKLOG. The Netlify steps below no longer apply.
-- ⏳ **Migrate to `echoesofthegarden.com` at EA** — NOT before; the domain is
+- ✅ **Hosting moved to Cloudflare Workers** (2026-11-04): see BACKLOG. Site live on
+  `echoesofthegarden.com`; the Netlify site was switched off on 2026-11-10 (old netlify.app
+  links return 404). The Netlify steps below no longer apply.
+- ✅ ~~**Migrate to `echoesofthegarden.com` at EA**~~ — done early with the move to Cloudflare (all absolute URLs rewritten). Original plan: the domain is
   bought (2026-11-04) but stays unconnected until then. At EA: add it as a
   Netlify custom domain + set PRIMARY (301 the netlify.app host), then rewrite
   every absolute URL to the new origin — `index.html` (7: canonical, og:url,
@@ -82,7 +85,7 @@ hand-translating content that will change.*
 ---
 
 ## Top risks / notes
-- **Domain is netlify.app until EA**: `echoesofthegarden.com` is bought
+- ~~**Domain is netlify.app until EA**~~ (obsolete: the site moved to `echoesofthegarden.com` in 2026-11): `echoesofthegarden.com` is bought
   (2026-11-04) but connecting it is a deliberate EA-time step. Do NOT rewrite
   the netlify.app URLs to `echoesofthegarden.com` before it's connected and live — that would point
   canonical/OG/JSON-LD at a domain that doesn't resolve and break the live

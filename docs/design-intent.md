@@ -62,8 +62,9 @@ are drafts until a native speaker checks them (BACKLOG W4). The welcome email is
 (BACKLOG).
 
 ## Links and surfaces
-- Canonical: https://echoesofthegarden.com/. `www.`, `echoesofthegarden.es` and
-  `echoes-of-the-garden.netlify.app` must 301 to it.
+- Canonical: https://echoesofthegarden.com/. `www.` and `echoesofthegarden.es` must 301 to it.
+  The old Netlify site (`echoes-of-the-garden.netlify.app`) was switched off on 2026-11-10: its
+  links return 404 and no longer redirect.
 - itch.io page should link back to the site (manual action in BACKLOG).
 - Legal: `/privacy/` holds the LSSI-CE owner data; footer "Legal notice" → `/privacy/#who-we-are`.
 
