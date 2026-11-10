@@ -50,6 +50,7 @@ assets/screenshots/            # copied from the game repo `marketing/steam/`
 scripts/                       # build-bestiary, build-devlog, build-i18n, site-chrome (shared header + CTA)
 src/worker.js                  # API, tests in src/worker.test.mjs
 i18n/{es,it}.json              # translations, key = the English text
+.well-known/security.txt       # RFC 9116 contact; renew Expires before 2027-11-10 (allowlisted in .assetsignore)
 ```
 
 ---
