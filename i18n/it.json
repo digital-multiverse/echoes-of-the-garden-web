@@ -10,7 +10,6 @@
  "%s, a creature of %s in Echoes of the Garden.": "%1, una creatura di %2 in Echoes of the Garden.",
  ", cultivating creature-seeds: beings that are part plant, part animal, part memory.": ", coltivando semi-creatura: esseri che sono in parte pianta, in parte animale e in parte memoria.",
  ", kept in the game for now and ready for Steam. Three of them count time spent with the garden in focus.": ", per ora conservati nel gioco e pronti per Steam. Tre contano il tempo passato con il giardino in primo piano.",
- ", which receives your IP address. These providers may process data outside the European Union. We never sell your data.": ", che riceve il tuo indirizzo IP. Questi fornitori possono trattare dati fuori dall'Unione Europea. Non vendiamo mai i tuoi dati.",
  ". Combine them and climb: Rastro, Impronta, Murmullo, Eco — ten tiers in all, ending in Origen. From tier four onward the forge can destroy the output instead of producing it. Each ecosystem's materials are its own.": ". Combinali e sali: Rastro, Impronta, Murmullo, Eco; dieci livelli in tutto, fino a Origen. Dal quarto livello la forgia può distruggere il risultato invece di crearlo. I materiali di ogni ecosistema sono solo suoi.",
  ". Early Access ships without the Market; when it opens, the economy is entirely player-driven via the Steam Community Market.": ". L'accesso anticipato esce senza il Mercato; quando aprirà, l'economia dipenderà solo dai giocatori tramite il Mercato della Comunità di Steam.",
  ". Only then will the Seed Altar trade for it. No timers, no dice: the garden shows a creature before it will sell it.": ". Solo allora l'Altare dei Semi la vende. Niente timer né dadi: il giardino ti mostra una creatura prima di vendertela.",
@@ -342,7 +341,6 @@
  "tend a garden outside of time": "curi un giardino fuori dal tempo",
  "the garden keeps living": "il giardino continua a vivere",
  "to host the site and": "per ospitare il sito e",
- "to store subscribers and send email. Pages load their fonts from": "per conservare gli iscritti e inviare email. Le pagine caricano i caratteri da",
  "unlock as you play and start to explain what this place is. The intro hints at it too, and I'm keeping the rest for players to find.": "si sbloccano giocando e iniziano a spiegare cos'è questo posto. Anche l'introduzione lo lascia intuire, e il resto lo lascio scoprire ai giocatori.",
  "when your creature dies, choose between": "quando la tua creatura muore, scegli tra",
  "© 2026 · Indie solo project · All rights reserved": "© 2026 · Progetto indie individuale · Tutti i diritti riservati",
@@ -376,7 +374,6 @@
  "there is no real-money shop": "non c'è un negozio con soldi veri",
  ". Early Access ships without the Market; when it opens, players set the prices on the Steam Community Market.": ". L'accesso anticipato esce senza il Mercato; quando aprirà, i prezzi li faranno i giocatori sul Mercato della Comunità di Steam.",
  "Legal notice": "Note legali",
- "Last updated: 8 November 2026": "Ultimo aggiornamento: 8 novembre 2026",
  "This site has no advertising and no analytics. It sets one security cookie, described below. We only handle personal data in the cases below.": "Questo sito non ha pubblicità né analisi. Usa un cookie di sicurezza, descritto più sotto. Trattiamo dati personali solo nei casi seguenti.",
  "Who we are and legal notice": "Chi siamo e note legali",
  "To unsubscribe, use the link at the bottom of any email: it takes one click. You can also write to": "Per disiscriverti, usa il link in fondo a qualsiasi email: basta un clic. Puoi anche scrivere a",
@@ -393,5 +390,9 @@
  "Free · Playable now in your browser": "Gratis · Già giocabile nel browser",
  "· Coming to Steam Early Access": "· In arrivo in accesso anticipato su Steam",
  "How resonances work": "Come funzionano le risonanze",
- "A Digital Multiverse project": "Un progetto di Digital Multiverse"
+ "A Digital Multiverse project": "Un progetto di Digital Multiverse",
+ "Show the finished phases": "Mostra le fasi concluse",
+ "Hide the finished phases": "Nascondi le fasi concluse",
+ "Last updated: 11 November 2026": "Ultimo aggiornamento: 11 novembre 2026",
+ "to store subscribers and send email. These providers may process data outside the European Union. We never sell your data.": "per conservare gli iscritti e inviare email. Questi fornitori possono trattare dati fuori dall'Unione Europea. Non vendiamo mai i tuoi dati."
 }
