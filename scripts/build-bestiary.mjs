@@ -195,7 +195,7 @@ ${PAGE_FONTS}
 ${HEADER}
   <main>
     <h1>The Bestiary</h1>
-    <p class="lead">${records.length} species across four ecosystems. Each one lives once.</p>
+    <p class="lead">${records.length} species across four ecosystems: Roots and Ash at Early Access launch, Garden and Cave in its first two updates. Each one lives once.</p>
 ${groups}
   </main>
 ${CTA}
@@ -265,7 +265,7 @@ ${HEADER}
   <main>
   <img class="sprite" src="../../${r.sprite}" alt="${esc(r.name)} pixel creature sprite" width="144" height="144">
   <h1>${esc(r.name)}</h1>
-  <div class="eco ${r.ecosystem}">${ECO_LABEL[r.ecosystem]}</div>
+  <div class="eco ${r.ecosystem}">${ECO_LABEL[r.ecosystem]}${ECO_NOTE[r.ecosystem] ?? ""}</div>
   <div class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</div>
   <div class="bands">Born by ${bands}</div>
   <p class="bands-help"><a href="/#systems">How resonances work</a></p>

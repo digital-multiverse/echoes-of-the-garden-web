@@ -64,13 +64,11 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ⚠️ Manual: subscribe a real address and use the unsubscribe link once
 - ✅ Production after #14 (2026-11-11, lab, host load 4–8): home mobile 86–97 (TBT 89–519 ms), desktop 94–99;
   es, dev log, entry, creature, `/bestiary/` 98–100. A11y 100 everywhere
-- ❓ Owner decision (Cloudflare, via `infra-servidores`): **managed robots.txt** is on. It prepends Content Signals
-  (`ai-train=no`) and disallows ~40 crawlers (ClaudeBot, GPTBot, Google-Extended, Applebot-Extended, Baiduspider…).
-  Lighthouse SEO drops 100 → 92 ("Unknown directive: Content-Signal"; Google ignores it). It also keeps AI
-  assistants from reading the site while `llms.txt` invites them. Keep it, or turn it off and decide per crawler
-  in our own `robots.txt`
-- ❓ Copy check: the site says "Four Ecosystems" / 28 creatures, while the game's `docs/steam-page.md` says Early
-  Access ships two biomes and adds two as EA updates. Fine for the browser build; recheck when the Steam page is live
+- ✅ AI crawlers (decided 2026-11-11): assistants may read and recommend the site, training is blocked. Already true via
+  AI Crawl Control (search/agents allow, training block) + Cloudflare managed robots.txt; checked by User-Agent. SEO 92
+  in Lighthouse is that robots.txt's `Content-Signal` line, kept on purpose (see design-intent)
+- ✅ Copy follows the Steam plan (ADR-001/011): 14 creatures and 2 ecosystems at Early Access launch, Garden and Cave in
+  the first two EA updates; creature pages for garden/cave say so
 
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
