@@ -249,7 +249,8 @@ ${PAGE_FONTS}
     .eco.garden { color: #b8aee0 }
     .eco.cave { color: #e8c870 }
     .traits { color: var(--dim); font-size: 14px; margin-bottom: 6px }
-    .bands { color: var(--dim); font-size: 13px; margin-bottom: 24px }
+    .bands { color: var(--dim); font-size: 13px; margin-bottom: 8px }
+    .bands-help { font-size: 13px; margin: 0 0 24px }
     .lore { max-width: 540px; font-size: 18px; font-style: italic; margin-bottom: 16px }
     .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
     a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
@@ -267,6 +268,7 @@ ${HEADER}
   <div class="eco ${r.ecosystem}">${ECO_LABEL[r.ecosystem]}</div>
   <div class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</div>
   <div class="bands">Born by ${bands}</div>
+  <p class="bands-help"><a href="/#systems">How resonances work</a></p>
   <p class="lore">${esc(r.lore)}</p>
   <p class="epitaph">On its death: “${esc(r.death_flavor)}”</p>
   <p class="related"><span>More from ${ECO_LABEL[r.ecosystem]}</span>${records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug).slice(0, 3).map((o) => ` · <a href="/bestiary/${o.slug}/">${esc(o.name)}</a>`).join("")}</p>

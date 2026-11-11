@@ -79,7 +79,7 @@ function seoBlock(file, lang) {
 
 function langNav(file, lang) {
   const p = file === "404.html" ? "/" : urlPath(file);
-  const link = (l, label, href) => `<a href="${href}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ""} style="color:#8fba7a">${label}</a>`;
+  const link = (l, label, href) => `<a href="${href}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ""} style="color:#8fba7a;display:inline-block;padding:12px 4px">${label}</a>`;
   const links = [link("en", "English", p), ...Object.entries(LOCALES).map(([l, v]) => link(l, v.label, `/${l}${p}`))].join(" · ");
   return `<!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px">${links}</nav><!-- LANG:END -->`;
 }
