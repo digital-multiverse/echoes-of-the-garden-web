@@ -26,7 +26,10 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
 
 ## Promises: what we can say
 - Free to play, playable now in the browser on itch.io (live).
-- 28 creatures in 4 ecosystems; permanent death; relics that carry the creature's name and life (game README).
+- Early Access opens with 2 ecosystems (Roots of the World, Tide of Ash: 14 creatures); Suspended Garden and Luminous
+  Cave (14 more) arrive in the first two EA updates (game ADR-001, ADR-011, `docs/steam-page.md`). The bestiary shows
+  all 28, with garden/cave marked as coming. Never "28 creatures" or "four ecosystems" as what you get at launch.
+- Permanent death; relics that carry the creature's name and life (game README).
 - No pay-to-win and no real-money shop: every item comes from play (game README).
 - Steam Early Access target: Q2 2027 (game ROADMAP, ADR-012).
 - Placeholder pixel art in a real game, no mock-ups (stated on the site).
@@ -82,6 +85,10 @@ Cloudflare settings go through the `infra-servidores` skill.
 ## Budgets that differ from the defaults
 None. Note: Best Practices stays at 81 in production because of Cloudflare's injected
 `/cdn-cgi/challenge-platform/` script (kept on purpose); don't report it as new.
+SEO stays at 92 because Cloudflare's managed robots.txt adds a `Content-Signal` line Lighthouse doesn't know (Google
+ignores it). Kept on purpose (2026-11-11): AI search and user agents (OAI-SearchBot, ChatGPT-User, Claude-SearchBot,
+Claude-User, PerplexityBot…) may read the site so assistants can recommend it; training crawlers (GPTBot, ClaudeBot,
+CCBot, Google-Extended…) are blocked by robots.txt and get 403 from AI Crawl Control. Check that split, not the score.
 
 ## Known decisions and open items
 - `BACKLOG.md` (phases W2–W4, manual actions).

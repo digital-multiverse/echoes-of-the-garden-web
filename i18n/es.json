@@ -96,7 +96,6 @@
  "Each biome has 12 slots in a 4 by 3 grid, and you move creatures by dragging them.": "Cada bioma tiene 12 huecos en una cuadrícula de 4 por 3, y mueves las criaturas arrastrándolas.",
  "Each creature goes through seed, hatchling, adult and elder. Then it dies and you choose. Rebirth leaves an Inherited Seed that carries its line forward. Preservation keeps it as a Relic. You get one or the other.": "Cada criatura pasa por semilla, cría, adulto y anciano. Después muere y tú eliges. Renacimiento deja una Semilla heredada que continúa su línea. Preservación la conserva como Reliquia. Es una cosa o la otra.",
  "Each creature has a": "Cada criatura tiene un",
- "Each ecosystem has its own philosophy, visual palette and mechanical specialty. A balanced garden needs all four.": "Cada ecosistema tiene su filosofía, su paleta y su especialidad. Un jardín equilibrado necesita los cuatro.",
  "Each generation passes traits and mutations forward. Over time, impossible combinations emerge.": "Cada generación transmite rasgos y mutaciones. Con el tiempo surgen combinaciones imposibles.",
  "Early Access Scope": "Alcance del acceso anticipado",
  "Early Access will launch without the real Steam Market, which becomes the first major update after launch. Until then, selling a relic pays out inside the game. The Suspended Garden and the Luminous Cave arrive as the first two Early Access content updates.": "El acceso anticipado saldrá sin el Mercado de Steam real, que pasa a ser la primera gran actualización tras el lanzamiento. Hasta entonces, vender una reliquia paga dentro del juego. El Jardín Suspendido y la Cueva Luminosa llegan como las dos primeras actualizaciones de contenido del acceso anticipado.",
@@ -134,7 +133,6 @@
  "Footer navigation": "Navegación del pie",
  "Forged from what the dead leave behind, stacked by tier and ecosystem. Specialising in one biome means wanting what players of another biome have.": "Forjados con lo que dejan los muertos, apilados por nivel y ecosistema. Especializarte en un bioma significa querer lo que tienen los jugadores de otro.",
  "Foundations": "Cimientos",
- "Four Ecosystems": "Cuatro ecosistemas",
  "Four navigable biomes, all 28 species defined, the Seed Altar and the full idle loop. Roots and Ash playable; Garden and Cave content moves to the Early Access updates.": "Cuatro biomas navegables, las 28 especies definidas, el Altar de Semillas y el bucle idle completo. Raíces y Ceniza jugables; el contenido de Jardín y Cueva pasa a las actualizaciones del acceso anticipado.",
  "Free to Play · Coming to Steam Early Access": "Gratis · Próximamente en acceso anticipado en Steam",
  "Free to play": "Gratis",
@@ -384,7 +382,6 @@
  "The Bestiary | Echoes of the Garden": "El bestiario | Echoes of the Garden",
  "All 28 creatures of Echoes of the Garden, an idle creature collector where life and death are permanent.": "Las 28 criaturas de Echoes of the Garden, un coleccionista de criaturas idle donde la vida y la muerte son permanentes.",
  "The Bestiary": "El bestiario",
- "28 species across four ecosystems. Each one lives once.": "28 especies en cuatro ecosistemas. Cada una vive una sola vez.",
  "Skip to content": "Saltar al contenido",
  "Close menu": "Cerrar menú",
  "Free · Playable now in your browser": "Gratis · Ya se juega en el navegador",
@@ -394,5 +391,9 @@
  "Show the finished phases": "Ver las fases terminadas",
  "Hide the finished phases": "Ocultar las fases terminadas",
  "Last updated: 11 November 2026": "Última actualización: 11 de noviembre de 2026",
- "to store subscribers and send email. These providers may process data outside the European Union. We never sell your data.": "para guardar suscriptores y enviar correo. Estos proveedores pueden tratar datos fuera de la Unión Europea. Nunca vendemos tus datos."
+ "to store subscribers and send email. These providers may process data outside the European Union. We never sell your data.": "para guardar suscriptores y enviar correo. Estos proveedores pueden tratar datos fuera de la Unión Europea. Nunca vendemos tus datos.",
+ "Creatures at launch": "Criaturas al lanzamiento",
+ "Each ecosystem has its own philosophy, visual palette and mechanical specialty. Early Access opens with Roots and Ash; Garden and Cave arrive in its first two updates.": "Cada ecosistema tiene su filosofía, su paleta y su especialidad. El acceso anticipado abre con Raíces y Ceniza; Jardín y Cueva llegan en sus dos primeras actualizaciones.",
+ "28 species across four ecosystems: Roots and Ash at Early Access launch, Garden and Cave in its first two updates. Each one lives once.": "28 especies en cuatro ecosistemas: Raíces y Ceniza al lanzamiento del acceso anticipado, Jardín y Cueva en sus dos primeras actualizaciones. Cada una vive una sola vez.",
+ "Four Ecosystems, Two at Launch": "Cuatro ecosistemas, dos al lanzamiento"
 }
