@@ -62,6 +62,15 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   layouts, no Google request; privacy and CSP updated)
 - ✅ Mobile roadmap folds the finished phases behind a button (only with JS): newsletter ~15,100 px
 - ⚠️ Manual: subscribe a real address and use the unsubscribe link once
+- ✅ Production after #14 (2026-11-11, lab, host load 4–8): home mobile 86–97 (TBT 89–519 ms), desktop 94–99;
+  es, dev log, entry, creature, `/bestiary/` 98–100. A11y 100 everywhere
+- ❓ Owner decision (Cloudflare, via `infra-servidores`): **managed robots.txt** is on. It prepends Content Signals
+  (`ai-train=no`) and disallows ~40 crawlers (ClaudeBot, GPTBot, Google-Extended, Applebot-Extended, Baiduspider…).
+  Lighthouse SEO drops 100 → 92 ("Unknown directive: Content-Signal"; Google ignores it). It also keeps AI
+  assistants from reading the site while `llms.txt` invites them. Keep it, or turn it off and decide per crawler
+  in our own `robots.txt`
+- ❓ Copy check: the site says "Four Ecosystems" / 28 creatures, while the game's `docs/steam-page.md` says Early
+  Access ships two biomes and adds two as EA updates. Fine for the browser build; recheck when the Steam page is live
 
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
