@@ -135,9 +135,9 @@ ${cards}${tail}
   return "\n" + sections.join("\n") + "\n      ";
 }
 
-const PAGE_FONTS = `  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital@0;1&display=swap" media="print" onload="this.media='all'">`;
+const PAGE_FONTS = `  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">`;
 
 /** /bestiary/: every species, grouped by biome. */
 function indexPage(records) {

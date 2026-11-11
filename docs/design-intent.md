@@ -47,7 +47,8 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
 - Voice: quiet, elegiac, plain. Sounds like a gardener's notebook; never sounds like a
   gacha ad ("Collect them all!", "Epic loot!").
 - Type: Cinzel Decorative (display), Crimson Pro (body), JetBrains Mono (small data),
-  from Google Fonts. Privacy and 404 must use the same `<link>` as the rest.
+  self-hosted in `assets/fonts/` (latin subset, OFL). Every page loads `/assets/fonts/fonts.css` with the same
+  two preloads; no Google Fonts request.
 - Colour tokens: `:root` in `index.html` (~line 78); dev log, creature pages and privacy
   share them through `scripts/site-chrome.mjs`.
 - Imagery: real in-engine captures only (source: `marketing/steam` in the game repo); the

@@ -57,8 +57,10 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Newsletter form: error tied to the field; footer and language links ~44 px tall
 - ✅ Mobile: trading section hidden, shorter badge, "Juega gratis", shared header logo on one line
 - ✅ Creature pages link "How resonances work" → `/#systems`
-- ⏳ Home TBT 300–990 ms (lab, idle host): 1.4 s of Style & Layout on mobile. Profile it (backdrop-filter, reveal transitions)
-- ⏳ Newsletter still at ~15,900 px on mobile: trim the roadmap to current + next phase
+- ✅ Home main-thread work 680–838 → ~450 ms (local trace): the garden canvas starts after load (it forced a full
+  layout while parsing) and fonts are self-hosted in `assets/fonts/` (no late Google stylesheet = two fewer full
+  layouts, no Google request; privacy and CSP updated)
+- ✅ Mobile roadmap folds the finished phases behind a button (only with JS): newsletter ~15,100 px
 - ⚠️ Manual: subscribe a real address and use the unsubscribe link once
 
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
