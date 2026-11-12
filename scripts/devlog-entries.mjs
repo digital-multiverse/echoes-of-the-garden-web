@@ -65,7 +65,7 @@ export const ENTRIES = [
   },
   {
     slug: "27-achievements-and-four-rare-lines",
-    title: "27 achievements and four rare lines",
+    title: "27 achievements and four rare last words",
     date: "2026-10-30",
     build: "v0.10.0",
     summary: "Achievements, words at each death, all the lore in three languages, and a bug that made creatures younger than they were.",

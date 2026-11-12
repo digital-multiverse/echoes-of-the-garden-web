@@ -106,7 +106,7 @@ ${records.filter((r) => r.ecosystem === eco).map((r) => `        <li><a href="/b
 ${garden("roots")}
 ${garden("ash")}
       <p class="bestiary-more">${later} more live in the Suspended Garden and the Luminous Cave. <a href="/bestiary/">See all ${records.length} creatures in the bestiary</a></p>
-      <p class="bestiary-more unlearned">Two more forms exist. No seed sells them. They are learned.</p>
+      <p class="bestiary-more unlearned">Two more forms can't be bought. You learn them by playing.</p>
       `;
 }
 
@@ -169,7 +169,7 @@ function page(r, records) {
   const kin = records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug);
   return `${head({
     title: `${r.name} | Echoes of the Garden Bestiary`,
-    description: `${r.flavor} ${r.name}, a creature of ${ECO_LABEL[r.ecosystem]} in Echoes of the Garden.`,
+    description: `${r.flavor} ${r.name}, a creature of the ${ECO_LABEL[r.ecosystem]} in Echoes of the Garden.`,
     url, image: img, type: "article",
     extra: `  <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -184,10 +184,10 @@ ${header("bestiary")}
     ${halo(r, false)}
     <h1>${esc(r.name)}</h1>
     <p class="where">${ECO_LABEL[r.ecosystem]}</p>
-${ECO_NOTE[r.ecosystem] ? `    <p class="where">${ECO_NOTE[r.ecosystem]}</p>\n` : ""}    <p class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</p>
+${ECO_NOTE[r.ecosystem] ? `    <p class="where">${ECO_NOTE[r.ecosystem]}</p>\n` : ""}    <p class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} affinity</p>
     <p class="lore">${esc(r.lore)}</p>
     <dl class="births">${births}</dl>
-    <p class="births-help"><a href="/#systems">How resonances work</a></p>
+    <p class="births-help"><a href="/guide/affinities/">How affinities work</a></p>
     <section class="last-words" aria-labelledby="last-words">
       <h2 id="last-words">On its death</h2>
       <blockquote><p>${esc(r.death_flavor)}</p></blockquote>

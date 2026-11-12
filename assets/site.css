@@ -37,9 +37,13 @@ code { font-size: 17px; color: var(--gold) }
 .site-nav a:hover, .site-nav a[aria-current] { color: var(--gold) }
 .site-head .btn { min-height: 44px; padding: 8px 18px; font-size: 18px }
 @media (max-width: 760px) {
-  .site-head { border-bottom: 0 }
-  .site-nav { display: none }
+  .site-nav { order: 3; width: 100%; gap: 20px; overflow-x: auto; border-top: 1px solid var(--line) }
+  .site-nav a { font-size: 17px }
   .site-logo { font-size: 15px }
+}
+@media (max-width: 360px) {
+  .site-nav { gap: 14px }
+  .site-nav a { font-size: 16px }
 }
 
 /* Page bodies */
