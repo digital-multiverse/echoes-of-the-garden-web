@@ -56,8 +56,8 @@ function creatureDict(column) {
 }
 
 async function pages() {
-  const list = ["index.html", "404.html", "privacy/index.html", "devlog/index.html", "bestiary/index.html"];
-  for (const dir of ["devlog", "bestiary"]) {
+  const list = ["index.html", "404.html", "privacy/index.html", "devlog/index.html", "bestiary/index.html", "guide/index.html"];
+  for (const dir of ["devlog", "bestiary", "guide"]) {
     for (const e of await readdir(dir, { withFileTypes: true })) if (e.isDirectory()) list.push(`${dir}/${e.name}/index.html`);
   }
   return list;
