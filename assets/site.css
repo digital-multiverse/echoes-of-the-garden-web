@@ -107,11 +107,35 @@ figcaption { color: var(--lichen); font-size: 17px; margin-top: 8px }
 .entries p { color: var(--lichen) }
 .post h2 { color: var(--bone) }
 
+/* Zones drawn with the game's own pieces (assets/motifs, cut from its sprites): roots hang
+   from under the header and from the top of the closing band, as they hang over the garden. */
+body { position: relative }
+.site-head { position: relative }
+.site-head::after {
+  content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 216px; pointer-events: none; image-rendering: pixelated;
+  background:
+    url(/assets/motifs/root-0.png) 2% 0 / 36px 216px no-repeat,
+    url(/assets/motifs/root-2.png) 7% 0 / 24px 144px no-repeat,
+    url(/assets/motifs/root-1.png) 93% 0 / 36px 216px no-repeat,
+    url(/assets/motifs/root-0.png) 98% 0 / 24px 144px no-repeat;
+}
+@media (max-width: 1000px) { .site-head::after { height: 96px; opacity: .5; background:
+  url(/assets/motifs/root-0.png) 2px 0 / 16px 96px no-repeat,
+  url(/assets/motifs/root-1.png) calc(100% - 2px) 0 / 16px 96px no-repeat } }
+
 /* Closing call to action and footer, on every page */
-.site-cta { max-width: 720px; margin: 96px auto 0; padding: 40px 24px 0; border-top: 1px solid var(--line); text-align: center }
+.site-cta { position: relative; margin: 112px 0 0; padding: 88px 24px 80px; background: var(--moss); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center }
+.site-cta::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 216px; pointer-events: none; image-rendering: pixelated;
+  background:
+    url(/assets/motifs/root-1.png) 4% 0 / 36px 216px no-repeat,
+    url(/assets/motifs/root-0.png) 96% 0 / 36px 216px no-repeat;
+}
+.site-cta > * { position: relative }
+@media (max-width: 760px) { .site-cta::before { height: 96px; opacity: .6; background-size: 16px 96px } }
 .site-cta p { color: var(--lichen); max-width: 46ch; margin: 0 auto 20px }
 .site-cta .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px }
-.site-foot { max-width: 1120px; margin: 72px auto 0; padding: 32px 24px 8px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 48px }
+.site-foot { max-width: 1120px; margin: 0 auto; padding: 32px 24px 8px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 48px }
 .site-foot .foot-logo { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 18px }
 .site-foot p { color: var(--lichen); font-size: 17px; margin-top: 6px }
 .site-foot nav { display: flex; flex-wrap: wrap; gap: 0 24px; max-width: 560px }
