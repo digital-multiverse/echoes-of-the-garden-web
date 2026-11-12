@@ -15,7 +15,7 @@
  */
 import { writeFile, mkdir, readFile, copyFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
-import { CHROME_CSS, HEADER, CTA } from "./site-chrome.mjs";
+import { HEAD_ASSETS, header, CTA, FOOTER } from "./site-chrome.mjs";
 
 const GAME = process.env.GAME_DIR ?? "../echoes-of-the-garden";
 const CREATURE_DIR = join(GAME, "data/creatures");
@@ -28,10 +28,9 @@ const LAUNCH_IDS = (await readdir(CREATURE_DIR)).filter((f) => f.endsWith(".tres
 const ECO_LABEL = { roots: "Roots of the World", ash: "Tide of Ash", garden: "Suspended Garden", cave: "Luminous Cave" };
 const ECO_ORDER = { roots: 0, ash: 1, garden: 2, cave: 3 };
 // ADR-011: garden/cave ship with the first two Early Access content updates.
-const ECO_NOTE = { garden: " — first Early Access update", cave: " — second Early Access update" };
+const ECO_NOTE = { garden: "First Early Access update", cave: "Second Early Access update" };
 // ADR-009: band_affinities index = birth band (UTC 6h bands).
-const BANDS = ["night", "morning", "midday", "evening"];
-// The homepage shows this many per biome and links to /bestiary/ for the rest: 28 cards made it 4 800 px tall on a phone.
+const BANDS = ["Born at night", "Born in the morning", "Born at midday", "Born in the evening"];
 
 const field = (src, name) => {
   const m = src.match(new RegExp(`^${name} = "([\\s\\S]*?)"$`, "m"));
@@ -111,70 +110,46 @@ ${garden("ash")}
       `;
 }
 
-const PAGE_FONTS = `  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">`;
-
-/** /bestiary/: every species, grouped by biome. */
-function indexPage(records) {
-  const url = `${SITE}/bestiary/`;
-  const description = `All ${records.length} creatures of Echoes of the Garden, an idle creature collector where life and death are permanent.`;
-  const groups = Object.keys(ECO_ORDER).map((eco) => {
-    const items = records.filter((r) => r.ecosystem === eco).map((r) => `      <li><a href="/bestiary/${r.slug}/">
-        <img src="/${r.sprite}" alt="" width="72" height="72" loading="lazy">
-        <strong>${esc(r.name)}</strong>
-        <span>${esc(r.flavor)}</span>
-      </a></li>`).join("\n");
-    return `    <h2 class="eco ${eco}">${ECO_LABEL[eco]}${ECO_NOTE[eco] ?? ""}</h2>
-    <ul class="grid">
-${items}
+const halo = (r, lazy = true) => `<span class="halo"><img src="/${r.sprite}" alt="" width="24" height="24"${lazy ? ' loading="lazy"' : ""}></span>`;
+const garden = (list, cls = "") => `    <ul class="garden${cls}">
+${list.map((r) => `      <li><a href="/bestiary/${r.slug}/">${halo(r)}<span>${esc(r.name)}</span></a></li>`).join("\n")}
     </ul>`;
-  }).join("\n");
-  return `<!DOCTYPE html>
+
+const head = ({ title, description, url, image, type, extra = "" }) => `<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Bestiary | Echoes of the Garden</title>
+  <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${url}">
   <meta name="robots" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="The Bestiary | Echoes of the Garden">
+  <meta property="og:type" content="${type}">
+  <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
-  <meta property="og:image" content="${SITE}/og-image.jpg">
+  <meta property="og:image" content="${image}">
   <meta property="og:url" content="${url}">
-${PAGE_FONTS}
-  <style>
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; --border: #222820 }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.6 }
-    main { max-width: 900px; margin: 0 auto; padding: 24px 16px 0 }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin: 16px 0 8px; text-align: center }
-    .lead { color: var(--dim); text-align: center; margin-bottom: 24px }
-    h2.eco { text-transform: uppercase; letter-spacing: .1em; font-size: 15px; margin: 36px 0 14px; color: var(--green) }
-    h2.ash { color: var(--amber) }
-    h2.garden { color: #b8aee0 }
-    h2.cave { color: #e8c870 }
-    .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px }
-    .grid a { display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; padding: 16px 12px; border: 1px solid var(--border); border-radius: 6px; text-align: center; text-decoration: none; color: var(--text) }
-    .grid a:hover { border-color: var(--gold) }
-    .grid img { image-rendering: pixelated }
-    .grid strong { color: var(--gold); font-size: 18px }
-    .grid span { color: var(--dim); font-size: 15px; font-style: italic }
-    a { color: var(--gold) }${CHROME_CSS}
-  </style>
+${extra}${HEAD_ASSETS}
 </head>
+`;
 
+/** Every species, garden by garden, as in the game. */
+function indexPage(records) {
+  const url = `${SITE}/bestiary/`;
+  const description = `All ${records.length} creatures of Echoes of the Garden, an idle creature collector where life and death are permanent.`;
+  const groups = Object.keys(ECO_ORDER).map((eco) => `    <h2 class="garden-title">${ECO_LABEL[eco]}</h2>
+${ECO_NOTE[eco] ? `    <p class="garden-note">${ECO_NOTE[eco]}</p>\n` : ""}${garden(records.filter((r) => r.ecosystem === eco), ECO_NOTE[eco] ? " garden-later" : "")}`).join("\n");
+  return `${head({ title: "The Bestiary | Echoes of the Garden", description, url, image: `${SITE}/og-image.jpg`, type: "website" })}
 <body>
-${HEADER}
-  <main>
+${header("bestiary")}
+  <main class="page page-wide">
     <h1>The Bestiary</h1>
     <p class="lead">${records.length} species across four ecosystems: Roots and Ash at Early Access launch, Garden and Cave in its first two updates. Each one lives once.</p>
 ${groups}
   </main>
 ${CTA}
+${FOOTER}
 </body>
 
 </html>
@@ -185,72 +160,45 @@ ${CTA}
 function page(r, records) {
   const url = `${SITE}/bestiary/${r.slug}/`;
   const img = `${SITE}/${r.sprite}`;
-  const bands = r.band_affinities.map((a, i) => `${BANDS[i]} → ${a}`).join(" · ");
   const ld = JSON.stringify({
     "@context": "https://schema.org", "@type": "Article",
-    headline: `${r.name} — Echoes of the Garden Bestiary`, about: r.name, image: img,
+    headline: `${r.name} | Echoes of the Garden Bestiary`, about: r.name, image: img,
     isPartOf: { "@type": "VideoGame", name: "Echoes of the Garden", url: `${SITE}/` },
   });
-  return `<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${esc(r.name)} — Echoes of the Garden Bestiary</title>
-  <meta name="description"
-    content="${esc(r.flavor)} ${esc(r.name)}, a creature of ${ECO_LABEL[r.ecosystem]} in Echoes of the Garden — an idle creature collector where life and death are permanent.">
-  <link rel="canonical" href="${url}">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="${esc(r.name)} — Echoes of the Garden">
-  <meta property="og:description" content="${esc(r.flavor)}">
-  <meta property="og:image" content="${img}">
-  <meta property="og:url" content="${url}">
-  <meta name="twitter:card" content="summary">
+  const births = r.band_affinities.map((a, i) => `<div><dt>${BANDS[i]}</dt><dd>${a}</dd></div>`).join("");
+  const kin = records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug);
+  return `${head({
+    title: `${r.name} | Echoes of the Garden Bestiary`,
+    description: `${r.flavor} ${r.name}, a creature of ${ECO_LABEL[r.ecosystem]} in Echoes of the Garden.`,
+    url, image: img, type: "article",
+    extra: `  <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
 ${ld}
 </script>
-${PAGE_FONTS}
-  <style>
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.65 }
-    main { display: flex; flex-direction: column; align-items: center; padding: 24px 20px 0; text-align: center }
-    .sprite { width: 144px; height: 144px; image-rendering: pixelated; margin-bottom: 20px }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin-bottom: 6px }
-    .eco { text-transform: uppercase; letter-spacing: .1em; font-size: 13px; margin-bottom: 4px }
-    .eco.roots { color: var(--green) }
-    .eco.ash { color: var(--amber) }
-    .eco.garden { color: #b8aee0 }
-    .eco.cave { color: #e8c870 }
-    .traits { color: var(--dim); font-size: 14px; margin-bottom: 6px }
-    .bands { color: var(--dim); font-size: 13px; margin-bottom: 8px }
-    .bands-help { font-size: 13px; margin: 0 0 24px }
-    .lore { max-width: 540px; font-size: 18px; font-style: italic; margin-bottom: 16px }
-    .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
-    a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
-    a:hover { border-color: var(--gold) }
-    .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
-    .back { font-size: 15px; letter-spacing: .05em }${CHROME_CSS}
-  </style>
-</head>
-
+`,
+  })}
 <body>
-${HEADER}
-  <main>
-  <img class="sprite" src="../../${r.sprite}" alt="${esc(r.name)} pixel creature sprite" width="144" height="144">
-  <h1>${esc(r.name)}</h1>
-  <div class="eco ${r.ecosystem}">${ECO_LABEL[r.ecosystem]}${ECO_NOTE[r.ecosystem] ?? ""}</div>
-  <div class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</div>
-  <div class="bands">Born by ${bands}</div>
-  <p class="bands-help"><a href="/#systems">How resonances work</a></p>
-  <p class="lore">${esc(r.lore)}</p>
-  <p class="epitaph">On its death: “${esc(r.death_flavor)}”</p>
-  <p class="related"><span>More from ${ECO_LABEL[r.ecosystem]}</span>${records.filter((o) => o.ecosystem === r.ecosystem && o.slug !== r.slug).slice(0, 3).map((o) => ` · <a href="/bestiary/${o.slug}/">${esc(o.name)}</a>`).join("")}</p>
-  <a class="back" href="/bestiary/">← The Bestiary of Echoes of the Garden</a>
+${header("bestiary")}
+  <main class="page creature">
+    <p class="crumbs"><a href="/bestiary/">The Bestiary</a></p>
+    ${halo(r, false)}
+    <h1>${esc(r.name)}</h1>
+    <p class="where">${ECO_LABEL[r.ecosystem]}</p>
+${ECO_NOTE[r.ecosystem] ? `    <p class="where">${ECO_NOTE[r.ecosystem]}</p>\n` : ""}    <p class="traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</p>
+    <p class="lore">${esc(r.lore)}</p>
+    <dl class="births">${births}</dl>
+    <p class="births-help"><a href="/#systems">How resonances work</a></p>
+    <section class="last-words" aria-labelledby="last-words">
+      <h2 id="last-words">On its death</h2>
+      <blockquote><p>${esc(r.death_flavor)}</p></blockquote>
+    </section>
+    <section class="related" aria-labelledby="kin">
+      <h2 id="kin">More from ${ECO_LABEL[r.ecosystem]}</h2>
+${garden(kin)}
+    </section>
   </main>
 ${CTA}
+${FOOTER}
 </body>
 
 </html>

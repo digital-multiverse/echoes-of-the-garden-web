@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moss Lizard | Bestiario di Echoes of the Garden</title>
-  <meta name="description"
-    content="Il primo ad arrivare. Moss Lizard, una creatura di Radici del Mondo in Echoes of the Garden.">
+  <meta name="description" content="Il primo ad arrivare. Moss Lizard, una creatura di Radici del Mondo in Echoes of the Garden.">
   <link rel="canonical" href="https://echoesofthegarden.com/it/bestiary/moss-lizard/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Moss Lizard — Echoes of the Garden">
-  <meta property="og:description" content="Il primo ad arrivare.">
+  <meta property="og:title" content="Moss Lizard | Bestiario di Echoes of the Garden">
+  <meta property="og:description" content="Il primo ad arrivare. Moss Lizard, una creatura di Radici del Mondo in Echoes of the Garden.">
   <meta property="og:image" content="https://echoesofthegarden.com/assets/creatures/lagarto_musgo.png">
   <meta property="og:url" content="https://echoesofthegarden.com/it/bestiary/moss-lizard/">
   <meta name="twitter:card" content="summary">
@@ -32,37 +31,7 @@
   <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.65 }
-    main { display: flex; flex-direction: column; align-items: center; padding: 24px 20px 0; text-align: center }
-    .sprite { width: 144px; height: 144px; image-rendering: pixelated; margin-bottom: 20px }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin-bottom: 6px }
-    .eco { text-transform: uppercase; letter-spacing: .1em; font-size: 13px; margin-bottom: 4px }
-    .eco.roots { color: var(--green) }
-    .eco.ash { color: var(--amber) }
-    .eco.garden { color: #b8aee0 }
-    .eco.cave { color: #e8c870 }
-    .traits { color: var(--dim); font-size: 14px; margin-bottom: 6px }
-    .bands { color: var(--dim); font-size: 13px; margin-bottom: 8px }
-    .bands-help { font-size: 13px; margin: 0 0 24px }
-    .lore { max-width: 540px; font-size: 18px; font-style: italic; margin-bottom: 16px }
-    .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
-    a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
-    a:hover { border-color: var(--gold) }
-    .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
-    .back { font-size: 15px; letter-spacing: .05em }
-    .site-head { box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; max-width: 900px; margin: 0 auto; padding: 16px }
-    .site-logo { font-family: 'Cinzel Decorative', serif; color: #e8cb7a; text-decoration: none; font-size: 15px; border: 0; white-space: nowrap }
-    .site-play { display: inline-block; padding: 10px 18px; border: 1px solid #5a9e6a; border-radius: 4px; background: #1e3324; color: #c8e8c0; text-decoration: none; font-size: 16px; line-height: 1.3; white-space: nowrap }
-    .site-play:hover { background: #2a4630 }
-    :focus-visible { outline: 2px solid #c8e8c0; outline-offset: 3px }
-    @media (max-width: 420px) { .site-logo { font-size: 12px } .site-play { font-size: 14px; padding: 8px 12px } }
-    .site-cta { width: 100%; max-width: 680px; margin: 48px auto 0; padding: 28px 16px 8px; border-top: 1px solid #222820; text-align: center }
-    .site-cta p { margin: 0 0 14px }
-    .site-cta .site-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
   <!-- SEO:START -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -77,24 +46,53 @@
 <body>
   <header class="site-head">
     <a class="site-logo" href="/it/">Echoes of the Garden</a>
-    <a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+    <nav class="site-nav" aria-label="Navigazione principale"><a href="/it/#life">Il gioco</a><a href="/it/bestiary/" aria-current="true">Bestiario</a><a href="/it/devlog/">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
   </header>
-  <main>
-  <img class="sprite" src="/assets/creatures/lagarto_musgo.png" alt="Moss Lizard sprite in pixel art della creatura" width="144" height="144">
-  <h1>Moss Lizard</h1>
-  <div class="eco roots">Radici del Mondo</div>
-  <div class="traits">Vita duratura · Resa modesta · Risonanza Arraigo</div>
-  <div class="bands">Nasce di notte → Ascua · di mattina → Arraigo · a mezzogiorno → Umbra · di sera → Escarcha</div>
-  <p class="bands-help"><a href="/it/#systems">Come funzionano le risonanze</a></p>
-  <p class="lore">Il primo ad arrivare. L'ultimo ad andarsene. Ha passato decenni sullo stesso tronco e il tronco gli è già cresciuto attorno.</p>
-  <p class="epitaph">Alla sua morte: “Anche adesso, la corteccia su cui riposava è ancora tiepida.”</p>
-  <p class="related"><span>Altro da Radici del Mondo</span> · <a href="/it/bestiary/earth-caterpillar/">Earth Caterpillar</a> · <a href="/it/bestiary/elder-centipede/">Elder Centipede</a> · <a href="/it/bestiary/peat-slug/">Peat Slug</a></p>
-  <a class="back" href="/it/bestiary/">← Il bestiario di Echoes of the Garden</a>
+  <main class="page creature">
+    <p class="crumbs"><a href="/it/bestiary/">Il bestiario</a></p>
+    <span class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24"></span>
+    <h1>Moss Lizard</h1>
+    <p class="where">Radici del Mondo</p>
+    <p class="traits">Vita duratura · Resa modesta · Risonanza Arraigo</p>
+    <p class="lore">Il primo ad arrivare. L'ultimo ad andarsene. Ha passato decenni sullo stesso tronco e il tronco gli è già cresciuto attorno.</p>
+    <dl class="births"><div><dt>Se nasce di notte</dt><dd>Ascua</dd></div><div><dt>Se nasce di mattina</dt><dd>Arraigo</dd></div><div><dt>Se nasce a mezzogiorno</dt><dd>Umbra</dd></div><div><dt>Se nasce di sera</dt><dd>Escarcha</dd></div></dl>
+    <p class="births-help"><a href="/it/#systems">Come funzionano le risonanze</a></p>
+    <section class="last-words" aria-labelledby="last-words">
+      <h2 id="last-words">Alla sua morte</h2>
+      <blockquote><p>Anche adesso, la corteccia su cui riposava è ancora tiepida.</p></blockquote>
+    </section>
+    <section class="related" aria-labelledby="kin">
+      <h2 id="kin">Altro da Radici del Mondo</h2>
+    <ul class="garden">
+      <li><a href="/it/bestiary/earth-caterpillar/"><span class="halo"><img src="/assets/creatures/oruga_tierra.png" alt="" width="24" height="24" loading="lazy"></span><span>Earth Caterpillar</span></a></li>
+      <li><a href="/it/bestiary/elder-centipede/"><span class="halo"><img src="/assets/creatures/ciempies_anciano.png" alt="" width="24" height="24" loading="lazy"></span><span>Elder Centipede</span></a></li>
+      <li><a href="/it/bestiary/peat-slug/"><span class="halo"><img src="/assets/creatures/babosa_turba.png" alt="" width="24" height="24" loading="lazy"></span><span>Peat Slug</span></a></li>
+      <li><a href="/it/bestiary/root-beetle/"><span class="halo"><img src="/assets/creatures/escarabajo_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Beetle</span></a></li>
+      <li><a href="/it/bestiary/root-mycelium/"><span class="halo"><img src="/assets/creatures/micelio_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Mycelium</span></a></li>
+      <li><a href="/it/bestiary/stone-tortoise/"><span class="halo"><img src="/assets/creatures/tortuga_roca.png" alt="" width="24" height="24" loading="lazy"></span><span>Stone Tortoise</span></a></li>
+    </ul>
+    </section>
   </main>
-  <aside class="site-cta">
-    <p>Echoes of the Garden è un gioco idle gratuito su creature che muoiono per sempre.</p>
-    <p class="site-links"><a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a> <a href="/it/#newsletter">Avvisami al lancio</a></p>
+  <aside class="site-cta" aria-label="Gioca">
+    <p>Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a><a class="btn" href="/it/#newsletter">Avvisami quando è su Steam</a></div>
   </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+    </div>
+    <nav aria-label="Piè di pagina">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+      <span>Steam (presto)</span>
+      <a href="/it/bestiary/">Bestiario</a>
+      <a href="/it/devlog/">Dev log</a>
+      <a href="/it/privacy/">Privacy</a>
+      <a href="/it/privacy/#who-we-are">Note legali</a>
+      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+    </nav>
+  </footer>
   <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/bestiary/moss-lizard/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/bestiary/moss-lizard/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/bestiary/moss-lizard/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
 </body>
 

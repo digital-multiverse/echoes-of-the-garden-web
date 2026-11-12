@@ -1,0 +1,119 @@
+/* Shared look for every page except the home (which inlines the same tokens for speed).
+   Tokens come from the game: its night, the gold of its titles, its label text. */
+:root {
+  --night: #0a0d09;
+  --moss: #141b13;
+  --line: #2c3528;
+  --bone: #e3dfcc;
+  --lichen: #a7ae99;
+  --gold: #e8cb7a;
+  --halo: 232, 203, 122;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+body { background: var(--night); color: var(--bone); font-family: 'Crimson Pro', Georgia, serif; font-size: 20px; line-height: 1.65; -webkit-font-smoothing: antialiased }
+img { display: block; max-width: 100%; height: auto }
+a { color: var(--gold); text-underline-offset: 3px; text-decoration-thickness: 1px }
+a:hover { text-decoration-thickness: 2px }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px }
+h1 { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: clamp(32px, 5vw, 46px); line-height: 1.15; text-wrap: balance; margin-bottom: 12px }
+h2 { font-size: 27px; font-weight: 600; line-height: 1.25; margin: 40px 0 10px }
+p + p, p + ul, ul + p { margin-top: 14px }
+ul { padding-left: 22px }
+li + li { margin-top: 8px }
+strong { font-weight: 600 }
+code { font-size: 17px; color: var(--gold) }
+
+/* Buttons, as on the home */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 22px; border: 1px solid var(--line); border-radius: 3px; background: var(--moss); color: var(--bone); font-size: 19px; line-height: 1.2; text-decoration: none; white-space: nowrap }
+.btn:hover { border-color: var(--lichen) }
+.btn-gold, .btn-gold:hover { background: var(--gold); border-color: var(--gold); color: var(--night); font-weight: 600 }
+
+/* Header */
+.site-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; max-width: 1120px; margin: 0 auto; padding: 12px 24px; border-bottom: 1px solid var(--line) }
+.site-logo { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; font-size: 17px; color: var(--gold); text-decoration: none; white-space: nowrap; padding: 10px 0; margin-right: auto }
+.site-nav { display: flex; gap: 24px }
+.site-nav a { color: var(--bone); text-decoration: none; font-size: 18px; padding: 10px 0; white-space: nowrap }
+.site-nav a:hover, .site-nav a[aria-current] { color: var(--gold) }
+.site-head .btn { min-height: 44px; padding: 8px 18px; font-size: 18px }
+@media (max-width: 760px) {
+  .site-head { border-bottom: 0 }
+  .site-nav { display: none }
+  .site-logo { font-size: 15px }
+}
+
+/* Page bodies */
+.page { max-width: 720px; margin: 0 auto; padding: 48px 24px 0 }
+.page-wide { max-width: 1120px }
+.crumbs { color: var(--lichen); font-size: 17px; margin-bottom: 20px }
+.crumbs a { display: inline-block; padding: 10px 0 }
+.meta { color: var(--lichen); font-size: 17px }
+.lead { color: var(--lichen); max-width: 60ch }
+figure { margin: 28px 0 }
+figure img { border: 1px solid var(--line); border-radius: 3px }
+figcaption { color: var(--lichen); font-size: 17px; margin-top: 8px }
+
+/* The light around a living creature */
+.halo { --glow: .32; position: relative; width: 132px; height: 132px; border-radius: 50%; display: grid; place-items: center; flex: none }
+.halo::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, rgba(var(--halo), var(--glow)) 0%, rgba(var(--halo), calc(var(--glow) * .45)) 38%, rgba(var(--halo), 0) 70%) }
+.halo img { position: relative; width: 72px; height: 72px; image-rendering: pixelated }
+
+/* A garden of creatures (bestiary index, related creatures) */
+.garden-title { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 22px; margin: 64px 0 0; text-align: center }
+.garden-note { color: var(--lichen); text-align: center; font-size: 18px; margin-top: 2px }
+.garden { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 4px; max-width: 980px; margin: 16px auto 0; padding: 0 }
+.garden li + li { margin: 0 }
+.garden a { display: flex; flex-direction: column; align-items: center; width: 132px; padding-bottom: 8px; color: var(--bone); text-decoration: none; font-size: 17px; line-height: 1.3; text-align: center }
+.garden .halo { --glow: .22; width: 104px; height: 104px }
+.garden .halo img { width: 56px; height: 56px }
+.garden a:hover .halo, .garden a:focus-visible .halo { --glow: .42 }
+.garden a:hover span { color: var(--gold) }
+.garden-later .halo { --glow: .1 }
+@media (max-width: 420px) { .garden a { width: 104px; font-size: 16px } .garden .halo { width: 88px; height: 88px } }
+
+/* Creature page */
+.creature { text-align: center }
+.creature > .halo { --glow: .36; width: 220px; height: 220px; margin: 0 auto 8px }
+.creature > .halo img { width: 120px; height: 120px }
+.creature .where { color: var(--lichen); font-size: 19px }
+.traits { margin-top: 4px }
+.lore { font-style: italic; font-size: 22px; max-width: 34ch; margin: 36px auto 0 }
+.births { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 640px; margin: 40px auto 0; border-top: 1px solid var(--line); text-align: center }
+.births div { padding: 14px 8px 0 }
+.births dt { color: var(--lichen); font-size: 17px }
+.births dd { font-size: 19px }
+.births-help { font-size: 17px; margin-top: 8px }
+.births-help a { display: inline-block; padding: 10px 0 }
+.last-words { max-width: 46ch; margin: 48px auto 0 }
+.last-words h2 { margin: 0 0 6px; font-size: 20px; color: var(--lichen); font-weight: 400 }
+.last-words blockquote { font-size: 23px; color: var(--gold) }
+.last-words blockquote p::before { content: "“" }
+.last-words blockquote p::after { content: "”" }
+.related { margin-top: 64px }
+.related h2 { text-align: center; font-size: 22px; margin: 0 }
+@media (max-width: 560px) { .births { grid-template-columns: repeat(2, 1fr) } }
+
+/* Dev log */
+.entries { list-style: none; padding: 0; margin-top: 28px }
+.entries li { padding: 24px 0; border-top: 1px solid var(--line) }
+.entries li + li { margin: 0 }
+.entries h2 { margin: 2px 0 6px; font-size: 25px }
+.entries h2 a { color: var(--bone); text-decoration: none }
+.entries h2 a:hover { color: var(--gold); text-decoration: underline }
+.entries p { color: var(--lichen) }
+.post h2 { color: var(--bone) }
+
+/* Closing call to action and footer, on every page */
+.site-cta { max-width: 720px; margin: 96px auto 0; padding: 40px 24px 0; border-top: 1px solid var(--line); text-align: center }
+.site-cta p { color: var(--lichen); max-width: 46ch; margin: 0 auto 20px }
+.site-cta .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px }
+.site-foot { max-width: 1120px; margin: 72px auto 0; padding: 32px 24px 8px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 48px }
+.site-foot .foot-logo { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 18px }
+.site-foot p { color: var(--lichen); font-size: 17px; margin-top: 6px }
+.site-foot nav { display: flex; flex-wrap: wrap; gap: 0 24px; max-width: 560px }
+.site-foot nav a, .site-foot nav span { display: inline-block; padding: 10px 0; font-size: 17px }
+.site-foot nav span { color: var(--lichen) }
+
+/* 404 */
+.lost { text-align: center; padding-top: 96px }
+.lost .lead { margin: 0 auto 28px }

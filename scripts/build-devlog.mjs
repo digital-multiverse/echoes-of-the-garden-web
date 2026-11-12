@@ -10,7 +10,7 @@
  */
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { ENTRIES } from "./devlog-entries.mjs";
-import { CHROME_CSS, HEADER, CTA } from "./site-chrome.mjs";
+import { HEAD_ASSETS, header, CTA, FOOTER } from "./site-chrome.mjs";
 
 const SITE = "https://echoesofthegarden.com";
 const HOME_ENTRIES = 3;
@@ -19,27 +19,6 @@ const newest = [...ENTRIES].sort((a, b) => b.date.localeCompare(a.date));
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const longDate = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 const jsonLd = (o) => JSON.stringify(o, null, 2).replace(/</g, "\\u003c");
-
-const STYLE = `
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #8fba7a; --text: #cdd2c4; --dim: #8a917f; --border: #222820; }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 19px; line-height: 1.7 }
-    main { max-width: 680px; margin: 0 auto; padding: 24px 16px 0 }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; line-height: 1.3; margin: 24px 0 8px }
-    h2 { color: var(--gold); font-size: 23px; font-weight: 600; margin: 36px 0 10px }
-    p, ul, figure { margin-bottom: 18px }
-    ul { padding-left: 22px }
-    li { margin-bottom: 8px }
-    strong { color: #e4e8dc; font-weight: 600 }
-    a { color: var(--green) }
-    img { display: block; width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated }
-    figcaption { color: var(--dim); font-size: 15px; margin-top: 6px }
-    .meta { color: var(--dim); font-size: 15px; margin-bottom: 28px }
-    .entry { padding: 22px 0; border-top: 1px solid var(--border) }
-    .entry h2 { margin: 4px 0 6px }
-    .entry h2 a { color: var(--gold); text-decoration: none }
-    .entry h2 a:hover { text-decoration: underline }
-    .entry p { margin: 0 }${CHROME_CSS}`;
 
 const head = ({ title, description, url, image, type, ld }) => `<!DOCTYPE html>
 <html lang="en">
@@ -59,11 +38,7 @@ const head = ({ title, description, url, image, type, ld }) => `<!DOCTYPE html>
   <script type="application/ld+json">
 ${jsonLd(ld)}
 </script>
-  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>${STYLE}
-  </style>
+${HEAD_ASSETS}
 </head>
 `;
 
@@ -83,18 +58,19 @@ function entryPage(e) {
     },
   })}
 <body>
-${HEADER}
-  <main>
-    <a href="/devlog/">← Dev Log</a>
+${header("devlog")}
+  <main class="page post">
+    <p class="crumbs"><a href="/devlog/">Dev log</a></p>
     <h1>${esc(e.title)}</h1>
     <p class="meta"><time datetime="${e.date}">${longDate(e.date)}</time> · Build ${e.build}</p>
     <figure>
-      <img src="/assets/screenshots/${e.image}" srcset="${srcset(e.image)}" sizes="(max-width: 712px) 100vw, 680px" width="1280" height="720" alt="${esc(e.alt)}">
-      <figcaption>Captured from build v0.9.0. Placeholder art.</figcaption>
+      <img src="/assets/screenshots/${e.image}" srcset="${srcset(e.image)}" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="${esc(e.alt)}">
+      <figcaption>A capture from the game. The pixel art is still placeholder.</figcaption>
     </figure>
 ${e.body.trim()}
   </main>
 ${CTA}
+${FOOTER}
 </body>
 
 </html>
@@ -104,11 +80,11 @@ ${CTA}
 function indexPage() {
   const url = `${SITE}/devlog/`;
   const description = "Development updates for Echoes of the Garden, an idle creature collector with permanent death.";
-  const rows = newest.map((e) => `    <article class="entry">
-      <time class="meta" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
-      <h2><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h2>
-      <p>${esc(e.summary)}</p>
-    </article>`).join("\n");
+  const rows = newest.map((e) => `      <li>
+        <time class="meta" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
+        <h2><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h2>
+        <p>${esc(e.summary)}</p>
+      </li>`).join("\n");
   return `${head({
     title: "Dev Log | Echoes of the Garden", description, url, image: `${SITE}/og-image.jpg`, type: "website",
     ld: {
@@ -117,13 +93,16 @@ function indexPage() {
     },
   })}
 <body>
-${HEADER}
-  <main>
-    <h1>Dev Log</h1>
-    <p class="meta">One entry per milestone.</p>
+${header("devlog")}
+  <main class="page">
+    <h1>Dev log</h1>
+    <p class="lead">One entry per milestone.</p>
+    <ul class="entries">
 ${rows}
+    </ul>
   </main>
 ${CTA}
+${FOOTER}
 </body>
 
 </html>

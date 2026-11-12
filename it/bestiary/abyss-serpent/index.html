@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abyss Serpent | Bestiario di Echoes of the Garden</title>
-  <meta name="description"
-    content="Viene da un luogo sotto la grotta conosciuta. Abyss Serpent, una creatura di Grotta Luminosa in Echoes of the Garden.">
+  <meta name="description" content="Viene da un luogo sotto la grotta conosciuta. Abyss Serpent, una creatura di Grotta Luminosa in Echoes of the Garden.">
   <link rel="canonical" href="https://echoesofthegarden.com/it/bestiary/abyss-serpent/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Abyss Serpent — Echoes of the Garden">
-  <meta property="og:description" content="Viene da un luogo sotto la grotta conosciuta.">
+  <meta property="og:title" content="Abyss Serpent | Bestiario di Echoes of the Garden">
+  <meta property="og:description" content="Viene da un luogo sotto la grotta conosciuta. Abyss Serpent, una creatura di Grotta Luminosa in Echoes of the Garden.">
   <meta property="og:image" content="https://echoesofthegarden.com/assets/creatures/serpiente_abismo.png">
   <meta property="og:url" content="https://echoesofthegarden.com/it/bestiary/abyss-serpent/">
   <meta name="twitter:card" content="summary">
@@ -32,37 +31,7 @@
   <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.65 }
-    main { display: flex; flex-direction: column; align-items: center; padding: 24px 20px 0; text-align: center }
-    .sprite { width: 144px; height: 144px; image-rendering: pixelated; margin-bottom: 20px }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin-bottom: 6px }
-    .eco { text-transform: uppercase; letter-spacing: .1em; font-size: 13px; margin-bottom: 4px }
-    .eco.roots { color: var(--green) }
-    .eco.ash { color: var(--amber) }
-    .eco.garden { color: #b8aee0 }
-    .eco.cave { color: #e8c870 }
-    .traits { color: var(--dim); font-size: 14px; margin-bottom: 6px }
-    .bands { color: var(--dim); font-size: 13px; margin-bottom: 8px }
-    .bands-help { font-size: 13px; margin: 0 0 24px }
-    .lore { max-width: 540px; font-size: 18px; font-style: italic; margin-bottom: 16px }
-    .epitaph { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 32px }
-    a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s }
-    a:hover { border-color: var(--gold) }
-    .related { max-width: 540px; font-size: 15px; color: var(--dim); margin-bottom: 16px; text-align: center }
-    .back { font-size: 15px; letter-spacing: .05em }
-    .site-head { box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; max-width: 900px; margin: 0 auto; padding: 16px }
-    .site-logo { font-family: 'Cinzel Decorative', serif; color: #e8cb7a; text-decoration: none; font-size: 15px; border: 0; white-space: nowrap }
-    .site-play { display: inline-block; padding: 10px 18px; border: 1px solid #5a9e6a; border-radius: 4px; background: #1e3324; color: #c8e8c0; text-decoration: none; font-size: 16px; line-height: 1.3; white-space: nowrap }
-    .site-play:hover { background: #2a4630 }
-    :focus-visible { outline: 2px solid #c8e8c0; outline-offset: 3px }
-    @media (max-width: 420px) { .site-logo { font-size: 12px } .site-play { font-size: 14px; padding: 8px 12px } }
-    .site-cta { width: 100%; max-width: 680px; margin: 48px auto 0; padding: 28px 16px 8px; border-top: 1px solid #222820; text-align: center }
-    .site-cta p { margin: 0 0 14px }
-    .site-cta .site-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
   <!-- SEO:START -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -77,24 +46,54 @@
 <body>
   <header class="site-head">
     <a class="site-logo" href="/it/">Echoes of the Garden</a>
-    <a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+    <nav class="site-nav" aria-label="Navigazione principale"><a href="/it/#life">Il gioco</a><a href="/it/bestiary/" aria-current="true">Bestiario</a><a href="/it/devlog/">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
   </header>
-  <main>
-  <img class="sprite" src="/assets/creatures/serpiente_abismo.png" alt="Abyss Serpent sprite in pixel art della creatura" width="144" height="144">
-  <h1>Abyss Serpent</h1>
-  <div class="eco cave">Grotta Luminosa: secondo aggiornamento dell'accesso anticipato</div>
-  <div class="traits">Vita fugace · Resa abbondante · Risonanza Escarcha</div>
-  <div class="bands">Nasce di notte → Brisa · di mattina → Escarcha · a mezzogiorno → Umbra · di sera → Arraigo</div>
-  <p class="bands-help"><a href="/it/#systems">Come funzionano le risonanze</a></p>
-  <p class="lore">Viene da un luogo sotto la grotta conosciuta. Ciò che rende non corrisponde alla durata della sua vita secondo nessuna formula che valga per le altre creature. Qualcos'altro contribuisce.</p>
-  <p class="epitaph">Alla sua morte: “Per un attimo dopo la sua morte, ogni altra creatura del giardino genera un ultimo battito. Poi la grotta torna silenziosa.”</p>
-  <p class="related"><span>Altro da Grotta Luminosa</span> · <a href="/it/bestiary/abyss-polyp/">Abyss Polyp</a> · <a href="/it/bestiary/cave-scorpion/">Cave Scorpion</a> · <a href="/it/bestiary/crystal-crab/">Crystal Crab</a></p>
-  <a class="back" href="/it/bestiary/">← Il bestiario di Echoes of the Garden</a>
+  <main class="page creature">
+    <p class="crumbs"><a href="/it/bestiary/">Il bestiario</a></p>
+    <span class="halo"><img src="/assets/creatures/serpiente_abismo.png" alt="" width="24" height="24"></span>
+    <h1>Abyss Serpent</h1>
+    <p class="where">Grotta Luminosa</p>
+    <p class="where">Secondo aggiornamento dell'accesso anticipato</p>
+    <p class="traits">Vita fugace · Resa abbondante · Risonanza Escarcha</p>
+    <p class="lore">Viene da un luogo sotto la grotta conosciuta. Ciò che rende non corrisponde alla durata della sua vita secondo nessuna formula che valga per le altre creature. Qualcos'altro contribuisce.</p>
+    <dl class="births"><div><dt>Se nasce di notte</dt><dd>Brisa</dd></div><div><dt>Se nasce di mattina</dt><dd>Escarcha</dd></div><div><dt>Se nasce a mezzogiorno</dt><dd>Umbra</dd></div><div><dt>Se nasce di sera</dt><dd>Arraigo</dd></div></dl>
+    <p class="births-help"><a href="/it/#systems">Come funzionano le risonanze</a></p>
+    <section class="last-words" aria-labelledby="last-words">
+      <h2 id="last-words">Alla sua morte</h2>
+      <blockquote><p>Per un attimo dopo la sua morte, ogni altra creatura del giardino genera un ultimo battito. Poi la grotta torna silenziosa.</p></blockquote>
+    </section>
+    <section class="related" aria-labelledby="kin">
+      <h2 id="kin">Altro da Grotta Luminosa</h2>
+    <ul class="garden">
+      <li><a href="/it/bestiary/abyss-polyp/"><span class="halo"><img src="/assets/creatures/polipo_abismo.png" alt="" width="24" height="24" loading="lazy"></span><span>Abyss Polyp</span></a></li>
+      <li><a href="/it/bestiary/cave-scorpion/"><span class="halo"><img src="/assets/creatures/escorpion_caverna.png" alt="" width="24" height="24" loading="lazy"></span><span>Cave Scorpion</span></a></li>
+      <li><a href="/it/bestiary/crystal-crab/"><span class="halo"><img src="/assets/creatures/cangrejo_cristal.png" alt="" width="24" height="24" loading="lazy"></span><span>Crystal Crab</span></a></li>
+      <li><a href="/it/bestiary/light-fish/"><span class="halo"><img src="/assets/creatures/pez_luz.png" alt="" width="24" height="24" loading="lazy"></span><span>Light Fish</span></a></li>
+      <li><a href="/it/bestiary/phosphor-eel/"><span class="halo"><img src="/assets/creatures/anguila_fosforo.png" alt="" width="24" height="24" loading="lazy"></span><span>Phosphor Eel</span></a></li>
+      <li><a href="/it/bestiary/quartz-snail/"><span class="halo"><img src="/assets/creatures/caracol_cuarzo.png" alt="" width="24" height="24" loading="lazy"></span><span>Quartz Snail</span></a></li>
+    </ul>
+    </section>
   </main>
-  <aside class="site-cta">
-    <p>Echoes of the Garden è un gioco idle gratuito su creature che muoiono per sempre.</p>
-    <p class="site-links"><a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a> <a href="/it/#newsletter">Avvisami al lancio</a></p>
+  <aside class="site-cta" aria-label="Gioca">
+    <p>Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a><a class="btn" href="/it/#newsletter">Avvisami quando è su Steam</a></div>
   </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+    </div>
+    <nav aria-label="Piè di pagina">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+      <span>Steam (presto)</span>
+      <a href="/it/bestiary/">Bestiario</a>
+      <a href="/it/devlog/">Dev log</a>
+      <a href="/it/privacy/">Privacy</a>
+      <a href="/it/privacy/#who-we-are">Note legali</a>
+      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+    </nav>
+  </footer>
   <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/bestiary/abyss-serpent/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/bestiary/abyss-serpent/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/bestiary/abyss-serpent/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
 </body>
 
