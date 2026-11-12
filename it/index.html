@@ -5,43 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ═══ PRIMARY SEO ═══════════════════════════════════════════════════════ -->
+  <!-- Primary SEO -->
   <title>Echoes of the Garden: gioco idle di creature con morte permanente</title>
   <meta name="description"
     content="Gioco idle gratuito di creature con morte permanente. Creature in pixel art nascono, invecchiano e muoiono per sempre, lasciando reliquie con un nome.">
   <meta name="keywords"
-    content="idle game, creature collector, steam, pixel art, steam market, trading, indie game, free to play, idle collector">
+    content="idle game, creature collector, permadeath, pixel art, indie game, free to play, browser game">
   <meta name="author" content="Echoes of the Garden">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://echoesofthegarden.com/it/">
 
-  <!-- ═══ OPEN GRAPH (Discord, Twitter, Facebook, Slack previews) ══════════ -->
+  <!-- Open Graph: Discord, Facebook, Slack previews -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://echoesofthegarden.com/it/">
-  <meta property="og:title" content="Echoes of the Garden: collezionista di creature idle">
+  <meta property="og:title" content="Echoes of the Garden: idle di collezione di creature">
   <meta property="og:description"
-    content="Un giardino fuori dal tempo. Creature che nascono, crescono e muoiono per sempre. Ogni reliquia porta il nome che le hai dato e la vita che ha vissuto. Gratis su Steam.">
+    content="Un gioco idle in cui ogni creatura vive, invecchia e muore per sempre, e sei tu a scegliere cosa lascia. Gratis nel browser già adesso; poi, accesso anticipato su Steam.">
   <meta property="og:image" content="https://echoesofthegarden.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Echoes of the Garden — pixel art idle creature collector">
+  <meta property="og:image:alt" content="Echoes of the Garden, a pixel art idle creature collector">
   <meta property="og:site_name" content="Echoes of the Garden">
   <meta property="og:locale" content="it_IT">
 
-  <!-- ═══ TWITTER CARD ═════════════════════════════════════════════════════ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Echoes of the Garden: collezionista di creature idle">
+  <meta name="twitter:title" content="Echoes of the Garden: idle di collezione di creature">
   <meta name="twitter:description"
-    content="Creature che nascono, crescono e muoiono per sempre. Due reliquie non condividono mai la stessa storia. Presto su Steam.">
+    content="Un gioco idle in cui ogni creatura vive, invecchia e muore per sempre. Gratis nel browser già adesso; poi, accesso anticipato su Steam.">
   <meta name="twitter:image" content="https://echoesofthegarden.com/og-image.jpg">
 
-  <!-- ═══ SCHEMA.ORG — VideoGame structured data ══════════════════════════ -->
+  <!-- Schema.org VideoGame structured data -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Echoes of the Garden",
-  "description": "Un collezionista di creature idle in cui le creature nascono, crescono, invecchiano e muoiono per sempre, lasciando reliquie con il nome che hai dato loro e la vita che hanno vissuto, scambiabili sul Mercato della Comunità di Steam dopo l'accesso anticipato.",
+  "description": "Un idle di collezione di creature in cui le creature nascono, crescono, invecchiano e muoiono per sempre, lasciando reliquie con il nome che hai dato loro e la vita che hanno vissuto, scambiabili sul Mercato della Comunità di Steam dopo l'accesso anticipato.",
   "genre": [
     "Idle Game",
     "Creature Collector",
@@ -203,2176 +203,281 @@
 }
 </script>
 
-  <!-- ═══ FAVICON (inline SVG — no file needed) ════════════════════════════ -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230d100c'/><text y='24' x='4' font-size='22'>🌱</text></svg>">
-  <link rel="apple-touch-icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230d100c'/><text y='24' x='4' font-size='22'>🌱</text></svg>">
 
-  <!-- ═══ THEME COLOR (browser chrome on mobile) ══════════════════════════ -->
-  <meta name="theme-color" content="#0d100c">
+  <!-- Theme colour: browser chrome on mobile -->
+  <meta name="theme-color" content="#0a0d09">
 
-  <!-- ═══ FONTS ═════════════════════════════════════════════════════════════ -->
+  <!-- Fonts -->
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
   <style>
-    /* ─── TOKENS ─────────────────────────────────────────────────────────── */
+    /* Tokens come from the game itself: its night background, the gold of its titles,
+       the pale text of its labels and the soft light around a living creature. */
     :root {
-      --bg: #090b08;
-      --bg2: #0d100c;
-      --surface: #131712;
-      --surface2: #191e17;
-      --border: #222820;
-      --border-hi: #313d2a;
-      --green: #5a9e6a;
-      --green-hi: #8fba7a;
-      --green-dim: #253d2c;
-      --green-glow: rgba(90, 158, 106, 0.15);
-      --gold: #c9a84c;
-      --gold-hi: #e8cb7a;
-      --gold-dim: rgba(201, 168, 76, 0.2);
-      --amber: #c8743a;
-      --purple: #9a7fd4;
-      --text: #c8dcc8;
-      --text-dim: #6a9070;
-      --text-muted: #8a9a8a;
-      --white: #edf0e6;
-      --nav-h: 58px;
-      --max-w: 1080px;
-      --radius: 3px;
+      --night: #0a0d09;
+      --dusk: #050705;
+      --moss: #141b13;
+      --line: #2c3528;
+      --bone: #e3dfcc;
+      --lichen: #a7ae99;
+      --gold: #e8cb7a;
+      --gold-deep: #c9a84c;
+      --halo: 232, 203, 122;
+      --nav-h: 64px;
+      --wide: 1120px;
+      --text: 680px;
+      color-scheme: dark;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px) }
     body {
-      background: var(--bg);
-      color: var(--text);
+      background: var(--night);
+      color: var(--bone);
       font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 17px;
-      line-height: 1.7;
-      overflow-x: hidden;
+      font-size: 20px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
+    img, video { display: block; max-width: 100%; height: auto }
+    a { color: var(--gold); text-underline-offset: 3px; text-decoration-thickness: 1px }
+    a:hover { text-decoration-thickness: 2px }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px }
+    h1, h2, h3 { font-weight: 600; line-height: 1.2; color: var(--bone) }
+    h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 16px; max-width: 24ch; text-wrap: balance }
+    h3 { font-size: 23px; margin-bottom: 6px }
+    p + p { margin-top: 14px }
+    .wrap { width: 100%; max-width: var(--wide); margin: 0 auto; padding: 0 24px }
+    .lede { color: var(--lichen); max-width: 60ch }
+    section { padding: 112px 0 }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0 }
+    .skip { position: absolute; left: -9999px; top: 8px; z-index: 30; padding: 12px 16px; background: var(--gold); color: var(--night) }
+    .skip:focus { left: 16px }
 
-    /* ─── SCROLLBAR ──────────────────────────────────────────────────────── */
-    ::-webkit-scrollbar {
-      width: 5px;
+    /* Buttons: the game's own buttons are dark slabs with a hairline; the one we want pressed is gold. */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+      padding: 10px 22px; border: 1px solid var(--line); border-radius: 3px;
+      background: var(--moss); color: var(--bone); font: inherit; font-size: 19px; line-height: 1.2;
+      text-decoration: none; cursor: pointer; white-space: nowrap;
     }
+    .btn:hover { border-color: var(--lichen) }
+    .btn:active { transform: translateY(1px) }
+    .btn-gold { background: var(--gold); border-color: var(--gold); color: var(--night); font-weight: 600 }
+    .btn-gold:hover { background: #f1d88f; border-color: #f1d88f }
 
-    ::-webkit-scrollbar-track {
-      background: var(--bg);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--green-dim);
-      border-radius: 3px;
-    }
-
-    /* ─── NOISE TEXTURE ──────────────────────────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.35;
-    }
-
-    section,
-    nav,
-    footer {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ─── NAV ────────────────────────────────────────────────────────────── */
+    /* ── Nav ── */
     .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      height: var(--nav-h);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      background: rgba(9, 11, 8, 0.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
+      position: sticky; top: 0; z-index: 20; height: var(--nav-h);
+      display: flex; align-items: center; gap: 28px; padding: 0 24px;
+      background: rgba(10, 13, 9, .94); border-bottom: 1px solid var(--line);
     }
+    .nav-logo { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; font-size: 17px; color: var(--gold); text-decoration: none; white-space: nowrap; margin-right: auto; padding: 8px 0 }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none }
+    .nav-links a { color: var(--bone); text-decoration: none; font-size: 18px; display: inline-block; padding: 10px 0; white-space: nowrap }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold) }
+    .nav-lang { display: flex; gap: 2px; padding-left: 20px; border-left: 1px solid var(--line) }
+    .nav-lang a { min-width: 44px; padding: 10px 6px; text-align: center; color: var(--lichen); font-size: 16px }
+    .nav-lang a[aria-current] { color: var(--gold) }
+    .nav .btn { min-height: 44px; padding: 8px 18px; font-size: 18px }
+    .nav-links a.btn-gold { color: var(--night); padding: 8px 18px }
+    .nav-links a.btn-gold:hover { color: var(--night) }
+    .nav-menu-btn { display: none; min-height: 44px; padding: 8px 16px; font-size: 18px }
 
-    .nav-logo {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: var(--gold);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 2.8s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1)
+    @media (max-width: 1100px) {
+      .nav { gap: 12px }
+      .nav-menu-btn { display: inline-flex }
+      .nav .nav-play { display: none }
+      .nav-links { display: none }
+      .nav.nav-open .nav-links {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+        position: fixed; inset: var(--nav-h) 0 auto 0; padding: 16px 24px 28px;
+        background: var(--night); border-bottom: 1px solid var(--line);
       }
-
-      50% {
-        opacity: 0.4;
-        transform: scale(0.65)
-      }
+      .nav.nav-open .nav-links a { font-size: 22px; padding: 10px 0 }
+      .nav.nav-open .nav-lang { border: 0; padding: 8px 0 0 }
+      .nav.nav-open .nav-lang a { font-size: 18px; padding: 10px 10px 10px 0 }
+      .nav.nav-open .nav-play { display: inline-flex; margin-top: 12px }
     }
+    @media (max-width: 380px) { .nav-logo { font-size: 14px } }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      display: block;
-      padding: 6px 13px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      border-radius: var(--radius);
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .nav-cta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      border-radius: var(--radius);
-      background: var(--green-dim);
-      color: var(--green-hi);
-      border: 1px solid rgba(90, 158, 106, 0.35);
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .nav-cta:hover {
-      background: rgba(90, 158, 106, 0.2);
-      border-color: var(--green);
-      box-shadow: 0 0 16px rgba(90, 158, 106, 0.15);
-    }
-
-    .nav-mobile-btn {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--text-dim);
-      font-size: 20px;
-      min-width: 44px;
-      min-height: 44px;
-    }
-
-    .nav-lang {
-      display: flex;
-      gap: 2px;
-      margin-left: 10px;
-      padding-left: 10px;
-      border-left: 1px solid var(--border);
-    }
-
-    .nav.nav-open .nav-lang {
-      margin: 8px 0 0;
-      padding: 8px 0 0;
-      border-left: 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .beast-all {
-      text-align: center;
-      margin-top: 36px;
-    }
-
-    /* Mobile nav open state — toggled via JS */
-    .nav.nav-open .nav-links {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: var(--nav-h);
-      left: 0;
-      right: 0;
-      background: rgba(9, 11, 8, 0.98);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
-      gap: 2px;
-      z-index: 99;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    /* ─── CONTAINERS ─────────────────────────────────────────────────────── */
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    /* ─── COMMON SECTION HEADER ──────────────────────────────────────────── */
-    .section-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .section-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .section-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(22px, 4vw, 38px);
-      color: var(--white);
-      letter-spacing: 2px;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .section-lead {
-      font-style: italic;
-      color: var(--text-dim);
-      font-size: 17px;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    /* ─── BUTTONS ────────────────────────────────────────────────────────── */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
-      border-radius: var(--radius);
-      background: var(--green-dim);
-      border: 1px solid var(--green);
-      color: var(--green-hi);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.25s;
-    }
-
-    .btn-primary:hover {
-      background: rgba(90, 158, 106, 0.22);
-      box-shadow: 0 0 28px rgba(90, 158, 106, 0.2);
-      transform: translateY(-2px);
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border-hi);
-      color: var(--text-dim);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
-      background: transparent;
-      transition: all 0.25s;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--text-muted);
-      color: var(--text);
-    }
-
-    /* ─── REVEAL ANIMATIONS ──────────────────────────────────────────────── */
-    /* Hidden only when the inline script in <head> has run, so a JS failure never blanks the page. */
-    @media (prefers-reduced-motion: reduce) {
-      html.js .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-
-      *, *::before, *::after {
-        animation: none !important;
-      }
-    }
-
-    /* ─── KEYBOARD AND LANDMARKS ─────────────────────────────────────────── */
-    :focus-visible {
-      outline: 2px solid var(--green-hi);
-      outline-offset: 3px;
-    }
-
-    .skip {
-      position: absolute;
-      left: -9999px;
-      top: 8px;
-      z-index: 200;
-      padding: 10px 16px;
-      background: var(--green-dim);
-      border: 1px solid var(--green);
-      color: var(--green-hi);
-      text-decoration: none;
-    }
-
-    .skip:focus {
-      left: 16px;
-    }
-
-    /* Phones: shorter first screen and a shorter road to the newsletter.
-       Trading is post-Early Access (ADR-012), so it is the first cut. */
-    @media (max-width: 820px) {
-      .badge-more,
-      #trading {
-        display: none;
-      }
-    }
-
-    /* Phones: finished roadmap phases fold behind a button (only with JS, so nothing is lost without it). */
-    .rm-more-wrap {
-      display: none;
-      text-align: center;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 820px) {
-      html.js .rm-more-wrap {
-        display: block;
-      }
-
-      html.js .roadmap-timeline:not(.rm-all) .rm-done {
-        display: none;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .btn-primary {
-        letter-spacing: 2px;
-      }
-    }
-
-    .js .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-
-    .js .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-d1 {
-      transition-delay: 0.1s;
-    }
-
-    .reveal-d2 {
-      transition-delay: 0.2s;
-    }
-
-    .reveal-d3 {
-      transition-delay: 0.3s;
-    }
-
-    .reveal-d4 {
-      transition-delay: 0.4s;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════════════════════════════════ */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      text-align: center;
-      padding-top: calc(var(--nav-h) + 40px);
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 55% at 50% 65%, rgba(42, 72, 50, 0.32) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 35% at 15% 85%, rgba(30, 55, 38, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 35% 40% at 85% 15%, rgba(25, 45, 30, 0.14) 0%, transparent 60%);
-    }
-
-    .hero-vignette {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 40%, rgba(9, 11, 8, 0.6) 100%);
-    }
-
-    .pixel-garden {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100px;
-      z-index: 2;
-      opacity: 0.35;
-    }
-
-    .pixel-garden canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 760px;
-      padding: 0 20px;
-    }
-
+    /* ── Hero: words on the left, the garden running on the right ── */
+    #hero { padding: 72px 0 96px }
+    .hero-grid { display: grid; grid-template-columns: 6fr 7fr; gap: 56px; align-items: center }
     .hero-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(36px, 7.5vw, 76px);
-      font-weight: 700;
-      letter-spacing: 3px;
-      line-height: 1.08;
-      margin-bottom: 12px;
-      color: var(--white);
-      text-shadow: 0 0 80px rgba(143, 186, 122, 0.18), 0 0 160px rgba(143, 186, 122, 0.08);
-      animation: heroFadeUp 0.9s ease both;
-    }
-
-    .hero-pitch {
-      font-size: clamp(18px, 2.4vw, 22px);
-      color: var(--text);
-      line-height: 1.5;
-      max-width: 560px;
-      margin: 8px auto 36px;
-      animation: heroFadeUp 0.8s ease both;
-    }
-
-    .hero-media {
-      max-width: 640px;
-      margin: 0 auto 48px;
-      animation: heroFadeUp 0.8s ease both;
-    }
-
-    .hero-media video {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid var(--border-hi);
-      border-radius: var(--radius);
-      image-rendering: pixelated;
-      cursor: pointer;
-    }
-
-    .hero-media figcaption {
-      font-style: italic;
-      color: var(--text-dim);
-      font-size: 16px;
-      margin-top: 12px;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-      animation: heroFadeUp 0.8s ease both;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      border-top: 1px solid var(--border);
-      padding-top: 32px;
-      animation: heroFadeUp 0.8s ease both;
-    }
-
-    .hero-stat-num {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 30px;
-      color: var(--gold-hi);
-      line-height: 1;
-      margin-bottom: 5px;
-    }
-
-    .hero-stat-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    @keyframes heroFadeUp {
-      from {
-        transform: translateY(14px);
-      }
-
-      to {
-        transform: translateY(0);
-      }
-    }
-
-    /* ─── BADGE ──────────────────────────────────────────────────────────── */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--amber);
-      animation: pulse 2s infinite;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   ABOUT
-═══════════════════════════════════════════════════════════════════════ */
-    #about {
-      padding: 120px 0;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: var(--text-dim);
-      margin-bottom: 18px;
-      font-size: 16px;
-      line-height: 1.85;
-    }
-
-    .about-text strong {
-      color: var(--green-hi);
-      font-weight: 600;
-    }
-
-    .about-text em {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .pillars {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .pillar {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 17px 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--green-dim);
-      border-radius: var(--radius);
-      transition: border-left-color 0.2s, transform 0.2s, background 0.2s;
-    }
-
-    .pillar:hover {
-      border-left-color: var(--green);
-      transform: translateX(5px);
-      background: var(--surface2);
-    }
-
-    .pillar-icon {
-      font-size: 20px;
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-
-    .pillar-name {
-      font-weight: 600;
-      color: var(--white);
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-
-    .pillar-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   LIFECYCLE
-═══════════════════════════════════════════════════════════════════════ */
-    #lifecycle {
-      padding: 100px 0;
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    #systems {
-      padding: 100px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .lifecycle-flow {
-      display: flex;
-      margin: 44px 0;
-    }
-
-    .lc-stage {
-      flex: 1;
-      padding: 28px 16px;
-      text-align: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-right: none;
-      position: relative;
-      transition: background 0.2s, border-color 0.2s;
-      cursor: default;
-    }
-
-    .lc-stage:first-child {
-      border-radius: var(--radius) 0 0 var(--radius);
-    }
-
-    .lc-stage:last-child {
-      border-right: 1px solid var(--border);
-      border-radius: 0 var(--radius) var(--radius) 0;
-    }
-
-    .lc-stage:not(.death):hover {
-      background: var(--surface2);
-    }
-
-    .lc-stage::after {
-      content: '→';
-      position: absolute;
-      right: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 14px;
-      z-index: 2;
-      background: var(--bg2);
-      padding: 4px 1px;
-    }
-
-    .lc-stage:last-child::after {
-      display: none;
-    }
-
-    .lc-emoji {
-      font-size: 34px;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .lc-name {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .lc-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    .lc-stage.death {
-      border-color: rgba(192, 80, 80, 0.25);
-    }
-
-    .lc-stage.death .lc-name {
-      color: #b87070;
-    }
-
-    .lc-stage.death:hover {
-      background: rgba(192, 80, 80, 0.04);
-      border-color: rgba(192, 80, 80, 0.4);
-    }
-
-    .lifecycle-note {
-      max-width: 640px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 26px 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
-      border-radius: var(--radius);
-      font-style: italic;
-      color: var(--text-dim);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    .lifecycle-note strong {
-      color: var(--gold-hi);
-      font-style: normal;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   ECOSYSTEMS
-═══════════════════════════════════════════════════════════════════════ */
-    #ecosystems {
-      padding: 120px 0;
-    }
-
-    .eco-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 48px;
-    }
-
-    .eco-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 34px 28px;
-      cursor: default;
-      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .eco-card-glow {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .eco-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .eco-card:hover .eco-card-glow {
-      opacity: 1;
-    }
-
-    .eco-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .eco-roots {
-      background: #0a150c;
-    }
-
-    .eco-roots .eco-card-glow {
-      background: radial-gradient(ellipse at 25% 50%, rgba(74, 124, 82, 0.22) 0%, transparent 70%);
-    }
-
-    .eco-roots:hover {
-      border-color: #4a7c52;
-      box-shadow: 0 12px 48px rgba(74, 124, 82, 0.14);
-    }
-
-    .eco-roots .eco-name {
-      color: #8fba7a;
-    }
-
-    .eco-roots .eco-tag {
-      background: rgba(74, 124, 82, 0.15);
-      color: #8fba7a;
-    }
-
-    .eco-ash {
-      background: #150f0a;
-    }
-
-    .eco-ash .eco-card-glow {
-      background: radial-gradient(ellipse at 75% 50%, rgba(138, 112, 96, 0.22) 0%, transparent 70%);
-    }
-
-    .eco-ash:hover {
-      border-color: #8a7060;
-      box-shadow: 0 12px 48px rgba(138, 112, 96, 0.14);
-    }
-
-    .eco-ash .eco-name {
-      color: #c4a882;
-    }
-
-    .eco-ash .eco-tag {
-      background: rgba(138, 112, 96, 0.15);
-      color: #c4a882;
-    }
-
-    .eco-garden {
-      background: #0d0c1a;
-    }
-
-    .eco-garden .eco-card-glow {
-      background: radial-gradient(ellipse at 25% 50%, rgba(122, 111, 170, 0.22) 0%, transparent 70%);
-    }
-
-    .eco-garden:hover {
-      border-color: #7a6faa;
-      box-shadow: 0 12px 48px rgba(122, 111, 170, 0.14);
-    }
-
-    .eco-garden .eco-name {
-      color: #b8aee0;
-    }
-
-    .eco-garden .eco-tag {
-      background: rgba(122, 111, 170, 0.15);
-      color: #b8aee0;
-    }
-
-    .eco-cave {
-      background: #150d00;
-    }
-
-    .eco-cave .eco-card-glow {
-      background: radial-gradient(ellipse at 75% 50%, rgba(192, 144, 64, 0.22) 0%, transparent 70%);
-    }
-
-    .eco-cave:hover {
-      border-color: #c09040;
-      box-shadow: 0 12px 48px rgba(192, 144, 64, 0.14);
-    }
-
-    .eco-cave .eco-name {
-      color: #e8c870;
-    }
-
-    .eco-cave .eco-tag {
-      background: rgba(192, 144, 64, 0.15);
-      color: #e8c870;
-    }
-
-    .eco-emblem {
-      font-size: 46px;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .eco-name {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 18px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .eco-tagline {
-      font-style: italic;
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.55;
-    }
-
-    .eco-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .eco-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 2px;
-    }
-
-    .eco-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    .eco-soon {
-      color: var(--amber);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   TRADING
-═══════════════════════════════════════════════════════════════════════ */
-    #trading {
-      padding: 100px 0;
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trading-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 44px;
-    }
-
-    .trading-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px 22px;
-      transition: border-color 0.2s, transform 0.2s, background 0.2s;
-    }
-
-    .trading-card:hover {
-      border-color: var(--border-hi);
-      transform: translateY(-3px);
-      background: var(--surface2);
-    }
-
-    .t-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .t-name {
-      font-weight: 600;
-      color: var(--white);
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .t-rarity {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .r-common {
-      color: #7aa882;
-    }
-
-    .r-rare {
-      color: #7b9fd4;
-    }
-
-    .r-epic {
-      color: #a07bd4;
-    }
-
-    .r-ancient {
-      color: var(--gold);
-    }
-
-    .r-event {
-      color: var(--amber);
-    }
-
-    .r-mythic {
-      color: var(--purple);
-    }
-
-    .t-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-
-    .t-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      padding: 5px 10px;
-      border-radius: 2px;
-      background: rgba(90, 158, 106, 0.08);
-      border: 1px solid var(--green-dim);
-      color: var(--green);
-      display: inline-block;
-    }
-
-    .trading-disclaimer {
-      max-width: 620px;
-      margin: 44px auto 0;
-      text-align: center;
-      padding: 22px 28px;
-      background: var(--surface);
-      border: 1px solid var(--gold-dim);
-      border-radius: var(--radius);
-    }
-
-    .trading-disclaimer p {
-      color: rgba(220, 195, 120, 0.75);
-      font-size: 14px;
-      margin: 0;
-      font-style: italic;
-    }
-
-    .trading-disclaimer strong {
-      color: var(--gold-hi);
-      font-style: normal;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   ROADMAP
-═══════════════════════════════════════════════════════════════════════ */
-    #roadmap {
-      padding: 120px 0;
-    }
-
-    .roadmap-timeline {
-      position: relative;
-      margin-top: 64px;
-    }
-
-    .roadmap-timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: var(--border);
-      transform: translateX(-50%);
-    }
-
-    .rm-item {
-      display: grid;
-      grid-template-columns: 1fr 60px 1fr;
-      margin-bottom: 32px;
-      align-items: start;
-    }
-
-    .rm-item:nth-child(even) .rm-content {
-      grid-column: 3;
-    }
-
-    .rm-item:nth-child(even) .rm-empty {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .rm-content {
-      padding: 22px 26px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .rm-content:hover {
-      border-color: var(--border-hi);
-      background: var(--surface2);
-    }
-
-    .rm-item:nth-child(odd) .rm-content {
-      margin-right: 32px;
-      text-align: right;
-    }
-
-    .rm-item:nth-child(even) .rm-content {
-      margin-left: 32px;
-    }
-
-    .rm-dot-col {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 26px;
-    }
-
-    .rm-dot {
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      border: 2px solid var(--bg);
-      flex-shrink: 0;
-      z-index: 1;
-    }
-
-    .rm-item[data-p="0"] .rm-dot {
-      background: #4a7a5a;
-      box-shadow: 0 0 10px rgba(74, 122, 90, 0.5);
-    }
-
-    .rm-item[data-p="1"] .rm-dot {
-      background: #6a9e6a;
-      box-shadow: 0 0 10px rgba(106, 158, 106, 0.5);
-    }
-
-    .rm-item[data-p="2"] .rm-dot {
-      background: #c9a84c;
-      box-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
-    }
-
-    .rm-item[data-p="3"] .rm-dot {
-      background: #9a7fd4;
-      box-shadow: 0 0 10px rgba(154, 127, 212, 0.5);
-    }
-
-    .rm-item[data-p="4"] .rm-dot {
-      background: #d4763a;
-      box-shadow: 0 0 10px rgba(212, 118, 58, 0.5);
-    }
-
-    .rm-phase {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 3px;
-    }
-
-    .rm-item[data-p="0"] .rm-phase {
-      color: var(--green-hi)
-    }
-
-    .rm-item[data-p="1"] .rm-phase {
-      color: #6a9e6a
-    }
-
-    .rm-item[data-p="2"] .rm-phase {
-      color: #c9a84c
-    }
-
-    .rm-item[data-p="3"] .rm-phase {
-      color: #9a7fd4
-    }
-
-    .rm-item[data-p="4"] .rm-phase {
-      color: #d4763a
-    }
-
-    .rm-title {
-      font-weight: 600;
-      color: var(--white);
-      font-size: 16px;
-      margin-bottom: 3px;
-    }
-
-    .rm-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .rm-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.55;
-      margin-bottom: 10px;
-    }
-
-    .rm-tag {
-      display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      padding: 3px 9px;
-      border-radius: 2px;
-    }
-
-    .rm-item[data-p="0"] .rm-tag {
-      background: rgba(74, 122, 90, 0.12);
-      color: #4a7a5a
-    }
-
-    .rm-item[data-p="1"] .rm-tag {
-      background: rgba(106, 158, 106, 0.12);
-      color: #6a9e6a
-    }
-
-    .rm-item[data-p="2"] .rm-tag {
-      background: rgba(201, 168, 76, 0.12);
-      color: #c9a84c
-    }
-
-    .rm-item[data-p="3"] .rm-tag {
-      background: rgba(154, 127, 212, 0.12);
-      color: #9a7fd4
-    }
-
-    .rm-item[data-p="4"] .rm-tag {
-      background: rgba(212, 118, 58, 0.12);
-      color: #d4763a
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   DEV LOG
-═══════════════════════════════════════════════════════════════════════ */
-    #devlog {
-      padding: 100px 0;
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .devlog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-      gap: 20px;
-      margin-top: 44px;
-    }
-
-    .devlog-card {
-      padding: 26px 24px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg);
-    }
-
-    .devlog-date {
-      display: block;
-      font-size: 13px;
-      color: #8a9a8a;
-      margin-bottom: 10px;
-    }
-
-    .devlog-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 18px;
-      line-height: 1.35;
-      margin-bottom: 10px;
-    }
-
-    .devlog-title a {
-      color: var(--gold-hi);
-      text-decoration: none;
-    }
-
-    .devlog-title a:hover {
-      text-decoration: underline;
-    }
-
-    .devlog-summary {
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .devlog-all {
-      margin-top: 28px;
-      text-align: center;
-    }
-
-    .devlog-all a {
-      color: var(--green-hi);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   NEWSLETTER
-═══════════════════════════════════════════════════════════════════════ */
-    #newsletter {
-      padding: 120px 0;
-    }
-
-    .newsletter-wrap {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 56px 48px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .newsletter-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(ellipse 90% 70% at 50% 110%, rgba(42, 72, 50, 0.28) 0%, transparent 65%);
-    }
-
-    .newsletter-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .nl-icon {
-      font-size: 44px;
-      display: block;
-      margin-bottom: 18px;
-    }
-
-    .nl-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(18px, 3vw, 26px);
-      color: var(--white);
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .nl-desc {
-      font-size: 15px;
-      color: var(--text-dim);
-      font-style: italic;
-      margin-bottom: 32px;
-      line-height: 1.65;
-    }
-
-    .nl-perks {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .nl-perk {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nl-perk::before {
-      content: '✦';
-      color: var(--green-dim);
-    }
-
-    .nl-form {
-      display: flex;
-      gap: 10px;
-      max-width: 420px;
-      margin: 0 auto 14px;
-    }
-
-    .nl-input {
-      flex: 1;
-      padding: 13px 18px;
-      border-radius: var(--radius);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--white);
-      font-family: 'Crimson Pro', serif;
-      font-size: 16px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .nl-input::placeholder {
-      color: var(--text-muted);
-    }
-
-    .nl-input:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(90, 158, 106, 0.1);
-    }
-
-    .nl-btn {
-      padding: 13px 22px;
-      border-radius: var(--radius);
-      border: none;
-      cursor: pointer;
-      background: var(--green-dim);
-      color: var(--green-hi);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      white-space: nowrap;
-      transition: background 0.2s, box-shadow 0.2s;
-    }
-
-    .nl-btn:hover:not(:disabled) {
-      background: rgba(90, 158, 106, 0.22);
-      box-shadow: 0 0 20px rgba(90, 158, 106, 0.18);
-    }
-
-    .nl-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .nl-privacy {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    .nl-privacy a {
-      color: var(--green-hi);
-    }
-
-    .nl-msg {
-      display: none;
-      margin-top: 14px;
-      padding: 13px 18px;
-      border-radius: var(--radius);
-      font-size: 14px;
-    }
-
-    .nl-msg.success {
-      display: block;
-      background: rgba(90, 158, 106, 0.1);
-      border: 1px solid var(--green-dim);
-      color: var(--green-hi);
-      animation: fadeIn 0.3s ease;
-    }
-
-    .nl-msg.error {
-      display: block;
-      background: rgba(192, 80, 80, 0.1);
-      border: 1px solid rgba(192, 80, 80, 0.3);
-      color: #c07070;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(4px)
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0)
-      }
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   ABOUT DEV
-═══════════════════════════════════════════════════════════════════════ */
-    #about-dev {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .about-dev-inner {
-      max-width: 640px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about-dev-inner p {
-      color: var(--text-muted);
-      font-size: 15px;
-      font-style: italic;
-      margin-bottom: 14px;
-      line-height: 1.75;
-    }
-
-    .dev-links {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-
-    .dev-link {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      padding: 7px 16px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
-    }
-
-    .dev-soon {
-      pointer-events: none;
-      border-style: dashed;
-    }
-
-    .dev-link:hover {
-      color: var(--green-hi);
-      border-color: var(--green-dim);
-      background: rgba(90, 158, 106, 0.05);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════════════════════════════ */
-    footer {
-      padding: 28px 40px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer-logo {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 2px;
-    }
-
-    .footer-copy {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-    }
-
-    .footer-links a {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-      display: inline-block;
-      padding: 12px 0;
-    }
-
-    .footer-links a:hover {
-      color: var(--text-dim);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════
-   RESPONSIVE
-   Breakpoints:
-     820px — tablet / collapsed nav
-     640px — small tablet
-     480px — mobile
-═══════════════════════════════════════════════════════════════════════ */
-
-    /* ── 1200px: the nav no longer fits on one line (Spanish labels are the longest) ── */
-    @media (max-width: 1200px) {
-
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-mobile-btn {
-        display: block;
-      }
-    }
-
-    /* ── 820px: tablet ─────────────────────────────────────────────────── */
-    @media (max-width: 820px) {
-
-      /* Layout */
-      .container {
-        padding: 0 20px;
-      }
-
-      /* Nav */
-      .nav {
-        padding: 0 20px;
-      }
-
-      /* Hero */
-      #hero {
-        padding-top: calc(var(--nav-h) + 24px);
-        padding-bottom: 40px;
-      }
-
-      .hero-stats {
-        gap: 28px;
-      }
-
-      /* About */
-      #about {
-        padding: 80px 0;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 44px;
-      }
-
-      /* Lifecycle */
-      #lifecycle,
-      #systems {
-        padding: 72px 0;
-      }
-
-      .lifecycle-flow {
-        flex-direction: column;
-      }
-
-      .lc-stage {
-        border-right: 1px solid var(--border) !important;
-        border-bottom: none;
-      }
-
-      .lc-stage:last-child {
-        border-bottom: 1px solid var(--border);
-        border-right: 1px solid var(--border) !important;
-      }
-
-      .lc-stage::after {
-        content: '\2193';
-        right: auto;
-        left: 50%;
-        bottom: -14px;
-        top: auto;
-        transform: translateX(-50%);
-        background: var(--bg2);
-        padding: 2px 4px;
-      }
-
-      .lc-stage:last-child::after {
-        display: none;
-      }
-
-      /* Ecosystems */
-      #ecosystems {
-        padding: 80px 0;
-      }
-
-      .eco-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .eco-card {
-        padding: 28px 22px;
-      }
-
-      /* Trading */
-      #trading {
-        padding: 72px 0;
-      }
-
-      .trading-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      /* Roadmap */
-      #roadmap {
-        padding: 80px 0;
-      }
-
-      .roadmap-timeline::before {
-        left: 18px;
-      }
-
-      .rm-item {
-        grid-template-columns: 36px 1fr;
-      }
-
-      .rm-item .rm-content {
-        grid-column: 2;
-      }
-
-      .rm-item .rm-empty {
-        display: none;
-      }
-
-      .rm-item .rm-content {
-        margin-right: 0 !important;
-        margin-left: 14px !important;
-        text-align: left !important;
-      }
-
-      .rm-dot-col {
-        justify-content: flex-start;
-        padding-left: 11px;
-      }
-
-      /* Dev Log */
-      #devlog {
-        padding: 72px 0;
-      }
-
-      /* Newsletter */
-      #newsletter {
-        padding: 80px 0;
-      }
-
-      .newsletter-wrap {
-        padding: 36px 22px;
-      }
-
-      .nl-form {
-        flex-direction: column;
-      }
-
-      .nl-btn {
-        width: 100%;
-        padding: 14px;
-      }
-
-      /* About Dev */
-      #about-dev {
-        padding: 60px 0;
-      }
-
-      .dev-links {
-        gap: 10px;
-      }
-
-      /* Footer */
-      footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 28px 20px;
-        gap: 10px;
-      }
-
-      .footer-links {
-        justify-content: center;
-      }
-
-      /* Section headers */
-      .section-header {
-        margin-bottom: 44px;
-      }
-    }
-
-    /* ── 640px: small tablet ────────────────────────────────────────── */
-    @media (max-width: 640px) {
-
-      /* Trading: single column at mid-size */
-      .trading-grid {
-        grid-template-columns: 1fr;
-      }
-
-      /* Newsletter perks: stack gracefully */
-      .nl-perks {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      /* Ecosystems: slightly less padding */
-      .eco-card {
-        padding: 24px 18px;
-      }
-
-      .eco-emblem {
-        font-size: 38px;
-      }
-
-      /* About pillars: tighter */
-      .pillar {
-        padding: 14px 16px;
-      }
-
-      /* Roadmap items: tighter gap */
-      .rm-item {
-        margin-bottom: 22px;
-      }
-
-      .rm-content {
-        padding: 18px 20px;
-      }
-
-      /* Lifecycle: reduce stage padding */
-      .lc-stage {
-        padding: 22px 14px;
-      }
-    }
-
-    /* ── 480px: mobile ──────────────────────────────────────────────── */
-    @media (max-width: 480px) {
-
-      /* Container */
-      .container {
-        padding: 0 16px;
-      }
-
-      /* Nav */
-      .nav {
-        padding: 0 16px;
-      }
-
-      .nav-logo {
-        font-size: 12px;
-        letter-spacing: 1px;
-      }
-
-      /* Hero */
-      .hero-stats {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero-stat-num {
-        font-size: 24px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .btn-primary,
-      .btn-ghost {
-        width: 100%;
-        justify-content: center;
-      }
-
-      /* Section headers */
-      .section-eyebrow {
-        font-size: 12px;
-      }
-
-      .section-lead {
-        font-size: 15px;
-      }
-
-      /* About */
-      #about {
-        padding: 60px 0;
-      }
-
-      .about-text p {
-        font-size: 15px;
-      }
-
-      .pillar {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .pillar-icon {
-        margin-top: 0;
-      }
-
-      /* Ecosystem */
-      .eco-name {
-        font-size: 16px;
-      }
-
-      /* Newsletter */
-      .newsletter-wrap {
-        padding: 28px 16px;
-      }
-
-      .nl-title {
-        font-size: clamp(16px, 5vw, 22px);
-      }
-
-      .nl-input,
-      .nl-btn {
-        font-size: 14px;
-      }
-
-      /* Roadmap */
-      .rm-title {
-        font-size: 14px;
-      }
-
-      .rm-desc {
-        font-size: 12px;
-      }
-
-      .roadmap-timeline::before {
-        left: 14px;
-      }
-
-      .rm-item {
-        grid-template-columns: 28px 1fr;
-      }
-
-      .rm-dot-col {
-        padding-left: 7px;
-      }
-
-      .rm-dot {
-        width: 11px;
-        height: 11px;
-      }
-
-      /* Lifecycle */
-      .lc-stage {
-        padding: 18px 12px;
-      }
-
-      .lc-emoji {
-        font-size: 28px;
-      }
-
-      /* Trading */
-      .trading-card {
-        padding: 20px 16px;
-      }
-
-      /* Dev links */
-      .dev-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      /* Footer */
-      footer {
-        padding: 20px 16px;
-        gap: 8px;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-      }
-    }
-
-    /* ── Bestiary ─────────────────────────────────────────── */
-    .beast-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 14px;
-    }
-
-    .beast-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 14px 16px;
-      text-align: center;
-      transition: border-color .25s ease, transform .25s ease;
-    }
-
-    .beast-card:hover {
-      border-color: var(--border-hi);
-      transform: translateY(-3px);
-    }
-
-    .beast-sprite {
-      width: 72px;
-      height: 72px;
-      image-rendering: pixelated;
-      margin: 0 auto 10px;
-      display: block;
-    }
-
-    .beast-unknown {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 34px;
-      color: var(--text-muted);
-    }
-
-    .beast-name {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 15px;
-      color: var(--gold-hi);
-      margin: 0 0 4px;
-    }
-
-    .beast-eco {
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 8px;
-    }
-
-    .beast-roots .beast-eco {
-      color: var(--green-hi);
-    }
-
-    .beast-ash .beast-eco {
-      color: var(--amber);
-    }
-
-    .beast-secret {
-      border-style: dashed;
-    }
-
-    .beast-traits {
-      font-size: 12px;
-      color: var(--text-dim);
-      margin-bottom: 8px;
-    }
-
-    .beast-flavor {
-      font-size: 12.5px;
-      line-height: 1.5;
-      color: var(--text);
-      font-style: italic;
-      margin: 0;
-    }
-
-
-    /* ── Card alignment: equal height, footer-anchored ────── */
-    .trading-grid,
-    .beast-grid {
-      align-items: stretch;
-    }
-
-    .trading-card,
-    .beast-card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .trading-card .t-desc,
-    .beast-card .beast-flavor {
-      flex: 1 1 auto;
-    }
-
-    .trading-card .t-badge {
-      margin-top: auto;
-      align-self: flex-start;
-    }
-
-    /* biome subheadings in the bestiary */
-    .beast-biome-title {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 18px;
-      margin: 28px 0 14px;
-      text-align: center;
-    }
-
-    .beast-biome-title:first-of-type {
-      margin-top: 4px;
-    }
-
-    .beast-biome-roots {
-      color: var(--green-hi);
-    }
-
-    .beast-biome-ash {
-      color: var(--amber);
-    }
-
-    .beast-garden .beast-eco,
-    .beast-biome-garden {
-      color: #b8aee0;
-    }
-
-    .beast-cave .beast-eco,
-    .beast-biome-cave {
-      color: #e8c870;
-    }
-
-    /* ── Screenshots (in-engine captures, marketing/steam in the game repo) ── */
-    .shots-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 44px;
-    }
-
-    .shot {
-      margin: 0;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .shot img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-    }
-
-    .shot-wide {
-      grid-column: 1 / -1;
-    }
-
-    .shot figcaption {
-      font-size: 13px;
-      color: var(--text-muted);
-      padding: 10px 14px;
-    }
-
-    @media (max-width: 820px) {
-      .shots-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-
-    /* bestiary cards are links — strip link chrome, keep card look */
-    a.beast-card {
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    a.beast-card:hover .beast-name {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold);
+      font-size: clamp(38px, 4.6vw, 60px); line-height: 1.1; margin-bottom: 24px; text-wrap: balance;
+    }
+    .hero-pitch { font-size: 23px; line-height: 1.5; max-width: 26ch; margin-bottom: 32px }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px }
+    .hero-media video { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 3px; background: #0d120b }
+    .media-ctl { display: flex; justify-content: flex-end; margin-top: 4px }
+    .media-ctl button { min-height: 44px; padding: 8px 4px; background: none; border: 0; color: var(--lichen); font: inherit; font-size: 17px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px }
+    .media-ctl button:hover { color: var(--bone) }
+    @media (max-width: 860px) {
+      #hero { padding: 40px 0 72px }
+      .hero-grid { grid-template-columns: 1fr; gap: 36px }
+      .hero-pitch { max-width: 32ch }
+    }
+
+    /* ── The light around a living creature, as in the game ── */
+    .halo { --glow: .32; position: relative; width: 132px; height: 132px; border-radius: 50%; display: grid; place-items: center }
+    .halo::before {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: radial-gradient(circle, rgba(var(--halo), var(--glow)) 0%, rgba(var(--halo), calc(var(--glow) * .45)) 38%, rgba(var(--halo), 0) 70%);
+    }
+    .halo img { position: relative; width: 72px; height: 72px; image-rendering: pixelated }
+
+    /* ── One life ── */
+    .life { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; position: relative }
+    .life::before { content: ""; position: absolute; top: 66px; left: 12%; right: 12%; height: 1px; background: var(--line) }
+    .life li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center }
+    .life .halo { background-color: var(--night); margin-bottom: 18px }
+    .life h3 { font-size: 22px }
+    .life p { color: var(--lichen); font-size: 18px; max-width: 24ch }
+    .life .seed { --glow: .06 }
+    .life .young { --glow: .2 }
+    .life .grown { --glow: .38 }
+    .life .old { --glow: .14 }
+    @media (max-width: 860px) {
+      .life { grid-template-columns: 1fr; gap: 20px }
+      .life::before { top: 40px; bottom: 40px; left: 54px; right: auto; width: 1px; height: auto }
+      .life li { display: grid; grid-template-columns: 108px 1fr; column-gap: 20px; align-items: center; text-align: left }
+      .life .halo { grid-row: span 2; width: 108px; height: 108px; margin: 0 }
+      .life h3 { align-self: end; margin: 0 }
+      .life p { align-self: start }
+      .life .halo img { width: 60px; height: 60px }
+      .life p { max-width: none }
+    }
+
+    /* ── The death: the one centred, quiet moment on the page ── */
+    #death { background: var(--dusk); text-align: center; padding: 128px 0 }
+    .silent { color: var(--lichen); font-size: 20px; margin-bottom: 28px }
+    #death .halo { margin: 0 auto 12px }
+    .dead-name { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: clamp(34px, 5vw, 50px); max-width: none; margin: 0 auto 18px }
+    .record { font-size: 22px; line-height: 1.6 }
+    .epitaph { color: var(--lichen); font-style: italic; margin-top: 18px }
+    .fates { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 860px; margin: 72px auto 0; text-align: left; border-top: 1px solid var(--line) }
+    .fate { padding: 32px 32px 0 }
+    .fate + .fate { border-left: 1px solid var(--line) }
+    .fate h3 { color: var(--gold) }
+    .fate .says { font-style: italic; color: var(--lichen); margin-bottom: 10px }
+    .either { color: var(--lichen); max-width: 54ch; margin: 48px auto 0 }
+    @media (max-width: 700px) {
+      #death { padding: 96px 0 }
+      .fates { grid-template-columns: 1fr }
+      .fate { padding: 28px 0 0 }
+      .fate + .fate { border-left: 0; border-top: 1px solid var(--line); margin-top: 28px }
+    }
+    /* Played once, when the section comes into view. Without JS or with reduced motion it is simply there. */
+    #death .halo { --glow: .38 }
+    #death .halo::before { opacity: 0 }
+    @media (prefers-reduced-motion: no-preference) {
+      #death.armed .halo::before { opacity: 1 }
+      #death.armed .unfold { opacity: 0 }
+      #death.seen .halo::before { animation: go-out 2.4s ease-in .4s forwards }
+      #death.seen .unfold { animation: appear 1s ease-out forwards; animation-delay: calc(2.2s + var(--i) * .5s) }
+    }
+    @keyframes go-out { to { opacity: 0 } }
+    @keyframes appear { to { opacity: 1 } }
+
+    /* ── Book of Echoes ── */
+    .book-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: start }
+    .ledger { list-style: none; border-top: 1px solid var(--line) }
+    .ledger li { padding: 16px 0; border-bottom: 1px solid var(--line) }
+    .ledger .who { color: var(--gold); font-size: 21px }
+    .ledger .who span { color: var(--bone) }
+    .ledger .how { color: var(--lichen); font-size: 17px }
+    @media (max-width: 860px) { .book-grid { grid-template-columns: 1fr; gap: 40px } }
+
+    /* ── How the garden grows ── */
+    .grows { display: grid; grid-template-columns: 7fr 5fr; gap: 56px; align-items: start; margin-top: 48px }
+    .grows figure img { border: 1px solid var(--line); border-radius: 3px }
+    .grows figcaption { color: var(--lichen); font-size: 17px; margin-top: 10px }
+    .grows-list { display: grid; gap: 36px }
+    .grows-list p { color: var(--lichen); font-size: 19px }
+    @media (max-width: 860px) { .grows { grid-template-columns: 1fr; gap: 40px } }
+
+    /* ── Ecosystems ── */
+    .ecos { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px }
+    .eco img { border: 1px solid var(--line); border-radius: 3px; margin-bottom: 20px }
+    .eco h3 { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 24px }
+    .eco .motto { font-style: italic; color: var(--lichen); margin-bottom: 8px }
+    .later { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--lichen); max-width: 70ch }
+    @media (max-width: 760px) { .ecos { grid-template-columns: 1fr } }
+
+    /* ── Bestiary: laid out like a garden in the game ── */
+    #bestiary { background: linear-gradient(var(--night), #0c110b 40%, var(--night)) }
+    .garden-title { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 20px; margin: 56px 0 8px; text-align: center }
+    .garden { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 4px; max-width: 980px; margin: 0 auto }
+    .garden a { display: flex; flex-direction: column; align-items: center; width: 132px; padding-bottom: 8px; color: var(--bone); text-decoration: none; font-size: 17px; line-height: 1.3; text-align: center }
+    .garden .halo { --glow: .22; width: 104px; height: 104px }
+    .garden .halo img { width: 56px; height: 56px }
+    .garden a:hover .halo, .garden a:focus-visible .halo { --glow: .42 }
+    .garden a:hover span { color: var(--gold) }
+    .bestiary-more { text-align: center; color: var(--lichen); max-width: 60ch; margin: 48px auto 0 }
+    .bestiary-more a { display: inline-block; padding: 10px 0 }
+    .unlearned { font-style: italic }
+    @media (max-width: 420px) { .garden a { width: 104px; font-size: 16px } .garden .halo { width: 88px; height: 88px } }
+
+    /* ── Where it is now: a real sequence, so it gets an order ── */
+    .road { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 48px; border-top: 1px solid var(--line) }
+    .road li { padding: 22px 20px 0 0; position: relative }
+    .road li::before { content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--line) }
+    .road .done::before { background: var(--lichen) }
+    .road .now::before { background: var(--gold); box-shadow: 0 0 0 5px rgba(var(--halo), .18) }
+    .road .when { color: var(--lichen); font-size: 17px }
+    .road .now .when { color: var(--gold) }
+    .road h3 { font-size: 21px; margin: 2px 0 6px }
+    .road p { color: var(--lichen); font-size: 17px; line-height: 1.55 }
+    @media (max-width: 960px) {
+      .road { grid-template-columns: 1fr; border-top: 0; border-left: 1px solid var(--line); margin-left: 4px }
+      .road li { padding: 0 0 28px 24px }
+      .road li::before { top: 9px; left: -5px }
+    }
+    .log { margin-top: 88px }
+    .log-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 8px }
+    .log-head h3 { font-size: 26px }
+    .devlog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 20px }
+    .devlog-date { color: var(--lichen); font-size: 17px }
+    .devlog-title { font-size: 22px; margin: 0 }
+    .devlog-title a { display: inline-block; padding: 9px 0; color: var(--bone); text-decoration: none }
+    .devlog-title a:hover { color: var(--gold); text-decoration: underline }
+    .devlog-summary { color: var(--lichen); font-size: 18px }
+    .devlog-all { margin-top: 20px }
+    .devlog-all a { display: inline-block; padding: 10px 0 }
+    @media (max-width: 860px) { .devlog-grid { grid-template-columns: 1fr; gap: 32px } }
+
+    /* ── Newsletter ── */
+    #newsletter { border-top: 1px solid var(--line) }
+    .nl { max-width: var(--text) }
+    .nl-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; margin-top: 28px }
+    .nl-field { flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px }
+    .nl-field label { font-size: 18px }
+    .nl-input { min-height: 48px; padding: 10px 14px; border: 1px solid #56604f; border-radius: 3px; background: var(--moss); color: var(--bone); font: inherit; font-size: 19px }
+    .nl-input::placeholder { color: #8d947f }
+    .nl-input[aria-invalid="true"] { border-color: #e08a6d }
+    .nl-msg { margin-top: 14px; font-size: 19px }
+    .nl-msg.success { color: var(--gold) }
+    .nl-msg.error { color: #f0a58c }
+    .nl-privacy { color: var(--lichen); font-size: 17px; margin-top: 16px }
+    .nl-privacy a { display: inline-block; padding: 12px 0 }
+
+    /* ── Footer ── */
+    footer { border-top: 1px solid var(--line); padding: 56px 0 24px }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px 48px }
+    .foot-logo { font-family: 'Cinzel Decorative', Georgia, serif; font-weight: 700; color: var(--gold); font-size: 18px }
+    .foot p { color: var(--lichen); font-size: 17px; margin-top: 6px; max-width: 36ch }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 0 24px; max-width: 560px }
+    .foot-links a, .foot-links span { display: inline-block; padding: 10px 0; font-size: 17px }
+    .foot-links span { color: var(--lichen) }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto }
+      *, *::before, *::after { animation: none !important; transition: none !important }
     }
   </style>
   <!-- SEO:START -->
@@ -2389,792 +494,362 @@
 <body>
   <a class="skip" href="#content">Vai al contenuto</a>
 
-  <!-- ══ NAV ══════════════════════════════════════════════════════════════ -->
-  <nav class="nav" id="main-nav" role="navigation" aria-label="Navigazione principale">
-    <a href="#hero" class="nav-logo" aria-label="Echoes of the Garden: home">
-      <div class="nav-logo-dot" aria-hidden="true"></div>
-      Echoes of the Garden
-    </a>
-    <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="#about">Il gioco</a></li>
-      <li><a href="#screenshots">Immagini</a></li>
+  <nav class="nav" id="main-nav" aria-label="Navigazione principale">
+    <a href="/it/" class="nav-logo">Echoes of the Garden</a>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#life">Il gioco</a></li>
       <li><a href="#bestiary">Bestiario</a></li>
-      <li><a href="#roadmap">Tabella di marcia</a></li>
-      <li><a href="#devlog">Dev Log</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="/it/devlog/">Dev log</a></li>
       <li class="nav-lang"><!-- NAVLANG:START --><a href="/" hreflang="en" lang="en" title="English">EN</a><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><a href="/it/" hreflang="it" lang="it" title="Italiano" aria-current="true">IT</a><!-- NAVLANG:END --></li>
+      <li><a href="https://echoes-of-the-garden.itch.io/play" class="btn btn-gold nav-play" target="_blank" rel="noopener">Gioca gratis nel browser</a></li>
     </ul>
-    <a href="#newsletter" class="nav-cta">Avvisami</a>
-    <button class="nav-mobile-btn" onclick="toggleMenu()" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <button type="button" class="btn nav-menu-btn" aria-expanded="false" aria-controls="nav-menu">Menu</button>
   </nav>
 
   <main id="content">
-  <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
-  <section id="hero" aria-label="Copertina">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-vignette" aria-hidden="true"></div>
-    <div class="pixel-garden" aria-hidden="true"><canvas id="garden-canvas"></canvas></div>
-
-    <div class="hero-content">
-      <div class="badge">
-        <span class="badge-dot" aria-hidden="true"></span>
-        Gratis · Già giocabile nel browser<span class="badge-more"> · In arrivo in accesso anticipato su Steam</span>
-      </div>
-      <h1 class="hero-title">Echoes of the<br>Garden</h1>
-      <p class="hero-pitch">Un gioco idle in cui ogni creatura vive, invecchia e muore per sempre, e sei tu a scegliere cosa lascia.</p>
-      <div class="hero-actions">
-        <a href="https://echoes-of-the-garden.itch.io/play" class="btn-primary" target="_blank" rel="noopener">🌱 Gioca gratis nel browser</a>
-        <a href="#newsletter" class="btn-ghost">Avvisami al lancio →</a>
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title" class="hero-title">Echoes of the Garden</h1>
+        <p class="hero-pitch">Un gioco idle in cui ogni creatura vive, invecchia e muore per sempre, e sei tu a scegliere cosa lascia.</p>
+        <div class="hero-actions">
+          <a href="https://echoes-of-the-garden.itch.io/play" class="btn btn-gold" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+          <a href="#newsletter" class="btn">Avvisami quando è su Steam</a>
+        </div>
       </div>
       <figure class="hero-media">
         <video id="hero-video" src="/assets/screenshots/garden_loop.mp4" poster="/assets/screenshots/garden_loop-poster.webp"
           width="1280" height="720" autoplay muted loop playsinline
-          aria-label="Il giardino delle Radici del Mondo in vita: radici che ondeggiano, pulviscolo che fluttua e una risorsa che compare"></video>
-        <figcaption>Un giardino fuori dal tempo. Ogni reliquia porta il nome che le hai dato e la vita che ha vissuto.</figcaption>
+          aria-label="Il giardino delle Radici del Mondo nel gioco: radici che ondeggiano, pulviscolo che fluttua e una risorsa che compare"></video>
+        <div class="media-ctl"><button type="button" id="video-toggle" hidden>Metti in pausa il giardino</button></div>
       </figure>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num">14</div>
-          <div class="hero-stat-label">Creature al lancio</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">1</div>
-          <div class="hero-stat-label">Vita ciascuna</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">24/7</div>
-          <div class="hero-stat-label">Cresce anche quando non ci sei</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">Gratis</div>
-          <div class="hero-stat-label">Niente pay-to-win</div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ══ ABOUT ══════════════════════════════════════════════════════════════ -->
-  <section id="about" aria-labelledby="about-title">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="section-eyebrow" style="text-align:left">Il mondo</span>
-          <h2 id="about-title" class="section-title"
-            style="text-align:left;font-size:clamp(20px,3vw,30px);margin-bottom:22px">Un giardino dove il tempo<br>non scorre in linea retta</h2>
-          <p>In Echoes of the Garden <strong>curi un giardino fuori dal tempo</strong>, coltivando semi-creatura: esseri che sono in parte pianta, in parte animale e in parte memoria.</p>
-          <p>Ogni creatura ha un <strong>vero ciclo vitale</strong>. Nascono, crescono, raggiungono il loro apice e invecchiano. Quando muoiono, la perdita è <em>permanente e irreversibile</em>. Ciò che lasciano porta il nome che hai dato loro e la vita che hanno vissuto.</p>
-          <p>Mentre sei via, <strong>il giardino continua a vivere</strong>. Al ritorno trovi un mondo che è cambiato senza di te. Un gioco idle che non si ferma mai del tutto.</p>
-        </div>
-        <div class="pillars reveal reveal-d2" role="list" aria-label="Pilastri del gioco">
-          <div class="pillar" role="listitem">
-            <span class="pillar-icon" aria-hidden="true">⏳</span>
-            <div>
-              <div class="pillar-name">Vero ciclo vitale</div>
-              <div class="pillar-desc">4 stadi vitali in tempo reale. Niente è istantaneo. Niente è eterno.</div>
-            </div>
-          </div>
-          <div class="pillar" role="listitem">
-            <span class="pillar-icon" aria-hidden="true">💀</span>
-            <div>
-              <div class="pillar-name">Morte permanente</div>
-              <div class="pillar-desc">Quando una creatura muore, non c'è più. Ciò che lascia porta il suo nome e la vita che ha vissuto.
-              </div>
-            </div>
-          </div>
-          <div class="pillar" role="listitem">
-            <span class="pillar-icon" aria-hidden="true">🧬</span>
-            <div>
-              <div class="pillar-name">Eredità viva</div>
-              <div class="pillar-desc">Ogni generazione trasmette tratti e mutazioni. Col tempo emergono combinazioni impossibili.</div>
-            </div>
-          </div>
-          <div class="pillar" role="listitem">
-            <span class="pillar-icon" aria-hidden="true">🧭</span>
-            <div>
-              <div class="pillar-name">Curare, non accumulare</div>
-              <div class="pillar-desc">Dodici posti, sei risonanze. Le vicine si armonizzano o si scontrano: dove pianti conta quanto cosa pianti.</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section id="life" aria-labelledby="life-title">
+    <div class="wrap">
+      <h2 id="life-title">Hollowroot è vissuto quattordici ore</h2>
+      <p class="lede">Ogni creatura del giardino nasce, cresce, invecchia e muore in tempo reale, che tu stia guardando o no. Questa è una di loro, un Moss Lizard delle Radici del Mondo.</p>
+      <ol class="life">
+        <li>
+          <div class="halo seed"><img src="/assets/creatures/seed_roots.png" alt="" width="24" height="24"></div>
+          <h3>Seme</h3>
+          <p>Si compra all'Altare dei Semi o lo lascia un genitore. Non succede nulla finché non lo pianti.</p>
+        </li>
+        <li>
+          <div class="halo young"><img src="/assets/creatures/lagarto_musgo_hatchling.png" alt="" width="24" height="24"></div>
+          <h3>Cucciolo</h3>
+          <p>Piccolo e lento, ed è il momento di dargli un nome. Questo è diventato Hollowroot.</p>
+        </li>
+        <li>
+          <div class="halo grown"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24"></div>
+          <h3>Adulto</h3>
+          <p>Le sue ore migliori. È quando dà di più al giardino, e le sue mutazioni si vedono sul corpo.</p>
+        </li>
+        <li>
+          <div class="halo old"><img src="/assets/creatures/lagarto_musgo_elder.png" alt="" width="24" height="24"></div>
+          <h3>Anziano</h3>
+          <p>Rallenta e ogni ora dà un po' meno. La fine è vicina e la si vede arrivare.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ══ SCREENSHOTS ════════════════════════════════════════════════════════ -->
-  <section id="screenshots" aria-labelledby="shots-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Nel motore</span>
-        <h2 id="shots-title" class="section-title">Il giardino, così come funziona</h2>
-        <p class="section-lead">Catturato dalla build v0.9.0. Pixel art provvisoria, gioco vero: niente di tutto questo è un montaggio.</p>
+  <section id="death" aria-labelledby="death-title">
+    <div class="wrap">
+      <p class="silent">Il giardino tace.</p>
+      <div class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24"></div>
+      <h2 id="death-title" class="dead-name">Hollowroot</h2>
+      <p class="record unfold" style="--i:0">Ha vissuto 14h 00m.<br>Ha dato al giardino 1522 Root Sap.<br>Prima della sua stirpe.</p>
+      <p class="epitaph unfold" style="--i:1">Anche adesso, la corteccia su cui riposava è ancora tiepida.</p>
+      <div class="fates unfold" style="--i:2">
+        <div class="fate">
+          <h3>Rinascita</h3>
+          <p class="says">La sua eco mette seme.</p>
+          <p>Un Seme ereditato che porta la sua stirpe e una nuova mutazione. La stirpe continua.</p>
+        </div>
+        <div class="fate">
+          <h3>Preservazione</h3>
+          <p class="says">La sua forma resta, la sua stirpe finisce.</p>
+          <p>Una Reliquia che conserva il suo nome e il suo epitaffio, e dà al suo ecosistema un bonus permanente.</p>
+        </div>
       </div>
-      <div class="shots-grid">
-        <figure class="shot reveal">
-          <img src="/assets/screenshots/03_death_ceremony.webp" srcset="/assets/screenshots/03_death_ceremony-960.webp 960w, /assets/screenshots/03_death_ceremony.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="La Cerimonia della morte: il nome di una creatura, il suo epitaffio e i due destini, Rinascita o Preservazione" width="1920" height="1080" loading="lazy">
-          <figcaption>Ogni creatura muore. Sei tu a decidere cosa diventa.</figcaption>
-        </figure>
-        <figure class="shot reveal reveal-d1">
-          <img src="/assets/screenshots/01_roots_garden.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Radici del Mondo con dodici creature in tre stadi" width="1920" height="1080" loading="lazy">
-          <figcaption>Cura un giardino vivo, anche quando sei via.</figcaption>
-        </figure>
-        <figure class="shot reveal reveal-d2">
-          <img src="/assets/screenshots/02_tide_of_ash.webp" srcset="/assets/screenshots/02_tide_of_ash-960.webp 960w, /assets/screenshots/02_tide_of_ash.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Marea di Cenere con braci, strati di fumo e bagliori di sinergia tra vicine" width="1920" height="1080" loading="lazy">
-          <figcaption>Ogni bioma chiede un tipo diverso di pazienza.</figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Pannello di creazione dell'Arco degli Echi, da Vestigio a Eco, con il rischio di distruzione di ogni livello" width="1920" height="1080" loading="lazy">
-          <figcaption>Trasforma la perdita nell'Arco degli Echi, da Vestigio a Origen.</figcaption>
-        </figure>
-        <figure class="shot reveal reveal-d1">
-          <img src="/assets/screenshots/04_codex_fragments.webp" srcset="/assets/screenshots/04_codex_fragments-960.webp 960w, /assets/screenshots/04_codex_fragments.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Il Codex, scheda Frammenti: quattro frammenti di storia sbloccati" width="1920" height="1080" loading="lazy">
-          <figcaption>Il giardino conserva i suoi echi. Leggi ciò che ricorda.</figcaption>
-        </figure>
-        <figure class="shot reveal reveal-d2">
-          <img src="/assets/screenshots/06_book_of_echoes.webp" srcset="/assets/screenshots/06_book_of_echoes-960.webp 960w, /assets/screenshots/06_book_of_echoes.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" alt="Il Libro degli Echi: righe di memoria con nome, specie, bioma, destino e tempo vissuto" width="1920" height="1080" loading="lazy">
-          <figcaption>Ogni vita resta scritta. Nessuna torna uguale.</figcaption>
-        </figure>
-      </div>
+      <p class="either unfold" style="--i:3">O l'una o l'altra, mai entrambe. In ogni caso, la morte lascia anche un Vestigio, il primo materiale dell'Echo Arc.</p>
     </div>
   </section>
 
-  <!-- ══ LIFECYCLE ══════════════════════════════════════════════════════════ -->
-  <section id="lifecycle" aria-labelledby="lifecycle-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Meccanica centrale</span>
-        <h2 id="lifecycle-title" class="section-title">Il ciclo della vita</h2>
-        <p class="section-lead">Ogni creatura segue lo stesso percorso. Ciò che la rende unica è quello che accade lungo la strada e ciò che lascia dietro di sé.</p>
+  <section id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div>
+        <h2 id="book-title">Il giardino le annota tutte</h2>
+        <p class="lede">Il Libro degli Echi conserva ogni creatura passata per il tuo giardino: il nome, la specie, come è finita e quanto ha vissuto. Letto dall'inizio, è la storia del tuo giardino.</p>
+        <p class="lede">Il Codex conserva il resto: le specie che hai incontrato, otto frammenti di storia che si sbloccano facendo cose e il conto di ciò che è finito, ciò che è stato conservato e ciò che è tornato.</p>
       </div>
-      <div class="lifecycle-flow reveal" role="list" aria-label="Stadi della vita di una creatura">
-        <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌰</span>
-          <div class="lc-name">Seme</div>
-          <div class="lc-desc">Si compra all'Altare dei Semi o si eredita. Inattivo finché non lo pianti. L'inizio di ogni storia.</div>
-        </div>
-        <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌿</span>
-          <div class="lc-name">Cucciolo</div>
-          <div class="lc-desc">Inizia a produrre lentamente. Attributi in sviluppo. Vulnerabile. È ora che gli dai un nome.</div>
-        </div>
-        <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🌸</span>
-          <div class="lc-name">Adulto</div>
-          <div class="lc-desc">Massimo rendimento. Le mutazioni si vedono sullo sprite. Il meglio della sua vita.</div>
-        </div>
-        <div class="lc-stage" role="listitem"><span class="lc-emoji" aria-hidden="true">🍂</span>
-          <div class="lc-name">Anziano</div>
-          <div class="lc-desc">La produzione cala. L'ultimo tratto prima della scelta che decide cosa lascerà.</div>
-        </div>
-        <div class="lc-stage death" role="listitem"><span class="lc-emoji" aria-hidden="true">✦</span>
-          <div class="lc-name">Morte</div>
-          <div class="lc-desc">Permanente. Scegli: Seme ereditato con mutazioni o Reliquia permanente. Mai entrambi.</div>
-        </div>
-      </div>
-      <div class="lifecycle-note reveal" role="note">
-        <strong>La scelta decisiva:</strong> quando la tua creatura muore, scegli tra <em>Rinascita</em> , un Seme ereditato con il suo lignaggio e una nuova mutazione, oppure <em>Preservazione</em> , una Reliquia statica con bonus permanenti per il giardino. Puoi sceglierne solo una. Questa scelta pesa davvero. Qualunque cosa scegli, ogni morte lascia anche un
-        <em>Vestigio</em> , il primo livello dell'Arco degli Echi.
-      </div>
+      <ul class="ledger" aria-label="Voci di un Libro degli Echi del gioco">
+        <li><div class="who">Hollowroot, <span>Moss Lizard</span></div><div class="how">Radici del Mondo. Preservata. Ha vissuto 14h 00m</div></li>
+        <li><div class="who">Kindling, <span>Ash Salamander</span></div><div class="how">Marea di Cenere. Preservata. Ha vissuto 4h 12m</div></li>
+        <li><div class="who">Third Hollow, <span>Moss Lizard</span></div><div class="how">Radici del Mondo. Rinata. Ha vissuto 14h 00m</div></li>
+        <li><div class="who">Umber, <span>Peat Slug</span></div><div class="how">Radici del Mondo. Preservata. Ha vissuto 12h 36m</div></li>
+        <li><div class="who">Marrowstone, <span>Stone Tortoise</span></div><div class="how">Radici del Mondo. Preservata. Ha vissuto 25h 12m</div></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ══ SYSTEMS ═══════════════════════════════════════════════════════════ -->
   <section id="systems" aria-labelledby="systems-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Come cresce il giardino</span>
-        <h2 id="systems-title" class="section-title">Tre sistemi, niente numeri</h2>
-        <p class="section-lead">Il giardino ti mostra le cose prima di spiegarle. Tutto ciò che segue è qualitativo in gioco: chi osserva, confronta e fa teorie arriva più lontano di chi ottimizza.</p>
-      </div>
-      <div class="trading-grid">
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">👁</span>
-          <div class="t-name">Incontri e l'Altare dei Semi</div>
-          <div class="t-rarity r-common">Acquisizione</div>
-          <div class="t-desc">Le nuove specie non sono semplicemente in vendita. Quando un bioma produce, qualcosa si muove: un avviso discreto, un dossier, una creatura che ora hai <em>visto</em>. Solo allora l'Altare dei Semi la vende. Niente timer né dadi: il giardino ti mostra una creatura prima di vendertela.</div><span class="t-badge">Prima rivelata, poi comprata</span>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🧭</span>
-          <div class="t-name">La ruota delle risonanze</div>
-          <div class="t-rarity r-rare">Cura</div>
-          <div class="t-desc">Sei risonanze su una ruota: Arraigo, Ascua, Fulgor, Brisa, Escarcha e Umbra. Ogni creatura ne porta una, in base all'ora in cui è nata. Le vicine a un passo si armonizzano; le opposte si scontrano. Dodici posti per bioma: la sfida è disporle, non ripetere.</div><span class="t-badge">Bordo dorato: armonia · rosso: scontro</span>
-        </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🪶</span>
-          <div class="t-name">L'Arco degli Echi</div>
-          <div class="t-rarity r-ancient">Creazione</div>
-          <div class="t-desc">Ogni morte lascia un <em>Vestigio</em>. Combinali e sali: Rastro, Impronta, Murmullo, Eco; dieci livelli in tutto, fino a Origen. Dal quarto livello la forgia può distruggere il risultato invece di crearlo. I materiali di ogni ecosistema sono solo suoi.</div><span class="t-badge">Livelli 1–5 ora · 6–10 con Steam</span>
-        </article>
+    <div class="wrap">
+      <h2 id="systems-title">Come cresce il giardino</h2>
+      <p class="lede">Il gioco non ti mostra mai i numeri che ci sono dietro. Si impara guardando.</p>
+      <div class="grows">
+        <figure>
+          <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 860px) 100vw, 640px" alt="Il pannello dell'Echo Arc nel gioco, con i livelli da Vestigio in su e il rischio di perdere il risultato a ogni livello" width="1920" height="1080" loading="lazy">
+          <figcaption>L'Echo Arc nella versione v0.9.0. La pixel art è ancora provvisoria.</figcaption>
+        </figure>
+        <div class="grows-list">
+          <div>
+            <h3>Le specie nuove si fanno vedere prima</h3>
+            <p>All'inizio non c'è niente di nuovo in vendita. Man mano che un bioma produce, compare una creatura che non conoscevi, e solo allora l'Altare dei Semi ti vende il suo seme.</p>
+          </div>
+          <div>
+            <h3>I vicini contano</h3>
+            <p>Ogni creatura nasce sotto una di sei risonanze, decisa dall'ora in cui è nata: Arraigo, Ascua, Fulgor, Brisa, Escarcha e Umbra. Le vicine a un passo di distanza si aiutano e quelle opposte si ostacolano. Un bioma ha dodici posti, quindi conta dove pianti.</p>
+          </div>
+          <div>
+            <h3>Ciò che si perde diventa materiale</h3>
+            <p>I Vestigi si combinano in Rastro, Impronta, Murmullo e così via fino a Origen, dieci livelli in tutto. Dal quarto in poi, la forgia può distruggere ciò che ci metti. I livelli da uno a cinque sono già nel gioco.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ ECOSYSTEMS ══════════════════════════════════════════════════════════ -->
   <section id="ecosystems" aria-labelledby="ecosystems-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Design del mondo</span>
-        <h2 id="ecosystems-title" class="section-title">Quattro ecosistemi, due al lancio</h2>
-        <p class="section-lead">Ogni ecosistema ha la sua filosofia, la sua tavolozza e la sua specialità. L'accesso anticipato si apre con Radici e Cenere; Giardino e Grotta arrivano con i primi due aggiornamenti.</p>
-      </div>
-      <div class="eco-grid">
-        <article class="eco-card eco-roots reveal">
-          <div class="eco-card-glow" aria-hidden="true"></div>
-          <div class="eco-inner">
-            <span class="eco-emblem" aria-hidden="true">🌳</span>
-            <h3 class="eco-name">Radici del Mondo</h3>
-            <p class="eco-tagline">"Ciò che cresce lentamente dura secoli." Creature antiche e pazienti, fatte per resistere.
-            </p>
-            <div class="eco-tags"><span class="eco-tag">Sopravvivenza</span><span class="eco-tag">Utilità</span></div>
-            <div class="eco-meta">7 creature · disponibili al lancio</div>
-          </div>
+    <div class="wrap">
+      <h2 id="ecosystems-title">Due ecosistemi aprono al lancio</h2>
+      <p class="lede">Ognuno ha le sue creature, il suo ritmo e i suoi materiali.</p>
+      <div class="ecos">
+        <article class="eco">
+          <img src="/assets/screenshots/01_roots_garden-960.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 760px) 100vw, 540px" alt="Radici del Mondo nel gioco, con dodici creature in diversi stadi della loro vita" width="960" height="540" loading="lazy">
+          <h3>Radici del Mondo</h3>
+          <p class="motto">Ciò che cresce piano dura secoli.</p>
+          <p>Sette creature pazienti che vivono a lungo e danno con costanza.</p>
         </article>
-        <article class="eco-card eco-ash reveal reveal-d1">
-          <div class="eco-card-glow" aria-hidden="true"></div>
-          <div class="eco-inner">
-            <span class="eco-emblem" aria-hidden="true">🌋</span>
-            <h3 class="eco-name">Marea di Cenere</h3>
-            <p class="eco-tagline">"Dalla distruzione nasce il nuovo." Creature volatili e potenti che vivono in fretta e muoiono in grande.</p>
-            <div class="eco-tags"><span class="eco-tag">Rarità</span><span class="eco-tag">Utilità</span></div>
-            <div class="eco-meta">7 creature · disponibili al lancio</div>
-          </div>
-        </article>
-        <article class="eco-card eco-garden reveal reveal-d2">
-          <div class="eco-card-glow" aria-hidden="true"></div>
-          <div class="eco-inner">
-            <span class="eco-emblem" aria-hidden="true">🌸</span>
-            <h3 class="eco-name">Giardino Sospeso</h3>
-            <p class="eco-tagline">"Tra il sogno e l'aria." Creature eteree che esistono a metà strada verso un altro piano.</p>
-            <div class="eco-tags"><span class="eco-tag">Esplorazione</span><span class="eco-tag">Rarità</span></div>
-            <div class="eco-meta eco-soon">7 creature · primo aggiornamento dell'accesso anticipato</div>
-          </div>
-        </article>
-        <article class="eco-card eco-cave reveal reveal-d3">
-          <div class="eco-card-glow" aria-hidden="true"></div>
-          <div class="eco-inner">
-            <span class="eco-emblem" aria-hidden="true">✨</span>
-            <h3 class="eco-name">Grotta Luminosa</h3>
-            <p class="eco-tagline">"L'oscurità che illumina." Creature che portano la propria luce e rivelano ciò che è nascosto.</p>
-            <div class="eco-tags"><span class="eco-tag">Esplorazione</span><span class="eco-tag">Sopravvivenza</span></div>
-            <div class="eco-meta eco-soon">7 creature · secondo aggiornamento dell'accesso anticipato</div>
-          </div>
+        <article class="eco">
+          <img src="/assets/screenshots/02_tide_of_ash-960.webp" srcset="/assets/screenshots/02_tide_of_ash-960.webp 960w, /assets/screenshots/02_tide_of_ash.webp 1920w" sizes="(max-width: 760px) 100vw, 540px" alt="Marea di Cenere nel gioco, con braci, fumo e il bagliore tra vicine che si aiutano" width="960" height="540" loading="lazy">
+          <h3>Marea di Cenere</h3>
+          <p class="motto">Dalla distruzione nasce il nuovo.</p>
+          <p>Sette creature volatili che vivono in fretta, danno molto e muoiono giovani.</p>
         </article>
       </div>
+      <p class="later">Il Giardino Sospeso arriva con il primo aggiornamento dell'accesso anticipato e la Grotta Luminosa con il secondo. Le loro quattordici creature sono già disegnate.</p>
     </div>
   </section>
 
   <section id="bestiary" aria-labelledby="bestiary-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Gli abitanti</span>
-        <h2 id="bestiary-title" class="section-title">Bestiario</h2>
-        <p class="section-lead">Ventotto specie in quattro biomi, ognuna con il suo ritmo di vivere e morire: Radici e Cenere al lancio dell'accesso anticipato, Giardino e Grotta con i primi due aggiornamenti di contenuti. I numeri restano nascosti: il giardino premia chi osserva, confronta e fa teorie.</p>
-      </div>
+    <div class="wrap">
+      <h2 id="bestiary-title">Chi ci vive</h2>
+      <p class="lede">Ogni specie ha la sua durata di vita, la sua resa e le sue ultime parole.</p>
       <!-- BESTIARY:START -->
-      <h3 class="beast-biome-title beast-biome-roots">Radici del Mondo</h3>
-      <div class="beast-grid">
-        <a class="beast-card beast-roots reveal" href="/it/bestiary/earth-caterpillar/">
-          <img class="beast-sprite" src="/assets/creatures/oruga_tierra.png" alt="Earth Caterpillar — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Earth Caterpillar</h3>
-          <div class="beast-eco">Radici del Mondo</div>
-          <div class="beast-traits">Vita duratura · Resa generosa · Risonanza Umbra</div>
-          <p class="beast-flavor">Lenta finché non lo è più.</p>
-        </a>
-        <a class="beast-card beast-roots reveal reveal-d1" href="/it/bestiary/elder-centipede/">
-          <img class="beast-sprite" src="/assets/creatures/ciempies_anciano.png" alt="Elder Centipede — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Elder Centipede</h3>
-          <div class="beast-eco">Radici del Mondo</div>
-          <div class="beast-traits">Vita duratura · Resa generosa · Risonanza Escarcha</div>
-          <p class="beast-flavor">Si orienta percependo la decomposizione delle altre creature.</p>
-        </a>
-      </div>
-      <h3 class="beast-biome-title beast-biome-ash">Marea di Cenere</h3>
-      <div class="beast-grid">
-        <a class="beast-card beast-ash reveal" href="/it/bestiary/ash-drake/">
-          <img class="beast-sprite" src="/assets/creatures/dragon_ceniza.png" alt="Ash Drake — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Ash Drake</h3>
-          <div class="beast-eco">Marea di Cenere</div>
-          <div class="beast-traits">Vita fugace · Resa abbondante · Risonanza Ascua</div>
-          <p class="beast-flavor">Vecchio per questo bioma; inaudito, a dire il vero.</p>
-        </a>
-        <a class="beast-card beast-ash reveal reveal-d1" href="/it/bestiary/ash-salamander/">
-          <img class="beast-sprite" src="/assets/creatures/salamandra_ceniza.png" alt="Ash Salamander — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Ash Salamander</h3>
-          <div class="beast-eco">Marea di Cenere</div>
-          <div class="beast-traits">Vita fugace · Resa abbondante · Risonanza Ascua</div>
-          <p class="beast-flavor">Nata dalla brace, di rado dura una stagione.</p>
-        </a>
-      </div>
-      <h3 class="beast-biome-title beast-biome-garden">Giardino Sospeso: primo aggiornamento dell'accesso anticipato</h3>
-      <div class="beast-grid">
-        <a class="beast-card beast-garden reveal" href="/it/bestiary/crystal-dragonfly/">
-          <img class="beast-sprite" src="/assets/creatures/libelula_cristal.png" alt="Crystal Dragonfly — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Crystal Dragonfly</h3>
-          <div class="beast-eco">Giardino Sospeso</div>
-          <div class="beast-traits">Vita costante · Resa generosa · Risonanza Brisa</div>
-          <p class="beast-flavor">Trasparente da certe angolazioni.</p>
-        </a>
-        <a class="beast-card beast-garden reveal reveal-d1" href="/it/bestiary/ethereal-butterfly/">
-          <img class="beast-sprite" src="/assets/creatures/mariposa_eterea.png" alt="Ethereal Butterfly — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Ethereal Butterfly</h3>
-          <div class="beast-eco">Giardino Sospeso</div>
-          <div class="beast-traits">Vita costante · Resa generosa · Risonanza Arraigo</div>
-          <p class="beast-flavor">Le sue ali non dovrebbero tenerla in aria.</p>
-        </a>
-      </div>
-      <h3 class="beast-biome-title beast-biome-cave">Grotta Luminosa: secondo aggiornamento dell'accesso anticipato</h3>
-      <div class="beast-grid">
-        <a class="beast-card beast-cave reveal" href="/it/bestiary/abyss-polyp/">
-          <img class="beast-sprite" src="/assets/creatures/polipo_abismo.png" alt="Abyss Polyp — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Abyss Polyp</h3>
-          <div class="beast-eco">Grotta Luminosa</div>
-          <div class="beast-traits">Vita fugace · Resa abbondante · Risonanza Escarcha</div>
-          <p class="beast-flavor">Ancorato al punto più profondo del fondo della grotta.</p>
-        </a>
-        <a class="beast-card beast-cave reveal reveal-d1" href="/it/bestiary/abyss-serpent/">
-          <img class="beast-sprite" src="/assets/creatures/serpiente_abismo.png" alt="Abyss Serpent — sprite in pixel art della creatura" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">Abyss Serpent</h3>
-          <div class="beast-eco">Grotta Luminosa</div>
-          <div class="beast-traits">Vita fugace · Resa abbondante · Risonanza Escarcha</div>
-          <p class="beast-flavor">Viene da un luogo sotto la grotta conosciuta.</p>
-        </a>
-        <article class="beast-card beast-secret reveal">
-          <div class="beast-sprite beast-unknown" aria-hidden="true">?</div>
-          <h3 class="beast-name">???</h3>
-          <div class="beast-eco">Sintesi</div>
-          <div class="beast-traits">Il giardino insegna; non istruisce.</div>
-          <p class="beast-flavor">Esistono altre due forme. Nessun seme le vende. Si imparano.</p>
-        </article>
-      </div>
-      <p class="beast-all"><a class="btn-ghost" href="/it/bestiary/">Vedi tutte le 28 creature →</a></p>
+      <h3 class="garden-title">Radici del Mondo</h3>
+      <ul class="garden">
+        <li><a href="/it/bestiary/earth-caterpillar/"><span class="halo"><img src="/assets/creatures/oruga_tierra.png" alt="" width="24" height="24" loading="lazy"></span><span>Earth Caterpillar</span></a></li>
+        <li><a href="/it/bestiary/elder-centipede/"><span class="halo"><img src="/assets/creatures/ciempies_anciano.png" alt="" width="24" height="24" loading="lazy"></span><span>Elder Centipede</span></a></li>
+        <li><a href="/it/bestiary/moss-lizard/"><span class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24" loading="lazy"></span><span>Moss Lizard</span></a></li>
+        <li><a href="/it/bestiary/peat-slug/"><span class="halo"><img src="/assets/creatures/babosa_turba.png" alt="" width="24" height="24" loading="lazy"></span><span>Peat Slug</span></a></li>
+        <li><a href="/it/bestiary/root-beetle/"><span class="halo"><img src="/assets/creatures/escarabajo_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Beetle</span></a></li>
+        <li><a href="/it/bestiary/root-mycelium/"><span class="halo"><img src="/assets/creatures/micelio_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Mycelium</span></a></li>
+        <li><a href="/it/bestiary/stone-tortoise/"><span class="halo"><img src="/assets/creatures/tortuga_roca.png" alt="" width="24" height="24" loading="lazy"></span><span>Stone Tortoise</span></a></li>
+      </ul>
+      <h3 class="garden-title">Marea di Cenere</h3>
+      <ul class="garden">
+        <li><a href="/it/bestiary/ash-drake/"><span class="halo"><img src="/assets/creatures/dragon_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Drake</span></a></li>
+        <li><a href="/it/bestiary/ash-salamander/"><span class="halo"><img src="/assets/creatures/salamandra_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Salamander</span></a></li>
+        <li><a href="/it/bestiary/ash-scorpion/"><span class="halo"><img src="/assets/creatures/escorpion_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Scorpion</span></a></li>
+        <li><a href="/it/bestiary/char-mole/"><span class="halo"><img src="/assets/creatures/topo_carbon.png" alt="" width="24" height="24" loading="lazy"></span><span>Char Mole</span></a></li>
+        <li><a href="/it/bestiary/ember-falcon/"><span class="halo"><img src="/assets/creatures/halcon_brasa.png" alt="" width="24" height="24" loading="lazy"></span><span>Ember Falcon</span></a></li>
+        <li><a href="/it/bestiary/flame-wasp/"><span class="halo"><img src="/assets/creatures/avispa_llama.png" alt="" width="24" height="24" loading="lazy"></span><span>Flame Wasp</span></a></li>
+        <li><a href="/it/bestiary/smoke-serpent/"><span class="halo"><img src="/assets/creatures/serpiente_humo.png" alt="" width="24" height="24" loading="lazy"></span><span>Smoke Serpent</span></a></li>
+      </ul>
+      <p class="bestiary-more">Altre 14 vivono nel Giardino Sospeso e nella Grotta Luminosa. <a href="/it/bestiary/">Vedi tutte le 28 creature nel bestiario</a></p>
+      <p class="bestiary-more unlearned">Esistono altre due forme. Nessun seme le vende. Si imparano.</p>
       <!-- BESTIARY:END -->
     </div>
   </section>
 
-  <!-- ══ TRADING ══════════════════════════════════════════════════════════════ -->
-  <section id="trading" aria-labelledby="trading-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Mercato della Comunità di Steam</span>
-        <h2 id="trading-title" class="section-title">Ogni reliquia ha una storia</h2>
-        <p class="section-lead">Gli oggetti nascono giocando, non si comprano. Ogni reliquia porta il nome che le hai dato e la vita che ha vissuto. Il mercato è mosso solo dai giocatori. Arriva con il primo grande aggiornamento dopo l'accesso anticipato; fino ad allora, le reliquie si vendono nel giardino stesso.</p>
-      </div>
-      <div class="trading-grid">
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">🧬</span>
-          <div class="t-name">Semi ereditati</div>
-          <div class="t-rarity r-epic">Rara · Mitica</div>
-          <div class="t-desc">Nascono quando scegli Rinascita alla morte di una creatura. Portano il lignaggio e le mutazioni del progenitore; ogni generazione esce un po' meglio. Da Rara in su si possono scambiare.</div><span
-            class="t-badge">Il lignaggio viaggia</span>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">💎</span>
-          <div class="t-name">Reliquie</div>
-          <div class="t-rarity r-ancient">Rara · Mitica</div>
-          <div class="t-desc">Si ottengono solo scegliendo Preservazione. Specie e rarità ne fissano l'effetto: un bonus passivo al suo ecosistema che sopravvive a ogni scambio. Nome, generazione ed epitaffio viaggiano con lei come la sua storia.</div><span class="t-badge">La storia va con lei</span>
-        </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🪶</span>
-          <div class="t-name">Materiali dell'Arco degli Echi</div>
-          <div class="t-rarity r-rare">Vestigio → Origen</div>
-          <div class="t-desc">Forgiati con ciò che lasciano i morti, impilati per livello ed ecosistema. Specializzarti in un bioma significa volere ciò che hanno i giocatori di un altro.</div><span class="t-badge">Si scambiano per livello</span>
-        </article>
-      </div>
-      <div class="trading-disclaimer reveal" role="note">
-        <p>Tutti gli oggetti nascono giocando: <strong>non c'è un negozio con soldi veri</strong>. L'accesso anticipato esce senza il Mercato; quando aprirà, i prezzi li faranno i giocatori sul Mercato della Comunità di Steam.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ WHAT'S NEW ═══════════════════════════════════════════════════════════ -->
-  <section id="whats-new" aria-labelledby="new-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Contenuti dell'accesso anticipato</span>
-        <h2 id="new-title" class="section-title">Ciò che il giardino contiene ora</h2>
-        <p class="section-lead">Il minimo dell'accesso anticipato, già nella build giocabile. Radici e Cenere sono aperte; Giardino e Grotta arriveranno come aggiornamenti di contenuti.</p>
-      </div>
-      <div class="trading-grid">
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">📖</span>
-          <div class="t-name">Libro degli Echi</div>
-          <div class="t-desc">Un registro di ogni vita che il giardino ha ospitato: nome, specie, bioma, destino e tempo vissuto. Niente di ciò che contiene torna uguale.</div>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🕯️</span>
-          <div class="t-name">Cerimonia della morte</div>
-          <div class="t-desc">La morte occupa lo schermo. Il nome della creatura, il suo epitaffio, una frase che dice solo la sua specie e i due destini tra cui scegliere. Alcune morti dicono qualcosa di più raro.</div>
-        </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🪨</span>
-          <div class="t-name">Frammenti di storia</div>
-          <div class="t-desc">Otto frammenti di ciò che il giardino ricorda, ognuno sbloccato da qualcosa che hai fatto, non da qualcosa che hai letto. Nessuno spiega.</div>
-        </article>
-        <article class="trading-card reveal"><span class="t-icon" aria-hidden="true">🧮</span>
-          <div class="t-name">Statistiche complessive</div>
-          <div class="t-desc">Ciò che è finito, ciò che è stato conservato, ciò che è tornato, fin dove è arrivato un lignaggio. Il Codex tiene il conto perché il giardino possa rispondere quando glielo si chiede.</div>
-        </article>
-        <article class="trading-card reveal reveal-d1"><span class="t-icon" aria-hidden="true">🗣️</span>
-          <div class="t-name">English · Español · Italiano</div>
-          <div class="t-desc">Interfaccia, storia delle creature, ricette e frammenti in tre lingue. I nomi delle risonanze restano come sono: sono nomi, non parole.</div>
-        </article>
-        <article class="trading-card reveal reveal-d2"><span class="t-icon" aria-hidden="true">🎨</span>
-          <div class="t-name">Tutte le 28 specie disegnate</div>
-          <div class="t-desc">Il Giardino Sospeso e la Grotta Luminosa hanno pronti creature e sfondi, con tre stadi ciascuna, in attesa dei loro aggiornamenti. Ci sono anche l'introduzione guidata e un vero menu di opzioni.</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ ROADMAP ══════════════════════════════════════════════════════════════ -->
   <section id="roadmap" aria-labelledby="roadmap-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Piano di sviluppo</span>
-        <h2 id="roadmap-title" class="section-title">La strada davanti</h2>
-        <p class="section-lead">Onesto e pubblico. Echoes è fatto da una sola persona. Ecco esattamente dove siamo e dove stiamo andando. I trimestri sono obiettivi, non scadenze. I numeri di fase sono nomi, non un ordine: prima esce l'accesso anticipato, poi il Mercato.</p>
+    <div class="wrap">
+      <h2 id="roadmap-title">A che punto è il gioco</h2>
+      <p class="lede">Echoes of the Garden lo fa una sola persona, alla luce del sole. Le date sono obiettivi, non promesse.</p>
+      <ol class="road">
+        <li class="done">
+          <p class="when">Fatto, primavera 2026</p>
+          <h3>Fondamenta</h3>
+          <p>Una creatura che nasce, cresce e muore, e un salvataggio che sopravvive a un riavvio.</p>
+        </li>
+        <li class="done">
+          <p class="when">Fatto, luglio 2026</p>
+          <h3>Il ciclo del giardino</h3>
+          <p>Quattro biomi, tutte le 28 specie definite, l'Altare dei Semi e il ciclo idle.</p>
+        </li>
+        <li class="done">
+          <p class="when">Fatto, ottobre 2026</p>
+          <h3>Economia</h3>
+          <p>L'Echo Arc fino al livello cinque, le risonanze e gli incontri, provati contro un mese di gioco simulato.</p>
+        </li>
+        <li class="now">
+          <p class="when">Ora, con l'obiettivo del secondo trimestre 2027</p>
+          <h3>Accesso anticipato su Steam</h3>
+          <p>La grafica, l'introduzione, il Libro degli Echi e le tre lingue ci sono già. Prossimo passo: un test con giocatori nuovi.</p>
+        </li>
+        <li>
+          <p class="when">Dopo l'accesso anticipato</p>
+          <h3>Mercato della Comunità di Steam</h3>
+          <p>Scambio di reliquie e materiali, e i livelli da sei a dieci dell'Echo Arc. Dipende dalla revisione di Valve.</p>
+        </li>
+      </ol>
+      <div class="log" id="devlog">
+        <div class="log-head">
+          <h3>Dal dev log</h3>
+        </div>
+        <!-- DEVLOG:START -->
+        <div class="devlog-grid">
+          <article>
+            <time class="devlog-date" datetime="2026-11-05">5 novembre 2026 · Build v0.12.1</time>
+            <h4 class="devlog-title"><a href="/it/devlog/ready-for-strangers/">Pronto per nuovi giocatori</a></h4>
+            <p class="devlog-summary">Una revisione del design ha trovato undici minuti vuoti nella prima sessione. Cosa è cambiato prima del primo playtest esterno.</p>
+          </article>
+          <article>
+            <time class="devlog-date" datetime="2026-10-30">30 ottobre 2026 · Build v0.10.0</time>
+            <h4 class="devlog-title"><a href="/it/devlog/27-achievements-and-four-rare-lines/">27 obiettivi e quattro frasi rare</a></h4>
+            <p class="devlog-summary">Obiettivi, parole a ogni morte, tutta la storia in tre lingue e un bug che rendeva le creature più giovani di quanto fossero.</p>
+          </article>
+          <article>
+            <time class="devlog-date" datetime="2026-10-29">29 ottobre 2026 · Build v0.9.0</time>
+            <h4 class="devlog-title"><a href="/it/devlog/a-garden-that-remembers/">Un giardino che ricorda</a></h4>
+            <p class="devlog-summary">Il Libro degli Echi registra ogni creatura che ha vissuto, arriva la storia e il gioco parla spagnolo e italiano.</p>
+          </article>
+        </div>
+        <p class="devlog-all"><a href="/it/devlog/">Tutte le voci del dev log</a></p>
+        <!-- DEVLOG:END -->
       </div>
-      <div class="roadmap-timeline" id="rm-list" role="list" aria-label="Tabella di marcia dello sviluppo">
-
-        <div class="rm-item rm-done" data-p="0" role="listitem">
-          <div class="rm-content reveal">
-            <div class="rm-phase">Fase 0</div>
-            <div class="rm-title">Fondamenta</div>
-            <div class="rm-date">T2 2026 · fatto</div>
-            <div class="rm-desc">Una creatura che nasce, cresce e muore, e un salvataggio che sopravvive a un riavvio. Ciclo vitale, progressi offline, la scelta della morte e i semi ereditati.</div>
-            <span class="rm-tag">✅ Chiusa</span>
-          </div>
-          <div class="rm-dot-col">
-            <div class="rm-dot"></div>
-          </div>
-          <div class="rm-empty"></div>
-        </div>
-
-        <div class="rm-item rm-done" data-p="1" role="listitem">
-          <div class="rm-empty"></div>
-          <div class="rm-dot-col">
-            <div class="rm-dot"></div>
-          </div>
-          <div class="rm-content reveal">
-            <div class="rm-phase">Fase 1</div>
-            <div class="rm-title">Ciclo del giardino</div>
-            <div class="rm-date">T3 2026 · chiusa a luglio 2026</div>
-            <div class="rm-desc">Quattro biomi navigabili, tutte le 28 specie definite, l'Altare dei Semi e il ciclo idle completo. Radici e Cenere giocabili; i contenuti di Giardino e Grotta passano agli aggiornamenti dell'accesso anticipato.</div>
-            <span class="rm-tag">✅ Chiusa · v0.3.0</span>
-          </div>
-        </div>
-
-        <div class="rm-item rm-done" data-p="2" role="listitem">
-          <div class="rm-content reveal">
-            <div class="rm-phase">Fase 2</div>
-            <div class="rm-title">Economia</div>
-            <div class="rm-date">T4 2026 · chiusa a ottobre 2026</div>
-            <div class="rm-desc">Risorse di livello 2, livelli 1–5 dell'Arco degli Echi, la generazione degli oggetti, la ruota delle risonanze, gli incontri e un giocatore simulato di 30 giorni che ha dovuto superare ogni controllo prima di pubblicare qualsiasi cosa.</div>
-            <span class="rm-tag">✅ Chiusa · v0.6.0</span>
-          </div>
-          <div class="rm-dot-col">
-            <div class="rm-dot"></div>
-          </div>
-          <div class="rm-empty"></div>
-        </div>
-
-        <div class="rm-item" data-p="4" role="listitem">
-          <div class="rm-empty"></div>
-          <div class="rm-dot-col">
-            <div class="rm-dot"></div>
-          </div>
-          <div class="rm-content reveal">
-            <div class="rm-phase">Fase 4 · viene prima della fase 3</div>
-            <div class="rm-title">Rifinitura e accesso anticipato</div>
-            <div class="rm-date">T2 2027 · in corso</div>
-            <div class="rm-desc">Fatto: grafica di tutte le 28 specie e dei due sfondi rimanenti, introduzione guidata, opzioni, il Libro degli Echi, statistiche, frammenti di storia, la Cerimonia della morte e tre lingue. Da fare: un playtest esterno con nuovi giocatori e la lista per il lancio. L'accesso anticipato esce senza il Mercato.</div>
-            <span class="rm-tag">🔄 In corso</span>
-          </div>
-        </div>
-
-        <div class="rm-item" data-p="3" role="listitem">
-          <div class="rm-content reveal">
-            <div class="rm-phase">Fase 3 · primo grande aggiornamento dopo l'accesso anticipato</div>
-            <div class="rm-title">Mercato della Comunità di Steam</div>
-            <div class="rm-date">Dopo l'accesso anticipato</div>
-            <div class="rm-desc">Reliquie e materiali dell'Arco degli Echi sul Mercato della Comunità, generati sul server. Livelli 6–10 dell'Arco degli Echi e ricette tra ecosistemi. Dipende dalla revisione di Valve dell'economia free-to-play; il lancio non la aspetta.</div>
-            <span class="rm-tag">⏳ Dopo il lancio</span>
-          </div>
-          <div class="rm-dot-col">
-            <div class="rm-dot"></div>
-          </div>
-          <div class="rm-empty"></div>
-        </div>
-
-      </div>
-      <p class="rm-more-wrap"><button type="button" class="btn-ghost rm-more" aria-expanded="false" aria-controls="rm-list">Mostra le fasi concluse</button></p>
     </div>
   </section>
 
-  <!-- ══ DEV LOG ══════════════════════════════════════════════════════════════ -->
-  <section id="devlog" aria-labelledby="devlog-title">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Novità dello sviluppo</span>
-        <h2 id="devlog-title" class="section-title">Dev Log</h2>
-        <p class="section-lead">Progressi, scelte di design e il dietro le quinte di come cresce il giardino.
-        </p>
-      </div>
-      <!-- DEVLOG:START -->
-      <div class="devlog-grid">
-        <article class="devlog-card reveal">
-          <time class="devlog-date" datetime="2026-11-05">5 novembre 2026 · Build v0.12.1</time>
-          <h3 class="devlog-title"><a href="/it/devlog/ready-for-strangers/">Pronto per nuovi giocatori</a></h3>
-          <p class="devlog-summary">Una revisione del design ha trovato undici minuti vuoti nella prima sessione. Cosa è cambiato prima del primo playtest esterno.</p>
-        </article>
-        <article class="devlog-card reveal">
-          <time class="devlog-date" datetime="2026-10-30">30 ottobre 2026 · Build v0.10.0</time>
-          <h3 class="devlog-title"><a href="/it/devlog/27-achievements-and-four-rare-lines/">27 obiettivi e quattro frasi rare</a></h3>
-          <p class="devlog-summary">Obiettivi, parole a ogni morte, tutta la storia in tre lingue e un bug che rendeva le creature più giovani di quanto fossero.</p>
-        </article>
-        <article class="devlog-card reveal">
-          <time class="devlog-date" datetime="2026-10-29">29 ottobre 2026 · Build v0.9.0</time>
-          <h3 class="devlog-title"><a href="/it/devlog/a-garden-that-remembers/">Un giardino che ricorda</a></h3>
-          <p class="devlog-summary">Il Libro degli Echi registra ogni creatura che ha vissuto, arriva la storia e il gioco parla spagnolo e italiano.</p>
-        </article>
-      </div>
-      <p class="devlog-all"><a href="/it/devlog/">Tutte le voci del dev log</a></p>
-      <!-- DEVLOG:END -->
-    </div>
-  </section>
-
-  <!-- ══ NEWSLETTER ════════════════════════════════════════════════════════════ -->
   <section id="newsletter" aria-labelledby="newsletter-title">
-    <div class="container">
-      <div class="newsletter-wrap reveal">
-        <div class="newsletter-inner">
-          <span class="nl-icon" aria-hidden="true">🌿</span>
-          <h2 id="newsletter-title" class="nl-title">Il giardino ti chiama</h2>
-          <p class="nl-desc">Iscriviti per ricevere novità sullo sviluppo, l'avviso dell'accesso anticipato e una Founder's Seed esclusiva all'uscita del gioco.</p>
-          <div class="nl-perks">
-            <span class="nl-perk">Novità</span>
-            <span class="nl-perk">Avviso accesso anticipato</span>
-            <span class="nl-perk">Founder's Seed</span>
-          </div>
-          <form class="nl-form" id="nl-form" onsubmit="handleSubscribe(event)" novalidate>
-            <label for="nl-email" class="sr-only">Indirizzo email</label>
-            <input type="email" id="nl-email" class="nl-input" placeholder="your@email.com" required
-              autocomplete="email" aria-required="true" aria-describedby="nl-error">
-            <!-- Honeypot: invisible to humans, auto-filled by bots. Server rejects non-empty. -->
-            <input type="text" id="nl-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
-              style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
-            <button type="submit" class="nl-btn" id="nl-btn">Iscrivimi</button>
-          </form>
-          <div id="nl-success" class="nl-msg success" role="status" aria-live="polite" style="display:none"></div>
-          <div id="nl-error" class="nl-msg error" role="alert" aria-live="assertive" style="display:none"></div>
-          <p class="nl-privacy">Niente spam · Disiscriviti quando vuoi · <a href="/it/privacy/">Privacy</a></p>
+    <div class="wrap nl">
+      <h2 id="newsletter-title">Sappi quando arriva su Steam</h2>
+      <p class="lede">Un'email quando apre l'accesso anticipato, qualche nota di sviluppo prima e un Founder's Seed all'uscita.</p>
+      <form class="nl-form" id="nl-form" novalidate>
+        <div class="nl-field">
+          <label for="nl-email">Indirizzo email</label>
+          <input type="email" id="nl-email" class="nl-input" required autocomplete="email" aria-describedby="nl-error">
         </div>
-      </div>
+        <!-- Honeypot: invisible to people, filled in by bots. The server rejects it when it isn't empty. -->
+        <input type="text" id="nl-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
+          style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
+        <button type="submit" class="btn btn-gold" id="nl-btn">Iscriviti</button>
+      </form>
+      <p id="nl-success" class="nl-msg success" role="status" hidden></p>
+      <p id="nl-error" class="nl-msg error" role="alert" hidden></p>
+      <p class="nl-privacy">Niente spam, e ogni email ha un link per disiscriverti. <a href="/it/privacy/">Informativa sulla privacy</a></p>
     </div>
   </section>
-
-  <!-- ══ ABOUT DEV ═════════════════════════════════════════════════════════════ -->
-  <section id="about-dev" aria-label="Lo sviluppatore">
-    <div class="container">
-      <div class="about-dev-inner reveal">
-        <span class="section-eyebrow">Lo sviluppatore</span>
-        <p>Echoes of the Garden è un progetto indipendente fatto da una sola persona, con grande amore per i giochi idle, i collezionisti di creature e i mondi con qualcosa da dire.</p>
-        <p>Lo sviluppo è trasparente e pubblico perché la comunità merita di sapere a cosa va incontro.</p>
-        <nav class="dev-links" aria-label="Link esterni">
-          <a href="https://echoes-of-the-garden.itch.io/play" class="dev-link" target="_blank" rel="noopener">Gioca su itch.io</a>
-          <span class="dev-link dev-soon">Steam (presto)</span>
-          <a href="#newsletter" class="dev-link">Newsletter</a>
-        </nav>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ FOOTER ════════════════════════════════════════════════════════════════ -->
   </main>
 
-  <footer role="contentinfo">
-    <div class="footer-logo">Echoes of the Garden</div>
-    <p class="footer-copy">© 2026 · Progetto indie individuale · Tutti i diritti riservati</p>
-    <nav class="footer-links" aria-label="Navigazione del piè di pagina">
-      <a href="#about">Il gioco</a>
-      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca</a>
-      <a href="#roadmap">Tabella di marcia</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="/it/privacy/">Privacy</a>
-      <a href="/it/privacy/#who-we-are">Note legali</a>
-      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
-    </nav>
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div class="foot-logo">Echoes of the Garden</div>
+        <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+      </div>
+      <nav class="foot-links" aria-label="Piè di pagina">
+        <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+        <span>Steam (presto)</span>
+        <a href="/it/bestiary/">Bestiario</a>
+        <a href="/it/devlog/">Dev log</a>
+        <a href="/it/privacy/">Privacy</a>
+        <a href="/it/privacy/#who-we-are">Note legali</a>
+        <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+      </nav>
+    </div>
   </footer>
 
-  <!-- SCREEN READER ONLY utility -->
-  <style>
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0
-    }
-  </style>
-
   <script>
-    /* ── PIXEL GARDEN ──────────────────────────────────────────────── */
-    const canvas = document.getElementById('garden-canvas');
-    const ctx = canvas.getContext('2d');
-    let plants = [];
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function initGarden() {
-      canvas.width = window.innerWidth;
-      canvas.height = 100;
-      plants = [];
-      const PX = 4;
-      for (let x = 0; x < canvas.width; x += Math.floor(Math.random() * 5 + 2) * PX) {
-        plants.push({
-          x, PX,
-          h: (Math.floor(Math.random() * 9 + 2)) * PX,
-          color: `hsl(${115 + Math.random() * 45},${28 + Math.random() * 28}%,${12 + Math.random() * 14}%)`,
-          sway: Math.random() * Math.PI * 2,
-          speed: 0.008 + Math.random() * 0.018
-        });
-      }
-    }
-
-    function paintGarden(step) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      plants.forEach(p => {
-        p.sway += p.speed * step;
-        ctx.fillStyle = p.color;
-        ctx.fillRect(p.x + Math.sin(p.sway) * p.PX * 0.6, canvas.height - p.h, p.PX, p.h);
-      });
-    }
-
-    // 15 fps is enough for a slow sway and keeps the main thread free for the first paint.
-    let lastPaint = 0;
-    function drawGarden(now) {
-      requestAnimationFrame(drawGarden);
-      if (now - lastPaint < 66) return;
-      lastPaint = now;
-      paintGarden(4);
-    }
-
-    // Start after load: reading innerWidth while the page is still parsing forces a full layout
-    // of the home page (~100 ms on a fast machine, most of the mobile TBT).
-    let gardenWidth = 0;
-    function startGarden() {
-      gardenWidth = innerWidth;
-      initGarden();
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) paintGarden(0);
-      else requestAnimationFrame(drawGarden);
-    }
-    addEventListener('load', () => requestAnimationFrame(startGarden));
-    addEventListener('resize', () => {
-      if (gardenWidth && innerWidth !== gardenWidth) { gardenWidth = innerWidth; initGarden(); }
-    });
-
-    /* ── HERO VIDEO ────────────────────────────────────────────────── */
-    // Muted loop: paused for reduced motion, and a click pauses or resumes it (WCAG 2.2.2).
+    /* Hero video: a looping video needs a visible way to stop it (WCAG 2.2.2). */
     const heroVideo = document.getElementById('hero-video');
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); }
-    heroVideo.addEventListener('click', () => (heroVideo.paused ? heroVideo.play() : heroVideo.pause()));
+    const videoToggle = document.getElementById('video-toggle');
+    function syncVideoToggle() { videoToggle.textContent = heroVideo.paused ? 'Riprendi il giardino' : 'Metti in pausa il giardino'; }
+    if (reduceMotion) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); }
+    videoToggle.hidden = false;
+    videoToggle.addEventListener('click', () => { heroVideo.paused ? heroVideo.play() : heroVideo.pause(); });
+    heroVideo.addEventListener('play', syncVideoToggle);
+    heroVideo.addEventListener('pause', syncVideoToggle);
+    syncVideoToggle();
 
-    /* ── SCROLL REVEAL ─────────────────────────────────────────────── */
-    const ro = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-    /* ── NAV ACTIVE LINK ───────────────────────────────────────────── */
-    // A line across the middle of the screen: works for sections taller than the viewport,
-    // which a visibility threshold never reaches (the bestiary used to leave "Trading" lit).
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sio = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        navLinks.forEach(a => a.classList.remove('active'));
-        document.querySelector(`.nav-links a[href="#${e.target.id}"]`)?.classList.add('active');
-      });
-    }, { rootMargin: '-50% 0px -50% 0px' });
-    document.querySelectorAll('section[id]').forEach(s => sio.observe(s));
-
-    /* ── MOBILE MENU ────────────────────────────────────────────────── */
-    let menuOpen = false;
-    function toggleMenu() {
-      const nav = document.getElementById('main-nav');
-      const btn = document.querySelector('.nav-mobile-btn');
-      menuOpen = !menuOpen;
-      nav.classList.toggle('nav-open', menuOpen);
-      btn.setAttribute('aria-expanded', menuOpen);
-      btn.setAttribute('aria-label', menuOpen ? 'Chiudi menu' : 'Apri menu');
-      btn.textContent = menuOpen ? '\u2715' : '\u2630';
-      // Keep Tab inside the open menu: everything but the nav goes inert.
-      document.querySelectorAll('body > :not(nav)').forEach(el => { el.inert = menuOpen; });
-      if (menuOpen) document.querySelector('.nav-links a').focus();
+    /* The death plays once, when it comes into view. */
+    const death = document.getElementById('death');
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      death.classList.add('armed');
+      new IntersectionObserver((entries, io) => {
+        if (entries[0].isIntersecting) { death.classList.add('visto'); io.disconnect(); }
+      }, { threshold: 0.35 }).observe(death);
     }
+
+    /* Mobile menu: Escape closes it, and the rest of the page is inert while it is open. */
+    const nav = document.getElementById('main-nav');
+    const menuBtn = nav.querySelector('.nav-menu-btn');
+    function setMenu(open) {
+      nav.classList.toggle('nav-open', open);
+      menuBtn.setAttribute('aria-expanded', open);
+      menuBtn.textContent = open ? 'Chiudi' : 'Menu';
+      document.querySelectorAll('body > :not(nav)').forEach(el => { el.inert = open; });
+      if (open) nav.querySelector('.nav-links a').focus();
+    }
+    menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('nav-open')));
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && menuOpen) { toggleMenu(); document.querySelector('.nav-mobile-btn').focus(); }
+      if (e.key === 'Escape' && nav.classList.contains('nav-open')) { setMenu(false); menuBtn.focus(); }
     });
-    // close on link click
-    document.querySelectorAll('.nav-links a').forEach(el => {
-      el.addEventListener('click', () => { if (menuOpen) toggleMenu(); });
-    });
+    nav.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-    document.querySelector('.rm-more').addEventListener('click', e => {
-      const all = document.getElementById('rm-list').classList.toggle('rm-all');
-      e.currentTarget.setAttribute('aria-expanded', all);
-      e.currentTarget.textContent = all ? 'Nascondi le fasi concluse' : 'Mostra le fasi concluse';
-    });
-
-    /* ── NEWSLETTER ──────────────────────────────────────────────────
-       Backend: src/worker.js (Resend API).
-       Setup docs live in the repo README — not here. */
-    async function handleSubscribe(e) {
+    /* Newsletter. Backend: /api/subscribe in src/worker.js (Resend). */
+    const form = document.getElementById('nl-form');
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      const email = document.getElementById('nl-email').value.trim();
-      const website = document.getElementById('nl-website').value; // honeypot
+      const input = document.getElementById('nl-email');
+      const email = input.value.trim();
+      const website = document.getElementById('nl-website').value;
       const btn = document.getElementById('nl-btn');
       const success = document.getElementById('nl-success');
       const error = document.getElementById('nl-error');
+      const fail = msg => { error.textContent = msg; error.hidden = false; input.setAttribute('aria-invalid', 'true'); };
 
-      if (!email || !email.includes('@')) {
-        error.textContent = 'Inserisci un indirizzo email valido.';
-        error.style.display = 'block'; document.getElementById('nl-email').setAttribute('aria-invalid', 'true');
-        return;
-      }
+      success.hidden = true; error.hidden = true; input.removeAttribute('aria-invalid');
+      if (!email || !email.includes('@')) return fail('Inserisci un indirizzo email valido.');
 
       btn.disabled = true;
-      btn.textContent = 'Iscrizione…';
-      success.style.display = 'none';
-      error.style.display = 'none'; document.getElementById('nl-email').removeAttribute('aria-invalid');
-
-      // Preview mode — shows success without a real backend
-      const isLocalPreview = ['localhost', '127.0.0.1', ''].includes(location.hostname) || location.protocol === 'file:';
-
-      if (isLocalPreview) {
-        success.textContent = '✦ Preview mode — subscription would be saved to Resend here.';
-        success.style.display = 'block';
-        document.getElementById('nl-email').value = '';
-        btn.textContent = '✓ Done';
-        return;
+      btn.textContent = 'Iscrizione in corso…';
+      if (['localhost', '127.0.0.1', ''].includes(location.hostname)) {
+        success.textContent = 'Modalità anteprima: qui l\'iscrizione verrebbe salvata su Resend.';
+        success.hidden = false; btn.textContent = 'Iscritto'; return;
       }
-
       try {
-        const res = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, website })
-        });
+        const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, website }) });
         if (res.ok) {
-          success.textContent = '✦ Ci sei. Ti avviseremo quando aprirà il giardino.';
-          success.style.display = 'block';
-          document.getElementById('nl-email').value = '';
-          btn.textContent = '✓ Iscritto';
-        } else if (res.status === 429) {
-          error.textContent = 'Troppi tentativi. Aspetta qualche minuto e riprova.';
-          error.style.display = 'block'; document.getElementById('nl-email').setAttribute('aria-invalid', 'true');
-          btn.disabled = false;
-          btn.textContent = 'Iscrivimi';
-        } else {
-          throw new Error('Server error ' + res.status);
+          success.textContent = 'Sei iscritto. Ti scriveremo quando il giardino apre su Steam.';
+          success.hidden = false; input.value = ''; btn.textContent = 'Iscritto';
+          return;
         }
-      } catch (err) {
-        error.textContent = 'Qualcosa è andato storto. Riprova o scrivici direttamente.';
-        error.style.display = 'block'; document.getElementById('nl-email').setAttribute('aria-invalid', 'true');
-        btn.disabled = false;
-        btn.textContent = 'Try again';
+        fail(res.status === 429 ? 'Troppi tentativi. Aspetta qualche minuto e riprova.' : 'L\'iscrizione non è andata a buon fine. Riprova tra poco.');
+      } catch {
+        fail('L\'iscrizione non è andata a buon fine. Riprova tra poco.');
       }
-    }
+      btn.disabled = false;
+      btn.textContent = 'Iscriviti';
+    });
   </script>
-  <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/" hreflang="en" lang="en" style="color:#8fba7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/" hreflang="es" lang="es" style="color:#8fba7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/" hreflang="it" lang="it" aria-current="true" style="color:#8fba7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
+  <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
 </body>
 
 </html>

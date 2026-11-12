@@ -131,15 +131,15 @@ ${CTA}
 }
 
 const homeSection = () => `
-      <div class="devlog-grid">
-${newest.slice(0, HOME_ENTRIES).map((e) => `        <article class="devlog-card reveal">
-          <time class="devlog-date" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
-          <h3 class="devlog-title"><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h3>
-          <p class="devlog-summary">${esc(e.summary)}</p>
-        </article>`).join("\n")}
-      </div>
-      <p class="devlog-all"><a href="/devlog/">All dev log entries</a></p>
-      `;
+        <div class="devlog-grid">
+${newest.slice(0, HOME_ENTRIES).map((e) => `          <article>
+            <time class="devlog-date" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
+            <h4 class="devlog-title"><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h4>
+            <p class="devlog-summary">${esc(e.summary)}</p>
+          </article>`).join("\n")}
+        </div>
+        <p class="devlog-all"><a href="/devlog/">All dev log entries</a></p>
+        `;
 
 const START = "<!-- DEVLOG:START -->";
 const END = "<!-- DEVLOG:END -->";
