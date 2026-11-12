@@ -32,7 +32,6 @@ const ECO_NOTE = { garden: " — first Early Access update", cave: " — second 
 // ADR-009: band_affinities index = birth band (UTC 6h bands).
 const BANDS = ["night", "morning", "midday", "evening"];
 // The homepage shows this many per biome and links to /bestiary/ for the rest: 28 cards made it 4 800 px tall on a phone.
-const HOME_PER_BIOME = 2;
 
 const field = (src, name) => {
   const m = src.match(new RegExp(`^${name} = "([\\s\\S]*?)"$`, "m"));
@@ -97,42 +96,19 @@ async function buildRecords() {
 const esc = (s) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-/** A single creature card (static, indexable markup). */
-function card(r, i) {
-  const delay = i % 3 ? ` reveal-d${i % 3}` : "";
-  return `        <a class="beast-card beast-${r.ecosystem} reveal${delay}" href="/bestiary/${r.slug}/">
-          <img class="beast-sprite" src="${r.sprite}" alt="${esc(r.name)} — pixel creature sprite" width="72" height="72" loading="lazy">
-          <h3 class="beast-name">${esc(r.name)}</h3>
-          <div class="beast-eco">${ECO_LABEL[r.ecosystem] ?? r.ecosystem}</div>
-          <div class="beast-traits">${r.lifespan} life · ${r.yield} yield · ${r.affinity} resonance</div>
-          <p class="beast-flavor">${esc(r.flavor)}</p>
-        </a>`;
-}
-
-const TEASER = `        <article class="beast-card beast-secret reveal">
-          <div class="beast-sprite beast-unknown" aria-hidden="true">?</div>
-          <h3 class="beast-name">???</h3>
-          <div class="beast-eco">Synthesis</div>
-          <div class="beast-traits">The garden teaches; it does not instruct.</div>
-          <p class="beast-flavor">Two more forms exist. No seed sells them. They are learned.</p>
-        </article>`;
-
-/** Homepage grid: a few per biome with subheadings, the teaser, then the link to every species. */
+/** Homepage: the launch creatures laid out like a garden in the game, one per biome; the rest are a link away. */
 function renderGrid(records) {
-  const sections = [];
-  const ecos = Object.keys(ECO_ORDER);
-  for (const eco of ecos) {
-    const group = records.filter((r) => r.ecosystem === eco).slice(0, HOME_PER_BIOME);
-    const cards = group.map((r, i) => card(r, i)).join("\n");
-    const tail = eco === ecos.at(-1) ? "\n" + TEASER : "";
-    const title = ECO_LABEL[eco] + (ECO_NOTE[eco] ?? "");
-    sections.push(`      <h3 class="beast-biome-title beast-biome-${eco}">${title}</h3>
-      <div class="beast-grid">
-${cards}${tail}
-      </div>`);
-  }
-  sections.push(`      <p class="beast-all"><a class="btn-ghost" href="/bestiary/">See all ${records.length} creatures →</a></p>`);
-  return "\n" + sections.join("\n") + "\n      ";
+  const garden = (eco) => `      <h3 class="garden-title">${ECO_LABEL[eco]}</h3>
+      <ul class="garden">
+${records.filter((r) => r.ecosystem === eco).map((r) => `        <li><a href="/bestiary/${r.slug}/"><span class="halo"><img src="${r.sprite}" alt="" width="24" height="24" loading="lazy"></span><span>${esc(r.name)}</span></a></li>`).join("\n")}
+      </ul>`;
+  const later = records.filter((r) => ECO_NOTE[r.ecosystem]).length;
+  return `
+${garden("roots")}
+${garden("ash")}
+      <p class="bestiary-more">${later} more live in the Suspended Garden and the Luminous Cave. <a href="/bestiary/">See all ${records.length} creatures in the bestiary</a></p>
+      <p class="bestiary-more unlearned">Two more forms exist. No seed sells them. They are learned.</p>
+      `;
 }
 
 const PAGE_FONTS = `  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
