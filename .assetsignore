@@ -10,6 +10,8 @@
 !bestiary/**
 !devlog/
 !devlog/**
+!guide/
+!guide/**
 !privacy/
 !privacy/**
 !es/
