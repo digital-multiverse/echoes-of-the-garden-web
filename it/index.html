@@ -335,7 +335,7 @@
     .life { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; position: relative }
     .life::before { content: ""; position: absolute; top: 66px; left: 12%; right: 12%; height: 1px; background: var(--line) }
     .life li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center }
-    .life .halo { background-color: var(--night); margin-bottom: 18px }
+    .life .halo { background-color: var(--moss); margin-bottom: 18px }
     .life h3 { font-size: 22px }
     .life p { color: var(--lichen); font-size: 18px; max-width: 24ch }
     .life .seed { --glow: .06 }
@@ -467,6 +467,82 @@
     .nl-privacy { color: var(--lichen); font-size: 17px; margin-top: 16px }
     .nl-privacy a { display: inline-block; padding: 12px 0 }
 
+
+    /* ── Zones, drawn with the game's own pieces ──
+       Bands of moss mark the parts that explain the game; root strands hang from their top
+       edge as they hang over the garden in the game (assets/motifs, cut from the game's
+       sprites). The hero sits on the game's roots backdrop, motes included. */
+    #hero { background: url(/assets/motifs/backdrop-roots.png) center / cover var(--night); image-rendering: pixelated }
+    #hero .hero-media { image-rendering: auto }
+    section { padding: 104px 0 }
+    .band { position: relative; background: var(--moss); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line) }
+    .band::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 216px; pointer-events: none; image-rendering: pixelated;
+      background:
+        url(/assets/motifs/root-0.png) 3% 0 / 36px 216px no-repeat,
+        url(/assets/motifs/root-2.png) 9% 0 / 24px 144px no-repeat,
+        url(/assets/motifs/root-1.png) 91% 0 / 36px 216px no-repeat,
+        url(/assets/motifs/root-0.png) 97% 0 / 24px 144px no-repeat;
+    }
+    .band > .wrap { position: relative }
+    #bestiary.band { background: var(--moss) }
+    @media (max-width: 860px) {
+      .band::before { height: 144px; opacity: .6; background:
+        url(/assets/motifs/root-0.png) 2px 0 / 16px 96px no-repeat,
+        url(/assets/motifs/root-1.png) calc(100% - 2px) 0 / 16px 96px no-repeat }
+    }
+
+    /* The gate into the garden: the hero film and the two ecosystems under an arch. */
+    .hero-media video, .eco img { border-radius: 50% 50% 3px 3px / 22% 22% 3px 3px; border-color: #3d4a36 }
+
+    /* The death: motes leave the creature and rise, once, while the light goes out. */
+    #death { position: relative; overflow: hidden }
+    #death::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+      background:
+        radial-gradient(circle, rgba(var(--halo), .55) 0 1.5px, transparent 2.5px) 46% 30% / 3px 3px no-repeat,
+        radial-gradient(circle, rgba(var(--halo), .45) 0 1.5px, transparent 2.5px) 53% 26% / 3px 3px no-repeat,
+        radial-gradient(circle, rgba(var(--halo), .4) 0 1px, transparent 2px) 49% 22% / 3px 3px no-repeat,
+        radial-gradient(circle, rgba(var(--halo), .5) 0 1.5px, transparent 2.5px) 56% 33% / 3px 3px no-repeat,
+        radial-gradient(circle, rgba(var(--halo), .35) 0 1px, transparent 2px) 43% 35% / 3px 3px no-repeat;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      #death.seen::after { animation: rise 3.2s ease-out .6s forwards }
+    }
+    @keyframes rise { 0% { opacity: 0; transform: translateY(40px) } 25% { opacity: 1 } 100% { opacity: 0; transform: translateY(-120px) } }
+
+    /* The one gold zone: where you ask to be told. Dark roots reach down into the light. */
+    .band-gold { background: var(--gold); color: var(--night); border: 0 }
+    .band-gold::before { background:
+        url(/assets/motifs/root-dark-0.png) 4% 0 / 36px 216px no-repeat,
+        url(/assets/motifs/root-dark-1.png) 10% 0 / 24px 144px no-repeat,
+        url(/assets/motifs/root-dark-2.png) 90% 0 / 36px 216px no-repeat,
+        url(/assets/motifs/root-dark-0.png) 96% 0 / 24px 144px no-repeat }
+    @media (max-width: 860px) { .band-gold::before { background:
+        url(/assets/motifs/root-dark-0.png) 2px 0 / 16px 96px no-repeat,
+        url(/assets/motifs/root-dark-2.png) calc(100% - 2px) 0 / 16px 96px no-repeat } }
+    .band-gold h2 { color: var(--night) }
+    .band-gold .lede, .band-gold .nl-privacy { color: #2b2a1c }
+    .band-gold a { color: var(--night) }
+    .band-gold .nl-field label { color: var(--night); font-weight: 600 }
+    .band-gold .nl-input { background: var(--night); border-color: var(--night); color: var(--bone) }
+    .band-gold .btn-gold { background: var(--night); border-color: var(--night); color: var(--gold) }
+    .band-gold .btn-gold:hover { background: #1c2419; border-color: #1c2419 }
+    .band-gold :focus-visible { outline-color: var(--night) }
+    .band-gold .nl-msg.success { color: var(--night); font-weight: 600 }
+    .band-gold .nl-msg.error { color: #7a1f0b; font-weight: 600 }
+    .band-gold .nl-input[aria-invalid="true"] { border-color: #7a1f0b; box-shadow: 0 0 0 2px #7a1f0b }
+    #newsletter + footer { border-top: 0 }
+
+    /* Dev log on the home: a short list, not a grid of cards. */
+    .devlog-grid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line) }
+    .devlog-grid article { display: grid; grid-template-columns: 270px 1fr; column-gap: 32px; padding: 14px 0; border-bottom: 1px solid var(--line) }
+    .devlog-grid .devlog-date { grid-row: span 2; padding-top: 12px }
+    @media (max-width: 700px) { .devlog-grid article { grid-template-columns: 1fr } .devlog-grid .devlog-date { grid-row: auto; padding-top: 0 } }
+
+    /* On a phone the finished steps of the road keep only their name. */
+    @media (max-width: 600px) { .road .done p { display: none } .road li { padding-bottom: 20px } }
+
     /* ── Footer ── */
     footer { border-top: 1px solid var(--line); padding: 56px 0 24px }
     .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px 48px }
@@ -528,7 +604,7 @@
     </div>
   </section>
 
-  <section id="life" aria-labelledby="life-title">
+  <section id="life" class="band" aria-labelledby="life-title">
     <div class="wrap">
       <h2 id="life-title">Hollowroot ha vissuto quattordici ore</h2>
       <p class="lede">Ogni creatura del giardino nasce, cresce, invecchia e muore in tempo reale, che tu stia guardando o no. Questa è una di loro, un Moss Lizard delle Radici del Mondo.</p>
@@ -597,7 +673,7 @@
     </div>
   </section>
 
-  <section id="systems" aria-labelledby="systems-title">
+  <section id="systems" class="band" aria-labelledby="systems-title">
     <div class="wrap">
       <h2 id="systems-title">Come cresce il giardino</h2>
       <p class="lede">Il gioco non ti mostra mai i numeri che ci sono dietro. Si impara guardando.</p>
@@ -646,7 +722,7 @@
     </div>
   </section>
 
-  <section id="bestiary" aria-labelledby="bestiary-title">
+  <section id="bestiary" class="band" aria-labelledby="bestiary-title">
     <div class="wrap">
       <h2 id="bestiary-title">Chi ci vive</h2>
       <!-- BESTIARY:START -->
@@ -735,7 +811,7 @@
     </div>
   </section>
 
-  <section id="newsletter" aria-labelledby="newsletter-title">
+  <section id="newsletter" class="band band-gold" aria-labelledby="newsletter-title">
     <div class="wrap nl">
       <h2 id="newsletter-title">Avvisami quando arriva su Steam</h2>
       <p class="lede">Un'email quando apre l'accesso anticipato e qualche nota di sviluppo prima.</p>

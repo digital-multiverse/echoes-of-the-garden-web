@@ -61,6 +61,14 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
     `assets/fonts/` (latin subset, OFL); no Google Fonts request. No monospace on the home.
   - The home tells one real life (Hollowroot, a Moss Lizard: seed, hatchling, adult, elder,
     death) and the death screen is the single memorable moment, animated once on scroll.
+- Zones (2026-11-12, "garden zones"): the page alternates the night background with moss
+  bands (`.band`) for the parts that explain the game, a darker ceremony for the death, and one
+  gold band for the newsletter, the only place we ask for something. Root strands hang from the
+  top of each band and under the inner-page header, as they hang over the garden in the game;
+  they are the game's own sprites (`assets/motifs/`, cut from `assets/sprites/biomes/` in the
+  game repo, lightened for the dark bands). The hero sits on the game's roots backdrop with its
+  motes. The hero film and the ecosystem captures sit under a low arch, a garden gate. One
+  motion only: motes rise from the dead creature, once, off with reduced motion.
 - Imagery: real in-engine captures and sprites only (source: `marketing/steam` and
   `assets/sprites/creatures` in the game repo); the hero loop is `garden_loop.mp4` + poster.
   Never stock art, never AI-generated "concept art".
