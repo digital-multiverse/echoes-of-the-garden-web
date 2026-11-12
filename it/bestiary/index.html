@@ -16,34 +16,7 @@
   <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>
-    :root { --bg: #090b08; --gold: #e8cb7a; --green: #5a9e6a; --amber: #d68b4a; --text: #cdd2c4; --dim: #8a917f; --border: #222820 }
-    * { box-sizing: border-box; margin: 0; padding: 0 }
-    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', serif; line-height: 1.6 }
-    main { max-width: 900px; margin: 0 auto; padding: 24px 16px 0 }
-    h1 { font-family: 'Cinzel Decorative', serif; color: var(--gold); font-size: 32px; margin: 16px 0 8px; text-align: center }
-    .lead { color: var(--dim); text-align: center; margin-bottom: 24px }
-    h2.eco { text-transform: uppercase; letter-spacing: .1em; font-size: 15px; margin: 36px 0 14px; color: var(--green) }
-    h2.ash { color: var(--amber) }
-    h2.garden { color: #b8aee0 }
-    h2.cave { color: #e8c870 }
-    .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px }
-    .grid a { display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; padding: 16px 12px; border: 1px solid var(--border); border-radius: 6px; text-align: center; text-decoration: none; color: var(--text) }
-    .grid a:hover { border-color: var(--gold) }
-    .grid img { image-rendering: pixelated }
-    .grid strong { color: var(--gold); font-size: 18px }
-    .grid span { color: var(--dim); font-size: 15px; font-style: italic }
-    a { color: var(--gold) }
-    .site-head { box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; max-width: 900px; margin: 0 auto; padding: 16px }
-    .site-logo { font-family: 'Cinzel Decorative', serif; color: #e8cb7a; text-decoration: none; font-size: 15px; border: 0; white-space: nowrap }
-    .site-play { display: inline-block; padding: 10px 18px; border: 1px solid #5a9e6a; border-radius: 4px; background: #1e3324; color: #c8e8c0; text-decoration: none; font-size: 16px; line-height: 1.3; white-space: nowrap }
-    .site-play:hover { background: #2a4630 }
-    :focus-visible { outline: 2px solid #c8e8c0; outline-offset: 3px }
-    @media (max-width: 420px) { .site-logo { font-size: 12px } .site-play { font-size: 14px; padding: 8px 12px } }
-    .site-cta { width: 100%; max-width: 680px; margin: 48px auto 0; padding: 28px 16px 8px; border-top: 1px solid #222820; text-align: center }
-    .site-cta p { margin: 0 0 14px }
-    .site-cta .site-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
   <!-- SEO:START -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -58,168 +31,74 @@
 <body>
   <header class="site-head">
     <a class="site-logo" href="/it/">Echoes of the Garden</a>
-    <a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+    <nav class="site-nav" aria-label="Navigazione principale"><a href="/it/#life">Il gioco</a><a href="/it/bestiary/" aria-current="true">Bestiario</a><a href="/it/devlog/">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
   </header>
-  <main>
+  <main class="page page-wide">
     <h1>Il bestiario</h1>
     <p class="lead">28 specie in quattro ecosistemi: Radici e Cenere al lancio dell'accesso anticipato, Giardino e Grotta con i primi due aggiornamenti. Ognuna vive una volta sola.</p>
-    <h2 class="eco roots">Radici del Mondo</h2>
-    <ul class="grid">
-      <li><a href="/it/bestiary/earth-caterpillar/">
-        <img src="/assets/creatures/oruga_tierra.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Earth Caterpillar</strong>
-        <span>Lenta finché non lo è più.</span>
-      </a></li>
-      <li><a href="/it/bestiary/elder-centipede/">
-        <img src="/assets/creatures/ciempies_anciano.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Elder Centipede</strong>
-        <span>Si orienta percependo la decomposizione delle altre creature.</span>
-      </a></li>
-      <li><a href="/it/bestiary/moss-lizard/">
-        <img src="/assets/creatures/lagarto_musgo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Moss Lizard</strong>
-        <span>Il primo ad arrivare.</span>
-      </a></li>
-      <li><a href="/it/bestiary/peat-slug/">
-        <img src="/assets/creatures/babosa_turba.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Peat Slug</strong>
-        <span>Più lenta del muschio su cui vive.</span>
-      </a></li>
-      <li><a href="/it/bestiary/root-beetle/">
-        <img src="/assets/creatures/escarabajo_raiz.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Root Beetle</strong>
-        <span>Passa quasi tutta la vita sottoterra, seguendo percorsi di radice più antichi del bioma.</span>
-      </a></li>
-      <li><a href="/it/bestiary/root-mycelium/">
-        <img src="/assets/creatures/micelio_raiz.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Root Mycelium</strong>
-        <span>Non si muove.</span>
-      </a></li>
-      <li><a href="/it/bestiary/stone-tortoise/">
-        <img src="/assets/creatures/tortuga_roca.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Stone Tortoise</strong>
-        <span>Nessuno l'ha mai vista muoversi in fretta.</span>
-      </a></li>
+    <h2 class="garden-title">Radici del Mondo</h2>
+    <ul class="garden">
+      <li><a href="/it/bestiary/earth-caterpillar/"><span class="halo"><img src="/assets/creatures/oruga_tierra.png" alt="" width="24" height="24" loading="lazy"></span><span>Earth Caterpillar</span></a></li>
+      <li><a href="/it/bestiary/elder-centipede/"><span class="halo"><img src="/assets/creatures/ciempies_anciano.png" alt="" width="24" height="24" loading="lazy"></span><span>Elder Centipede</span></a></li>
+      <li><a href="/it/bestiary/moss-lizard/"><span class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24" loading="lazy"></span><span>Moss Lizard</span></a></li>
+      <li><a href="/it/bestiary/peat-slug/"><span class="halo"><img src="/assets/creatures/babosa_turba.png" alt="" width="24" height="24" loading="lazy"></span><span>Peat Slug</span></a></li>
+      <li><a href="/it/bestiary/root-beetle/"><span class="halo"><img src="/assets/creatures/escarabajo_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Beetle</span></a></li>
+      <li><a href="/it/bestiary/root-mycelium/"><span class="halo"><img src="/assets/creatures/micelio_raiz.png" alt="" width="24" height="24" loading="lazy"></span><span>Root Mycelium</span></a></li>
+      <li><a href="/it/bestiary/stone-tortoise/"><span class="halo"><img src="/assets/creatures/tortuga_roca.png" alt="" width="24" height="24" loading="lazy"></span><span>Stone Tortoise</span></a></li>
     </ul>
-    <h2 class="eco ash">Marea di Cenere</h2>
-    <ul class="grid">
-      <li><a href="/it/bestiary/ash-drake/">
-        <img src="/assets/creatures/dragon_ceniza.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Ash Drake</strong>
-        <span>Vecchio per questo bioma; inaudito, a dire il vero.</span>
-      </a></li>
-      <li><a href="/it/bestiary/ash-salamander/">
-        <img src="/assets/creatures/salamandra_ceniza.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Ash Salamander</strong>
-        <span>Nata dalla brace, di rado dura una stagione.</span>
-      </a></li>
-      <li><a href="/it/bestiary/ash-scorpion/">
-        <img src="/assets/creatures/escorpion_ceniza.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Ash Scorpion</strong>
-        <span>Quasi tutte le creature della cenere attraversano la vita di corsa.</span>
-      </a></li>
-      <li><a href="/it/bestiary/char-mole/">
-        <img src="/assets/creatures/topo_carbon.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Char Mole</strong>
-        <span>L'unica creatura della cenere che va più a fondo invece che più in fretta.</span>
-      </a></li>
-      <li><a href="/it/bestiary/ember-falcon/">
-        <img src="/assets/creatures/halcon_brasa.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Ember Falcon</strong>
-        <span>Non atterra mai.</span>
-      </a></li>
-      <li><a href="/it/bestiary/flame-wasp/">
-        <img src="/assets/creatures/avispa_llama.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Flame Wasp</strong>
-        <span>Da sola, insignificante.</span>
-      </a></li>
-      <li><a href="/it/bestiary/smoke-serpent/">
-        <img src="/assets/creatures/serpiente_humo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Smoke Serpent</strong>
-        <span>Difficile da vedere contro il terreno cinereo.</span>
-      </a></li>
+    <h2 class="garden-title">Marea di Cenere</h2>
+    <ul class="garden">
+      <li><a href="/it/bestiary/ash-drake/"><span class="halo"><img src="/assets/creatures/dragon_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Drake</span></a></li>
+      <li><a href="/it/bestiary/ash-salamander/"><span class="halo"><img src="/assets/creatures/salamandra_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Salamander</span></a></li>
+      <li><a href="/it/bestiary/ash-scorpion/"><span class="halo"><img src="/assets/creatures/escorpion_ceniza.png" alt="" width="24" height="24" loading="lazy"></span><span>Ash Scorpion</span></a></li>
+      <li><a href="/it/bestiary/char-mole/"><span class="halo"><img src="/assets/creatures/topo_carbon.png" alt="" width="24" height="24" loading="lazy"></span><span>Char Mole</span></a></li>
+      <li><a href="/it/bestiary/ember-falcon/"><span class="halo"><img src="/assets/creatures/halcon_brasa.png" alt="" width="24" height="24" loading="lazy"></span><span>Ember Falcon</span></a></li>
+      <li><a href="/it/bestiary/flame-wasp/"><span class="halo"><img src="/assets/creatures/avispa_llama.png" alt="" width="24" height="24" loading="lazy"></span><span>Flame Wasp</span></a></li>
+      <li><a href="/it/bestiary/smoke-serpent/"><span class="halo"><img src="/assets/creatures/serpiente_humo.png" alt="" width="24" height="24" loading="lazy"></span><span>Smoke Serpent</span></a></li>
     </ul>
-    <h2 class="eco garden">Giardino Sospeso: primo aggiornamento dell'accesso anticipato</h2>
-    <ul class="grid">
-      <li><a href="/it/bestiary/crystal-dragonfly/">
-        <img src="/assets/creatures/libelula_cristal.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Crystal Dragonfly</strong>
-        <span>Trasparente da certe angolazioni.</span>
-      </a></li>
-      <li><a href="/it/bestiary/ethereal-butterfly/">
-        <img src="/assets/creatures/mariposa_eterea.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Ethereal Butterfly</strong>
-        <span>Le sue ali non dovrebbero tenerla in aria.</span>
-      </a></li>
-      <li><a href="/it/bestiary/mist-serpent/">
-        <img src="/assets/creatures/serpiente_niebla.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Mist Serpent</strong>
-        <span>Preferisce lo spazio tra gli stadi: il momento dopo che una cosa finisce e prima che inizi la successiva.</span>
-      </a></li>
-      <li><a href="/it/bestiary/moon-moth/">
-        <img src="/assets/creatures/polilla_luna.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Moon Moth</strong>
-        <span>Si nutre davvero solo nella parte più lenta della notte.</span>
-      </a></li>
-      <li><a href="/it/bestiary/silk-spider/">
-        <img src="/assets/creatures/arana_seda.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Silk Spider</strong>
-        <span>Costruisce senza sosta, anche quando non resta più spazio dove costruire.</span>
-      </a></li>
-      <li><a href="/it/bestiary/suspended-hummingbird/">
-        <img src="/assets/creatures/colibri_suspension.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Suspended Hummingbird</strong>
-        <span>Si muove di continuo, ma a una frequenza così alta che l'effetto è l'immobilità.</span>
-      </a></li>
-      <li><a href="/it/bestiary/veil-jellyfish/">
-        <img src="/assets/creatures/medusa_velo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Veil Jellyfish</strong>
-        <span>Più che nuotare, va alla deriva.</span>
-      </a></li>
+    <h2 class="garden-title">Giardino Sospeso</h2>
+    <p class="garden-note">Primo aggiornamento dell'accesso anticipato</p>
+    <ul class="garden garden-later">
+      <li><a href="/it/bestiary/crystal-dragonfly/"><span class="halo"><img src="/assets/creatures/libelula_cristal.png" alt="" width="24" height="24" loading="lazy"></span><span>Crystal Dragonfly</span></a></li>
+      <li><a href="/it/bestiary/ethereal-butterfly/"><span class="halo"><img src="/assets/creatures/mariposa_eterea.png" alt="" width="24" height="24" loading="lazy"></span><span>Ethereal Butterfly</span></a></li>
+      <li><a href="/it/bestiary/mist-serpent/"><span class="halo"><img src="/assets/creatures/serpiente_niebla.png" alt="" width="24" height="24" loading="lazy"></span><span>Mist Serpent</span></a></li>
+      <li><a href="/it/bestiary/moon-moth/"><span class="halo"><img src="/assets/creatures/polilla_luna.png" alt="" width="24" height="24" loading="lazy"></span><span>Moon Moth</span></a></li>
+      <li><a href="/it/bestiary/silk-spider/"><span class="halo"><img src="/assets/creatures/arana_seda.png" alt="" width="24" height="24" loading="lazy"></span><span>Silk Spider</span></a></li>
+      <li><a href="/it/bestiary/suspended-hummingbird/"><span class="halo"><img src="/assets/creatures/colibri_suspension.png" alt="" width="24" height="24" loading="lazy"></span><span>Suspended Hummingbird</span></a></li>
+      <li><a href="/it/bestiary/veil-jellyfish/"><span class="halo"><img src="/assets/creatures/medusa_velo.png" alt="" width="24" height="24" loading="lazy"></span><span>Veil Jellyfish</span></a></li>
     </ul>
-    <h2 class="eco cave">Grotta Luminosa: secondo aggiornamento dell'accesso anticipato</h2>
-    <ul class="grid">
-      <li><a href="/it/bestiary/abyss-polyp/">
-        <img src="/assets/creatures/polipo_abismo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Abyss Polyp</strong>
-        <span>Ancorato al punto più profondo del fondo della grotta.</span>
-      </a></li>
-      <li><a href="/it/bestiary/abyss-serpent/">
-        <img src="/assets/creatures/serpiente_abismo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Abyss Serpent</strong>
-        <span>Viene da un luogo sotto la grotta conosciuta.</span>
-      </a></li>
-      <li><a href="/it/bestiary/cave-scorpion/">
-        <img src="/assets/creatures/escorpion_caverna.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Cave Scorpion</strong>
-        <span>Non si muove se non deve.</span>
-      </a></li>
-      <li><a href="/it/bestiary/crystal-crab/">
-        <img src="/assets/creatures/cangrejo_cristal.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Crystal Crab</strong>
-        <span>Il suo guscio è cresciuto attorno ai depositi di quarzo su cui si appoggia.</span>
-      </a></li>
-      <li><a href="/it/bestiary/light-fish/">
-        <img src="/assets/creatures/pez_luz.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Light Fish</strong>
-        <span>Genera la propria luce e la usa per percorrere tunnel che non ne hanno altra.</span>
-      </a></li>
-      <li><a href="/it/bestiary/phosphor-eel/">
-        <img src="/assets/creatures/anguila_fosforo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Phosphor Eel</strong>
-        <span>Lascia una scia di luce quando si muove.</span>
-      </a></li>
-      <li><a href="/it/bestiary/quartz-snail/">
-        <img src="/assets/creatures/caracol_cuarzo.png" alt="" width="72" height="72" loading="lazy">
-        <strong>Quartz Snail</strong>
-        <span>Ogni generazione è un po' più grande della precedente.</span>
-      </a></li>
+    <h2 class="garden-title">Grotta Luminosa</h2>
+    <p class="garden-note">Secondo aggiornamento dell'accesso anticipato</p>
+    <ul class="garden garden-later">
+      <li><a href="/it/bestiary/abyss-polyp/"><span class="halo"><img src="/assets/creatures/polipo_abismo.png" alt="" width="24" height="24" loading="lazy"></span><span>Abyss Polyp</span></a></li>
+      <li><a href="/it/bestiary/abyss-serpent/"><span class="halo"><img src="/assets/creatures/serpiente_abismo.png" alt="" width="24" height="24" loading="lazy"></span><span>Abyss Serpent</span></a></li>
+      <li><a href="/it/bestiary/cave-scorpion/"><span class="halo"><img src="/assets/creatures/escorpion_caverna.png" alt="" width="24" height="24" loading="lazy"></span><span>Cave Scorpion</span></a></li>
+      <li><a href="/it/bestiary/crystal-crab/"><span class="halo"><img src="/assets/creatures/cangrejo_cristal.png" alt="" width="24" height="24" loading="lazy"></span><span>Crystal Crab</span></a></li>
+      <li><a href="/it/bestiary/light-fish/"><span class="halo"><img src="/assets/creatures/pez_luz.png" alt="" width="24" height="24" loading="lazy"></span><span>Light Fish</span></a></li>
+      <li><a href="/it/bestiary/phosphor-eel/"><span class="halo"><img src="/assets/creatures/anguila_fosforo.png" alt="" width="24" height="24" loading="lazy"></span><span>Phosphor Eel</span></a></li>
+      <li><a href="/it/bestiary/quartz-snail/"><span class="halo"><img src="/assets/creatures/caracol_cuarzo.png" alt="" width="24" height="24" loading="lazy"></span><span>Quartz Snail</span></a></li>
     </ul>
   </main>
-  <aside class="site-cta">
-    <p>Echoes of the Garden è un gioco idle gratuito su creature che muoiono per sempre.</p>
-    <p class="site-links"><a class="site-play" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a> <a href="/it/#newsletter">Avvisami al lancio</a></p>
+  <aside class="site-cta" aria-label="Gioca">
+    <p>Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a><a class="btn" href="/it/#newsletter">Avvisami quando è su Steam</a></div>
   </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+    </div>
+    <nav aria-label="Piè di pagina">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+      <span>Steam (presto)</span>
+      <a href="/it/bestiary/">Bestiario</a>
+      <a href="/it/devlog/">Dev log</a>
+      <a href="/it/privacy/">Privacy</a>
+      <a href="/it/privacy/#who-we-are">Note legali</a>
+      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+    </nav>
+  </footer>
   <!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/bestiary/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/bestiary/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/bestiary/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
 </body>
 

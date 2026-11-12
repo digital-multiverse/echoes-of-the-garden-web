@@ -109,11 +109,8 @@ function translator(dict, missing, file) {
     if (dict.has(s)) return dict.get(s);
     let m;
     if ((m = s.match(/^(\w+) life · (\w+) yield · (\w+) resonance$/))) return dict.get("%s life · %s yield · %s resonance")?.replace("%1", t(m[1])).replace("%2", t(m[2])).replace("%3", m[3]) ?? miss("%s life · %s yield · %s resonance");
-    if ((m = s.match(/^Born by night → (\w+) · morning → (\w+) · midday → (\w+) · evening → (\w+)$/))) return dict.get("Born by night")?.replace("%1", m[1]).replace("%2", m[2]).replace("%3", m[3]).replace("%4", m[4]) ?? miss("Born by night");
-    if ((m = s.match(/^On its death: “(.*)”$/))) return `${t("On its death:")} “${t(m[1])}”`;
-    if ((m = s.match(/^(.*) (?:— )?pixel creature sprite$/))) return `${m[1]} ${t("pixel creature sprite")}`;
-    if ((m = s.match(/^(.*) — Echoes of the Garden Bestiary$/))) return `${m[1]} | ${t("Echoes of the Garden Bestiary")}`;
-    if ((m = s.match(/^(.*) — Echoes of the Garden$/)) && NAMES.has(m[1])) return s;
+    if ((m = s.match(/^(.*) \| Echoes of the Garden Bestiary$/))) return `${m[1]} | ${t("Echoes of the Garden Bestiary")}`;
+    if ((m = s.match(/^(.*) \| Echoes of the Garden$/)) && NAMES.has(m[1])) return s;
     if ((m = s.match(/^(\d+) (\w+) (\d{4})( · Build .*)?$/))) return `${t(`%d ${m[2]} %d`).replace("%d", m[1]).replace("%d", m[3])}${(m[4] ?? "").replace("Build", t("Build"))}`;
     if ((m = s.match(/^More from (.*)$/))) return `${t("More from")} ${t(m[1])}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden Dev Log$/))) return `${t(m[1])} | ${t("Echoes of the Garden Dev Log")}`;
