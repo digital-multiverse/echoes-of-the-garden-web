@@ -21,7 +21,7 @@ const NAMES = new Set(bestiary.map((c) => c.name));
 const RESONANCES = new Set(bestiary.map((c) => c.affinity));
 const KEEP = new Set(["Echoes of the Garden", "Echo Arc", "Dev Log", "Vestigio", "Rastro", "Impronta", "Murmullo", "Eco", "Origen", "Vestigio → Origen",
   "English", "Español", "Italiano", "English · Español · Italiano", "itch.io", "Steam", "Newsletter", "your@email.com",
-  "Cloudflare", "Resend", "Google Fonts", "AEPD", "Digital Multiverse", "info@digital-multiverse.com", "hello@echoesofthegarden.com", "Founder's Seed", "cf_clearance", ...NAMES, ...RESONANCES]);
+  "Cloudflare", "Resend", "Google Fonts", "AEPD", "Digital Multiverse", "info@digital-multiverse.com", "hello@echoesofthegarden.com", "cf_clearance", ...NAMES, ...RESONANCES]);
 
 /** Minimal CSV reader: quoted fields may hold commas, line breaks and doubled quotes. */
 function parseCsv(text) {
@@ -81,7 +81,7 @@ function langNav(file, lang) {
   const p = file === "404.html" ? "/" : urlPath(file);
   const link = (l, label, href) => `<a href="${href}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ""} style="color:#e8cb7a;display:inline-block;padding:12px 4px">${label}</a>`;
   const links = [link("en", "English", p), ...Object.entries(LOCALES).map(([l, v]) => link(l, v.label, `/${l}${p}`))].join(" · ");
-  return `<!-- LANG:START --><nav aria-label="Language" style="text-align:center;padding:24px 16px;font-size:15px">${links}</nav><!-- LANG:END -->`;
+  return `<!-- LANG:START --><nav aria-label="${{ en: "Language", es: "Idioma", it: "Lingua" }[lang]}" style="text-align:center;padding:24px 16px;font-size:15px">${links}</nav><!-- LANG:END -->`;
 }
 
 /** Short EN · ES · IT links for the homepage nav (inside the mobile menu too). */
@@ -108,7 +108,7 @@ function translator(dict, missing, file) {
     if (!/\p{L}{2}/u.test(s) || KEEP.has(s) || /^v\d/.test(s)) return s;
     if (dict.has(s)) return dict.get(s);
     let m;
-    if ((m = s.match(/^(\w+) life · (\w+) yield · (\w+) resonance$/))) return dict.get("%s life · %s yield · %s resonance")?.replace("%1", t(m[1])).replace("%2", t(m[2])).replace("%3", m[3]) ?? miss("%s life · %s yield · %s resonance");
+    if ((m = s.match(/^(\w+ life) · (\w+ yield) · (\w+) affinity$/))) return `${t(m[1])} · ${t(m[2])} · ${(dict.get("%s affinity") ?? miss("%s affinity")).replace("%s", m[3])}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden Bestiary$/))) return `${m[1]} | ${t("Echoes of the Garden Bestiary")}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden$/)) && NAMES.has(m[1])) return s;
     if ((m = s.match(/^(\d+) (\w+) (\d{4})( · Build .*)?$/))) return `${t(`%d ${m[2]} %d`).replace("%d", m[1]).replace("%d", m[3])}${(m[4] ?? "").replace("Build", t("Build"))}`;
@@ -134,7 +134,7 @@ function translate(html, file, lang, dict, missing) {
   });
   out = out.replace(/(<title>)([^<]*)(<\/title>)/, (_, a, s, z) => a + t(s) + z);
   out = out.replace(/<(meta)\b[^>]*>/g, (tag) => {
-    if (!/(name|property)="(description|og:title|og:description|twitter:title|twitter:description)"/.test(tag)) return tag;
+    if (!/(name|property)="(description|og:title|og:description|og:image:alt|twitter:title|twitter:description)"/.test(tag)) return tag;
     return tag.replace(/content="([^"]*)"/, (_, s) => {
       return `content="${norm(s).includes(", a creature of ") ? metaCreature(norm(s), t) : t(s)}"`;
     });
