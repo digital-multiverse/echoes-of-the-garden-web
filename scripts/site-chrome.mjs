@@ -8,12 +8,12 @@ export const HEAD_ASSETS = `  <link rel="preload" href="/assets/fonts/crimson-pr
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/assets/site.css">`;
 
-/** `current` is the section the page belongs to ("bestiary" or "devlog"), marked in the nav. */
+/** `current` is the section the page belongs to ("guide", "bestiary" or "devlog"), marked in the nav. */
 export const header = (current) => {
   const link = (key, href, label) => `<a href="${href}"${key === current ? ' aria-current="true"' : ""}>${label}</a>`;
   return `  <header class="site-head">
     <a class="site-logo" href="/">Echoes of the Garden</a>
-    <nav class="site-nav" aria-label="Main navigation">${link("game", "/#life", "The game")}${link("bestiary", "/bestiary/", "Bestiary")}${link("devlog", "/devlog/", "Dev log")}</nav>
+    <nav class="site-nav" aria-label="Main navigation">${link("game", "/#life", "The game")}${link("guide", "/guide/", "How to play")}${link("bestiary", "/bestiary/", "Bestiary")}${link("devlog", "/devlog/", "Dev log")}</nav>
     <a class="btn btn-gold" href="${PLAY}" target="_blank" rel="noopener">Play free in your browser</a>
   </header>`;
 };
@@ -32,6 +32,7 @@ export const FOOTER = `  <footer class="site-foot">
       <a href="${PLAY}" target="_blank" rel="noopener">Play on itch.io</a>
       <span>Steam (soon)</span>
       <a href="/bestiary/">Bestiary</a>
+      <a href="/guide/">How to play</a>
       <a href="/devlog/">Dev log</a>
       <a href="/privacy/">Privacy</a>
       <a href="/privacy/#who-we-are">Legal notice</a>

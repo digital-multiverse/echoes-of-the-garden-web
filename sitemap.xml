@@ -37,6 +37,12 @@
   <url><loc>https://echoesofthegarden.com/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/resonances/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://echoesofthegarden.com/es/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/es/bestiary/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -74,6 +80,12 @@
   <url><loc>https://echoesofthegarden.com/es/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/resonances/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://echoesofthegarden.com/it/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/it/bestiary/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -111,4 +123,10 @@
   <url><loc>https://echoesofthegarden.com/it/devlog/a-garden-that-remembers/</loc><lastmod>2026-10-29</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/27-achievements-and-four-rare-lines/</loc><lastmod>2026-10-30</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/ready-for-strangers/</loc><lastmod>2026-11-05</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/resonances/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
