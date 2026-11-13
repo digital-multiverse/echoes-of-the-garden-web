@@ -394,5 +394,18 @@
   "Saving on the web.": "Salvataggio sul web.",
   "The browser version says once that your progress is saved in that browser.": "La versione per browser avvisa una volta che i tuoi progressi sono salvati in quel browser.",
   "The web build also lost a few symbols that its font could not draw.": "La versione web ha anche perso alcuni simboli che il suo font non sapeva disegnare.",
-  "One tester is not enough to tune the game's pace, so the next step is more players.": "Un solo tester non basta per regolare il ritmo del gioco, quindi il prossimo passo è farlo provare a più persone."
+  "One tester is not enough to tune the game's pace, so the next step is more players.": "Un solo tester non basta per regolare il ritmo del gioco, quindi il prossimo passo è farlo provare a più persone.",
+  "Every species has a nature": "Ogni specie ha una natura",
+  "Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.": "Le specie rivelano la loro natura alla prima morte, una di loro tiene tutto per la fine e l'eccedenza del giardino ha finalmente dove andare.",
+  "Until this build every creature worked the same way: it gave at a steady pace from the day it hatched to the day it died. v0.14.0 starts to change that.": "Fino a questa build tutte le creature funzionavano allo stesso modo: davano a ritmo costante dal giorno in cui nascevano al giorno in cui morivano. La v0.14.0 comincia a cambiarlo.",
+  "Natures": "Nature",
+  "Every species now has a nature. You learn it the first time one of them dies, and from then on it appears in the species' Codex entry.": "Ora ogni specie ha una natura. La scopri la prima volta che ne muore una, e da quel momento compare nella sua voce del Codex.",
+  "Most species are Steady. The first nature that changes how a creature plays is the Bloomer: it gives little while it lives and pays it all back when it dies, at the moment you choose its fate. I won't say which species it is.": "La maggior parte delle specie è Costante. La prima natura che cambia il modo di giocare una creatura è la Fioritura: dà poco finché vive e restituisce tutto quando muore, nel momento in cui scegli il suo destino. Non dirò quale specie sia.",
+  "Attunement": "Sintonia",
+  "Once a biome's collection was complete, its Root Sap or Living Ash sat at the cap and most of what the garden made was lost. In my simulations, a player checking in twice a day lost about four fifths of it.": "Una volta completata la collezione di un bioma, il suo Root Sap o la sua Living Ash restavano al limite e quasi tutto ciò che il giardino produceva andava perso. Nelle mie simulazioni, chi entra due volte al giorno ne perdeva circa quattro quinti.",
+  "The Echo Arc now has an Attunement track for the Roots of the World and the Tide of Ash. Offer pours everything you hold into it, nothing you offer is lost between ranks, and each rank leaves a Rastro, the second tier of the Echo Arc. In the same simulations the loss drops to about 2 percent.": "L'Arco degli Echi ora ha una Sintonia per le Radici del Mondo e la Marea di Cenere. Offri vi versa tutto ciò che hai, niente di ciò che offri va perso tra un grado e l'altro, e ogni grado lascia un Rastro, il secondo livello dell'Arco degli Echi. Nelle stesse simulazioni la perdita scende a circa il 2 %.",
+  "Also in v0.14.0": "Anche nella v0.14.0",
+  "The line that announces a new species now names the biome where it stirs.": "La riga che annuncia una nuova specie ora nomina il bioma in cui si muove.",
+  "The Spanish and Italian text had a full review.": "I testi in spagnolo e italiano sono stati revisionati da capo.",
+  "This build goes to the testers next. How they play it decides how the other natures work.": "Ora questa build passa ai tester. Come la giocheranno deciderà come funzioneranno le altre nature."
 }
