@@ -137,9 +137,8 @@ export const ENTRIES = [
     date: "2026-11-13",
     build: "v0.14.0",
     summary: "Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.",
-    image: "05_echo_arc.webp",
-    alt: "The Echo Arc crafting panel",
-    caption: "The Echo Arc in build v0.9.0, before the Attunement track. The pixel art is still placeholder.",
+    image: "07_attunement.webp",
+    alt: "The Echo Arc open over the Roots of the World, with the garden's Attunement at rank 3 and its Offer button",
     body: `
 <p>Until this build every creature worked the same way: it gave at a steady pace from the day it hatched to the day it died. v0.14.0 starts to change that.</p>
 <h2>Natures</h2>

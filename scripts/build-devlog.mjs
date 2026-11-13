@@ -65,7 +65,7 @@ ${header("devlog")}
     <p class="meta"><time datetime="${e.date}">${longDate(e.date)}</time>, ${e.build}</p>
     <figure>
       <img src="/assets/screenshots/${e.image}" srcset="${srcset(e.image)}" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="${esc(e.alt)}">
-      <figcaption>${e.caption ?? "A capture from the game. The pixel art is still placeholder."}</figcaption>
+      <figcaption>A capture from the game. The pixel art is still placeholder.</figcaption>
     </figure>
 ${e.body.trim()}
   </main>
