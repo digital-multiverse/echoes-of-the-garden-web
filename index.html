@@ -284,11 +284,9 @@
     .seasons { list-style: none; display: grid; grid-template-columns: 4fr 5fr 4fr; gap: 0; margin-top: 48px; border-top: 1px solid var(--line) }
     .season { padding: 28px 28px 32px 0 }
     .season + .season { padding-left: 28px; border-left: 1px solid var(--line) }
-    .season .when { color: var(--lichen); font-size: 17px }
-    .season h3 { font-size: 23px; margin: 2px 0 10px }
+    .season h3 { font-size: 23px; margin: 0 0 10px }
     .season p { color: var(--lichen); font-size: 18px }
     .season-now { background: var(--moss); border-top: 2px solid var(--gold); margin-top: -1px }
-    .season-now .when { color: var(--gold) }
     .arrivals { list-style: none; display: grid; gap: 10px; margin: 6px 0 16px }
     .arrivals li { display: flex; align-items: center; gap: 12px; font-size: 18px; line-height: 1.35 }
     .arrivals strong { display: block; font-weight: 600; color: var(--bone) }
@@ -536,7 +534,6 @@
   <section id="systems" class="band" aria-labelledby="systems-title">
     <div class="wrap">
       <h2 id="systems-title">How the garden grows</h2>
-      <p class="lede">The game never shows you the numbers behind any of this. You learn it by watching.</p>
       <div class="grows">
         <figure>
           <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 860px) 100vw, 640px" alt="The Echo Arc panel in the game, with the tiers from Vestigio upwards and the risk of losing the result at each one" width="1920" height="1080" loading="lazy">
@@ -635,27 +632,24 @@
   <section id="roadmap" aria-labelledby="roadmap-title">
     <div class="wrap">
       <h2 id="roadmap-title">Where the game is now</h2>
-      <p class="lede">One person makes Echoes of the Garden, in public. Updated 12 November 2026. Plans can change, and this page changes with them.</p>
+      <p class="lede">One person makes Echoes of the Garden, in public. Updated 13 November 2026. Plans can change, and this page changes with them.</p>
       <ol class="seasons">
         <li class="season">
-          <p class="when">Built in 2026</p>
           <h3>Already in the garden</h3>
-          <p>The garden loop, all 28 species designed, the Echo Arc up to Eco, affinities, the Book of Echoes and three languages. You can play it today in your browser.</p>
+          <p>Built in 2026: the garden loop, all 28 species designed, affinities and the first natures, the Echo Arc up to Eco with its Attunement, the Book of Echoes and three languages. You can play it today in your browser.</p>
         </li>
         <li class="season season-now">
-          <p class="when">Now, aiming for Q2 2027</p>
           <h3>Steam Early Access</h3>
+          <p>Aiming for Q2 2027, after a playtest with new players.</p>
           <ul class="arrivals">
             <li><span class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>At launch</strong> Roots of the World and Tide of Ash</span></li>
             <li class="later-eco"><span class="halo"><img src="/assets/creatures/medusa_velo.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>First update</strong> The Suspended Garden</span></li>
             <li class="later-eco"><span class="halo"><img src="/assets/creatures/pez_luz.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>Second update</strong> The Luminous Cave</span></li>
           </ul>
-          <p>Before launch: a playtest with new players.</p>
         </li>
         <li class="season">
-          <p class="when">After Early Access</p>
           <h3>Steam Community Market</h3>
-          <p>Trading relics and materials, and Echo Arc tiers six to ten. It waits on Valve's review.</p>
+          <p>It comes after Early Access: trading relics and materials, and Echo Arc tiers six to ten, once Valve has reviewed it.</p>
         </li>
       </ol>
       <div class="log" id="devlog">
@@ -665,17 +659,17 @@
         <!-- DEVLOG:START -->
         <div class="devlog-grid">
           <article>
-            <time class="devlog-date" datetime="2026-11-13">13 November 2026 · Build v0.14.0</time>
+            <time class="devlog-date" datetime="2026-11-13">13 November 2026, v0.14.0</time>
             <h4 class="devlog-title"><a href="/devlog/every-species-has-a-nature/">Every species has a nature</a></h4>
             <p class="devlog-summary">Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.</p>
           </article>
           <article>
-            <time class="devlog-date" datetime="2026-11-08">8 November 2026 · Build v0.13.0</time>
+            <time class="devlog-date" datetime="2026-11-08">8 November 2026, v0.13.0</time>
             <h4 class="devlog-title"><a href="/devlog/what-the-first-stranger-taught-me/">What the first stranger taught me</a></h4>
             <p class="devlog-summary">The first external tester thought the garden had stopped working. It hadn't, but nothing on screen said so. What changed in v0.13.0.</p>
           </article>
           <article>
-            <time class="devlog-date" datetime="2026-11-05">5 November 2026 · Build v0.12.1</time>
+            <time class="devlog-date" datetime="2026-11-05">5 November 2026, v0.12.1</time>
             <h4 class="devlog-title"><a href="/devlog/ready-for-strangers/">Ready for strangers</a></h4>
             <p class="devlog-summary">A design review found eleven quiet minutes in the first session. What changed before the first external playtest.</p>
           </article>
@@ -692,7 +686,7 @@
     <div class="wrap foot">
       <div>
         <div class="foot-logo">Echoes of the Garden</div>
-        <p>An independent game by a single developer. © 2026</p>
+        <p>An independent game by a single developer. © 2026</p>
       </div>
       <nav class="foot-links" aria-label="Footer">
         <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Play on itch.io</a>

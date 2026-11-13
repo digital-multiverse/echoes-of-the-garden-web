@@ -4,7 +4,7 @@
  *   node scripts/build-guide.mjs     (then build-i18n for /es/ and /it/)
  *
  * Writes guide/index.html, guide/<slug>/index.html and the /guide/ lines of sitemap.xml.
- * Every rule here was checked against the game (v0.9, code + in-game strings, 2026-11-12):
+ * Every rule here was checked against the game (v0.14, code + in-game strings, 2026-11-13):
  * keep it to what the itch.io build does, and no numbers, as in the game.
  */
 import { writeFile, mkdir, readFile } from "node:fs/promises";
@@ -20,13 +20,16 @@ const CHAPTERS = [
   {
     slug: "a-life",
     title: "A life, from seed to elder",
-    summary: "Planting, the four stages of a life, and what the garden does while you are away.",
+    summary: "Planting, the four stages of a life, each species' nature, and what the garden does while you are away.",
     epigraph: "Tend what grows. Let it end. Then choose what remains.",
     body: `    <p>You start in the Roots of the World with one creature already planted. It is your First Echo, and it lives a whole life in minutes so that you see one from start to end on your first visit.</p>
     <h2>Four stages</h2>
     <p>Every creature goes from Seed to Hatchling, then Adult, then Elder, and then it dies. It can't be stopped or undone. While it lives it gives its garden a little of that garden's resource each minute: Root Sap in the Roots of the World, Living Ash in the Tide of Ash.</p>
     <p>The others keep the garden's own pace: they grow over hours, not minutes. Slow species live longer and give steadily; the creatures of the Tide of Ash burn through their lives quickly.</p>
 ${shot("01_roots_garden", "Roots of the World in the game, with creatures at different stages of their lives")}
+    <h2>Natures</h2>
+    <p>Every species has a nature. You learn it the first time one of them dies, and from then on the Codex shows it in that species' entry.</p>
+    <p>Most species are Steady: they give at the same pace from the day they hatch to the day they die. A Bloomer gives little while it lives and pays it all back when it dies, at the moment you choose its fate. More natures will follow.</p>
     <h2>Planting</h2>
     <p>Each garden has twelve spaces in a grid of four by three. You plant seeds bought at the Seed Altar or inherited from a creature that died. Where you put them matters, and the chapter on affinities explains why.</p>
     <h2>While you are away</h2>
@@ -84,7 +87,7 @@ ${shot("04_codex_fragments", "The Codex in the game, with the species discovered
   {
     slug: "echo-arc",
     title: "The Echo Arc",
-    summary: "Refining, the ten tiers from Vestigio to Origen, and the risk of losing what you put in.",
+    summary: "Refining, the ten tiers from Vestigio to Origen, the risk of losing what you put in, and Attunement.",
     epigraph: "Refine loss into the Echo Arc, from Vestigio to Origen.",
     body: `    <p>Every death leaves a Vestigio of its garden. The Echo Arc is where you turn those remains into something more.</p>
 ${shot("05_echo_arc", "The Echo Arc panel in the game, with the tiers from Vestigio upwards and the risk of losing the result at each one")}
@@ -98,7 +101,10 @@ ${shot("05_echo_arc", "The Echo Arc panel in the game, with the tiers from Vesti
     <h2>Refining</h2>
     <p>From Murmullo on, each attempt also needs a refined material. Refining turns a garden's resource into it: Root Sap into Ancient Root Echo, Living Ash into Ash Ember.</p>
     <h2>The risk</h2>
-    <p>The first three tiers always work. From Murmullo on, an attempt can fail and destroy what you put in, and the higher you go the more likely that is. Reaching Eco, the fifth tier, is the milestone the game is named after.</p>`,
+    <p>The first three tiers always work. From Murmullo on, an attempt can fail and destroy what you put in, and the higher you go the more likely that is. Reaching Eco, the fifth tier, is the milestone the game is named after.</p>
+    <h2>Attunement</h2>
+    <p>A garden can only hold so much of its resource, and late in the game most of what it makes would go to waste. For that, the Echo Arc gives the Roots of the World and the Tide of Ash an Attunement each.</p>
+    <p>Offer pours all the resource you hold into that garden's Attunement. What you offer carries over from one rank to the next, and each rank leaves a Rastro.</p>`,
   },
 ];
 

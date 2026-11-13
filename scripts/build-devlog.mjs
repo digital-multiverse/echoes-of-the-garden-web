@@ -62,10 +62,10 @@ ${header("devlog")}
   <main class="page post">
     <p class="crumbs"><a href="/devlog/">Dev log</a></p>
     <h1>${esc(e.title)}</h1>
-    <p class="meta"><time datetime="${e.date}">${longDate(e.date)}</time> · Build ${e.build}</p>
+    <p class="meta"><time datetime="${e.date}">${longDate(e.date)}</time>, ${e.build}</p>
     <figure>
       <img src="/assets/screenshots/${e.image}" srcset="${srcset(e.image)}" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="${esc(e.alt)}">
-      <figcaption>A capture from the game. The pixel art is still placeholder.</figcaption>
+      <figcaption>${e.caption ?? "A capture from the game. The pixel art is still placeholder."}</figcaption>
     </figure>
 ${e.body.trim()}
   </main>
@@ -81,7 +81,7 @@ function indexPage() {
   const url = `${SITE}/devlog/`;
   const description = "Development updates for Echoes of the Garden, an idle creature collector with permanent death.";
   const rows = newest.map((e) => `      <li>
-        <time class="meta" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
+        <time class="meta" datetime="${e.date}">${longDate(e.date)}, ${e.build}</time>
         <h2><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h2>
         <p>${esc(e.summary)}</p>
       </li>`).join("\n");
@@ -112,7 +112,7 @@ ${FOOTER}
 const homeSection = () => `
         <div class="devlog-grid">
 ${newest.slice(0, HOME_ENTRIES).map((e) => `          <article>
-            <time class="devlog-date" datetime="${e.date}">${longDate(e.date)} · Build ${e.build}</time>
+            <time class="devlog-date" datetime="${e.date}">${longDate(e.date)}, ${e.build}</time>
             <h4 class="devlog-title"><a href="/devlog/${e.slug}/">${esc(e.title)}</a></h4>
             <p class="devlog-summary">${esc(e.summary)}</p>
           </article>`).join("\n")}

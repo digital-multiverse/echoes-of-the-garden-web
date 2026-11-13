@@ -111,10 +111,10 @@ function translator(dict, missing, file) {
     if ((m = s.match(/^(\w+ life) · (\w+ yield) · (\w+) affinity$/))) return `${t(m[1])} · ${t(m[2])} · ${(dict.get("%s affinity") ?? miss("%s affinity")).replace("%s", m[3])}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden Bestiary$/))) return `${m[1]} | ${t("Echoes of the Garden Bestiary")}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden$/)) && NAMES.has(m[1])) return s;
-    if ((m = s.match(/^(\d+) (\w+) (\d{4})( · Build .*)?$/))) return `${t(`%d ${m[2]} %d`).replace("%d", m[1]).replace("%d", m[3])}${(m[4] ?? "").replace("Build", t("Build"))}`;
+    if ((m = s.match(/^(\d+) (\w+) (\d{4})(, v[\d.]+)?$/))) return `${t(`%d ${m[2]} %d`).replace("%d", m[1]).replace("%d", m[3])}${m[4] ?? ""}`;
     if ((m = s.match(/^More from (.*)$/))) return `${t("More from")} ${t(m[1])}`;
     if ((m = s.match(/^(.*) \| Echoes of the Garden Dev Log$/))) return `${t(m[1])} | ${t("Echoes of the Garden Dev Log")}`;
-    if ((m = s.match(/^· Build (.*)$/))) return `· ${t("Build")} ${m[1]}`;
+    if (/^, v[\d.]+$/.test(s)) return s;
     return miss(s);
   };
   const miss = (s) => { missing.add(s); return s; };
