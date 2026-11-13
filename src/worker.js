@@ -72,30 +72,22 @@ const welcomeHtml = (unsubscribe) => `
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#090b08;font-family:Georgia,serif">
-  <div style="max-width:520px;margin:0 auto;padding:48px 32px">
-    <div style="text-align:center;margin-bottom:32px">
-      <span style="font-size:48px">🌱</span>
-    </div>
-    <h1 style="font-family:Georgia,serif;color:#e8cb7a;font-size:22px;font-weight:normal;margin-bottom:16px;text-align:center">
-      Welcome to the Garden
-    </h1>
-    <p style="color:#c8dcc8;font-size:16px;line-height:1.7;margin-bottom:16px">
-      You're on the list. We'll let you know when the garden opens.
+<body style="margin:0;padding:0;background:#0a0d09;font-family:Georgia,serif">
+  <div style="max-width:520px;margin:0 auto;padding:48px 28px">
+    <p style="font-family:Georgia,serif;color:#e8cb7a;font-size:20px;letter-spacing:.5px;margin:0 0 28px;text-align:center">Echoes of the Garden</p>
+    <h1 style="font-family:Georgia,serif;color:#e3dfcc;font-size:24px;font-weight:normal;margin:0 0 16px">You are on the list</h1>
+    <p style="color:#e3dfcc;font-size:17px;line-height:1.7;margin:0 0 16px">
+      Thank you for subscribing. We will write when Echoes of the Garden opens in Early Access on Steam,
+      and now and then before that with a short note on how the game is going.
     </p>
-    <p style="color:#c8dcc8;font-size:16px;line-height:1.7;margin-bottom:32px">
-      When Early Access launches, you'll receive a <strong style="color:#8fba7a">Founder's Seed</strong> — 
-      an exclusive item only available to newsletter subscribers.
+    <p style="color:#e3dfcc;font-size:17px;line-height:1.7;margin:0 0 32px">
+      Until then, the garden is already open in your browser:
+      <a href="https://echoes-of-the-garden.itch.io/play" style="color:#e8cb7a">play it free on itch.io</a>.
     </p>
-    <div style="border-top:1px solid #222820;padding-top:24px;text-align:center">
-      <a href="https://echoesofthegarden.com/" style="color:#5a9e6a;font-size:14px;text-decoration:none">
-        echoesofthegarden.com
-      </a>
-    </div>
-    <p style="color:#3a5040;font-size:12px;text-align:center;margin-top:16px;line-height:1.5">
-      You received this because you subscribed at echoesofthegarden.com.<br>
-      No spam, ever. <a href="${unsubscribe}" style="color:#5a9e6a">Unsubscribe</a> at any time ·
-      <a href="https://echoesofthegarden.com/privacy/" style="color:#5a9e6a">Privacy</a>
+    <p style="color:#a7ae99;font-size:14px;line-height:1.6;margin:0;padding-top:20px;border-top:1px solid #2c3528">
+      You get this email because you subscribed at <a href="${SITE}/" style="color:#a7ae99">echoesofthegarden.com</a>.
+      <a href="${unsubscribe}" style="color:#a7ae99">Unsubscribe</a> ·
+      <a href="${SITE}/privacy/" style="color:#a7ae99">Privacy</a>
     </p>
   </div>
 </body>
@@ -141,7 +133,7 @@ async function subscribe(request, env) {
       const welcome = await resend('/emails', {
         from: 'Echoes of the Garden <hello@echoesofthegarden.com>',
         to: email,
-        subject: '🌱 Welcome to Echoes of the Garden',
+        subject: 'Welcome to Echoes of the Garden',
         headers: listUnsubscribe,
         html: welcomeHtml(unsubscribe),
       }, env.RESEND_API_KEY);
@@ -157,7 +149,7 @@ async function subscribe(request, env) {
 
 const page = (title, body) => new Response(`<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>${title} — Echoes of the Garden</title></head>
+<meta name="robots" content="noindex"><title>${title} | Echoes of the Garden</title></head>
 <body style="margin:0;background:#090b08;color:#c8dcc8;font-family:Georgia,serif;font-size:18px;line-height:1.7">
 <main style="max-width:520px;margin:0 auto;padding:64px 16px;text-align:center">
 <h1 style="color:#e8cb7a;font-weight:normal;font-size:26px">${title}</h1>${body}
