@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cada especie tiene una naturaleza | Dev log de Echoes of the Garden</title>
+  <meta name="description" content="Las especies revelan su naturaleza en su primera muerte, una de ellas lo guarda todo para el final y el excedente del jardín por fin tiene adónde ir.">
+  <link rel="canonical" href="https://echoesofthegarden.com/es/devlog/every-species-has-a-nature/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cada especie tiene una naturaleza | Dev log de Echoes of the Garden">
+  <meta property="og:description" content="Las especies revelan su naturaleza en su primera muerte, una de ellas lo guarda todo para el final y el excedente del jardín por fin tiene adónde ir.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/es/devlog/every-species-has-a-nature/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cada especie tiene una naturaleza",
+  "description": "Las especies revelan su naturaleza en su primera muerte, una de ellas lo guarda todo para el final y el excedente del jardín por fin tiene adónde ir.",
+  "datePublished": "2026-11-13",
+  "image": "https://echoesofthegarden.com/assets/screenshots/05_echo_arc.webp",
+  "url": "https://echoesofthegarden.com/es/devlog/every-species-has-a-nature/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/es/"
+  }
+}
+</script>
+  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/every-species-has-a-nature/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/every-species-has-a-nature/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/every-species-has-a-nature/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/every-species-has-a-nature/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <header class="site-head">
+    <a class="site-logo" href="/es/">Echoes of the Garden</a>
+    <nav class="site-nav" aria-label="Navegación principal"><a href="/es/#life">El juego</a><a href="/es/guide/">Cómo se juega</a><a href="/es/bestiary/">Bestiario</a><a href="/es/devlog/" aria-current="true">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega gratis en el navegador</a>
+  </header>
+  <main class="page post">
+    <p class="crumbs"><a href="/es/devlog/">Dev log</a></p>
+    <h1>Cada especie tiene una naturaleza</h1>
+    <p class="meta"><time datetime="2026-11-13">13 de noviembre de 2026</time> · Build v0.14.0</p>
+    <figure>
+      <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="El panel de creación del Arco de Ecos">
+      <figcaption>Una captura del juego. El pixel art todavía es provisional.</figcaption>
+    </figure>
+<p>Hasta esta build todas las criaturas funcionaban igual: daban a un ritmo constante desde el día en que nacían hasta el día en que morían. La v0.14.0 empieza a cambiarlo.</p>
+<h2>Naturalezas</h2>
+<p>Ahora cada especie tiene una naturaleza. La descubres la primera vez que muere una de ellas, y desde entonces aparece en su entrada del Códice.</p>
+<p>La mayoría de las especies son Constantes. La primera naturaleza que cambia cómo se juega una criatura es la Floración: da poco mientras vive y lo devuelve todo al morir, en el momento en que eliges su destino. No diré qué especie es.</p>
+<h2>Sintonía</h2>
+<p>Al completar la colección de un bioma, su Root Sap o su Living Ash se quedaban en el tope y se perdía casi todo lo que producía el jardín. En mis simulaciones, alguien que entra dos veces al día perdía unas cuatro quintas partes.</p>
+<p>El Arco de Ecos tiene ahora una Sintonía para las Raíces del Mundo y la Marea de Ceniza. Ofrecer vierte en ella todo lo que tienes, nada de lo ofrecido se pierde entre rangos y cada rango deja un Rastro, el segundo nivel del Arco de Ecos. En esas mismas simulaciones la pérdida baja a un 2 % aproximadamente.</p>
+<h2>También en la v0.14.0</h2>
+<ul>
+  <li>La línea que anuncia una especie nueva ahora nombra el bioma donde se mueve.</li>
+  <li>Los textos en español e italiano han tenido una revisión completa.</li>
+</ul>
+<p>Ahora esta build pasa a los testers. Cómo la jueguen decidirá cómo funcionan las demás naturalezas.</p>
+  </main>
+  <aside class="site-cta" aria-label="Jugar">
+    <p>Echoes of the Garden es un juego idle gratuito sobre criaturas que viven, envejecen y mueren para siempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega gratis en el navegador</a><a class="btn" href="/es/#newsletter">Avísame cuando esté en Steam</a></div>
+  </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un juego independiente de un solo desarrollador. © 2026</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega en itch.io</a>
+      <span>Steam (pronto)</span>
+      <a href="/es/bestiary/">Bestiario</a>
+      <a href="/es/guide/">Cómo se juega</a>
+      <a href="/es/devlog/">Dev log</a>
+      <a href="/es/privacy/">Privacidad</a>
+      <a href="/es/privacy/#who-we-are">Aviso legal</a>
+      <a href="https://digital-multiverse.com">Un proyecto de Digital Multiverse</a>
+    </nav>
+  </footer>
+  <!-- LANG:START --><nav aria-label="Idioma" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/every-species-has-a-nature/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/devlog/every-species-has-a-nature/" hreflang="es" lang="es" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/devlog/every-species-has-a-nature/" hreflang="it" lang="it" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>
