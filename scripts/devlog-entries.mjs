@@ -131,4 +131,27 @@ export const ENTRIES = [
 <p>The web build also lost a few symbols that its font could not draw.</p>
 <p>One tester is not enough to tune the game's pace, so the next step is more players.</p>`,
   },
+  {
+    slug: "every-species-has-a-nature",
+    title: "Every species has a nature",
+    date: "2026-11-13",
+    build: "v0.14.0",
+    summary: "Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.",
+    image: "05_echo_arc.webp",
+    alt: "The Echo Arc crafting panel",
+    body: `
+<p>Until this build every creature worked the same way: it gave at a steady pace from the day it hatched to the day it died. v0.14.0 starts to change that.</p>
+<h2>Natures</h2>
+<p>Every species now has a nature. You learn it the first time one of them dies, and from then on it appears in the species' Codex entry.</p>
+<p>Most species are Steady. The first nature that changes how a creature plays is the Bloomer: it gives little while it lives and pays it all back when it dies, at the moment you choose its fate. I won't say which species it is.</p>
+<h2>Attunement</h2>
+<p>Once a biome's collection was complete, its Root Sap or Living Ash sat at the cap and most of what the garden made was lost. In my simulations, a player checking in twice a day lost about four fifths of it.</p>
+<p>The Echo Arc now has an Attunement track for the Roots of the World and the Tide of Ash. Offer pours everything you hold into it, nothing you offer is lost between ranks, and each rank leaves a Rastro, the second tier of the Echo Arc. In the same simulations the loss drops to about 2 percent.</p>
+<h2>Also in v0.14.0</h2>
+<ul>
+  <li>The line that announces a new species now names the biome where it stirs.</li>
+  <li>The Spanish and Italian text had a full review.</li>
+</ul>
+<p>This build goes to the testers next. How they play it decides how the other natures work.</p>`,
+  },
 ];
