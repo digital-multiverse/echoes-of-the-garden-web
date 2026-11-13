@@ -108,4 +108,27 @@ export const ENTRIES = [
 <p>This site also moved to echoesofthegarden.com, and the in-game bug reports now arrive through it.</p>
 <p>Next comes the external playtest: new players, no guidance, and notes on where they get lost or bored.</p>`,
   },
+  {
+    slug: "what-the-first-stranger-taught-me",
+    title: "What the first stranger taught me",
+    date: "2026-11-08",
+    build: "v0.13.0",
+    summary: "The first external tester thought the garden had stopped working. It hadn't, but nothing on screen said so. What changed in v0.13.0.",
+    image: "01_roots_garden.webp",
+    alt: "A garden in the Roots of the World biome with creatures on a grid",
+    body: `
+<p>The first external tester played the web build with no guidance. The first creature lived and died as planned. Then the garden went quiet: the other creatures only gave resources every five minutes, so for a while nothing seemed to happen, and the tester decided production was broken.</p>
+<p>The numbers were right. The game just never showed them. Two more things came out of the same session: messages faded before anyone read them, and nothing said whether the browser version keeps your progress. It does.</p>
+<h2>What changed in v0.13.0</h2>
+<ul>
+  <li><strong>A gift every minute.</strong> Creatures now give every minute instead of every five, at the same rate per hour. The garden earns exactly what it did before, and you can see it working.</li>
+  <li><strong>The pace, explained.</strong> After the first creature's fate, a short note says the others grow over hours and keep giving while the game is closed.</li>
+  <li><strong>Next gift.</strong> Hover a creature to see when its next gift arrives and how much it brings.</li>
+  <li><strong>Messages you notice.</strong> Messages appear as cards with a soft sound. The important ones stay until you click them.</li>
+  <li><strong>Unread mail.</strong> The Mail button counts the messages you haven't opened yet.</li>
+  <li><strong>Saving on the web.</strong> The browser version says once that your progress is saved in that browser.</li>
+</ul>
+<p>The web build also lost a few symbols that its font could not draw.</p>
+<p>One tester is not enough to tune the game's pace, so the next step is more players.</p>`,
+  },
 ];

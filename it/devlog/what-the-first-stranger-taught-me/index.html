@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosa mi ha insegnato il primo sconosciuto | Dev log di Echoes of the Garden</title>
+  <meta name="description" content="Il primo tester esterno pensava che il giardino avesse smesso di funzionare. Non era così, ma niente sullo schermo lo diceva. Cosa è cambiato nella v0.13.0.">
+  <link rel="canonical" href="https://echoesofthegarden.com/it/devlog/what-the-first-stranger-taught-me/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cosa mi ha insegnato il primo sconosciuto | Dev log di Echoes of the Garden">
+  <meta property="og:description" content="Il primo tester esterno pensava che il giardino avesse smesso di funzionare. Non era così, ma niente sullo schermo lo diceva. Cosa è cambiato nella v0.13.0.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/it/devlog/what-the-first-stranger-taught-me/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cosa mi ha insegnato il primo sconosciuto",
+  "description": "Il primo tester esterno pensava che il giardino avesse smesso di funzionare. Non era così, ma niente sullo schermo lo diceva. Cosa è cambiato nella v0.13.0.",
+  "datePublished": "2026-11-08",
+  "image": "https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp",
+  "url": "https://echoesofthegarden.com/it/devlog/what-the-first-stranger-taught-me/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/it/"
+  }
+}
+</script>
+  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/what-the-first-stranger-taught-me/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/what-the-first-stranger-taught-me/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/what-the-first-stranger-taught-me/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/what-the-first-stranger-taught-me/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <header class="site-head">
+    <a class="site-logo" href="/it/">Echoes of the Garden</a>
+    <nav class="site-nav" aria-label="Navigazione principale"><a href="/it/#life">Il gioco</a><a href="/it/guide/">Come si gioca</a><a href="/it/bestiary/">Bestiario</a><a href="/it/devlog/" aria-current="true">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+  </header>
+  <main class="page post">
+    <p class="crumbs"><a href="/it/devlog/">Dev log</a></p>
+    <h1>Cosa mi ha insegnato il primo sconosciuto</h1>
+    <p class="meta"><time datetime="2026-11-08">8 novembre 2026</time> · Build v0.13.0</p>
+    <figure>
+      <img src="/assets/screenshots/01_roots_garden.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="Un giardino del bioma Radici del Mondo con creature su una griglia">
+      <figcaption>Uno screenshot dal gioco. La pixel art è ancora provvisoria.</figcaption>
+    </figure>
+<p>Il primo tester esterno ha giocato la versione web senza alcuna guida. La prima creatura è vissuta ed è morta come previsto. Poi il giardino è rimasto in silenzio: le altre creature davano risorse solo ogni cinque minuti, così per un po' sembrava non succedere nulla, e il tester ha concluso che la produzione fosse rotta.</p>
+<p>I numeri erano giusti. Il gioco semplicemente non li mostrava. Dalla stessa sessione sono emerse altre due cose: i messaggi sparivano prima che qualcuno li leggesse, e niente diceva se la versione per browser conserva i tuoi progressi. Li conserva.</p>
+<h2>Cosa è cambiato nella v0.13.0</h2>
+<ul>
+  <li><strong>Un dono ogni minuto.</strong> Ora le creature danno ogni minuto invece che ogni cinque, allo stesso ritmo orario. Il giardino guadagna esattamente quanto prima, e si vede che funziona.</li>
+  <li><strong>Il ritmo, spiegato.</strong> Dopo il destino della prima creatura, una breve nota spiega che le altre crescono nell'arco di ore e continuano a dare anche a gioco chiuso.</li>
+  <li><strong>Prossimo dono.</strong> Passa il mouse su una creatura per vedere quando arriva il suo prossimo dono e quanto porta.</li>
+  <li><strong>Messaggi che si notano.</strong> I messaggi compaiono come schede con un suono leggero. Quelli importanti restano finché non ci clicchi sopra.</li>
+  <li><strong>Posta non letta.</strong> Il pulsante Posta conta i messaggi che non hai ancora aperto.</li>
+  <li><strong>Salvataggio sul web.</strong> La versione per browser avvisa una volta che i tuoi progressi sono salvati in quel browser.</li>
+</ul>
+<p>La versione web ha anche perso alcuni simboli che il suo font non sapeva disegnare.</p>
+<p>Un solo tester non basta per regolare il ritmo del gioco, quindi il prossimo passo è farlo provare a più persone.</p>
+  </main>
+  <aside class="site-cta" aria-label="Gioca">
+    <p>Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a><a class="btn" href="/it/#newsletter">Avvisami quando è su Steam</a></div>
+  </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+    </div>
+    <nav aria-label="Piè di pagina">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+      <span>Steam (presto)</span>
+      <a href="/it/bestiary/">Bestiario</a>
+      <a href="/it/guide/">Come si gioca</a>
+      <a href="/it/devlog/">Dev log</a>
+      <a href="/it/privacy/">Privacy</a>
+      <a href="/it/privacy/#who-we-are">Note legali</a>
+      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+    </nav>
+  </footer>
+  <!-- LANG:START --><nav aria-label="Lingua" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/what-the-first-stranger-taught-me/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/devlog/what-the-first-stranger-taught-me/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/devlog/what-the-first-stranger-taught-me/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>
