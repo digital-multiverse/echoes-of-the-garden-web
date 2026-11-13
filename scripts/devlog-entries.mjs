@@ -200,4 +200,31 @@ export const ENTRIES = [
 </ul>
 <p>Next I wait for the testers. What they say about the first minutes decides whether the game's pace changes.</p>`,
   },
+  {
+    slug: "a-shorter-first-life",
+    title: "A shorter first life",
+    date: "2026-11-14",
+    build: "v0.17.0",
+    summary: "Your first creature now lives about ten minutes instead of twenty, and every species in the first two biomes has its nature.",
+    image: "03_death_ceremony.webp",
+    alt: "The death ceremony with the choice between Rebirth and Preservation",
+    body: `
+<p>v0.15.0 added a guide to the first session and said that, if the first minutes still felt slow, the next step would be the pace itself. This build changes the pace.</p>
+<h2>The First Echo</h2>
+<p>The creature you start with now lives its whole life in about ten minutes, half of what it took before. It gives about the same Root Sap over that life, only sooner: the first seed at the Seed Altar is affordable at around one minute twenty instead of two minutes forty, and the first fate arrives just before the ten-minute mark.</p>
+<p>Only the First Echo runs faster. The rest of the game keeps its pace, and a save with a First Echo already growing keeps the old speed.</p>
+<h2>Natures and traits</h2>
+<p>v0.14.0 brought the first nature that plays differently, the Bloomer. The other two are in now:</p>
+<ul>
+  <li>Ephemeral species live briefly, and the relic they leave tends to be rarer.</li>
+  <li>Heirloom species give a little less, and their seeds carry a mutation more often.</li>
+</ul>
+<p>On top of its nature, a species can have a trait. Some give a little more with each generation of their line, or with each mutation they carry. One gives more for every creature that died in its biome before it was born. Others give more in one stage of their life. The Ember Falcon dives once when it reaches old age and gives a great deal all at once. And two species, when you plant them, make every other creature in their biome give a burst of what it produces.</p>
+<p>Nine of the fourteen species in the Roots of the World and the Tide of Ash have a trait. Like the nature, it shows in the species' Codex entry after its first death.</p>
+<h2>Also in v0.17.0</h2>
+<ul>
+  <li>The Spanish and Italian trait lines had a native-reader pass.</li>
+</ul>
+<p>This build goes to the testers. A first life of ten minutes is the part I most want to watch someone play.</p>`,
+  },
 ];

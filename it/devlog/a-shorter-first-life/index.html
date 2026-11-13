@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una prima vita più breve | Dev log di Echoes of the Garden</title>
+  <meta name="description" content="La tua prima creatura ora vive circa dieci minuti invece di venti, e tutte le specie dei primi due biomi hanno la loro natura.">
+  <link rel="canonical" href="https://echoesofthegarden.com/it/devlog/a-shorter-first-life/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Una prima vita più breve | Dev log di Echoes of the Garden">
+  <meta property="og:description" content="La tua prima creatura ora vive circa dieci minuti invece di venti, e tutte le specie dei primi due biomi hanno la loro natura.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/03_death_ceremony.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/it/devlog/a-shorter-first-life/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Una prima vita più breve",
+  "description": "La tua prima creatura ora vive circa dieci minuti invece di venti, e tutte le specie dei primi due biomi hanno la loro natura.",
+  "datePublished": "2026-11-14",
+  "image": "https://echoesofthegarden.com/assets/screenshots/03_death_ceremony.webp",
+  "url": "https://echoesofthegarden.com/it/devlog/a-shorter-first-life/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/it/"
+  }
+}
+</script>
+  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/a-shorter-first-life/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/a-shorter-first-life/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/a-shorter-first-life/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/a-shorter-first-life/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <header class="site-head">
+    <a class="site-logo" href="/it/">Echoes of the Garden</a>
+    <nav class="site-nav" aria-label="Navigazione principale"><a href="/it/#life">Il gioco</a><a href="/it/guide/">Come si gioca</a><a href="/it/bestiary/">Bestiario</a><a href="/it/devlog/" aria-current="true">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a>
+  </header>
+  <main class="page post">
+    <p class="crumbs"><a href="/it/devlog/">Dev log</a></p>
+    <h1>Una prima vita più breve</h1>
+    <p class="meta"><time datetime="2026-11-14">14 novembre 2026</time>, v0.17.0</p>
+    <figure>
+      <img src="/assets/screenshots/03_death_ceremony.webp" srcset="/assets/screenshots/03_death_ceremony-960.webp 960w, /assets/screenshots/03_death_ceremony.webp 1920w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="La Cerimonia della morte con la scelta tra Rinascita e Preservazione">
+      <figcaption>Uno screenshot dal gioco.</figcaption>
+    </figure>
+<p>v0.15.0 added a guide to the first session and said that, if the first minutes still felt slow, the next step would be the pace itself. This build changes the pace.</p>
+<h2>La Prima Eco</h2>
+<p>La creatura con cui inizi ora vive la sua vita intera in circa dieci minuti, la metà di prima. Dà più o meno lo stesso Root Sap nell'arco di quella vita, solo prima: il primo seme dell'Altare si può comprare verso un minuto e venti invece di due minuti e quaranta, e il primo destino arriva poco prima dei dieci minuti.</p>
+<p>Solo la Prima Eco va più veloce. Il resto del gioco mantiene il suo ritmo, e un salvataggio con una Prima Eco già in crescita conserva la velocità di prima.</p>
+<h2>Nature e tratti</h2>
+<p>v0.14.0 brought the first nature that plays differently, the Bloomer. The other two are in now:</p>
+<ul>
+  <li>Le specie Effimere vivono poco, e la reliquia che lasciano tende a essere più rara.</li>
+  <li>Le specie di Eredità danno un po' meno, e i loro semi portano una mutazione più spesso.</li>
+</ul>
+<p>Oltre alla sua natura, una specie può avere un tratto. Alcune danno un po' di più a ogni generazione della loro stirpe, o per ogni mutazione che portano. Una dà di più per ogni creatura morta nel suo bioma prima della sua nascita. Altre danno di più in una certa fase della loro vita. L'Ember Falcon si getta in picchiata una sola volta, quando arriva alla vecchiaia, e dà molto tutto d'un colpo. E ci sono due specie che, quando le pianti, fanno dare di colpo a ogni altra creatura del loro bioma una parte di ciò che produce.</p>
+<p>Nove delle quattordici specie delle Radici del Mondo e della Marea di Cenere hanno un tratto. Come la natura, compare nella voce della specie nel Codex dopo la sua prima morte.</p>
+<h2>Anche nella v0.17.0</h2>
+<ul>
+  <li>Le righe dei tratti in spagnolo e in italiano hanno avuto una revisione da lettore madrelingua.</li>
+</ul>
+<p>Questa build va ai tester. Una prima vita di dieci minuti è la parte che più voglio veder giocare a qualcuno.</p>
+  </main>
+  <aside class="site-cta" aria-label="Gioca">
+    <p>Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca gratis nel browser</a><a class="btn" href="/it/#newsletter">Avvisami quando è su Steam</a></div>
+  </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un gioco indipendente di un solo sviluppatore. © 2026</p>
+    </div>
+    <nav aria-label="Piè di pagina">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Gioca su itch.io</a>
+      <span>Steam (presto)</span>
+      <a href="/it/bestiary/">Bestiario</a>
+      <a href="/it/guide/">Come si gioca</a>
+      <a href="/it/devlog/">Dev log</a>
+      <a href="/it/privacy/">Privacy</a>
+      <a href="/it/privacy/#who-we-are">Note legali</a>
+      <a href="https://digital-multiverse.com">Un progetto di Digital Multiverse</a>
+    </nav>
+  </footer>
+  <!-- LANG:START --><nav aria-label="Lingua" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/a-shorter-first-life/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/devlog/a-shorter-first-life/" hreflang="es" lang="es" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/devlog/a-shorter-first-life/" hreflang="it" lang="it" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>
