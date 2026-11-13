@@ -26,7 +26,7 @@ export const CTA = `  <aside class="site-cta" aria-label="Play the game">
 export const FOOTER = `  <footer class="site-foot">
     <div>
       <div class="foot-logo">Echoes of the Garden</div>
-      <p>An independent game by a single developer. © 2026</p>
+      <p>An independent game by a single developer. © 2026</p>
     </div>
     <nav aria-label="Footer">
       <a href="${PLAY}" target="_blank" rel="noopener">Play on itch.io</a>

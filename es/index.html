@@ -429,11 +429,9 @@
     .seasons { list-style: none; display: grid; grid-template-columns: 4fr 5fr 4fr; gap: 0; margin-top: 48px; border-top: 1px solid var(--line) }
     .season { padding: 28px 28px 32px 0 }
     .season + .season { padding-left: 28px; border-left: 1px solid var(--line) }
-    .season .when { color: var(--lichen); font-size: 17px }
-    .season h3 { font-size: 23px; margin: 2px 0 10px }
+    .season h3 { font-size: 23px; margin: 0 0 10px }
     .season p { color: var(--lichen); font-size: 18px }
     .season-now { background: var(--moss); border-top: 2px solid var(--gold); margin-top: -1px }
-    .season-now .when { color: var(--gold) }
     .arrivals { list-style: none; display: grid; gap: 10px; margin: 6px 0 16px }
     .arrivals li { display: flex; align-items: center; gap: 12px; font-size: 18px; line-height: 1.35 }
     .arrivals strong { display: block; font-weight: 600; color: var(--bone) }
@@ -681,7 +679,6 @@
   <section id="systems" class="band" aria-labelledby="systems-title">
     <div class="wrap">
       <h2 id="systems-title">Cómo crece el jardín</h2>
-      <p class="lede">El juego nunca te enseña los números que hay detrás. Se aprende mirando.</p>
       <div class="grows">
         <figure>
           <img src="/assets/screenshots/05_echo_arc.webp" srcset="/assets/screenshots/05_echo_arc-960.webp 960w, /assets/screenshots/05_echo_arc.webp 1920w" sizes="(max-width: 860px) 100vw, 640px" alt="El panel del Arco de Ecos en el juego, con los niveles desde Vestigio hacia arriba y el riesgo de perder el resultado en cada uno" width="1920" height="1080" loading="lazy">
@@ -780,27 +777,24 @@
   <section id="roadmap" aria-labelledby="roadmap-title">
     <div class="wrap">
       <h2 id="roadmap-title">En qué punto está el juego</h2>
-      <p class="lede">Una sola persona hace Echoes of the Garden, a la vista de todos. Actualizado el 12 de noviembre de 2026. Los planes pueden cambiar, y esta página cambia con ellos.</p>
+      <p class="lede">Una sola persona hace Echoes of the Garden, a la vista de todos. Actualizado el 13 de noviembre de 2026. Los planes pueden cambiar, y esta página cambia con ellos.</p>
       <ol class="seasons">
         <li class="season">
-          <p class="when">Hecho en 2026</p>
           <h3>Ya está en el jardín</h3>
-          <p>El ciclo del jardín, las 28 especies diseñadas, el Arco de Ecos hasta Eco, las afinidades, el Libro de Ecos y tres idiomas. Hoy ya puedes jugarlo en tu navegador.</p>
+          <p>Hecho en 2026: el ciclo del jardín, las 28 especies diseñadas, las afinidades y las primeras naturalezas, el Arco de Ecos hasta Eco con su Sintonía, el Libro de Ecos y tres idiomas. Hoy ya puedes jugarlo en tu navegador.</p>
         </li>
         <li class="season season-now">
-          <p class="when">Ahora, previsto para el segundo trimestre de 2027</p>
           <h3>Acceso anticipado en Steam</h3>
+          <p>Previsto para el segundo trimestre de 2027, después de una prueba con jugadores nuevos.</p>
           <ul class="arrivals">
             <li><span class="halo"><img src="/assets/creatures/lagarto_musgo.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>En el lanzamiento</strong> Raíces del Mundo y Marea de Ceniza</span></li>
             <li class="later-eco"><span class="halo"><img src="/assets/creatures/medusa_velo.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>Primera actualización</strong> El Jardín Suspendido</span></li>
             <li class="later-eco"><span class="halo"><img src="/assets/creatures/pez_luz.png" alt="" width="24" height="24" loading="lazy"></span><span><strong>Segunda actualización</strong> La Cueva Luminosa</span></li>
           </ul>
-          <p>Antes del lanzamiento: una prueba con jugadores nuevos.</p>
         </li>
         <li class="season">
-          <p class="when">Tras el acceso anticipado</p>
           <h3>Mercado de la Comunidad de Steam</h3>
-          <p>Intercambio de reliquias y materiales, y los niveles seis a diez del Arco de Ecos. Depende de la revisión de Valve.</p>
+          <p>Llega después del acceso anticipado: el intercambio de reliquias y materiales, y los niveles seis a diez del Arco de Ecos, cuando Valve lo haya revisado.</p>
         </li>
       </ol>
       <div class="log" id="devlog">
@@ -810,17 +804,17 @@
         <!-- DEVLOG:START -->
         <div class="devlog-grid">
           <article>
-            <time class="devlog-date" datetime="2026-11-13">13 de noviembre de 2026 · Build v0.14.0</time>
+            <time class="devlog-date" datetime="2026-11-13">13 de noviembre de 2026, v0.14.0</time>
             <h4 class="devlog-title"><a href="/es/devlog/every-species-has-a-nature/">Cada especie tiene una naturaleza</a></h4>
             <p class="devlog-summary">Las especies revelan su naturaleza en su primera muerte, una de ellas lo guarda todo para el final y el excedente del jardín por fin tiene adónde ir.</p>
           </article>
           <article>
-            <time class="devlog-date" datetime="2026-11-13">13 de noviembre de 2026 · Build v0.15.0</time>
+            <time class="devlog-date" datetime="2026-11-13">13 de noviembre de 2026, v0.15.0</time>
             <h4 class="devlog-title"><a href="/es/devlog/someone-to-show-you-around/">Alguien que te enseñe el jardín</a></h4>
             <p class="devlog-summary">Dos testers dijeron que en los primeros minutos no tenían nada que hacer ni sabían de qué iba el juego. La v0.15.0 añade una guía breve para la primera partida.</p>
           </article>
           <article>
-            <time class="devlog-date" datetime="2026-11-08">8 de noviembre de 2026 · Build v0.13.0</time>
+            <time class="devlog-date" datetime="2026-11-08">8 de noviembre de 2026, v0.13.0</time>
             <h4 class="devlog-title"><a href="/es/devlog/what-the-first-stranger-taught-me/">Lo que me enseñó el primer desconocido</a></h4>
             <p class="devlog-summary">El primer tester externo creyó que el jardín había dejado de funcionar. No era así, pero nada en pantalla lo decía. Qué cambió en la v0.13.0.</p>
           </article>
@@ -837,7 +831,7 @@
     <div class="wrap foot">
       <div>
         <div class="foot-logo">Echoes of the Garden</div>
-        <p>Un juego independiente de un solo desarrollador. © 2026</p>
+        <p>Un juego independiente de un solo desarrollador. © 2026</p>
       </div>
       <nav class="foot-links" aria-label="Pie de página">
         <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega en itch.io</a>
