@@ -277,7 +277,7 @@
     .bestiary-more { text-align: center; color: var(--lichen); max-width: 60ch; margin: 48px auto 0 }
     .bestiary-more a { display: inline-block; padding: 10px 0 }
     .unlearned { font-style: italic }
-    @media (max-width: 420px) { .garden a { width: 104px; font-size: 16px } .garden .halo { width: 88px; height: 88px } }
+    @media (max-width: 420px) { .garden { gap: 8px 0 } .garden a { width: 84px; font-size: 15px } .garden .halo { width: 76px; height: 76px } .garden .halo img { width: 48px; height: 48px } }
 
     /* ── Where it is now: three stages, sharper the closer they are (as indie Early Access
        roadmaps do it). The current one is the lit one. ── */
@@ -292,7 +292,6 @@
     .arrivals strong { display: block; font-weight: 600; color: var(--bone) }
     .arrivals .halo { --glow: .3; width: 64px; height: 64px; flex: none }
     .arrivals .halo img { width: 40px; height: 40px }
-    .arrivals .later-eco .halo { --glow: .1 }
     .arrivals .later-eco { color: var(--lichen) }
     @media (max-width: 960px) {
       .seasons { grid-template-columns: 1fr }
@@ -659,14 +658,14 @@
         <!-- DEVLOG:START -->
         <div class="devlog-grid">
           <article>
-            <time class="devlog-date" datetime="2026-11-13">13 November 2026, v0.14.0</time>
-            <h4 class="devlog-title"><a href="/devlog/every-species-has-a-nature/">Every species has a nature</a></h4>
-            <p class="devlog-summary">Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.</p>
-          </article>
-          <article>
             <time class="devlog-date" datetime="2026-11-13">13 November 2026, v0.15.0</time>
             <h4 class="devlog-title"><a href="/devlog/someone-to-show-you-around/">Someone to show you around</a></h4>
             <p class="devlog-summary">Two testers said the first minutes left them with nothing to do and no idea what the game was about. v0.15.0 adds a short guide for the first session.</p>
+          </article>
+          <article>
+            <time class="devlog-date" datetime="2026-11-13">13 November 2026, v0.14.0</time>
+            <h4 class="devlog-title"><a href="/devlog/every-species-has-a-nature/">Every species has a nature</a></h4>
+            <p class="devlog-summary">Species now reveal their nature at their first death, one of them saves everything for the end, and the garden's surplus finally has somewhere to go.</p>
           </article>
           <article>
             <time class="devlog-date" datetime="2026-11-08">8 November 2026, v0.13.0</time>

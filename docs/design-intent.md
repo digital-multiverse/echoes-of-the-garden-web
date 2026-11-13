@@ -113,5 +113,5 @@ CCBot, Google-Extended…) are blocked by robots.txt and get 403 from AI Crawl C
 
 ## Known decisions and open items
 - `BACKLOG.md` (phases W2–W4, manual actions).
-- Last review: `docs/REVIEW-WEB-2026-11.md` and its "after fixes" table.
+- Reviews: `docs/REVIEW-WEB-2026-11.md` (first, with its "after fixes" table) and the dated ones after it; the newest is the last by date.
 - Game repo: `ROADMAP.md`, `docs/adr/012-*`, `docs/adr/013-*`.

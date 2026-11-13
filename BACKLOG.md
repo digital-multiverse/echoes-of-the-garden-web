@@ -31,10 +31,9 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   the Gardener no longer named on the site (ADR-013)
 
 ## Pending — your manual actions ⚠️
-- ⚠️ `npx wrangler secret put UNSUBSCRIBE_SECRET` (a long random string). Until it is set the welcome mail
-  keeps the `mailto:` unsubscribe. Then subscribe a test address and click its unsubscribe link once
-- ⚠️ itch.io page: add "Website, dev log and Early Access news: echoesofthegarden.com" to the description
-  and the site to the profile links — the itch page has no link back today
+- ✅ `UNSUBSCRIBE_SECRET` set: the welcome mail carries the signed one-click unsubscribe link
+- ✅ itch.io page links back to echoesofthegarden.com (description and profile links)
+- ⚠️ Subscribe a real address, check the new welcome email and use its unsubscribe link once
 - ⚠️ `npm run bestiary` needs the game checkout at `../echoes-of-the-garden`
   on `main` (or `GAME_DIR=`); the raw-GitHub fetch never worked (private repo)
 
@@ -61,7 +60,6 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   layout while parsing) and fonts are self-hosted in `assets/fonts/` (no late Google stylesheet = two fewer full
   layouts, no Google request; privacy and CSP updated)
 - ✅ Mobile roadmap folds the finished phases behind a button (only with JS): newsletter ~15,100 px
-- ⚠️ Manual: subscribe a real address and use the unsubscribe link once
 - ✅ Production after #14 (2026-11-11, lab, host load 4–8): home mobile 86–97 (TBT 89–519 ms), desktop 94–99;
   es, dev log, entry, creature, `/bestiary/` 98–100. A11y 100 everywhere
 - ✅ AI crawlers (decided 2026-11-11): assistants may read and recommend the site, training is blocked. Already true via
@@ -69,6 +67,19 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
   in Lighthouse is that robots.txt's `Content-Signal` line, kept on purpose (see design-intent)
 - ✅ Copy follows the Steam plan (ADR-001/011): 14 creatures and 2 ecosystems at Early Access launch, Garden and Cave in
   the first two EA updates; creature pages for garden/cave say so
+
+## Reviews 2026-11-12 to 2026-11-14 ✅ (`docs/REVIEW-WEB-2026-11-12.md`, `-13.md`, `-14.md`)
+- ✅ "How to play" guide as five Book of Echoes chapters (`scripts/build-guide.mjs`), in the nav and footer
+- ✅ Game terms: "affinity" (not "resonance"), es/it trait and Altar names copied from `strings.csv`
+- ✅ Garden zones: moss bands, ceremony, one gold band for the newsletter, root strands and motes cut from the game's
+  sprites (`assets/motifs/`); inner pages show their nav on mobile
+- ✅ Founder's Seed removed from the site and the welcome email until the game decides it; welcome email rewritten
+- ✅ Share image: the game's 1200×630 header capsule (`og-image.jpg`)
+- ✅ Roadmap in three stages (built, Early Access, Market) with an "Updated" date; newsletter above it
+- ✅ v0.14 in the guide and roadmap (natures, Attunement); in-engine Attunement capture for the v0.14 entry
+- ✅ Dev log ordered by date, then build, so same-day entries read newest first
+- ✅ Roadmap and bestiary: every creature gets the same halo, coming ecosystems included; 4 + 3 per row on mobile
+- ⏳ Lighthouse on an idle machine (three runs this week were on a loaded host, load 7–22 on 4 cores)
 
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
@@ -88,8 +99,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ Spanish and Italian: `/es/` and `/it/` baked by `npm run i18n` from `i18n/{es,it}.json` and the game's `content.csv`; hreflang on every page. Translations are drafts pending a native review
 - ✅ SEO pass: title and meta, keywords, real favicon files, 404 pages, WebP media, `llms.txt`, internal links
 - ⏳ Welcome email is English only, whatever the page language
-- ⏳ Lore-forward section on the landing page (epitaph / death prose) —
-  creature pages already show the epitaph; the homepage doesn't yet
+- ✅ Lore-forward landing: the home tells Hollowroot's life and death with the game's own death screen text
 - ⏳ Steam page link (CTA + JSON-LD sameAs) — blocked on Steam page existing
 - ⏳ Per-section OG images (bestiary share ≠ homepage share)
 
