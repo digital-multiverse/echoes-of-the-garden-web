@@ -79,7 +79,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ v0.14 in the guide and roadmap (natures, Attunement); in-engine Attunement capture for the v0.14 entry
 - ✅ Dev log ordered by date, then build, so same-day entries read newest first
 - ✅ Roadmap and bestiary: every creature gets the same halo, coming ecosystems included; 4 + 3 per row on mobile
-- ⏳ Lighthouse on an idle machine (three runs this week were on a loaded host, load 7–22 on 4 cores)
+- ✅ Lighthouse on an idle machine (2026-11-14, load 2.75 on 4 cores, lab): performance mobile/desktop home 97/100 (TBT 200 ms), /es/ 99/100, guide 100/100, creature 100/100, dev log entry 97/100; accessibility 100 everywhere
 
 ## Move to Cloudflare Workers ✅ (decided 2026-11-04, like comparavoto)
 - ✅ Worker port ready: `wrangler.jsonc`, `src/worker.js` (`/api/subscribe`, `/api/report`), `_headers`,
