@@ -14,7 +14,7 @@ import { HEAD_ASSETS, header, CTA, FOOTER } from "./site-chrome.mjs";
 
 const SITE = "https://echoesofthegarden.com";
 const HOME_ENTRIES = 3;
-const newest = [...ENTRIES].sort((a, b) => b.date.localeCompare(a.date));
+const newest = [...ENTRIES].sort((a, b) => b.date.localeCompare(a.date) || b.build.localeCompare(a.build, "en", { numeric: true }));
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const longDate = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
