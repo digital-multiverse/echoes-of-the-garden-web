@@ -183,4 +183,21 @@ export const ENTRIES = [
 </ul>
 <p>The guide does not change the game's pace. If the first minutes still feel slow with it, the next step is the pace itself.</p>`,
   },
+  {
+    slug: "signs-before-names",
+    title: "Signs before names",
+    date: "2026-11-13",
+    build: "v0.16.0",
+    summary: "Species you have not met yet now leave a sign at the Seed Altar, and the Spanish and Italian text had another pass.",
+    image: "02_tide_of_ash.webp",
+    alt: "The Tide of Ash biome with creatures among the cinders",
+    body: `
+<p>Until now a species you had not met yet was three question marks at the Seed Altar. Nothing told you it was there, or gave you a reason to wait for it.</p>
+<p>Each of those rows now carries one line: a sign that something lives nearby, without its name. In the Roots of the World, one of them reads: "One of the boulders is not where it was last season." There is one for each of the 28 species, in English, Spanish and Italian.</p>
+<h2>Also in v0.16.0</h2>
+<ul>
+  <li>The Spanish and Italian text added in the last three builds had a full review: the natures, Attunement, the first-steps guide and the new lore fragments.</li>
+</ul>
+<p>Next I wait for the testers. What they say about the first minutes decides whether the game's pace changes.</p>`,
+  },
 ];
