@@ -155,4 +155,33 @@ export const ENTRIES = [
 </ul>
 <p>This build goes to the testers next. How they play it decides how the other natures work.</p>`,
   },
+  {
+    slug: "someone-to-show-you-around",
+    title: "Someone to show you around",
+    date: "2026-11-13",
+    build: "v0.15.0",
+    summary: "Two testers said the first minutes left them with nothing to do and no idea what the game was about. v0.15.0 adds a short guide for the first session.",
+    image: "01_roots_garden.webp",
+    alt: "A garden in the Roots of the World biome with creatures on a grid",
+    body: `
+<p>The second tester put it plainly: in the first minutes there was nothing to do, the next thing took too long to unlock, and a little guidance would have helped them understand what the game was about. The first tester had hit a similar wall a week earlier.</p>
+<p>I timed the first session against the game's own numbers. The first seed becomes affordable at around two and a half minutes. After the third purchase, at about eleven minutes, nothing points you anywhere until your first creature dies, close to the twenty-minute mark.</p>
+<h2>First steps</h2>
+<p>A small card in the corner now walks you through the first session, one step at a time. Each step names something you can do right now and says in one line why it matters:</p>
+<ul>
+  <li>Name your first creature.</li>
+  <li>Open the Codex.</li>
+  <li>Plant a second seed at the Seed Altar.</li>
+  <li>Look at the Affinity Wheel.</li>
+  <li>Plant a species you have not grown yet.</li>
+  <li>Stay for the end of your first creature.</li>
+</ul>
+<p>The card closes with the first fate, and you can dismiss it at any time. Players who have already been through a first death never see it.</p>
+<h2>Also in v0.15.0</h2>
+<ul>
+  <li>Four new lore fragments, earned through Attunement. I won't quote them.</li>
+  <li>Reloading a save no longer announces fragments and achievements you already had.</li>
+</ul>
+<p>The guide does not change the game's pace. If the first minutes still feel slow with it, the next step is the pace itself.</p>`,
+  },
 ];

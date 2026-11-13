@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alguien que te enseñe el jardín | Dev log de Echoes of the Garden</title>
+  <meta name="description" content="Dos testers dijeron que en los primeros minutos no tenían nada que hacer ni sabían de qué iba el juego. La v0.15.0 añade una guía breve para la primera partida.">
+  <link rel="canonical" href="https://echoesofthegarden.com/es/devlog/someone-to-show-you-around/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Alguien que te enseñe el jardín | Dev log de Echoes of the Garden">
+  <meta property="og:description" content="Dos testers dijeron que en los primeros minutos no tenían nada que hacer ni sabían de qué iba el juego. La v0.15.0 añade una guía breve para la primera partida.">
+  <meta property="og:image" content="https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp">
+  <meta property="og:url" content="https://echoesofthegarden.com/es/devlog/someone-to-show-you-around/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Alguien que te enseñe el jardín",
+  "description": "Dos testers dijeron que en los primeros minutos no tenían nada que hacer ni sabían de qué iba el juego. La v0.15.0 añade una guía breve para la primera partida.",
+  "datePublished": "2026-11-13",
+  "image": "https://echoesofthegarden.com/assets/screenshots/01_roots_garden.webp",
+  "url": "https://echoesofthegarden.com/es/devlog/someone-to-show-you-around/",
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Multiverse",
+    "url": "https://digital-multiverse.com"
+  },
+  "about": {
+    "@type": "VideoGame",
+    "name": "Echoes of the Garden",
+    "url": "https://echoesofthegarden.com/es/"
+  }
+}
+</script>
+  <link rel="preload" href="/assets/fonts/crimson-pro-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cinzel-decorative-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <!-- SEO:START -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" hreflang="en" href="https://echoesofthegarden.com/devlog/someone-to-show-you-around/">
+  <link rel="alternate" hreflang="es" href="https://echoesofthegarden.com/es/devlog/someone-to-show-you-around/">
+  <link rel="alternate" hreflang="it" href="https://echoesofthegarden.com/it/devlog/someone-to-show-you-around/">
+  <link rel="alternate" hreflang="x-default" href="https://echoesofthegarden.com/devlog/someone-to-show-you-around/">
+  <!-- SEO:END -->
+</head>
+
+<body>
+  <header class="site-head">
+    <a class="site-logo" href="/es/">Echoes of the Garden</a>
+    <nav class="site-nav" aria-label="Navegación principal"><a href="/es/#life">El juego</a><a href="/es/guide/">Cómo se juega</a><a href="/es/bestiary/">Bestiario</a><a href="/es/devlog/" aria-current="true">Dev log</a></nav>
+    <a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega gratis en el navegador</a>
+  </header>
+  <main class="page post">
+    <p class="crumbs"><a href="/es/devlog/">Dev log</a></p>
+    <h1>Alguien que te enseñe el jardín</h1>
+    <p class="meta"><time datetime="2026-11-13">13 de noviembre de 2026</time>, v0.15.0</p>
+    <figure>
+      <img src="/assets/screenshots/01_roots_garden.webp" srcset="/assets/screenshots/01_roots_garden-960.webp 960w, /assets/screenshots/01_roots_garden.webp 1920w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="Un jardín del bioma Raíces del Mundo con criaturas en una cuadrícula">
+      <figcaption>Una captura del juego. El pixel art todavía es provisional.</figcaption>
+    </figure>
+<p>El segundo tester lo dijo claro: en los primeros minutos no había nada que hacer, lo siguiente tardaba demasiado en desbloquearse y un poco de guía le habría ayudado a entender de qué iba el juego. El primer tester se había topado con un muro parecido una semana antes.</p>
+<p>Cronometré la primera partida con los números del propio juego. La primera semilla se puede comprar hacia los dos minutos y medio. Después de la tercera compra, hacia el minuto once, nada te indica adónde ir hasta que muere tu primera criatura, cerca del minuto veinte.</p>
+<h2>Primeros pasos</h2>
+<p>Ahora una pequeña tarjeta en la esquina te acompaña durante la primera partida, paso a paso. Cada paso te propone algo que puedes hacer en ese momento y explica en una línea por qué importa:</p>
+<ul>
+  <li>Ponle nombre a tu primera criatura.</li>
+  <li>Abre el Códice.</li>
+  <li>Planta una segunda semilla en el Altar.</li>
+  <li>Mira la Rueda de afinidad.</li>
+  <li>Planta una especie que aún no hayas criado.</li>
+  <li>Quédate hasta el final de tu primera criatura.</li>
+</ul>
+<p>La tarjeta se cierra con el primer destino, y puedes quitarla cuando quieras. Quien ya ha pasado por una primera muerte no la ve.</p>
+<h2>También en la v0.15.0</h2>
+<ul>
+  <li>Cuatro fragmentos de lore nuevos, que se ganan con la Sintonía. No los voy a citar.</li>
+  <li>Al recargar una partida ya no se anuncian fragmentos y logros que ya tenías.</li>
+</ul>
+<p>La guía no cambia el ritmo del juego. Si con ella los primeros minutos siguen pareciendo lentos, lo siguiente será el ritmo en sí.</p>
+  </main>
+  <aside class="site-cta" aria-label="Jugar">
+    <p>Echoes of the Garden es un juego idle gratuito sobre criaturas que viven, envejecen y mueren para siempre.</p>
+    <div class="actions"><a class="btn btn-gold" href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega gratis en el navegador</a><a class="btn" href="/es/#newsletter">Avísame cuando esté en Steam</a></div>
+  </aside>
+  <footer class="site-foot">
+    <div>
+      <div class="foot-logo">Echoes of the Garden</div>
+      <p>Un juego independiente de un solo desarrollador. © 2026</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <a href="https://echoes-of-the-garden.itch.io/play" target="_blank" rel="noopener">Juega en itch.io</a>
+      <span>Steam (pronto)</span>
+      <a href="/es/bestiary/">Bestiario</a>
+      <a href="/es/guide/">Cómo se juega</a>
+      <a href="/es/devlog/">Dev log</a>
+      <a href="/es/privacy/">Privacidad</a>
+      <a href="/es/privacy/#who-we-are">Aviso legal</a>
+      <a href="https://digital-multiverse.com">Un proyecto de Digital Multiverse</a>
+    </nav>
+  </footer>
+  <!-- LANG:START --><nav aria-label="Idioma" style="text-align:center;padding:24px 16px;font-size:15px"><a href="/devlog/someone-to-show-you-around/" hreflang="en" lang="en" style="color:#e8cb7a;display:inline-block;padding:12px 4px">English</a> · <a href="/es/devlog/someone-to-show-you-around/" hreflang="es" lang="es" aria-current="true" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Español</a> · <a href="/it/devlog/someone-to-show-you-around/" hreflang="it" lang="it" style="color:#e8cb7a;display:inline-block;padding:12px 4px">Italiano</a></nav><!-- LANG:END -->
+</body>
+
+</html>
