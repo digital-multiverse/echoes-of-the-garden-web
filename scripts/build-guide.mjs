@@ -155,7 +155,7 @@ await writeFile("guide/index.html", indexHtml);
 for (const [i, c] of CHAPTERS.entries()) {
   const next = CHAPTERS[i + 1];
   const html = page(
-    head({ title: `${c.title} | How to play Echoes of the Garden`, description: c.summary, url: `${SITE}/guide/${c.slug}/` }),
+    head({ title: `${c.title} | Echoes of the Garden`, description: c.summary, url: `${SITE}/guide/${c.slug}/` }),
     `  <main class="page entry">
     <p class="crumbs"><a href="/guide/">How to play</a></p>
     <p class="meta">Chapter ${i + 1} of ${CHAPTERS.length}</p>

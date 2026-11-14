@@ -31,12 +31,6 @@
   <url><loc>https://echoesofthegarden.com/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
@@ -49,6 +43,12 @@
   <url><loc>https://echoesofthegarden.com/devlog/signs-before-names/</loc><lastmod>2026-11-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/a-shorter-first-life/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/devlog/what-a-relic-keeps/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://echoesofthegarden.com/es/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/es/bestiary/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -80,12 +80,6 @@
   <url><loc>https://echoesofthegarden.com/es/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/es/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
@@ -98,6 +92,12 @@
   <url><loc>https://echoesofthegarden.com/es/devlog/signs-before-names/</loc><lastmod>2026-11-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/a-shorter-first-life/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/es/devlog/what-a-relic-keeps/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/es/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://echoesofthegarden.com/it/privacy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://echoesofthegarden.com/it/bestiary/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -129,12 +129,6 @@
   <url><loc>https://echoesofthegarden.com/it/bestiary/light-fish/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/bestiary/phosphor-eel/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/bestiary/quartz-snail/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://echoesofthegarden.com/it/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/creatures-that-die-for-good/</loc><lastmod>2026-07-05</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/the-bug-that-paid-60-times-too-much/</loc><lastmod>2026-10-28</lastmod><priority>0.6</priority></url>
@@ -147,4 +141,10 @@
   <url><loc>https://echoesofthegarden.com/it/devlog/signs-before-names/</loc><lastmod>2026-11-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/a-shorter-first-life/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
   <url><loc>https://echoesofthegarden.com/it/devlog/what-a-relic-keeps/</loc><lastmod>2026-11-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/a-life/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/death/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/affinities/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/seed-altar/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://echoesofthegarden.com/it/guide/echo-arc/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

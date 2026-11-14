@@ -113,7 +113,7 @@ function translator(dict, missing, file) {
     if ((m = s.match(/^(.*) \| Echoes of the Garden$/)) && NAMES.has(m[1])) return s;
     if ((m = s.match(/^(\d+) (\w+) (\d{4})(, v[\d.]+)?$/))) return `${t(`%d ${m[2]} %d`).replace("%d", m[1]).replace("%d", m[3])}${m[4] ?? ""}`;
     if ((m = s.match(/^More from (.*)$/))) return `${t("More from")} ${t(m[1])}`;
-    if ((m = s.match(/^(.*) \| Echoes of the Garden Dev Log$/))) return `${t(m[1])} | ${t("Echoes of the Garden Dev Log")}`;
+    if ((m = s.match(/^(.*) \| Echoes of the Garden$/))) return `${t(m[1])} | Echoes of the Garden`;
     if (/^, v[\d.]+$/.test(s)) return s;
     return miss(s);
   };
