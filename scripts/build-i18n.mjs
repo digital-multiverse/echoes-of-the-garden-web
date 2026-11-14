@@ -184,10 +184,16 @@ for (const lang of Object.keys(LOCALES)) {
 }
 for (const file of all) await writeFile(file, withBlocks(await readFile(file, "utf8"), file, "en"));
 
-const sitemap = (await readFile("sitemap.xml", "utf8")).split("\n").filter((l) => !/<loc>[^<]*\/(es|it)\//.test(l));
+// Each URL lists its three language versions (hreflang alternates), as the pages' <head> does.
+const sitemap = (await readFile("sitemap.xml", "utf8")).split("\n").filter((l) => !/<loc>[^<]*\/(es|it)\//.test(l))
+  .map((l) => l.replace(/<xhtml:link[^>]*\/>/g, "").replace(/<urlset [^>]*>/, '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'));
+const alts = (path) => [["en", ""], ...Object.keys(LOCALES).map((l) => [l, `/${l}`]), ["x-default", ""]]
+  .map(([l, pre]) => `<xhtml:link rel="alternate" hreflang="${l}" href="${SITE}${pre}${path}"/>`).join("");
+const withAlts = (line) => line.replace(/<loc>([^<]*)<\/loc>([\s\S]*)<\/url>/, (_, loc, rest) =>
+  `<loc>${loc}</loc>${rest}${alts(loc.slice(SITE.length).replace(/^\/(es|it)\//, "/"))}</url>`);
 const body = sitemap.filter((l) => l.includes("<loc>"));
 const extra = Object.keys(LOCALES).flatMap((l) => body.map((line) => line.replace(`<loc>${SITE}/`, `<loc>${SITE}/${l}/`)));
-await writeFile("sitemap.xml", sitemap.join("\n").replace("</urlset>", `${extra.join("\n")}\n</urlset>`));
+await writeFile("sitemap.xml", sitemap.map(withAlts).join("\n").replace("</urlset>", `${extra.map(withAlts).join("\n")}\n</urlset>`));
 
 if (missing.size) {
   if (process.argv.includes("--missing")) await writeFile("i18n/missing.txt", [...missing].join("\n") + "\n");
