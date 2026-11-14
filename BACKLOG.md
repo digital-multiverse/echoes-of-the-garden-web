@@ -96,7 +96,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 
 ## Phase W2 — remaining ⏳
 - ✅ Devlog: 5 milestone entries, `npm run devlog` (scripts/devlog-entries.mjs), full page per entry
-- ✅ Spanish and Italian: `/es/` and `/it/` baked by `npm run i18n` from `i18n/{es,it}.json` and the game's `content.csv`; hreflang on every page. Translations are drafts pending a native review
+- ✅ Spanish and Italian: `/es/` and `/it/` baked by `npm run i18n` from `i18n/{es,it}.json` and the game's `content.csv`; hreflang on every page. Native review done (2026-11-14)
 - ✅ SEO pass: title and meta, keywords, real favicon files, 404 pages, WebP media, `llms.txt`, internal links
 - ⏳ Welcome email is English only, whatever the page language
 - ✅ Lore-forward landing: the home tells Hollowroot's life and death with the game's own death screen text
@@ -112,7 +112,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ✅ /es/ and /it/ static pages + hreflang
 - ✅ Language selector (URL-based links in the nav and at the foot of every page)
 - ✅ Translate web-original strings (hero, features)
-- ⏳ Native review of the Spanish and Italian drafts
+- ✅ Native review of the Spanish and Italian drafts (José, 2026-11-14). New strings after that date are drafts until checked
 - ⏳ Optional: suggest the visitor's language on first visit
 
 ## Icebox 🧊
