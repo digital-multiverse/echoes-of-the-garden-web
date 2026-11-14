@@ -50,7 +50,7 @@ function entryPage(e) {
   const url = `${SITE}/devlog/${e.slug}/`;
   const image = `${SITE}/assets/screenshots/${e.image}`;
   return `${head({
-    title: `${e.title} | Echoes of the Garden Dev Log`, description: e.summary, url, image, type: "article",
+    title: `${e.title} | Echoes of the Garden`, description: e.summary, url, image, type: "article",
     ld: {
       "@context": "https://schema.org", "@type": "BlogPosting", headline: e.title, description: e.summary,
       datePublished: e.date, image, url, author: publisher, publisher,
