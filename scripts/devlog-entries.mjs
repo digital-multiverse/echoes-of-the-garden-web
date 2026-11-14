@@ -227,4 +227,24 @@ export const ENTRIES = [
 </ul>
 <p>This build goes to the testers. A first life of ten minutes is the part I most want to watch someone play.</p>`,
   },
-];
+    {
+      slug: "what-a-relic-keeps",
+      title: "What a relic keeps",
+      date: "2026-11-14",
+      build: "v0.18.0",
+      summary: "A small build: the Sell window says what stays when a relic goes, a newly discovered species shows itself at the edge of the garden, and the clash glow is ember instead of red.",
+      image: "06_book_of_echoes.webp",
+      alt: "The Book of Echoes listing creatures that have lived",
+      body: `
+  <p>A small build, mostly polish.</p>
+  <h2>Selling a relic</h2>
+  <p>The Sell window now says what a sale takes and what it leaves. The relic leaves your garden. Its name and the life it lived stay in the Book of Echoes.</p>
+  <h2>Also in v0.18.0</h2>
+  <ul>
+    <li>When you discover a species, it appears for a moment at the edge of the garden, then fades.</li>
+    <li>Creatures that clash with a neighbour now glow ember instead of red. The red looked like an error.</li>
+    <li>Panels that open at the side are taller and now reach down to the bottom bar.</li>
+  </ul>
+  <p>The testers still decide what comes next.</p>`,
+    },
+  ];
