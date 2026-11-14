@@ -13,7 +13,7 @@ import { HEAD_ASSETS, header, CTA, FOOTER } from "./site-chrome.mjs";
 const SITE = "https://echoesofthegarden.com";
 const shot = (name, alt) => `    <figure>
       <img src="/assets/screenshots/${name}.webp" srcset="/assets/screenshots/${name}-960.webp 960w, /assets/screenshots/${name}.webp 1920w" sizes="(max-width: 720px) 100vw, 672px" width="1280" height="720" alt="${alt}" loading="lazy">
-      <figcaption>A capture from the game. The pixel art is still placeholder.</figcaption>
+      <figcaption>A capture from the game.</figcaption>
     </figure>`;
 
 const CHAPTERS = [

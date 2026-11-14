@@ -19,7 +19,7 @@ export const ENTRIES = [
   <li>Neighbours matter. An affinity wheel decides which creatures work well side by side.</li>
   <li>The time of day a creature is born sets its affinity.</li>
 </ul>
-<p>All 28 species exist as data, though only the first two biomes are in the game for now. The sprites are placeholder pixel art.</p>
+<p>All 28 species exist as data, though only the first two biomes are in the game for now.</p>
 <p><a href="/#bestiary">Meet the 28 species in the bestiary.</a></p>
 <p>The next job is the economy: what creatures produce, what it buys, and how long a collection should take.</p>`,
   },

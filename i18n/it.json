@@ -22,7 +22,6 @@
   "Accessibility.": "Accessibilità.",
   "Achievements, words at each death, all the lore in three languages, and a bug that made creatures younger than they were.": "Obiettivi, parole a ogni morte, tutta la storia in tre lingue e un bug che rendeva le creature più giovani di quanto fossero.",
   "Adult": "Adulto",
-  "All 28 species exist as data, though only the first two biomes are in the game for now. The sprites are placeholder pixel art.": "Tutte le 28 specie esistono come dati, anche se per ora nel gioco ci sono solo i primi due biomi. Gli sprite sono pixel art provvisoria.",
   "All creature lore, recipes and fragments": "Tutta la storia delle creature, ricette e frammenti",
   "All dev log entries": "Tutte le voci del dev log",
   "Also in v0.10.0": "Anche nella v0.10.0",
@@ -206,7 +205,6 @@
   "Roots of the World. Preserved. Lived 12h 36m": "Radici del Mondo. Preservata. Ha vissuto 12h 36m",
   "Roots of the World. Preserved. Lived 25h 12m": "Radici del Mondo. Preservata. Ha vissuto 25h 12m",
   "How the garden grows": "Come cresce il giardino",
-  "The Echo Arc, in build v0.9.0. The pixel art is still placeholder.": "L'Arco degli Echi nella versione v0.9.0. La pixel art è ancora provvisoria.",
   "New species show themselves first": "Le specie nuove si fanno vedere prima",
   "Nothing new is for sale at the start. As a biome earns, a creature you haven't met appears; only then will the Seed Altar sell you its seed.": "All'inizio non c'è niente di nuovo in vendita. Man mano che un bioma produce, compare una creatura che non conoscevi, e solo allora l'Altare ti vende il suo seme.",
   "Neighbours matter": "I vicini contano",
@@ -240,7 +238,6 @@
   "Echoes of the Garden is a free idle game about creatures that live, age and die for good.": "Echoes of the Garden è un gioco idle gratuito su creature che vivono, invecchiano e muoiono per sempre.",
   "First Early Access update": "Primo aggiornamento dell'accesso anticipato",
   "Second Early Access update": "Secondo aggiornamento dell'accesso anticipato",
-  "A capture from the game. The pixel art is still placeholder.": "Uno screenshot dal gioco. La pixel art è ancora provvisoria.",
   "Born at night": "Se nasce di notte",
   "Born in the morning": "Se nasce di mattina",
   "Born at midday": "Se nasce a mezzogiorno",
@@ -418,5 +415,8 @@
   "Also in v0.16.0": "Anche nella v0.16.0",
   "The Spanish and Italian text added in the last three builds had a full review: the natures, Attunement, the first-steps guide and the new lore fragments.": "I testi in spagnolo e italiano delle ultime tre build sono stati revisionati da capo: le nature, la Sintonia, la guida dei primi passi e i nuovi frammenti di lore.",
   "Next I wait for the testers. What they say about the first minutes decides whether the game's pace changes.": "Ora aspetto i tester. Quello che diranno dei primi minuti deciderà se il ritmo del gioco cambia.",
-  "The Tide of Ash biome with creatures among the cinders": "Il bioma Marea di Cenere con creature tra le braci"
+  "The Tide of Ash biome with creatures among the cinders": "Il bioma Marea di Cenere con creature tra le braci",
+  "The Echo Arc in the game.": "L'Arco degli Echi nel gioco.",
+  "A capture from the game.": "Uno screenshot dal gioco.",
+  "All 28 species exist as data, though only the first two biomes are in the game for now.": "Tutte le 28 specie esistono come dati, anche se per ora nel gioco ci sono solo i primi due biomi."
 }
