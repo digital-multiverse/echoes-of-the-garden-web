@@ -104,7 +104,7 @@ Tasks for the web repo only. See WEB-ROADMAP.md for phasing.
 - ⏳ Per-section OG images (bestiary share ≠ homepage share)
 
 ## Phase W3 — Steam alignment ⏳
-- ⏳ "Wishlist on Steam" CTA above the fold (top priority once page is live)
+- 🔄 "Wishlist on Steam" CTA above the fold: ready in `scripts/steam-live.mjs` (es/it translated), run it with the store URL once the page is live
 - ✅ Devlog / news section
 - ⏳ Press-kit page
 

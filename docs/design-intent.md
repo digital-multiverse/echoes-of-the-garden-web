@@ -22,7 +22,7 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
 |---|---|---|
 | Play free in browser | https://echoes-of-the-garden.itch.io/play | Home, every creature page, every dev log entry, `/bestiary/`, 404 |
 | Get notified / Subscribe | `/#newsletter` (form → `/api/subscribe` in `src/worker.js`) | Home, every creature page, every dev log entry |
-| Steam (wishlist) | Not live yet: shown as plain text "Steam (soon)", never a dead link | Footer; becomes a CTA when the Steam page exists (BACKLOG W3) |
+| Steam (wishlist) | Not live yet: shown as plain text "Steam (soon)", never a dead link. When the store page is live, `node scripts/steam-live.mjs <url> && npm run build` turns "Tell me when it's on Steam" into "Wishlist on Steam" and the footer text into a link | Footer; then the second button of the hero and of every closing CTA (BACKLOG W3) |
 
 ## Promises: what we can say
 - Free to play, playable now in the browser on itch.io (live).
