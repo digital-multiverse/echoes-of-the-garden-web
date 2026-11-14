@@ -233,8 +233,8 @@ export const ENTRIES = [
       date: "2026-11-14",
       build: "v0.18.0",
       summary: "A small build: the Sell window says what stays when a relic goes, a newly discovered species shows itself at the edge of the garden, and the clash glow is ember instead of red.",
-      image: "06_book_of_echoes.webp",
-      alt: "The Book of Echoes listing creatures that have lived",
+      image: "08_book_of_echoes.webp",
+      alt: "The Book of Echoes open over the Tide of Ash, with eight lives and the ember glow of a clash",
       body: `
   <p>A small build, mostly polish.</p>
   <h2>Selling a relic</h2>
