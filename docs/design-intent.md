@@ -32,7 +32,7 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
 - Permanent death; relics that carry the creature's name and life (game README).
 - No pay-to-win and no real-money shop: every item comes from play (game README).
 - Steam Early Access target: Q2 2027 (game ROADMAP, ADR-012).
-- Placeholder pixel art in a real game, no mock-ups (stated on the site).
+- Real in-engine captures of the current game, no mock-ups.
 
 ## What we must not say
 - **Any trading or Steam Community Market as available today.** Early Access ships without
@@ -44,6 +44,8 @@ and desktop both matter. Languages: English first, then Spanish and Italian.
   (game `docs/adr/013-*`).
 - "No cookies": Cloudflare JS Detections sets `cf_clearance` (decided 2026-11 to keep it;
   privacy page names it).
+- That the pixel art is placeholder, provisional or temporary (José, 2026-11-14), or a build
+  number in a caption: it goes stale with every release.
 - Release dates more precise than the game ROADMAP supports, or a date the ROADMAP has moved.
 
 ## Brand
