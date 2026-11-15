@@ -26,7 +26,7 @@ const CHAPTERS = [
     <h2>Four stages</h2>
     <p>Every creature goes from Seed to Hatchling, then Adult, then Elder, and then it dies. It can't be stopped or undone. While it lives it gives its garden a little of that garden's resource each minute: Root Sap in the Roots of the World, Living Ash in the Tide of Ash.</p>
     <p>The others keep the garden's own pace: they grow over hours, not minutes. Slow species live longer and give steadily; the creatures of the Tide of Ash burn through their lives quickly.</p>
-${shot("01_roots_garden", "Roots of the World in the game, with creatures at different stages of their lives")}
+${shot("09_roots_garden", "Roots of the World in the game, with creatures at different stages of their lives")}
     <h2>Natures</h2>
     <p>Every species has a nature. You learn it the first time one of them dies, and from then on the Codex shows it in that species' entry.</p>
     <p>Most species are Steady: they give at the same pace from the day they hatch to the day they die. A Bloomer gives little while it lives and pays it all back when it dies, at the moment you choose its fate. An Ephemeral species lives briefly, and the relic it leaves tends to be rarer. An Heirloom species gives a little less, and its seeds carry a mutation more often.</p>
