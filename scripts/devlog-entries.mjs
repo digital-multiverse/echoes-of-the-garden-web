@@ -247,4 +247,24 @@ export const ENTRIES = [
   </ul>
   <p>The testers still decide what comes next.</p>`,
     },
+    {
+      slug: "a-start-of-its-own",
+      title: "A start of its own",
+      date: "2026-11-15",
+      build: "v0.19.0",
+      summary: "A small build with no gameplay changes: the game opens on its own logo, Settings has a Licenses page, and the Windows and Linux builds carry the garden's icon.",
+      image: "01_roots_garden.webp",
+      alt: "The Roots of the World, with creatures resting among the moss",
+      body: `
+  <p>A small build with no changes to how the game plays.</p>
+  <h2>A start of its own</h2>
+  <p>The game used to open on the engine's logo. Now it opens on its own: the sprout and the title, on the garden's dark background. The browser version shows the same image while it loads.</p>
+  <h2>Also in v0.19.0</h2>
+  <ul>
+    <li>Settings has a Licenses page. It lists the engine and the fonts the game is built with, and the licenses they come under.</li>
+    <li>The Windows and Linux builds use the garden's sprout as their icon.</li>
+    <li>The Spanish and Italian achievement names were revised.</li>
+  </ul>
+  <p>If you are testing v0.18.0, nothing changes: the questions are the same.</p>`,
+    },
   ];
