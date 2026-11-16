@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Form endpoints (POST only): Googlebot finds them in the JS and gets 405 on GET
+Disallow: /api/
 
 Sitemap: https://echoesofthegarden.com/sitemap.xml
